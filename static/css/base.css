@@ -1,0 +1,30 @@
+.container {
+    width: 650px;
+}
+.container a {
+    color: Gray;
+}
+.container a:hover {
+    color: LightGray;
+}
+.content {
+    margin-left: 10px;
+    line-height: 150%;
+}
+.header {
+    background-color: #DDDDFF;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+    font-family: 'Linden Hill', Georgia, serif;
+}
+.header .title {
+    color: white;
+    text-decoration: none;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 2em;
+}
+/* Utility classes */
+.centered {
+    display: block;
+    margin: 0 auto;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="http://localhost:8000/static/css/base.css">
+    <link rel="stylesheet" href="http://localhost:8000/static/css/post.css">
+    <link rel="stylesheet" href="http://localhost:8000/static/css/page.css">
+    <link rel="stylesheet" href="http://localhost:8000/static/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8000/static/css/katex.min.css">
+    <script src="http://localhost:8000/static/js/lodash.min.js"></script>
+    <script src="http://localhost:8000/static/js/jquery-2.2.2.js"></script>
+    <script src="http://localhost:8000/static/js/katex.min.js"></script>
+    <script src="http://localhost:8000/static/js/auto-render.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a class="title" href="http://localhost:8000/main.html">Eli Rose</a> 's
+            <a href="http://localhost:8000/about.html">about</a>
+            &sdot;
+            <a href="http://localhost:8000/turing.html">turing</a>
+            &sdot;
+            <a href="http://localhost:8000/fraction_pattern.html">fraction pattern</a>
+            &sdot;
+            <a href="http://localhost:8000/markov_text.html">text generator</a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">2312 by Kim Stanley Robinson</div>
+    <div class="post-date">Thursday, February 25th, 2016</div>
+</div>
+<div class="post-content">
+    <p>Hi!</p>
+<p><img width="200px" height="300px" class="post-floating-image" src="http://localhost:8000/static/images/2312_book_cover.jpg"></p>
+</div>
+<div class="post-tags">
+    
+    <b>Tags:</b> <a href="google.com">book-review</a>,
+    <a href="google.com">review</a>
+    
+    
+</div>
+
+        </div>
+    </div>
+<script>
+    renderMathInElement(
+        document.getElementById("content"), {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        }
+    )
+</script>
+</body>
+</html>

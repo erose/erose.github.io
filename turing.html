@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="http://localhost:8000/static/css/base.css">
+    <link rel="stylesheet" href="http://localhost:8000/static/css/post.css">
+    <link rel="stylesheet" href="http://localhost:8000/static/css/page.css">
+    <link rel="stylesheet" href="http://localhost:8000/static/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8000/static/css/katex.min.css">
+    <script src="http://localhost:8000/static/js/lodash.min.js"></script>
+    <script src="http://localhost:8000/static/js/jquery-2.2.2.js"></script>
+    <script src="http://localhost:8000/static/js/katex.min.js"></script>
+    <script src="http://localhost:8000/static/js/auto-render.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a class="title" href="http://localhost:8000/main.html">Eli Rose</a> 's
+            <a href="http://localhost:8000/about.html">about</a>
+            &sdot;
+            <a href="http://localhost:8000/turing.html">turing</a>
+            &sdot;
+            <a href="http://localhost:8000/fraction_pattern.html">fraction pattern</a>
+            &sdot;
+            <a href="http://localhost:8000/markov_text.html">text generator</a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Turing</div>
+    <div class="post-date"></div>
+</div>
+<div class="post-content">
+    <script src="http://localhost:8000/static/js/paper-full.js"></script>
+
+<script src="http://localhost:8000/static/js/animatePaper.js"></script>
+
+<script type="text/paperscript" src="http://localhost:8000/static/js/turing.js"
+canvas="canvas"></script>
+
+<p>A Turing machine is something like this:</p>
+<canvas id="canvas" width="640px" height="480px"></canvas>
+</div>
+<div class="post-tags">
+    
+</div>
+
+        </div>
+    </div>
+<script>
+    renderMathInElement(
+        document.getElementById("content"), {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        }
+    )
+</script>
+</body>
+</html>

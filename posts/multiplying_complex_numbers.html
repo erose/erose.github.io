@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="http://localhost:8000/static/css/base.css">
+    <link rel="stylesheet" href="http://localhost:8000/static/css/post.css">
+    <link rel="stylesheet" href="http://localhost:8000/static/css/page.css">
+    <link rel="stylesheet" href="http://localhost:8000/static/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8000/static/css/katex.min.css">
+    <script src="http://localhost:8000/static/js/lodash.min.js"></script>
+    <script src="http://localhost:8000/static/js/jquery-2.2.2.js"></script>
+    <script src="http://localhost:8000/static/js/katex.min.js"></script>
+    <script src="http://localhost:8000/static/js/auto-render.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a class="title" href="http://localhost:8000/main.html">Eli Rose</a> 's
+            <a href="http://localhost:8000/about.html">about</a>
+            &sdot;
+            <a href="http://localhost:8000/turing.html">turing</a>
+            &sdot;
+            <a href="http://localhost:8000/fraction_pattern.html">fraction pattern</a>
+            &sdot;
+            <a href="http://localhost:8000/markov_text.html">text generator</a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Why Does Multiplying Two Complex Numbers Add Their Angles?</div>
+    <div class="post-date">Thursday, March 10th, 2016</div>
+</div>
+<div class="post-content">
+    <p>The complex number $z = a + bi$ can be drawn. Plot the imaginary part on the $y$-axis, and the real part on the $x$-axis.</p>
+<p><center>
+<a href="https://commons.wikimedia.org/w/index.php?curid=3465773"> <img alt="" src="http://localhost:8000/static/images/complex_plane.svg" /></a>
+</center></p>
+<p>This lets us see complex numbers as arrows. So a complex number has a certain length and forms a certain angle with the $x$-axis. (It's the same idea as <em>polar form</em> in the ordinary $xy$-plane).</p>
+<p>When you add another complex number $z'$ to $z$, you get a third arrow which has the sum of the $x$-coordinates and the sum of the $y$-coordinates. When you multiply $z$ by $z'$, you get a third arrow which has the <em>product</em> of $z$ and $z'$'s <em>lengths</em> and the <em>sum</em> of $z$ and $z'$ <em>angles</em>.</p>
+<p>Why is the second fact true? Here's one way you might discover it, assuming you were familiar with rotation matrices. Let's multiply $a + bi$ and $c + di$ algebraically:</p>
+<p>$$
+\begin{matrix}
+(a + bi)(c + di) &amp; = &amp; ac + adi + bci + bdi^2\\
+&amp; = &amp; ac + adi + bci - bd\\
+&amp; = &amp; (ac - bd) + (ad + bc)i\\
+\end{matrix}
+$$</p>
+<p>Now let's see $a + bi$ as a vector and think of <em>multiplication of $a + bi$ by $c + di$</em> as instead being <em>action</em> (left-multiplication) by some matrix on that vector.</p>
+<p>$$
+\begin{bmatrix}? &amp; ?\\? &amp; ?\end{bmatrix}\begin{bmatrix}a\\b\end{bmatrix} = \begin{bmatrix}ac - bd\\ad + bc\end{bmatrix}
+$$</p>
+<p>You can see what this matrix must be: it's</p>
+<p>$$
+\begin{bmatrix}c &amp; -d\\d &amp; c\end{bmatrix}\begin{bmatrix}a\\b\end{bmatrix} = \begin{bmatrix}ac - bd\\ad + bc\end{bmatrix}
+$$</p>
+<p>Now think about $c + di$ as something with an angle $\theta$ and a length $r$ and write it as $c + di = r\cos(\theta) + ir\sin(\theta)$. Substitute in and you get:</p>
+<p>$$
+\begin{matrix}
+\begin{bmatrix}c &amp; -d\\d &amp; c\end{bmatrix} &amp; = &amp; \begin{bmatrix}r\cos(\theta) &amp; -r\sin(\theta)\\ r\sin(\theta) &amp; r\cos(\theta)\end{bmatrix}\\
+&amp; = &amp; r\begin{bmatrix}\cos(\theta) &amp; -\sin(\theta)\\ \sin(\theta) &amp; \cos(\theta)\end{bmatrix}
+\end{matrix}
+$$</p>
+<p>So the mysterious matrix, which performs multiplication by $c + di$, has turned out to be the <a href="https://en.wikipedia.org/wiki/Rotation_matrix">rotation matrix</a> for $\theta$, times a scalar.</p>
+<p>$$
+(c + di)(a + bi) = r\begin{bmatrix}\cos(\theta) &amp; -\sin(\theta)\\ \sin(\theta) &amp; \cos(\theta)\end{bmatrix}\begin{bmatrix}a\\b\end{bmatrix}
+$$</p>
+<p>The rotation matrix says to add the angles, because that's what rotation does. The scalar $r$ says to multiply the lengths.</p>
+</div>
+<div class="post-tags">
+    
+    <b>Tags:</b> <a href="google.com">math</a>
+    
+    
+</div>
+
+        </div>
+    </div>
+<script>
+    renderMathInElement(
+        document.getElementById("content"), {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        }
+    )
+</script>
+</body>
+</html>
