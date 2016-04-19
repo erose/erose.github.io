@@ -30,12 +30,24 @@
         <div id="content" class="content">
             
 <div class="post-header">
-    <div class="post-title">About Me</div>
+    <div class="post-title">Text Generator</div>
     <div class="post-date"></div>
 </div>
 <div class="post-content">
-    <p>Hi, I'm Eli Rose. That's the name of a person! I'm a recent grad of <a href="http://www.oberlin.edu">Oberlin College</a> and now live in Cambridge, MA.</p>
-<p>This blog is for writing stuff down that would otherwise fly through and out of my life. Also, so other people can see it.</p>
+    <script src="http://reallyeli.com/static/js/markov_text.js"></script>
+
+<p><textarea id="input-text" placeholder="Input:" style="width: 100%; height: 250px;"></textarea></p>
+<p><button id="generate-button" onclick="press();" style="border-radius: 5px;">
+    <img
+    class="arrow" id="still-icon" src="http://reallyeli.com/static/icons/arrow.gif"
+    style="width: 20px; height: 20px;"
+    >
+    <img
+    class="arrow" id="active-icon" src="http://reallyeli.com/static/icons/rotating_arrow.gif"
+    style="display: none; width: 20px; height: 20px;"
+    >
+</button></p>
+<p><textarea id="output-text" placeholder="Output:" style="width: 100%; height: 250px;"></textarea></p>
 </div>
 <div class="post-tags">
     
