@@ -1,5 +1,6 @@
 var zeroColor = 'CornflowerBlue',
     oneColor  = 'Crimson';
+var activeMachine = null;
 
 // Animations.
 flash = function(item, duration){
@@ -571,7 +572,19 @@ var TuringMachine = Group.extend({
         );
     },
 });
+window.switchTM = function(tm_name){
+    project.clear(); // Wipe the canvas.
 
+    if (tm_name == "charger"){
+        activeMachine = create_charger(view.center);
+    } else if (tm_name == "looper"){
+        activeMachine = create_looper(view.center);
+    } else if (tm_name == "6_state_busy_beaver"){
+        activeMachine = create_busy_beaver_6(view.center);
+    }
+
+    activeMachine.start();
+}
 function create_busy_beaver_6(position){
     pentagon = [
         new Point(100, 0), new Point(30, 95), new Point(-80, 58),
@@ -622,13 +635,15 @@ function create_charger(position){
     return M;
 }
 
-var activeMachine = create_charger(view.center);
-activeMachine.start();
-
 function onFrame(){
-    // View should remain centered on the tape head.
-    view.center = new Point(
-        activeMachine.head.path.position.x, view.center.y
-    );
-    activeMachine.dfa.position.x = activeMachine.head.path.position.x;
+    if (activeMachine != null){
+        // View should remain centered on the tape head.
+        view.center = new Point(
+            activeMachine.head.path.position.x, view.center.y
+        );
+        activeMachine.dfa.position.x = activeMachine.head.path.position.x;
+    }
 }
+
+// Default.
+switchTM("6_state_busy_beaver");
