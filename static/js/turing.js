@@ -583,6 +583,8 @@ window.switchTM = function(tm_name){
         activeMachine = create_busy_beaver_6(view.center);
     }
 
+    $(".tm-description").hide();
+    $("#" + tm_name + "-description").show()
     activeMachine.start();
 }
 function create_busy_beaver_6(position){

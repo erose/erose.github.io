@@ -41,13 +41,31 @@
 <script type="text/paperscript" src="http://reallyeli.com/static/js/turing.js"
 canvas="canvas"></script>
 
-<p>Choose your Turing Machine:
+<style>
+    .tm-description {display: none;}
+</style>
+
+<canvas id="canvas" width="640px" height="480px"></canvas>
+
+<p>Choose your machine:
 <select onchange="switchTM(this.value);">
     <option value="charger">Charger</option>
     <option value="looper">Looper</option>
-    <option value="6_state_busy_beaver">6-State Busy Beaver</option>
-</select>
-<canvas id="canvas" width="640px" height="480px"></canvas></p>
+    <option value="6_state_busy_beaver" selected="selected">6-State Busy Beaver</option>
+</select></p>
+<hr>
+
+<div class="tm-description" id="charger-description">
+This is one of the simplest possible machines. It writes 1s off to the right forever. On a blank tape, it enters a loop immediately.
+</div>
+
+<div class="tm-description" id="looper-description">
+This machine vacillates horribly, doing nothing forever. On a blank tape, it enters a loop within two steps.
+</div>
+
+<div class="tm-description" id="6_state_busy_beaver-description">
+This is a certain 6-state machine with an unusual property: no one knows whether it ever halts or enters a loop.
+</div>
 </div>
 <div class="post-tags">
     
