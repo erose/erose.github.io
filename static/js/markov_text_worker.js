@@ -22,11 +22,10 @@ function weighted_roll(options_to_weights, total_weight){
     return chosen;
 }
 
-function get_counts(text, n){
+function get_counts(initial, text, n){
     // Takes a text string and an n-gram size.
     // Returns {n-gram: {char1: count1, char2: count2, ..., total: ()}, ...}
-
-    result = {}
+    result = initial
 
     // We must repeat the first n characters at the end to create a loop.
     // If the last character's not already whitespace, insert a space.
@@ -50,11 +49,14 @@ function get_counts(text, n){
     return result;
 }
 
-function get_text(input_text, n){
+function get_text(input_texts, n){
     // Returns n characters of text similar to input_text.
 
     var NGRAM_SIZE = 10;
-    var counts = get_counts(input_text, NGRAM_SIZE);
+    var counts = {};
+    _.each(input_texts, function(text){
+        counts = get_counts(counts, text, NGRAM_SIZE);
+    });
 
     var output_text = "";
     var current_ngram = _.sample(
@@ -74,9 +76,21 @@ function get_text(input_text, n){
 
 onmessage = function(e){
     // Called when there is new text to process from the frontend.
-    var input_text = e.data[0];
-    var n = parseInt(e.data[1]);
+    var content = e.data[0];
+    var n = +e.data[1];
+
+    // Concatenate the data from the various input URLs.
+    var input_texts = [];
+    _.each(content.urls, function(url){
+        // Grab the text (async = false).
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url, false);
+        xhr.send(null);
+
+        input_texts.push(xhr.responseText);
+    });
 
     // Reply to the frontend.
-    postMessage([get_text(input_text, n)]);
+    var output_text = get_text(input_texts, n);
+    postMessage([output_text]);
 }

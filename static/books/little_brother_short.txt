@@ -1,0 +1,1000 @@
+Chapter 1
+
+[[This chapter is dedicated to BakkaPhoenix Books in Toronto, Canada. Bakka is the oldest science fiction bookstore in the world, and it made me the mutant I am today. I wandered in for the first time around the age of 10 and asked for some recommendations. Tanya Huff (yes, *the* Tanya Huff, but she wasn't a famous writer back then!) took me back into the used section and pressed a copy of H. Beam Piper's "Little Fuzzy" into my hands, and changed my life forever. By the time I was 18, I was working at Bakka -- I took over from Tanya when she retired to write full time -- and I learned life-long lessons about how and why people buy books. I think every writer should work at a bookstore (and plenty of writers have worked at Bakka over the years! For the 30th anniversary of the store, they put together an anthology of stories by Bakka writers that included work by Michelle Sagara (AKA Michelle West), Tanya Huff, Nalo Hopkinson, Tara Tallan --and me!)]]
+
+[[BakkaPhoenix Books: http://www.bakkaphoenixbooks.com/ 697 Queen Street West, Toronto ON Canada M6J1E6, +1 416 963 9993]]
+
+I'm a senior at Cesar Chavez high in San Francisco's sunny Mission district, and that makes me one of the most surveilled people in the world. My name is Marcus Yallow, but back when this story starts, I was going by w1n5t0n. Pronounced "Winston."
+
+*Not* pronounced "Double-you-one-enn-five-tee-zero-enn" -- unless you're a clueless disciplinary officer who's far enough behind the curve that you still call the Internet "the information superhighway." 
+
+I know just such a clueless person, and his name is Fred Benson, one of three vice-principals at Cesar Chavez. He's a sucking chest wound of a human being. But if you're going to have a jailer, better a clueless one than one who's really on the ball.
+
+"Marcus Yallow," he said over the PA one Friday morning. The PA isn't very good to begin with, and when you combine that with Benson's habitual mumble, you get something that sounds more like someone struggling to digest a bad burrito than a school announcement. But human beings are good at picking their names out of audio confusion -- it's a survival trait. 
+
+I grabbed my bag and folded my laptop three-quarters shut -- I didn't want to blow my downloads -- and got ready for the inevitable.
+
+"Report to the administration office immediately."
+
+My social studies teacher, Ms Galvez, rolled her eyes at me and I rolled my eyes back at her. The Man was always coming down on me, just because I go through school firewalls like wet kleenex, spoof the gait-recognition software, and nuke the snitch chips they track us with. Galvez is a good type, anyway, never holds that against me (especially when I'm helping get with her webmail so she can talk to her brother who's stationed in Iraq). 
+
+My boy Darryl gave me a smack on the ass as I walked past. I've known Darryl since we were still in diapers and escaping from play-school, and I've been getting him into and out of trouble the whole time. I raised my arms over my head like a prizefighter and made my exit from Social Studies and began the perp-walk to the office.
+
+I was halfway there when my phone went. That was another no-no -- phones are muy prohibido at Chavez High -- but why should that stop me? I ducked into the toilet and shut myself in the middle stall (the furthest stall is always grossest because so many people head straight for it, hoping to escape the smell and the squick -- the smart money and good hygiene is down the middle). I checked the phone -- my home PC had sent it an email to tell it that there was something new up on Harajuku Fun Madness, which happens to be the best game ever invented.
+
+I grinned. Spending Fridays at school was teh suck anyway, and I was glad of the excuse to make my escape.
+
+I ambled the rest of the way to Benson's office and tossed him a wave as I sailed through the door.
+
+"If it isn't Double-you-one-enn-five-tee-zero-enn," he said. Fredrick Benson -- Social Security number 545-03-2343, date of birth August 15 1962, mother's maiden name Di Bona, hometown Petaluma -- is a lot taller than me. I'm a runty 5'8", while he stands 6'7", and his college basketball days are far enough behind him that his chest muscles have turned into saggy man-boobs that were painfully obvious through his freebie dot-com polo-shirts. He always looks like he's about to slam-dunk your ass, and he's really into raising his voice for dramatic effect. Both these start to lose their efficacy with repeated application.
+
+"Sorry, nope," I said. "I never heard of this R2D2 character of yours."
+
+"W1n5t0n," he said, spelling it out again. He gave me a hairy eyeball and waited for me to wilt. Of course it was my handle, and had been for years. It was the identity I used when I was posting on message-boards where I was making my contributions to the field of applied security research. You know, like sneaking out of school and disabling the minder-tracer on my phone. But he didn't know that this was my handle. Only a small number of people did, and I trusted them all to the end of the earth.
+
+"Um, not ringing any bells," I said. I'd done some pretty cool stuff around school using that handle -- I was very proud of my work on snitch-tag killers -- and if he could link the two identities, I'd be in trouble. No one at school ever called me w1n5t0n or even Winston. Not even my pals. It was Marcus or nothing.
+
+Benson settled down behind his desk and tapped his class-ring nervously on his blotter. He did this whenever things started to go bad for him. Poker players call stuff like this a "tell" -- something that let you know what was going on in the other guy's head. I knew Benson's tells backwards and forwards.
+
+"Marcus, I hope you realize how serious this is." 
+
+"I will just as soon as you explain what this is, sir." I always say "sir" to authority figures when I'm messing with them. It's my own tell.
+
+He shook his head at me and looked down, another tell. Any second now, he was going to start shouting at me. "Listen, kiddo! It's time you came to grips with the fact that we know about what you've been doing, and that we're not going to be lenient about it. You're going to be lucky if you're not expelled before this meeting is through. Do you want to graduate?"
+
+"Mr Benson, you still haven't explained what the problem is --"
+
+He slammed his hand down on the desk and then pointed his finger at me. "The *problem*, Mr Yallow, is that you've been engaged in criminal conspiracy to subvert this school's security system, and you have supplied security countermeasures to your fellow students. You know that we expelled Graciella Uriarte last week for using one of your devices." Uriarte had gotten a bad rap. She'd bought a radio-jammer from a head-shop near the 16th Street BART station and it had set off the countermeasures in the school hallway. Not my doing, but I felt for her.
+
+"And you think I'm involved in that?"
+
+"We have reliable intelligence indicating that you are w1n5t0n" -- again, he spelled it out, and I began to wonder if he hadn't figured out that the 1 was an I and the 5 was an S. "We know that this w1n5t0n character is responsible for the theft of last year's standardized tests." That actually hadn't been me, but it was a sweet hack, and it was kind of flattering to hear it attributed to me. "And therefore liable for several years in prison unless you cooperate with me."
+
+"You have 'reliable intelligence'? I'd like to see it."
+
+He glowered at me. "Your attitude isn't going to help you."
+
+"If there's evidence, sir, I think you should call the police and turn it over to them. It sounds like this is a very serious matter, and I wouldn't want to stand in the way of a proper investigation by the duly constituted authorities." 
+
+"You want me to call the police."
+
+"And my parents, I think. That would be for the best."
+
+We stared at each other across the desk. He'd clearly expected me to fold the second he dropped the bomb on me. I don't fold. I have a trick for staring down people like Benson. I look slightly to the left of their heads, and think about the lyrics to old Irish folk songs, the kinds with three hundred verses. It makes me look perfectly composed and unworried. 
+
+*And the wing was on the bird and the bird was on the egg and the egg was in the nest and the nest was on the leaf and the leaf was on the twig and the twig was on the branch and the branch was on the limb and the limb was in the tree and the tree was in the bog -- the bog down in the valley-oh! High-ho the rattlin' bog, the bog down in the valley-oh --*
+
+"You can return to class now," he said. "I'll call on you once the police are ready to speak to you."
+
+"Are you going to call them now?"
+
+"The procedure for calling in the police is complicated. I'd hoped that we could settle this fairly and quickly, but since you insist --"
+
+"I can wait while you call them is all," I said. "I don't mind."
+
+He tapped his ring again and I braced for the blast.
+
+"*Go!*" he yelled. "Get the hell out of my office, you miserable little --"
+
+I got out, keeping my expression neutral. He wasn't going to call the cops. If he'd had enough evidence to go to the police with, he would have called them in the first place. He hated my guts. I figured he'd heard some unverified gossip and hoped to spook me into confirming it. 
+
+I moved down the corridor lightly and sprightly, keeping my gait even and measured for the gait-recognition cameras. These had been installed only a year before, and I loved them for their sheer idiocy. Beforehand, we'd had face-recognition cameras covering nearly every public space in school, but a court ruled that was unconstitutional. So Benson and a lot of other paranoid school administrators had spent our textbook dollars on these idiot cameras that were supposed to be able to tell one person's walk from another. Yeah, right. 
+
+I got back to class and sat down again, Ms Galvez warmly welcoming me back. I unpacked the school's standard-issue machine and got back into classroom mode. The SchoolBooks were the snitchiest technology of them all, logging every keystroke, watching all the network traffic for suspicious keywords, counting every click, keeping track of every fleeting thought you put out over the net. We'd gotten them in my junior year, and it only took a couple months for the shininess to wear off. Once people figured out that these "free" laptops worked for the man -- and showed a never-ending parade of obnoxious ads to boot -- they suddenly started to feel very heavy and burdensome. 
+
+Cracking my SchoolBook had been easy. The crack was online within a month of the machine showing up, and there was nothing to it -- just download a DVD image, burn it, stick it in the SchoolBook, and boot it while holding down a bunch of different keys at the same time. The DVD did the rest, installing a whole bunch of hidden programs on the machine, programs that would stay hidden even when the Board of Ed did its daily remote integrity checks of the machines. Every now and again I had to get an update for the software to get around the Board's latest tests, but it was a small price to pay to get a little control over the box.
+
+I fired up IMParanoid, the secret instant messenger that I used when I wanted to have an off-the-record discussion right in the middle of class. Darryl was already logged in.
+
+> The game's afoot! Something big is going down with Harajuku Fun Madness, dude. You in?
+
+> No. Freaking. Way. If I get caught ditching a third time, I'm expelled. Man, you know that. We'll go after school.
+
+> You've got lunch and then study-hall, right? That's two hours. Plenty of time to run down this clue and get back before anyone misses us. I'll get the whole team out.
+
+Harajuku Fun Madness is the best game ever made. I know I already said that, but it bears repeating. It's an ARG, an Alternate Reality Game, and the story goes that a gang of Japanese fashion-teens discovered a miraculous healing gem at the temple in Harajuku, which is basically where cool Japanese teenagers invented every major subculture for the past ten years. They're being hunted by evil monks, the Yakuza (AKA the Japanese mafia), aliens, tax-inspectors, parents, and a rogue artificial intelligence. They slip the players coded messages that we have to decode and use to track down clues that lead to more coded messages and more clues.
+
+Imagine the best afternoon you've ever spent prowling the streets of a city, checking out all the weird people, funny hand-bills, street-maniacs, and funky shops. Now add a scavenger hunt to that, one that requires you to research crazy old films and songs and teen culture from around the world and across time and space. And it's a competition, with the winning team of four taking a grand prize of ten days in Tokyo, chilling on Harajuku bridge, geeking out in Akihabara, and taking home all the Astro Boy merchandise you can eat. Except that he's called "Atom Boy" in Japan.
+
+That's Harajuku Fun Madness, and once you've solved a puzzle or two, you'll never look back.
+
+> No man, just no. NO. Don't even ask.
+
+> I need you D. You're the best I've got. I swear I'll get us in and out without anyone knowing it. You know I can do that, right?
+
+> I know you can do it
+
+> So you're in?
+
+> Hell no
+
+> Come on, Darryl. You're not going to your deathbed wishing you'd spent more study periods sitting in school
+
+> I'm not going to go to my deathbed wishing I'd spent more time playing ARGs either
+
+> Yeah but don't you think you might go to your death-bed wishing you'd spent more time with Vanessa Pak?
+
+Van was part of my team. She went to a private girl's school in the East Bay, but I knew she'd ditch to come out and run the mission with me. Darryl has had a crush on her literally for years -- even before puberty endowed her with many lavish gifts. Darryl had fallen in love with her mind. Sad, really.
+
+> You suck
+
+> You're coming?
+
+He looked at me and shook his head. Then he nodded. I winked at him and set to work getting in touch with the rest of my team.
+
+#
+
+I wasn't always into ARGing. I have a dark secret: I used to be a LARPer. LARPing is Live Action Role Playing, and it's just about what it sounds like: running around in costume, talking in a funny accent, pretending to be a super-spy or a vampire or a medieval knight. It's like Capture the Flag in monster-drag, with a bit of Drama Club thrown in, and the best games were the ones we played in Scout Camps out of town in Sonoma or down on the Peninsula. Those three-day epics could get pretty hairy, with all-day hikes, epic battles with foam-and-bamboo swords, casting spells by throwing beanbags and shouting "Fireball!" and so on. Good fun, if a little goofy. Not nearly as geeky as talking about what your elf planned on doing as you sat around a table loaded with Diet Coke cans and painted miniatures, and more physically active than going into a mouse-coma in front of a massively multiplayer game at home.
+
+The thing that got me into trouble were the mini-games in the hotels. Whenever a science fiction convention came to town, some LARPer would convince them to let us run a couple of six-hour mini-games at the con, piggybacking on their rental of the space. Having a bunch of enthusiastic kids running around in costume lent color to the event, and we got to have a ball among people even more socially deviant than us.
+
+The problem with hotels is that they have a lot of non-gamers in them, too -- and not just sci-fi people. Normal people. From states that begin and end with vowels. On holidays.
+
+And sometimes those people misunderstand the nature of a game.
+
+Let's just leave it at that, OK?
+
+#
+
+Class ended in ten minutes, and that didn't leave me with much time to prepare. The first order of business were those pesky gait-recognition cameras. Like I said, they'd started out as face-recognition cameras, but those had been ruled unconstitutional. As far as I know, no court has yet determined whether these gait-cams are any more legal, but until they do, we're stuck with them.
+
+"Gait" is a fancy word for the way you walk. People are pretty good at spotting gaits -- next time you're on a camping trip, check out the bobbing of the flashlight as a distant friend approaches you. Chances are you can identify him just from the movement of the light, the characteristic way it bobs up and down that tells our monkey brains that this is a person approaching us.
+
+Gait recognition software takes pictures of your motion, tries to isolate you in the pics as a silhouette, and then tries to match the silhouette to a database to see if it knows who you are. It's a biometric identifier, like fingerprints or retina-scans, but it's got a lot more "collisions" than either of those. A biometric "collision" is when a measurement matches more than one person. Only you have your fingerprint, but you share your gait with plenty other people.
+
+Not exactly, of course. Your personal, inch-by-inch walk is yours and yours alone. The problem is your inch-by-inch walk changes based on how tired you are, what the floor is made of, whether you pulled your ankle playing basketball, and whether you've changed your shoes lately. So the system kind of fuzzes-out your profile, looking for people who walk kind of like you. 
+
+There are a lot of people who walk kind of like you. What's more, it's easy not to walk kind of like you -- just take one shoe off. Of course, you'll always walk like you-with-one-shoe-off in that case, so the cameras will eventually figure out that it's still you. Which is why I prefer to inject a little randomness into my attacks on gait-recognition: I put a handful of gravel into each shoe. Cheap and effective, and no two steps are the same. Plus you get a great reflexology foot massage in the process (I kid. Reflexology is about as scientifically useful as gait-recognition).
+
+The cameras used to set off an alert every time someone they didn't recognize stepped onto campus. 
+
+This did *not* work.
+
+The alarm went off every ten minutes. When the mailman came by. When a parent dropped in. When the grounds-people went to work fixing up the basketball court. When a student showed up wearing new shoes. 
+
+So now it just tries to keep track of who's where and when. If someone leaves by the school-gates during classes, their gait is checked to see if it kinda-sorta matches any student gait and if it does, whoop-whoop-whoop, ring the alarm!
+
+Chavez High is ringed with gravel walkways. I like to keep a couple handsful of rocks in my shoulder-bag, just in case. I silently passed Darryl ten or fifteen pointy little bastards and we both loaded our shoes.
+
+Class was about to finish up -- and I realized that I still hadn't checked the Harajuku Fun Madness site to see where the next clue was! I'd been a little hyper-focused on the escape, and hadn't bothered to figure out where we were escaping *to*.
+
+I turned to my SchoolBook and hit the keyboard. The web-browser we used was supplied with the machine. It was a locked-down spyware version of Internet Explorer, Microsoft's crashware turd that no one under the age of 40 used voluntarily.
+
+I had a copy of Firefox on the USB drive built into my watch, but that wasn't enough -- the SchoolBook ran Windows Vista4Schools, an antique operating system designed to give school administrators the illusion that they controlled the programs their students could run.
+
+But Vista4Schools is its own worst enemy. There are a lot of programs that Vista4Schools doesn't want you to be able to shut down -- keyloggers, censorware -- and these programs run in a special mode that makes them invisible to the system. You can't quit them because you can't even see they're there.
+
+Any program whose name starts with $SYS$ is invisible to the operating system. It doesn't show up on listings of the hard drive, nor in the process monitor. So my copy of Firefox was called $SYS$Firefox -- and as I launched it, it became invisible to Windows, and so invisible to the network's snoopware.
+
+Now I had an indie browser running, I needed an indie network connection. The school's network logged every click in and out of the system, which was bad news if you were planning on surfing over to the Harajuku Fun Madness site for some extra-curricular fun.
+
+The answer is something ingenious called TOR -- The Onion Router. An onion router is an Internet site that takes requests for web-pages and passes them onto other onion routers, and on to other onion routers, until one of them finally decides to fetch the page and pass it back through the layers of the onion until it reaches you. The traffic to the onion-routers is encrypted, which means that the school can't see what you're asking for, and the layers of the onion don't know who they're working for. There are millions of  nodes -- the program was set up by the US Office of Naval Research to help their people get around the censorware in countries like Syria and China, which means that it's perfectly designed for operating in the confines of an average American high school.
+
+TOR works because the school has a finite blacklist of naughty addresses we aren't allowed to visit, and the addresses of the  nodes change all the time -- no way could the school keep track of them all. Firefox and TOR together made me into the invisible man, impervious to Board of Ed snooping, free to check out the Harajuku FM site and see what was up.
+
+There it was, a new clue. Like all Harajuku Fun Madness clues, it had a physical, online and mental component. The online component was a puzzle you had to solve, one that required you to research the answers to a bunch of obscure questions. This batch included a bunch of questions on the plots in dojinshi -- those are comic books drawn by fans of manga, Japanese comics. They can be as big as the official comics that inspire them, but they're a lot weirder, with crossover story-lines and sometimes really silly songs and action. Lots of love stories, of course. Everyone loves to see their favorite toons hook up.
+
+I'd have to solve those riddles later, when I got home. They were easiest to solve with the whole team, downloading tons of dojinshi files and scouring them for answers to the puzzles.
+
+I'd just finished scrap-booking all the clues when the bell rang and we began our escape. I surreptitiously slid the gravel down the side of my short boots -- ankle-high Blundstones from Australia, great for running and climbing, and the easy slip-on/slip-off laceless design makes them convenient at the never-ending metal-detectors that are everywhere now.
+
+We also had to evade physical surveillance, of course, but that gets easier every time they add a new layer of physical snoopery -- all the bells and whistles lull our beloved faculty into a totally false sense of security. We surfed the crowd down the hallways, heading for my favorite side-exit. We were halfway along when Darryl hissed, "Crap! I forgot, I've got a library book in my bag."
+
+"You're kidding me," I said, and hauled him into the next bathroom we passed. Library books are bad news. Every one of them has an arphid -- Radio Frequency ID tag -- glued into its binding, which makes it possible for the librarians to check out the books by waving them over a reader, and lets a library shelf tell you if any of the books on it are out of place.
+
+But it also lets the school track where you are at all times. It was another of those legal loopholes: the courts wouldn't let the schools track *us* with arphids, but they could track *library books*, and use the school records to tell them who was likely to be carrying which library book.
+
+I had a little Faraday pouch in my bag -- these are little wallets lined with a mesh of copper wires that effectively block radio energy, silencing arphids. But the pouches were made for neutralizing ID cards and toll-booth transponders, not books like --
+
+"Introduction to Physics?" I groaned. The book was the size of a dictionary.
+
+&&&
+
+Chapter 2
+
+[[This chapter is dedicated to Amazon.com, the largest Internet bookseller in the world. Amazon is *amazing* -- a "store" where you can get practically any book ever published (along with practically everything else, from laptops to cheese-graters), where they've elevated recommendations to a high art, where they allow customers to directly communicate with each other, where they are constantly inventing new and better ways of connecting books with readers. Amazon has always treated me like gold -- the founder, Jeff Bezos, even posted a reader-review for my first novel! -- and I shop there like crazy (looking at my spreadsheets, it appears that I buy something from Amazon approximately every *six days*). Amazon's in the process of reinventing what it means to be a bookstore in the twenty-first century and I can't think of a better group of people to be facing down that thorny set of problems.]]
+
+[[Amazon: http://www.amazon.com/exec/obidos/ASIN/0765319853/downandoutint-20]]
+
+"I'm thinking of majoring in physics when I go to Berkeley," Darryl said. His dad taught at the University of California at Berkeley, which meant he'd get free tuition when he went. And there'd never been any question in Darryl's household about whether he'd go.
+
+"Fine, but couldn't you research it online?"
+
+"My dad said I should read it. Besides, I didn't plan on committing any crimes today."
+
+"Skipping school isn't a crime. It's an infraction. They're totally different."
+
+"What are we going to do, Marcus?"
+
+"Well, I can't hide it, so I'm going to have to nuke it." Killing arphids is a dark art. No merchant wants malicious customers going for a walk around the shop-floor and leaving behind a bunch of lobotomized merchandise that is missing its invisible bar-code, so the manufacturers have refused to implement a "kill signal" that you can radio to an arphid to get it to switch off. You can reprogram arphids with the right box, but I hate doing that to library books. It's not exactly tearing pages out of a book, but it's still bad, since a book with a reprogrammed arphid can't be shelved and can't be found. It just becomes a needle in a haystack.
+
+That left me with only one option: nuking the thing. Literally. 30 seconds in a microwave will do in pretty much every arphid on the market. And because the arphid wouldn't answer at all when D checked it back in at the library, they'd just print a fresh one for it and recode it with the book's catalog info, and it would end up clean and neat back on its shelf.
+
+All we needed was a microwave.
+
+"Give it another two minutes and the teacher's lounge will be empty," I said. 
+
+Darryl grabbed his book at headed for the door. "Forget it, no way. I'm going to class."
+
+I snagged his elbow and dragged him back. "Come on, D, easy now. It'll be fine."
+
+"The *teacher's lounge*? Maybe you weren't listening, Marcus. If I get busted *just once more*, I am *expelled.* You hear that? *Expelled.*"
+
+"You won't get caught," I said. The one place a teacher wouldn't be after this period was the lounge. "We'll go in the back way." The lounge had a little kitchenette off to one side, with its own entrance for teachers who just wanted to pop in and get a cup of joe. The microwave -- which always reeked of popcorn and spilled soup -- was right in there, on top of the miniature fridge.
+
+Darryl groaned. I thought fast. "Look, the bell's *already rung*. If you go to study hall now, you'll get a late-slip. Better not to show at all at this point. I can infiltrate and exfiltrate any room on this campus, D. You've seen me do it. I'll keep you safe, bro."
+
+He groaned again. That was one of Darryl's tells: once he starts groaning, he's ready to give in.
+
+"Let's roll," I said, and we took off.
+
+It was flawless. We skirted the classrooms, took the back stairs into the basement, and came up the front stairs right in front of the teachers' lounge. Not a sound came from the door, and I quietly turned the knob and dragged Darryl in before silently closing the door.
+
+The book just barely fit in the microwave, which was looking even less sanitary than it had the last time I'd popped in here to use it. I conscientiously wrapped it in paper towels before I set it down. "Man, teachers are *pigs*," I hissed. Darryl, white faced and tense, said nothing.
+
+The arphid died in a shower of sparks, which was really quite lovely (though not nearly as pretty as the effect you get when you nuke a frozen grape, which has to be seen to be believed).
+
+Now, to exfiltrate the campus in perfect anonymity and make our escape.
+
+Darryl opened the door and began to move out, me on his heels. A second later, he was standing on my toes, elbows jammed into my chest, as he tried to back-pedal into the closet-sized kitchen we'd just left.
+
+"Get back," he whispered urgently. "Quick -- it's Charles!"
+
+Charles Walker and I don't get along. We're in the same grade, and we've known each other as long as I've known Darryl, but that's where the resemblance ends. Charles has always been big for his age, and now that he's playing football and on the juice, he's even bigger. He's got anger management problems -- I lost a milk-tooth to him in the third grade -- and he's managed to keep from getting in trouble over them by becoming the most active snitch in school.
+
+It's a bad combination, a bully who also snitches, taking great pleasure in going to the teachers with whatever infractions he's found. Benson *loved* Charles. Charles liked to let on that he had some kind of unspecified bladder problem, which gave him a ready-made excuse to prowl the hallways at Chavez, looking for people to fink on.
+
+The last time Charles had caught some dirt on me, it had ended with me giving up LARPing. I had no intention of being caught by him again.
+
+"What's he doing?"
+
+"He's coming this way is what he's doing," Darryl said. He was shaking.
+
+"OK," I said. "OK, time for emergency countermeasures." I got my phone out. I'd planned this well in advance. Charles would never get me again. I emailed my server at home, and it got into motion.
+
+A few seconds later, Charles's phone spazzed out spectacularly. I'd had tens of thousands of simultaneous random calls and text messages sent to it, causing every chirp and ring it had to go off and keep on going off. The attack was accomplished by means of a botnet, and for that I felt bad, but it was in the service of a good cause.
+
+Botnets are where infected computers spend their afterlives. When you get a worm or a virus, your computer sends a message to a chat channel on IRC -- the Internet Relay Chat. That message tells the botmaster -- the guy who deployed the worm -- that the computers are there ready to do his bidding. Botnets are supremely powerful, since they can comprise thousands, even hundreds of thousands of computers, scattered all over the Internet, connected to juicy high-speed connections and running on fast home PCs. Those PCs normally function on behalf of their owners, but when the botmaster calls them, they rise like zombies to do his bidding.
+
+There are so many infected PCs on the Internet that the price of hiring an hour or two on a botnet has crashed. Mostly these things work for spammers as cheap, distributed spambots, filling your mailbox with come-ons for boner-pills or with new viruses that can infect you and recruit your machine to join the botnet.
+
+I'd just rented 10 seconds' time on three thousand PCs and had each of them send a text message or voice-over-IP call to Charles's phone, whose number I'd extracted from a sticky note on Benson's desk during one fateful office-visit.
+
+Needless to say, Charles's phone was not equipped to handle this. First the SMSes filled the memory on his phone, causing it to start choking on the routine operations it needed to do things like manage the ringer and log all those incoming calls' bogus return numbers (did you know that it's *really easy* to fake the return number on a caller ID? There are about fifty ways of doing it -- just google "spoof caller id").
+
+Charles stared at it dumbfounded, and jabbed at it furiously, his thick eyebrows knotting and wiggling as he struggled with the demons that had possessed his most personal of devices. The plan was working so far, but he wasn't doing what he was supposed to be doing next -- he was supposed to go find some place to sit down and try to figure out how to get his phone back. 
+Darryl shook me by the shoulder, and I pulled my eye away from the crack in the door. 
+
+"What's he doing?" Darryl whispered.
+
+"I totaled his phone, but he's just staring at it now instead of moving on." It wasn't going to be easy to reboot that thing. Once the memory was totally filled, it would have a hard time loading the code it needed to delete the bogus messages -- and there was no bulk-erase for texts on his phone, so he'd have to manually delete all of the thousands of messages. 
+
+Darryl shoved me back and stuck his eye up to the door. A moment later, his shoulders started to shake. I got scared, thinking he was panicking, but when he pulled back, I saw that he was laughing so hard that tears were streaming down his cheeks.
+
+"Galvez just totally busted him for being in the halls during class *and* for having his phone out -- you should have seen her tear into him. She was really enjoying it."
+
+We shook hands solemnly and snuck back out of the corridor, down the stairs, around the back, out the door, past the fence and out into the glorious sunlight of afternoon in the Mission. Valencia Street had never looked so good. I checked my watch and yelped. 
+
+"Let's move! The rest of the gang is meeting us at the cable-cars in twenty minutes!"
+
+#
+
+Van spotted us first. She was blending in with a group of Korean tourists, which is one of her favorite ways of camouflaging herself when she's ditching school. Ever since the truancy moblog went live, our world is full of nosy shopkeepers and pecksniffs who take it upon themselves to snap our piccies and put them on the net where they can be perused by school administrators. 
+
+She came out of the crowd and bounded toward us. Darryl has had a thing for Van since forever, and she's sweet enough to pretend she doesn't know it. She gave me a hug and then moved onto Darryl, giving him a quick sisterly kiss on the cheek that made him go red to the tops of his ears.
+
+The two of them made a funny pair: Darryl is a little on the heavy side, though he wears it well, and he's got a kind of pink complexion that goes red in the cheeks whenever he runs or gets excited. He's been able to grow a beard since we were 14, but thankfully he started shaving after a brief period known to our gang as "the Lincoln years." And he's tall. Very, very tall. Like basketball player tall. 
+
+Meanwhile, Van is half a head shorter than me, and skinny, with straight black hair that she wears in crazy, elaborate braids that she researches on the net. She's got pretty coppery skin and dark eyes, and she loves big glass rings the size of radishes, which click and clack together when she dances.
+
+"Where's Jolu?" she said. 
+
+"How are you, Van?" Darryl asked in a choked voice. He always ran a step behind the conversation when it came to Van.
+
+"I'm great, D. How's your every little thing?" Oh, she was a bad, bad person. Darryl nearly fainted.
+
+Jolu saved him from social disgrace by showing up just then, in an oversize leather baseball jacket, sharp sneakers, and a meshback cap advertising our favorite Mexican masked wrestler, El Santo Junior. Jolu is Jose Luis Torrez, the completing member of our foursome. He went to a super-strict Catholic school in the Outer Richmond, so it wasn't easy for him to get out. But he always did: no one exfiltrated like our Jolu. He liked his jacket because it hung down low -- which was pretty stylish in parts of the city -- and covered up all his Catholic school crap, which was like a bulls-eye for nosy jerks with the truancy moblog bookmarked on their phones.
+
+"Who's ready to go?" I asked, once we'd all said hello. I pulled out my phone and showed them the map I'd downloaded to it on the BART. "Near as I can work out, we wanna go up to the Nikko again, then one block past it to O'Farrell, then left up toward Van Ness. Somewhere in there we should find the wireless signal."
+
+Van made a face. "That's a nasty part of the Tenderloin." I couldn't argue with her. That part of San Francisco is one of the weird bits -- you go in through the Hilton's front entrance and it's all touristy stuff like the cable-car turnaround and family restaurants. Go through to the other side and you're in the 'Loin, where every tracked out transvestite hooker, hard-case pimp, hissing drug dealer and cracked up homeless person in town was concentrated. What they bought and sold, none of us were old enough to be a part of (though there were plenty of hookers our age plying their trade in the 'Loin.)
+
+"Look on the bright side," I said. "The only time you want to go up around there is broad daylight. None of the other players are going to go near it until tomorrow at the earliest. This is what we in the ARG business call a *monster head start.*"
+
+Jolu grinned at me. "You make it sound like a good thing," he said.
+
+"Beats eating uni," I said. 
+
+"We going to talk or we going to win?" Van said. After me, she was hands-down the most hardcore player in our group. She took winning very, very seriously.
+
+We struck out, four good friends, on our way to decode a clue, win the game -- and lose everything we cared about, forever.
+
+#
+
+The physical component of today's clue was a set of GPS coordinates -- there were coordinates for all the major cities where Harajuku Fun Madness was played -- where we'd find a WiFi access-point's signal. That signal was being deliberately jammed by another, nearby WiFi point that was hidden so that it couldn't be spotted by conventional wifinders, little key-fobs that told you when you were within range of someone's open access-point, which you could use for free.
+
+We'd have to track down the location of the "hidden" access point by measuring the strength of the "visible" one, finding the spot where it was most mysteriously weakest. There we'd find another clue -- last time it had been in the special of the day at Anzu, the swanky sushi restaurant in the Nikko hotel in the Tenderloin. The Nikko was owned by Japan Airlines, one of Harajuku Fun Madness's sponsors, and the staff had all made a big fuss over us when we finally tracked down the clue. They'd given us bowls of miso soup and made us try uni, which is sushi made from sea urchin, with the texture of very runny cheese and a smell like very runny dog-droppings. But it tasted *really* good. Or so Darryl told me. I wasn't going to eat that stuff.
+
+I picked up the WiFi signal with my phone's wifinder about three blocks up O'Farrell, just before Hyde Street, in front of a dodgy "Asian Massage Parlor" with a red blinking CLOSED sign in the window. The network's name was HarajukuFM, so we knew we had the right spot.
+
+"If it's in there, I'm not going," Darryl said. 
+
+"You all got your wifinders?" I said. 
+
+Darryl and Van had phones with built-in wifinders, while Jolu, being too cool to carry a phone bigger than his pinky finger, had a separate little directional fob.
+
+"OK, fan out and see what we see. You're looking for a sharp drop off in the signal that gets worse the more you move along it."
+
+I took a step backward and ended up standing on someone's toes. A female voice said "oof" and I spun around, worried that some crack-ho was going to stab me for breaking her heels.
+
+Instead, I found myself face to face with another kid my age. She had a shock of bright pink hair and a sharp, rodent-like face, with big sunglasses that were practically air-force goggles. She was dressed in striped tights beneath a black granny dress, with lots of little Japanese decorer toys safety pinned to it -- anime characters, old world leaders, emblems from foreign soda-pop.
+
+She held up a camera and snapped a picture of me and my crew.
+
+"Cheese," she said. "You're on candid snitch-cam."
+
+"No way," I said. "You wouldn't --"
+
+"I will," she said. "I will send this photo to truant watch in thirty seconds unless you four back off from this clue and let me and my friends here run it down. You can come back in one hour and it'll be all yours. I think that's more than fair."
+
+I looked behind her and noticed three other girls in similar garb -- one with blue hair, one with green, and one with purple. "Who are you supposed to be, the Popsicle Squad?"
+
+"We're the team that's going to kick your team's ass at Harajuku Fun Madness," she said. "And I'm the one who's *right this second* about to upload your photo and get you in *so much trouble* --"
+
+Behind me I felt Van start forward. Her all-girls school was notorious for its brawls, and I was pretty sure she was ready to knock this chick's block off.
+
+Then the world changed forever.
+
+We felt it first, that sickening lurch of the cement under your feet that every Californian knows  instinctively -- *earthquake*. My first inclination, as always, was to get away: "when in trouble or in doubt, run in circles, scream and shout." But the fact was, we were already in the safest place we could be, not in a building that could fall in on us, not out toward the middle of the road where bits of falling cornice could brain us.
+
+Earthquakes are eerily quiet -- at first, anyway -- but this wasn't quiet. This was loud, an incredible roaring sound that was louder than anything I'd ever heard before. The sound was so punishing it drove me to my knees, and I wasn't the only one. Darryl shook my arm and pointed over the buildings and we saw it then: a huge black cloud rising from the northeast, from the direction of the Bay.
+
+There was another rumble, and the cloud of smoke spread out, that spreading black shape we'd all grown up seeing in movies. Someone had just blown up something, in a big way. 
+
+There were more rumbles and more tremors. Heads appeared at windows up and down the street. We all looked at the mushroom cloud in silence. 
+
+Then the sirens started.
+
+I'd heard sirens like these before -- they test the civil defense sirens at noon on Tuesdays. But I'd only heard them go off unscheduled in old war movies and video games, the kind where someone is bombing someone else from above. Air raid sirens. The wooooooo sound made it all less real. 
+
+"Report to shelters immediately." It was like the voice of God, coming from all places at once. There were speakers on some of the electric poles, something I'd never noticed before, and they'd all switched on at once.
+
+"Report to shelters immediately." Shelters? We looked at each other in confusion. What shelters? The cloud was rising steadily, spreading out. Was it nuclear? Were we breathing in our last breaths?
+
+The girl with the pink hair grabbed her friends and they tore ass downhill, back toward the BART station and the foot of the hills. 
+
+"REPORT TO SHELTERS IMMEDIATELY." There was screaming now, and a lot of running around. Tourists -- you can always spot the tourists, they're the ones who think CALIFORNIA = WARM and spend their San Francisco holidays freezing in shorts and t-shirts -- scattered in every direction. 
+
+"We should go!" Darryl hollered in my ear, just barely audible over the shrieking of the sirens, which had been joined by traditional police sirens. A dozen SFPD cruisers screamed past us.
+
+"REPORT TO SHELTERS IMMEDIATELY."
+
+"Down to the BART station," I hollered. My friends nodded. We closed ranks and began to move quickly downhill.
+
+&&&
+
+Chapter 3
+
+[[This chapter is dedicated to Borderlands Books, San Francisco's magnificent independent science fiction bookstore. Borderlands is basically located across the street from the fictional Cesar Chavez High depicted in Little Brother, and it's not just notorious for its brilliant events, signings, book clubs and such, but also for its amazing hairless Egyptian cat, Ripley, who likes to perch like a buzzing gargoyle on the computer at the front of the store. Borderlands is about the friendliest bookstore you could ask for, filled with comfy places to sit and read, and staffed by incredibly knowledgeable clerks who know everything there is to know about science fiction. Even better, they've always been willing to take orders for my book (by net or phone) and hold them for me to sign when I drop into the store, then they ship them within the US for free!]]
+
+[[Borderland Books: http://www.borderlands-books.com/ 866 Valencia Ave, San Francisco CA USA 94110 +1 888 893 4008]]
+
+We passed a lot of people in the road on the way to the Powell Street BART. They were running or walking, white-faced and silent or shouting and panicked. Homeless people cowered in doorways and watched it all, while a tall black trans hooker shouted at two mustached young men about something.
+
+The closer we got to the BART, the worse the press of bodies became. By the time we reached the stairway down into the station, it was a mob-scene, a huge brawl of people trying to crowd their way down a narrow staircase. I had my face crushed up against someone's back, and someone else was pressed into my back. 
+
+Darryl was still beside me -- he was big enough that he was hard to shove, and Jolu was right behind him, kind of hanging on to his waist. I spied Vanessa a few yards away, trapped by more people. 
+
+"Screw you!" I heard Van yell behind me. "Pervert! Get your hands off of me!"
+
+I strained around against the crowd and saw Van looking with disgust at an older guy in a nice suit who was kind of smirking at her. She was digging in her purse and I knew what she was digging for. 
+
+"Don't mace him!" I shouted over the din. "You'll get us all too."
+
+At the mention of the word mace, the guy looked scared and kind of melted back, though the crowd kept him moving forward. Up ahead, I saw someone, a middle-aged lady in a hippie dress, falter and fall. She screamed as she went down, and I saw her thrashing to get up, but she couldn't, the crowd's pressure was too strong. As I neared her, I bent to help her up, and was nearly knocked over her. I ended up stepping on her stomach as the crowd pushed me past her, but by then I don't think she was feeling anything.
+
+I was as scared as I'd ever been. There was screaming everywhere now, and more bodies on the floor, and the press from behind was as relentless as a bulldozer. It was all I could do to keep on my feet. 
+
+We were in the open concourse where the turnstiles were. It was hardly any better here -- the enclosed space sent the voices around us echoing back in a roar that made my head ring, and the smell and feeling of all those bodies made me feel a claustrophobia I'd never known I was prone to.
+
+People were still cramming down the stairs, and more were squeezing past the turnstiles and down the escalators onto the platforms, but it was clear to me that this wasn't going to have a happy ending. 
+
+"Want to take our chances up top?" I said to Darryl.
+
+"Yes, hell yes," he said. "This is vicious."
+
+I looked to Vanessa -- there was no way she'd hear me. I managed to get my phone out and I texted her. 
+
+> We're getting out of here
+
+I saw her feel the vibe from her phone, then look down at it and then back at me and nod vigorously. Darryl, meanwhile, had clued Jolu in.
+
+"*What's the plan?* Darryl shouted in my ear.
+
+"We're going to have to go back!" I shouted back, pointing at the remorseless crush of bodies.
+
+"It's impossible!" he said.
+
+"It's just going to get more impossible the longer we wait!"
+
+He shrugged. Van worked her way over to me and grabbed hold of my wrist. I took Darryl and Darryl took Jolu by the other hand and we pushed out. 
+
+It wasn't easy. We moved about three inches a minute at first, then slowed down even more when we reached the stairway. The people we passed were none too happy about us shoving them out of the way, either. A couple people swore at us and there was a guy who looked like he'd have punched me if he'd been able to get his arms loose. We passed three more crushed people beneath us, but there was no way I could have helped them. By that point, I wasn't even thinking of helping anyone. All I could think of was finding the spaces in front of us to move into, of Darryl's mighty straining on my wrist, of my death-grip on Van behind me. 
+
+We popped free like Champagne corks an eternity later, blinking in the grey smoky light. The air raid sirens were still blaring, and the sound of emergency vehicles' sirens as they tore down Market Street was even louder. There was almost no one on the streets anymore -- just the people trying hopelessly to get underground. A lot of them were crying. I spotted a bunch of empty benches -- usually staked out by skanky winos -- and pointed toward them. 
+
+We moved for them, the sirens and the smoke making us duck and hunch our shoulders. We got as far as the benches before Darryl fell forward.
+
+We all yelled and Vanessa grabbed him and turned him over. The side of his shirt was stained red, and the stain was spreading. She tugged his shirt up and revealed a long, deep cut in his pudgy side. 
+
+"Someone freaking *stabbed* him in the crowd," Jolu said, his hands clenching into fists. "Christ, that's vicious." 
+
+Darryl groaned and looked at us, then down at his side, then he groaned and his head went back again. 
+
+Vanessa took off her jean jacket and then pulled off the cotton hoodie she was wearing underneath it. She wadded it up and pressed it to Darryl's side. "Take his head," she said to me. "Keep it elevated." To Jolu she said, "Get his feet up -- roll up your coat or something." Jolu moved quickly. Vanessa's mother is a nurse and she'd had first aid training every summer at camp. She loved to watch people in movies get their first aid wrong and make fun of them. I was so glad to have her with us.
+
+We sat there for a long time, holding the hoodie to Darryl's side. He kept insisting that he was fine and that we should let him up, and Van kept telling him to shut up and lie still before she kicked his ass.
+
+"What about calling 911?" Jolu said. 
+
+I felt like an idiot. I whipped my phone out and punched 911. The sound I got wasn't even a busy signal -- it was like a whimper of pain from the phone system. You don't get sounds like that unless there's three million people all dialing the same number at once. Who needs botnets when you've got terrorists?
+
+"What about Wikipedia?" Jolu said.
+
+"No phone, no data," I said.
+
+"What about them?" Darryl said, and pointed at the street. I looked where he was pointing, thinking I'd see a cop or an paramedic, but there was no one there.
+
+"It's OK buddy, you just rest," I said.
+
+"No, you idiot, what about *them*, the cops in the cars? There!"
+
+He was right. Every five seconds, a cop car, an ambulance or a firetruck zoomed past. They could get us some help. I was such an idiot.
+
+"Come on, then," I said, "let's get you where they can see you and flag one down."
+
+Vanessa didn't like it, but I figured a cop wasn't going to stop for a kid waving his hat in the street, not that day. They just might stop if they saw Darryl bleeding there, though. I argued briefly with her and Darryl settled it by lurching to his feet and dragging himself down toward Market Street.
+
+The first vehicle that screamed past -- an ambulance -- didn't even slow down. Neither did the cop car that went past, nor the firetruck, nor the next three cop-cars. Darryl wasn't in good shape -- he was white-faced and panting. Van's sweater was soaked in blood.
+
+I was sick of cars driving right past me. The next time a car appeared down Market Street, I stepped right out into the road, waving my arms over my head, shouting "*STOP*." The car slewed to a stop and only then did I notice that it wasn't a cop car, ambulance or fire-engine.
+
+It was a military-looking Jeep, like an armored Hummer, only it didn't have any military insignia on it. The car skidded to a stop just in front of me, and I jumped back and lost my balance and ended up on the road. I felt the doors open near me, and then saw a confusion of booted feet moving close by. I looked up and saw a bunch of military-looking guys in coveralls, holding big, bulky rifles and wearing hooded gas masks with tinted face-plates.
+
+I barely had time to register them before those rifles were pointed at me. I'd never looked down the barrel of a gun before, but everything you've heard about the experience is true. You freeze where you are, time stops, and your heart thunders in your ears. I opened my mouth, then shut it, then, very slowly, I held my hands up in front of me.
+
+The faceless, eyeless armed man above me kept his gun very level. I didn't even breathe. Van was screaming something and Jolu was shouting and I looked at them for a second and that was when someone put a coarse sack over my head and cinched it tight around my windpipe, so quick and so fiercely I barely had time to gasp before it was locked on me. I was pushed roughly but dispassionately onto my stomach and something went twice around my wrists and then tightened up as well, feeling like baling wire and biting cruelly. I cried out and my own voice was muffled by the hood. 
+
+I was in total darkness now and I strained my ears to hear what was going on with my friends. I heard them shouting through the muffling canvas of the bag, and then I was being impersonally hauled to my feet by my wrists, my arms wrenched up behind my back, my shoulders screaming. 
+
+I stumbled some, then a hand pushed my head down and I was inside the Hummer. More bodies were roughly shoved in beside me.
+
+"Guys?" I shouted, and earned a hard thump on my head for my trouble. I heard Jolu respond, then felt the thump he was dealt, too. My head rang like a gong.
+
+"Hey," I said to the soldiers. "Hey, listen! We're just high school students. I wanted to flag you down because my friend was bleeding. Someone stabbed him." I had no idea how much of this was making it through the muffling bag. I kept talking. "Listen -- this is some kind of misunderstanding. We've got to get my friend to a hospital --"
+
+Someone went upside my head again. It felt like they used a baton or something -- it was harder than anyone had ever hit me in the head before. My eyes swam and watered and I literally couldn't breathe through the pain. A moment later, I caught my breath, but I didn't say anything. I'd learned my lesson.
+
+Who were these clowns? They weren't wearing insignia. Maybe they were terrorists! I'd never really believed in terrorists before -- I mean, I knew that in the abstract there were terrorists somewhere in the world, but they didn't really represent any risk to me. There were millions of ways that the world could kill me -- starting with getting run down by a drunk burning his way down Valencia -- that were infinitely more likely and immediate than terrorists. Terrorists killed a lot fewer people than bathroom falls and accidental electrocutions. Worrying about them always struck me as about as useful as worrying about getting hit by lightning.
+
+Sitting in the back of that Hummer, my head in a hood, my hands lashed behind my back, lurching back and forth while the bruises swelled up on my head, terrorism suddenly felt a lot riskier.
+
+The car rocked back and forth and tipped uphill. I gathered we were headed over Nob Hill, and from the angle, it seemed we were taking one of the steeper routes -- I guessed Powell Street. 
+
+Now we were descending just as steeply. If my mental map was right, we were heading down to Fisherman's Wharf. You could get on a boat there, get away. That fit with the terrorism hypothesis. Why the hell would terrorists kidnap a bunch of high school students?
+
+We rocked to a stop still on a downslope. The engine died and then the doors swung open. Someone dragged me by my arms out onto the road, then shoved me, stumbling, down a paved road. A few seconds later, I tripped over a steel staircase, bashing my shins. The hands behind me gave me another shove. I went up the stairs cautiously, not able to use my hands. I got up the third step and reached for the fourth, but it wasn't there. I nearly fell again, but new hands grabbed me from in front and dragged me down a steel floor and then forced me to my knees and locked my hands to something behind me.
+
+More movement, and the sense of bodies being shackled in alongside of me. Groans and muffled sounds. Laughter. Then a long, timeless eternity in the muffled gloom, breathing my own breath, hearing my own breath in my ears.
+
+#
+
+I actually managed a kind of sleep there, kneeling with the circulation cut off to my legs, my head in canvas twilight. My body had squirted a year's supply of adrenalin into my bloodstream in the space of 30 minutes, and while that stuff can give you the strength to lift cars off your loved ones and leap over tall buildings, the payback's always a bitch.
+
+I woke up to someone pulling the hood off my head. They were neither rough nor careful -- just...impersonal. Like someone at McDonald's putting together burgers.
+
+The light in the room was so bright I had to squeeze my eyes shut, but slowly I was able to open them to slits, then cracks, then all the way and look around. 
+
+We were all in the back of a truck, a big 18-wheeler. I could see the wheel-wells at regular intervals down the length. But the back of this truck had been turned into some kind of mobile command-post/jail. Steel desks lined the walls with banks of slick flat-panel displays climbing above them on articulated arms that let them be repositioned in a halo around the operators. Each desk had a gorgeous office-chair in front of it, festooned with user-interface knobs for adjusting every millimeter of the sitting surface, as well as height, pitch and yaw.
+
+Then there was the jail part -- at the front of the truck, furthest away from the doors, there were steel rails bolted into the sides of the vehicle, and attached to these steel rails were the prisoners.
+
+I spotted Van and Jolu right away. Darryl might have been in the remaining dozen shackled up back here, but it was impossible to say -- many of them were slumped over and blocking my view. It stank of sweat and fear back there. 
+
+Vanessa looked at me and bit her lip. She was scared. So was I. So was Jolu, his eyes rolling crazily in their sockets, the whites showing. I was scared. What's more, I had to piss like a *race-horse.*
+
+I looked around for our captors. I'd avoided looking at them up until now, the same way you don't look into the dark of a closet where your mind has conjured up a boogey-man. You don't want to know if you're right. 
+
+But I had to get a better look at these jerks who'd kidnapped us. If they were terrorists, I wanted to know. I didn't know what a terrorist looked like, though TV shows had done their best to convince me that they were brown Arabs with big beards and knit caps and loose cotton dresses that hung down to their ankles.
+
+Not so our captors. They could have been half-time-show cheerleaders on the Super Bowl. They looked *American* in a way I couldn't exactly define. Good jaw-lines, short, neat haircuts that weren't quite military. They came in white and brown, male and female, and smiled freely at one another as they sat down at the other end of the truck, joking and drinking coffees out of go-cups. These weren't Ay-rabs from Afghanistan: they looked like tourists from Nebraska.
+
+I stared at one, a young white woman with brown hair who barely looked older than me, kind of cute in a scary office-power-suit way. If you stare at someone long enough, they'll eventually look back at you. She did, and her face slammed into a totally different configuration, dispassionate, even robotic. The smile vanished in an instant.
+
+"Hey," I said. "Look, I don't understand what's going on here, but I really need to take a leak, you know?"
+
+She looked right through me as if she hadn't heard.
+
+"I'm serious, if I don't get to a can soon, I'm going to have an ugly accident. It's going to get pretty smelly back here, you know?"
+
+She turned to her colleagues, a little huddle of three of them, and they held a low conversation I couldn't hear over the fans from the computers.
+
+She turned back to me. "Hold it for another ten minutes, then you'll each get a piss-call."
+
+"I don't think I've got another ten minutes in me," I said, letting a little more urgency than I was really feeling creep into my voice. "Seriously, lady, it's now or never."
+
+She shook her head and looked at me like I was some kind of pathetic loser. She and her friends conferred some more, then another one came forward. He was older, in his early thirties, and pretty big across the shoulders, like he worked out. He looked like he was Chinese or Korean -- even Van can't tell the difference sometimes -- but with that bearing that said *American* in a way I couldn't put my finger on.
+
+He pulled his sports-coat aside to let me see the hardware strapped there: I recognized a pistol, a tazer and a can of either mace or pepper-spray before he let it fall again. 
+
+"No trouble," he said.
+
+"None," I agreed. 
+
+He touched something at his belt and the shackles behind me let go, my arms dropping suddenly behind me. It was like he was wearing Batman's utility belt -- wireless remotes for shackles! I guessed it made sense, though: you wouldn't want to lean over your prisoners with all that deadly hardware at their eye-level -- they might grab your gun with their teeth and pull the trigger with their tongues or something.
+
+My hands were still lashed together behind me by the plastic strapping, and now that I wasn't supported by the shackles, I found that my legs had turned into lumps of cork while I was stuck in one position. Long story short, I basically fell onto my face and kicked my legs weakly as they went pins-and-needles, trying to get them under me so I could rock up to my feet.
+
+The guy jerked me to my feet and I clown-walked to the very back of the truck, to a little boxed-in porta-john there. I tried to spot Darryl on the way back, but he could have been any of the five or six slumped people. Or none of them.
+
+"In you go," the guy said. 
+
+I jerked my wrists. "Take these off, please?" My fingers felt like purple sausages from the hours of bondage in the plastic cuffs.
+
+The guy didn't move.
+
+"Look," I said, trying not to sound sarcastic or angry (it wasn't easy). "Look. You either cut my wrists free or you're going to have to aim for me. A toilet visit is not a hands-free experience." Someone in the truck sniggered. The guy didn't like me, I could tell from the way his jaw muscles ground around. Man, these people were wired tight.
+
+He reached down to his belt and came up with a very nice set of multi-pliers. He flicked out a wicked-looking knife and sliced through the plastic cuffs and my hands were my own again.
+
+"Thanks," I said.
+
+He shoved me into the bathroom. My hands were useless, like lumps of clay on the ends of my wrists. As I wiggled my fingers limply, they tingled, then the tingling turned to a burning feeling that almost made me cry out. I put the seat down, dropped my pants and sat down. I didn't trust myself to stay on my feet.
+
+As my bladder cut loose, so did my eyes. I wept, crying silently and rocking back and forth while the tears and snot ran down my face. It was all I could do to keep from sobbing -- I covered my mouth and held the sounds in. I didn't want to give them the satisfaction. 
+
+Finally, I was peed out and cried out and the guy was pounding on the door. I cleaned my face as best as I could with wads of toilet paper, stuck it all down the john and flushed, then looked around for a sink but only found a pump-bottle of heavy-duty hand-sanitizer covered in small-print lists of the bio-agents it worked on. I rubbed some into my hands and stepped out of the john.
+
+"What were you doing in there?" the guy said.
+
+"Using the facilities," I said. He turned me around and grabbed my hands and I felt a new pair of plastic cuffs go around them. My wrists had swollen since the last pair had come off and the new ones bit cruelly into my tender skin, but I refused to give him the satisfaction of crying out.
+
+He shackled me back to my spot and grabbed the next person down, who, I saw now, was Jolu, his face puffy and an ugly bruise on his cheek. 
+
+"Are you OK?" I asked him, and my friend with the utility belt abruptly put his hand on my forehead and shoved hard, bouncing the back of my head off the truck's metal wall with a sound like a clock striking one. "No talking," he said as I struggled to refocus my eyes. 
+
+I didn't like these people. I decided right then that they would pay a price for all this.
+
+One by one, all the prisoners went to the can, and came back, and when they were done, my guard went back to his friends and had another cup of coffee -- they were drinking out of a big cardboard urn of Starbucks, I saw -- and they had an indistinct conversation that involved a fair bit of laughter.
+
+Then the door at the back of the truck opened and there was fresh air, not smoky the way it had been before, but tinged with ozone. In the slice of outdoors I saw before the door closed, I caught that it was dark out, and raining, with one of those San Francisco drizzles that's part mist.
+
+The man who came in was wearing a military uniform. A US military uniform. He saluted the people in the truck and they saluted him back and that's when I knew that I wasn't a prisoner of some terrorists -- I was a prisoner of the United States of America.
+
+#
+
+They set up a little screen at the end of the truck and then came for us one at a time, unshackling us and leading us to the back of the truck. As close as I could work it -- counting seconds off in my head, one hippopotami, two hippopotami -- the interviews lasted about seven minutes each. My head throbbed with dehydration and caffeine withdrawal.
+
+I was third, brought back by the woman with the severe haircut. Up close, she looked tired, with bags under her eyes and grim lines at the corners of her mouth.
+
+"Thanks," I said, automatically, as she unlocked me with a remote and then dragged me to my feet. I hated myself for the automatic politeness, but it had been drilled into me.
+
+She didn't twitch a muscle. I went ahead of her to the back of the truck and behind the screen. There was a single folding chair and I sat in it. Two of them -- Severe Haircut woman and utility belt man -- looked at me from their ergonomic super-chairs.
+
+They had a little table between them with the contents of my wallet and backpack spread out on it.
+
+"Hello, Marcus," Severe Haircut woman said. "We have some questions for you."
+
+"Am I under arrest?" I asked. This wasn't an idle question. If you're not under arrest, there are limits on what the cops can and can't do to you. For starters, they can't hold you forever without arresting you, giving you a phone call, and letting you talk to a lawyer. And hoo-boy, was I ever going to talk to a lawyer.
+
+"What's this for?" she said, holding up my phone. The screen was showing the error message you got if you kept trying to get into its data without giving the right password. It was a bit of a rude message -- an animated hand giving a certain universally recognized gesture -- because I liked to customize my gear.
+
+"Am I under arrest?" I repeated. They can't make you answer any questions if you're not under arrest, and when you ask if you're under arrest, they have to answer you. It's the rules.
+
+"You're being detained by the Department of Homeland Security," the woman snapped.
+
+"Am I under arrest?"
+
+"You're going to be more cooperative, Marcus, starting right now." She didn't say, "or else," but it was implied.
+
+"I would like to contact an attorney," I said. "I would like to know what I've been charged with. I would like to see some form of identification from both of you."
+
+The two agents exchanged looks.
+
+"I think you should really reconsider your approach to this situation," Severe Haircut woman said. "I think you should do that right now. We found a number of suspicious devices on your person. We found you and your confederates near the site of the worst terrorist attack this country has ever seen. Put those two facts together and things don't look very good for you, Marcus. You can cooperate, or you can be very, very sorry. Now, what is this for?"
+
+"You think I'm a terrorist? I'm seventeen years old!"
+
+"Just the right age -- Al Qaeda loves recruiting impressionable, idealistic kids. We googled you, you know. You've posted a lot of very ugly stuff on the public Internet."
+
+"I would like to speak to an attorney," I said.
+
+Severe haircut lady looked at me like I was a bug. "You're under the mistaken impression that you've been picked up by the police for a crime. You need to get past that. You are being detained as a potential enemy combatant by the government of the United States. If I were you, I'd be thinking very hard about how to convince us that you are not an enemy combatant. Very hard. Because there are dark holes that enemy combatants can disappear into, very dark deep holes, holes where you can just vanish. Forever. Are you listening to me young man? I want you to unlock this phone and then decrypt the files in its memory. I want you to account for yourself: why were you out on the street? What do you know about the attack on this city?"
+
+"I'm not going to unlock my phone for you," I said, indignant. My phone's memory had all kinds of private stuff on it: photos, emails, little hacks and mods I'd installed. "That's private stuff."
+
+"What have you got to hide?"
+
+"I've got the right to my privacy," I said. "And I want to speak to an attorney."
+
+"This is your last chance, kid. Honest people don't have anything to hide."
+
+"I want to speak to an attorney." My parents would pay for it. All the FAQs on getting arrested were clear on this point. Just keep asking to see an attorney, no matter what they say or do. There's no good that comes of talking to the cops without your lawyer present. These two said they weren't cops, but if this wasn't an arrest, what was it?
+
+In hindsight, maybe I should have unlocked my phone for them.
+
+&&&
+
+Chapter 4
+
+[[This chapter is dedicated to Barnes and Noble, a US national chain of bookstores. As America's mom-and-pop bookstores were vanishing, Barnes and Noble started to build these gigantic temples to reading all across the land. Stocking tens of thousands of titles (the mall bookstores and grocery-store spinner racks had stocked a small fraction of that) and keeping long hours that were convenient to families, working people and others potential readers, the B&N stores kept the careers of many writers afloat, stocking titles that smaller stores couldn't possibly afford to keep on their limited shelves. B&N has always had strong community outreach programs, and I've done some of my best-attended, best-organized signings at B&N stores, including the great events at the (sadly departed) B&N in Union Square, New York, where the mega-signing after the Nebula Awards took place, and the B&N in Chicago that hosted the event after the Nebs a few years later. Best of all is that B&N's "geeky" buyers really Get It when it comes to science fiction, comics and manga, games and similar titles. They're passionate and knowledgeable about the field and it shows in the excellent selection on display at the stores.]]
+
+[[Barnes and Noble, nationwide: http://search.barnesandnoble.com/Little-Brother/Cory-Doctorow/e/9780765319852/?itm=6]]
+
+They re-shackled and re-hooded me and left me there. A long time later, the truck started to move, rolling downhill, and then I was hauled back to my feet. I immediately fell over. My legs were so asleep they felt like blocks of ice, all except my knees, which were swollen and tender from all the hours of kneeling.
+
+Hands grabbed my shoulders and feet and I was picked up like a sack of potatoes. There were indistinct voices around me. Someone crying. Someone cursing. 
+
+I was carried a short distance, then set down and re-shackled to another railing. My knees wouldn't support me anymore and I pitched forward, ending up twisted on the ground like a pretzel, straining against the chains holding my wrists. 
+
+Then we were moving again, and this time, it wasn't like driving in a truck. The floor beneath me rocked gently and vibrated with heavy diesel engines and I realized I was on a ship! My stomach turned to ice. I was being taken off America's shores to somewhere *else*, and who the hell knew where that was? I'd been scared before, but this thought *terrified* me, left me paralyzed and wordless with fear. I realized that I might never see my parents again and I actually tasted a little vomit burn up my throat. The bag over my head closed in on me and I could barely breathe, something that was compounded by the weird position I was twisted into.
+
+But mercifully we weren't on the water for very long. It felt like an hour, but I know now that it was a mere fifteen minutes, and then I felt us docking, felt footsteps on the decking around me and felt other prisoners being unshackled and carried or led away. When they came for me, I tried to stand again, but couldn't, and they carried me again, impersonally, roughly.
+
+When they took the hood off again, I was in a cell.
+
+The cell was old and crumbled, and smelled of sea air. There was one window high up, and rusted bars guarded it. It was still dark outside. There was a blanket on the floor and a little metal toilet without a seat, set into the wall. The guard who took off my hood grinned at me and closed the solid steel door behind him.
+
+I gently massaged my legs, hissing as the blood came back into them and into my hands. Eventually I was able to stand, and then to pace. I heard other people talking, crying, shouting. I did some shouting too: "Jolu! Darryl! Vanessa!" Other voices on the cell-block took up the cry, shouting out names, too, shouting out obscenities. The nearest voices sounded like drunks losing their minds on a street-corner. Maybe I sounded like that too.
+
+Guards shouted at us to be quiet and that just made everyone yell louder. Eventually we were all howling, screaming our heads off, screaming our throats raw. Why not? What did we have to lose? 
+
+#
+
+The next time they came to question me, I was filthy and tired, thirsty and hungry. Severe haircut lady was in the new questioning party, as were three big guys who moved me around like a cut of meat. One was black, the other two were white, though one might have been hispanic. They all carried guns. It was like a Benneton's ad crossed with a game of Counter-Strike. 
+
+They'd taken me from my cell and chained my wrists and ankles together. I paid attention to my surroundings as we went. I heard water outside and thought that maybe we were on Alcatraz -- it was a prison, after all, even if it had been a tourist attraction for generations, the place where you went to see where Al Capone and his gangster contemporaries did their time. But I'd been to Alcatraz on a school trip. It was old and rusted, medieval. This place felt like it dated back to World War Two, not colonial times.
+
+There were bar-codes laser-printed on stickers and placed on each of the cell-doors, and numbers, but other than that, there was no way to tell who or what might be behind them.
+
+The interrogation room was modern, with fluorescent lights, ergonomic chairs -- not for me, though, I got a folding plastic garden-chair -- and a big wooden board-room table. A mirror lined one wall, just like in the cop shows, and I figured someone or other must be watching from behind it. Severe haircut lady and her friends helped themselves to coffees from an urn on a side-table (I could have torn her throat out with my teeth and taken her coffee just then), and then set a styrofoam cup of water down next to me -- without unlocking my wrists from behind my back, so I couldn't reach it. Hardy har har.
+
+"Hello, Marcus," Severe Haircut woman said. "How's your 'tude doing today?"
+
+I didn't say anything.
+
+"This isn't as bad as it gets you know," she said. "This is as *good* as it gets from now on. Even once you tell us what we want to know, even if that convinces us that you were just in the wrong place at the wrong time, you're a marked man now. We'll be watching you everywhere you go and everything you do. You've acted like you've got something to hide, and we don't like that."
+
+It's pathetic, but all my brain could think about was that phrase, "convince us that you were in the wrong place at the wrong time." This was the worst thing that had ever happened to me. I had never, ever felt this bad or this scared before. Those words, "wrong place at the wrong time," those six words, they were like a lifeline dangling before me as I thrashed to stay on the surface.
+
+"Hello, Marcus?" she snapped her fingers in front of my face. "Over here, Marcus." There was a little smile on her face and I hated myself for letting her see my fear. "Marcus, it can be a lot worse than this. This isn't the worst place we can put you, not by a damned sight." She reached down below the table and came out with a briefcase, which she snapped open. From it, she withdrew my phone, my arphid sniper/cloner, my wifinder, and my memory keys. She set them down on the table one after the other.
+
+"Here's what we want from you. You unlock the phone for us today. If you do that, you'll get outdoor and bathing privileges. You'll get a shower and you'll be allowed to walk around in the exercise yard. Tomorrow, we'll bring you back and ask you to decrypt the data on these memory sticks. Do that, and you'll get to eat in the mess hall. The day after, we're going to want your email passwords, and that will get you library privileges."
+
+The word "no" was on my lips, like a burp trying to come up, but it wouldn't come. "Why?" is what came out instead.
+
+"We want to be sure that you're what you seem to be. This is about your security, Marcus. Say you're innocent. You might be, though why an innocent man would act like he's got so much to hide is beyond me. But say you are: you could have been on that bridge when it blew. Your parents could have been. Your friends. Don't you want us to catch the people who attacked your home?"
+
+It's funny, but when she was talking about my getting "privileges" it scared me into submission. I felt like I'd done *something* to end up where I was, like maybe it was partially my fault, like I could do something to change it.
+
+But as soon as she switched to this BS about "safety" and "security," my spine came back. "Lady," I said, "you're talking about attacking my home, but as far as I can tell, you're the only one who's attacked me lately. I thought I lived in a country with a constitution. I thought I lived in a country where I had *rights*. You're talking about defending my freedom by tearing up the Bill of Rights."
+
+A flicker of annoyance passed over her face, then went away. "So melodramatic, Marcus. No one's attacked you. You've been detained by your country's government while we seek details on the worst terrorist attack ever perpetrated on our nation's soil. You have it within your power to help us fight this war on our nation's enemies. You want to preserve the Bill of Rights? Help us stop bad people from blowing up your city. Now, you have exactly thirty seconds to unlock that phone before I send you back to your cell. We have lots of other people to interview today."
+
+She looked at her watch. I rattled my wrists, rattled the chains that kept me from reaching around and unlocking the phone. Yes, I was going to do it. She'd told me what my path was to freedom -- to the world, to my parents -- and that had given me hope. Now she'd threatened to send me away, to take me off that path, and my hope had crashed and all I could think of was how to get back on it.
+
+So I rattled my wrists, wanting to get to my phone and unlock it for her, and she just looked at me coldly, checking her watch.
+
+"The password," I said, finally understanding what she wanted of me. She wanted me to say it out loud, here, where she could record it, where her pals could hear it. She didn't want me to just unlock the phone. She wanted me to submit to her. To put her in charge of me. To give up every secret, all my privacy. "The password," I said again, and then I told her the password. God help me, I submitted to her will.
+
+She smiled a little prim smile, which had to be her ice-queen equivalent of a touchdown dance, and the guards led me away. As the door closed, I saw her bend down over the phone and key the password in.
+
+I wish I could say that I'd anticipated this possibility in advance and created a fake password that unlocked a completely innocuous partition on my phone, but I wasn't nearly that paranoid/clever. 
+
+You might be wondering at this point what dark secrets I had locked away on my phone and memory sticks and email. I'm just a kid, after all. 
+
+The truth is that I had everything to hide, and nothing. Between my phone and my memory sticks, you could get a pretty good idea of who my friends were, what I thought of them, all the goofy things we'd done. You could read the transcripts of the electronic arguments we'd carried out and the electronic reconciliations we'd arrived at.
+
+You see, I don't delete stuff. Why would I? Storage is cheap, and you never know when you're going to want to go back to that stuff. Especially the stupid stuff. You know that feeling you get sometimes where you're sitting on the subway and there's no one to talk to and you suddenly remember some bitter fight you had, some terrible thing you said? Well, it's usually never as bad as you remember. Being able to go back and see it again is a great way to remind yourself that you're not as horrible a person as you think you are. Darryl and I have gotten over more fights that way than I can count.
+
+And even that's not it. I know my phone is private. I know my memory sticks are private. That's because of cryptography -- message scrambling. The math behind crypto is good and solid, and you and me get access to the same crypto that banks and the National Security Agency use. There's only one kind of crypto that anyone uses: crypto that's public, open and can be deployed by anyone. That's how you know it works.
+
+There's something really liberating about having some corner of your life that's *yours*, that no one gets to see except you. It's a little like nudity or taking a dump. Everyone gets naked every once in a while. Everyone has to squat on the toilet. There's nothing shameful, deviant or weird about either of them. But what if I decreed that from now on, every time you went to evacuate some solid waste, you'd have to do it in a glass room perched in the middle of Times Square, and you'd be buck naked?
+
+Even if you've got nothing wrong or weird with your body -- and how many of us can say that? -- you'd have to be pretty strange to like that idea. Most of us would run screaming. Most of us would hold it in until we exploded.
+
+It's not about doing something shameful. It's about doing something *private*. It's about your life belonging to you.
+
+They were taking that from me, piece by piece. As I walked back to my cell, that feeling of deserving it came back to me. I'd broken a lot of rules all my life and I'd gotten away with it, by and large. Maybe this was justice. Maybe this was my past coming back to me. After all, I had been where I was because I'd snuck out of school.
+
+I got my shower. I got to walk around the yard. There was a patch of sky overhead, and it smelled like the Bay Area, but beyond that, I had no clue where I was being held. No other prisoners were visible during my exercise period, and I got pretty bored with walking in circles. I strained my ears for any sound that might help me understand what this place was, but all I heard was the occasional vehicle, some distant conversations, a plane landing somewhere nearby.
+
+They brought me back to my cell and fed me, a half a pepperoni pie from Goat Hill Pizza, which I knew well, up on Potrero Hill. The carton with its familiar graphic and 415 phone number was a reminder that only a day before, I'd been a free man in a free country and that now I was a prisoner. I worried constantly about Darryl and fretted about my other friends. Maybe they'd been more cooperative and had been released. Maybe they'd told my parents and they were frantically calling around.
+
+Maybe not.
+
+The cell was fantastically spare, empty as my soul. I fantasized that the wall opposite my bunk was a screen, that I could be hacking right now, opening the cell-door. I fantasized about my workbench and the projects there -- the old cans I was turning into a ghetto surround-sound rig, the aerial photography kite-cam I was building, my homebrew laptop.
+
+I wanted to get out of there. I wanted to go home and have my friends and my school and my parents and my life back. I wanted to be able to go where I wanted to go, not be stuck pacing and pacing and pacing.
+
+#
+
+They took my passwords for my USB keys next. Those held some interesting messages I'd downloaded from one online discussion group or another, some chat transcripts, things where people had helped me out with some of the knowledge I needed to do the things I did. There was nothing on there you couldn't find with Google, of course, but I didn't think that would count in my favor.
+
+I got exercise again that afternoon, and this time there were others in the yard when I got there, four other guys and two women, of all ages and racial backgrounds. I guess lots of people were doing things to earn their "privileges."
+
+They gave me half an hour, and I tried to make conversation with the most normal-seeming of the other prisoners, a black guy about my age with a short afro. But when I introduced myself and stuck my hand out, he cut his eyes toward the cameras mounted ominously in the corners of the yard and kept walking without ever changing his facial expression.
+
+But then, just before they called my name and brought me back into the building, the door opened and out came -- Vanessa! I'd never been more glad to see a friendly face. She looked tired and grumpy, but not hurt, and when she saw me, she shouted my name and ran to me. We hugged each other hard and I realized I was shaking. Then I realized she was shaking, too.
+
+"Are you OK?" she said, holding me at arms' length.
+
+"I'm OK," I said. "They told me they'd let me go if I gave them my passwords."
+
+"They keep asking me questions about you and Darryl."
+
+There was a voice blaring over the loudspeaker, shouting at us to stop talking, to walk, but we ignored it.
+
+"Answer them," I said, instantly. "Anything they ask, answer them. If it'll get you out."
+
+"How are Darryl and Jolu?"
+
+"I haven't seen them."
+
+The door banged open and four big guards boiled out. Two took me and two took Vanessa. They forced me to the ground and turned my head away from Vanessa, though I heard her getting the same treatment. Plastic cuffs went around my wrists and then I was yanked to my feet and brought back to my cell.
+
+No dinner came that night. No breakfast came the next morning. No one came and brought me to the interrogation room to extract more of my secrets. The plastic cuffs didn't come off, and my shoulders burned, then ached, then went numb, then burned again. I lost all feeling in my hands.
+
+I had to pee. I couldn't undo my pants. I really, really had to pee.
+
+I pissed myself.
+
+They came for me after that, once the hot piss had cooled and gone clammy, making my already filthy jeans stick to my legs. They came for me and walked me down the long hall lined with doors, each door with its own bar code, each bar code a prisoner like me. They walked me down the corridor and brought me to the interrogation room and it was like a different planet when I entered there, a world where things were normal, where everything didn't reek of urine. I felt so dirty and ashamed, and all those feelings of deserving what I got came back to me.
+
+Severe haircut lady was already sitting. She was perfect: coifed and with just a little makeup. I smelled her hair stuff. She wrinkled her nose at me. I felt the shame rise in me.
+
+"Well, you've been a very naughty boy, haven't you? Aren't you a filthy thing?"
+
+Shame. I looked down at the table. I couldn't bear to look up. I wanted to tell her my email password and get gone. 
+
+"What did you and your friend talk about in the yard?"
+
+I barked a laugh at the table. "I told her to answer your questions. I told her to cooperate."
+
+"So do you give the orders?"
+
+I felt the blood sing in my ears. "Oh come on," I said. "We play a *game* together, it's called Harajuku Fun Madness. I'm the *team captain*. We're not terrorists, we're high school students. I don't give her orders. I told her that we needed to be *honest* with you so that we could clear up any suspicion and get out of here."
+
+She didn't say anything for a moment.
+
+"How is Darryl?" I said.
+
+"Who?"
+
+"Darryl. You picked us up together. My friend. Someone had stabbed him in the Powell Street BART. That's why we were up on the surface. To get him help."
+
+"I'm sure he's fine, then," she said.
+
+My stomach knotted and I almost threw up. "You don't *know*? You haven't got him here?"
+
+"Who we have here and who we don't have here is not something we're going to discuss with you, ever. That's not something you're going to know. Marcus, you've seen what happens when you don't cooperate with us. You've seen what happens when you disobey our orders. You've been a little cooperative, and it's gotten you almost to the point where you might go free again. If you want to make that possibility into a reality, you'll stick to answering my questions."
+
+I didn't say anything.
+
+"You're learning, that's good. Now, your email passwords, please."
+
+I was ready for this. I gave them everything: server address, login, password. This didn't matter. I didn't keep any email on my server. I downloaded it all and kept it on my laptop at home, which downloaded and deleted my mail from the server every sixty seconds. They wouldn't get anything out of my mail -- it got cleared off the server and stored on my laptop at home.
+
+Back to the cell, but they cut loose my hands and they gave me a shower and a pair of orange prison pants to wear. They were too big for me and hung down low on my hips, like a Mexican gang-kid in the Mission. That's where the baggy-pants-down-your-ass look comes from, you know that? From prison. I tell you what, it's less fun when it's not a fashion statement.
+
+They took away my jeans, and I spent another day in the cell. The walls were scratched cement over a steel grid. You could tell, because the steel was rusting in the salt air, and the grid shone through the green paint in red-orange. My parents were out that window, somewhere.
+
+They came for me again the next day.
+
+"We've been reading your mail for a day now. We changed the password so that your home computer couldn't fetch it."
+
+Well, of course they had. I would have done the same, now that I thought of it.
+
+"We have enough on you now to put you away for a very long time, Marcus. Your possession of these articles --" she gestured at all my little gizmos -- "and the data we recovered from your phone and memory sticks, as well as the subversive material we'd no doubt find if we raided your house and took your computer. It's enough to put you away until you're an old man. Do you understand that?"
+
+I didn't believe it for a second. There's no way a judge would say that all this stuff constituted any kind of real crime. It was free speech, it was technological tinkering. It wasn't a crime.
+
+But who said that these people would ever put me in front of a judge.
+
+"We know where you live, we know who your friends are. We know how you operate and how you think."
+
+It dawned on me then. They were about to let me go. The room seemed to brighten. I heard myself breathing, short little breaths.
+
+"We just want to know one thing: what was the delivery mechanism for the bombs on the bridge?"
+
+I stopped breathing. The room darkened again.
+
+"What?"
+
+"There were ten charges on the bridge, all along its length. They weren't in car-trunks. They'd been placed there. Who placed them there, and how did they get there?"
+
+"What?" I said it again.
+
+"This is your last chance, Marcus," she said. She looked sad. "You were doing so well until now. Tell us this and you can go home. You can get a lawyer and defend yourself in a court of law. There are doubtless extenuating circumstances that you can use to explain your actions. Just tell us this thing, and you're gone."
+
+"I don't know what you're talking about!" I was crying and I didn't even care. Sobbing, blubbering. "I have *no idea what you're talking about*!"
+
+She shook her head. "Marcus, please. Let us help you. By now you know that we always get what we're after."
+
+There was a gibbering sound in the back of my mind. They were *insane*. I pulled myself together, working hard to stop the tears. "Listen, lady, this is nuts. You've been into my stuff, you've seen it all. I'm a seventeen year old high school student, not a terrorist! You can't seriously think --"
+
+"Marcus, haven't you figured out that we're serious yet?" She shook her head. "You get pretty good grades. I thought you'd be smarter than that." She made a flicking gesture and the guards picked me up by the armpits.
+
+Back in my cell, a hundred little speeches occurred to me. The French call this "esprit d'escalier" -- the spirit of the staircase, the snappy rebuttals that come to you after you leave the room and slink down the stairs. In my mind, I stood and delivered, telling her that I was a citizen who loved my freedom, which made me the patriot and made her the traitor. In my mind, I shamed her for turning my country into an armed camp. In my mind, I was eloquent and brilliant and reduced her to tears.
+
+But you know what? None of those fine words came back to me when they pulled me out the next day. All I could think of was freedom. My parents.
+
+"Hello, Marcus," she said. "How are you feeling?"
+
+I looked down at the table. She had a neat pile of documents in front of her, and her ubiquitous go-cup of Starbucks beside her. I found it comforting somehow, a reminder that there was a real world out there somewhere, beyond the walls.
+
+"We're through investigating you, for now." She let that hang there. Maybe it meant that she was letting me go. Maybe it meant that she was going to throw me in a pit and forget that I existed. 
+
+"And?" I said finally.
+
+"And I want you to impress on you again that we are very serious about this. Our country has experienced the worst attack ever committed on its soil. How many 9/11s do you want us to suffer before you're willing to cooperate? The details of our investigation are secret. We won't stop at anything in our efforts to bring the perpetrators of these heinous crimes to justice. Do you understand that?"
+
+"Yes," I mumbled.
+
+"We are going to send you home today, but you are a marked man. You have not been found to be above suspicion -- we're only releasing you because we're done questioning you for now. But from now on, you *belong* to us. We will be watching you. We'll be waiting for you to make a misstep. Do you understand that we can watch you closely, all the time?"
+
+"Yes," I mumbled.
+
+"Good. You will never speak of what happened here to anyone, ever. This is a matter of national security. Do you know that the death penalty still holds for treason in time of war?"
+
+"Yes," I mumbled.
+
+"Good boy," she purred. "We have some papers here for you to sign." She pushed the stack of papers across the table to me. Little post-its with SIGN HERE printed on them had been stuck throughout them. A guard undid my cuffs. 
+
+I paged through the papers and my eyes watered and my head swam. I couldn't make sense of them. I tried to decipher the legalese. It seemed that I was signing a declaration that I had been voluntarily held and submitted to voluntary questioning, of my own free will.
+
+"What happens if I don't sign this?" I said. 
+
+She snatched the papers back and made that flicking gesture again. The guards jerked me to my feet. 
+
+"Wait!" I cried. "Please! I'll sign them!" They dragged me to the door. All I could see was that door, all I could think of was it closing behind me. 
+
+I lost it. I wept. I begged to be allowed to sign the papers. To be so close to freedom and have it snatched away, it made me ready to do anything. I can't count the number of times I've heard someone say, "Oh, I'd rather die than do something-or-other" -- I've said it myself now and again. But that was the first time I understood what it really meant. I would have rather died than go back to my cell.
+
+I begged as they took me out into the corridor. I told them I'd sign anything.
+
+She called out to the guards and they stopped. They brought me back. They sat me down. One of them put the pen in my hand.
+
+Of course, I signed, and signed and signed.
+
+#
+
+My jeans and t-shirt were back in my cell, laundered and folded. They smelled of detergent. I put them on and washed my face and sat on my cot and stared at the wall. They'd taken everything from me. First my privacy, then my dignity. I'd been ready to sign anything. I would have signed a confession that said I'd assassinated Abraham Lincoln.
+
+I tried to cry, but it was like my eyes were dry, out of tears.
+
+They got me again. A guard approached me with a hood, like the hood I'd been put in when they picked us up, whenever that was, days ago, weeks ago.
+
+The hood went over my head and cinched tight at my neck. I was in total darkness and the air was stifling and stale. I was raised to my feet and walked down corridors, up stairs, on gravel. Up a gangplank. On a ship's steel deck. My hands were chained behind me, to a railing. I knelt on the deck and listened to the thrum of the diesel engines.
+
+The ship moved. A hint of salt air made its way into the hood. It was drizzling and my clothes were heavy with water. I was outside, even if my head was in a bag. I was outside, in the world, moments from my freedom.
+
+They came for me and led me off the boat and over uneven ground. Up three metal stairs. My wrists were unshackled. My hood was removed. 
+
+I was back in the truck. Severe haircut woman was there, at the little desk she'd sat at before. She had a ziploc bag with her, and inside it were my phone and other little devices, my wallet and the change from my pockets. She handed them to me wordlessly.
+
+I filled my pockets. It felt so weird to have everything back in its familiar place, to be wearing my familiar clothes. Outside the truck's back door, I heard the familiar sounds of my familiar city.
+
+A guard passed me my backpack. The woman extended her hand to me. I just looked at it. She put it down and gave me a wry smile. Then she mimed zipping up her lips and pointed to me, and opened the door.
+
+It was daylight outside, gray and drizzling. I was looking down an alley toward cars and trucks and bikes zipping down the road. I stood transfixed on the truck's top step, staring at freedom.
+
+My knees shook. I knew now that they were playing with me again. In a moment, the guards would grab me and drag me back inside, the bag would go over my head again, and I would be back on the boat and sent off to the prison again, to the endless, unanswerable questions. I barely held myself back from stuffing my fist in my mouth. 
+
+Then I forced myself to go down one stair. Another stair. The last stair. My sneakers crunched down on the crap on the alley's floor, broken glass, a needle, gravel. I took a step. Another. I reached the mouth of the alley and stepped onto the sidewalk. 
+
+No one grabbed me.
+
+I was free.
+
+Then strong arms threw themselves around me. I nearly cried.
+
+&&&
+
+Chapter 5
+
+[[This chapter is dedicated to Secret Headquarters in Los Angeles, my drop-dead all-time favorite comic store in the world. It's small and selective about what it stocks, and every time I walk in, I walk out with three or four collections I'd never heard of under my arm. It's like the owners, Dave and David, have the uncanny ability to predict exactly what I'm looking for, and they lay it out for me seconds before I walk into the store. I discovered about three quarters of my favorite comics by wandering into SHQ, grabbing something interesting, sinking into one of the comfy chairs, and finding myself transported to another world. When my second story-collection, OVERCLOCKED, came out, they worked with local illustrator Martin Cenreda to do a free mini-comic based on Printcrime, the first story in the book. I left LA about a year ago, and of all the things I miss about it, Secret Headquarters is right at the top of the list.]]
+
+[[Secret Headquarters: http://www.thesecretheadquarters.com/ 3817 W. Sunset Boulevard, Los Angeles, CA 90026 +1 323 666 2228]]
+
+But it was Van, and she *was* crying, and hugging me so hard I couldn't breathe. I didn't care. I hugged her back, my face buried in her hair. 
+
+"You're OK!" she said. 
+
+"I'm OK," I managed.
+
+She finally let go of me and another set of arms wrapped themselves around me. It was Jolu! They were both there. He whispered, "You're safe, bro," in my ear and hugged me even tighter than Vanessa had.
+
+When he let go, I looked around. "Where's Darryl?" I asked.
+
+They both looked at each other. "Maybe he's still in the truck," Jolu said. 
+
+We turned and looked at the truck at the alley's end. It was a nondescript white 18-wheeler. Someone had already brought the little folding staircase inside. The rear lights glowed red, and the truck rolled backwards towards us, emitting a steady eep, eep, eep.
+
+"Wait!" I shouted as it accelerated towards us. "Wait! What about Darryl?" The truck drew closer. I kept shouting. "What about Darryl?"
+
+Jolu and Vanessa each had me by an arm and were dragging me away. I struggled against them, shouting. The truck pulled out of the alley's mouth and reversed into the street and pointed itself downhill and drove away. I tried to run after it, but Van and Jolu wouldn't let me go.
+
+I sat down on the sidewalk and put my arms around my knees and cried. I cried and cried and cried, loud sobs of the sort I hadn't done since I was a little kid. They wouldn't stop coming. I couldn't stop shaking.
+
+Vanessa and Jolu got me to my feet and moved me a little ways up the street. There was a Muni bus stop with a bench and they sat me on it. They were both crying too, and we held each other for a while, and I knew we were crying for Darryl, whom none of us ever expected to see again.
+
+#
+
+We were north of Chinatown, at the part where it starts to become North Beach, a neighborhood with a bunch of neon strip clubs and the legendary City Lights counterculture bookstore, where the Beat poetry movement had been founded back in the 1950s. 
+
+I knew this part of town well. My parents' favorite Italian restaurant was here and they liked to take me here for big plates of linguine and huge Italian ice-cream mountains with candied figs and lethal little espressos afterward.
+
+Now it was a different place, a place where I was tasting freedom for the first time in what seemed like an eternity.
+
+We checked our pockets and found enough money to get a table at one of the Italian restaurants, out on the sidewalk, under an awning. The pretty waitress lighted a gas-heater with a barbeque lighter, took our orders and went inside. The sensation of giving orders, of controlling my destiny, was the most amazing thing I'd ever felt.
+
+"How long were we in there?" I asked.
+
+"Six days," Vanessa said.
+
+"I got five," Jolu said.
+
+"I didn't count."
+
+"What did they do to you?" Vanessa said. I didn't want to talk about it, but they were both looking at me. Once I started, I couldn't stop. I told them everything, even when I'd been forced to piss myself, and they took it all in silently. I paused when the waitress delivered our sodas and waited until she got out of earshot, then finished. In the telling, it receded into the distance. By the end of it, I couldn't tell if I was embroidering the truth or if I was making it all seem *less* bad. My memories swam like little fish that I snatched at, and sometimes they wriggled out of my grasp.
+
+Jolu shook his head. "They were hard on you, dude," he said. He told us about his stay there. They'd questioned him, mostly about me, and he'd kept on telling them the truth, sticking to a plain telling of the facts about that day and about our friendship. They had gotten him to repeat it over and over again, but they hadn't played games with his head the way they had with me. He'd eaten his meals in a mess-hall with a bunch of other people, and been given time in a TV room where they were shown last year's blockbusters on video.
+
+Vanessa's story was only slightly different. After she'd gotten them angry by talking to me, they'd taken away her clothes and made her wear a set of orange prison overalls. She'd been left in her cell for two days without contact, though she'd been fed regularly. But mostly it was the same as Jolu: the same questions, repeated again and again.
+
+"They really hated you," Jolu said. "Really had it in for you. Why?"
+
+I couldn't imagine why. Then I remembered.
+
+*You can cooperate, or you can be very, very sorry.*
+
+"It was because I wouldn't unlock my phone for them, that first night. That's why they singled me out." I couldn't believe it, but there was no other explanation. It had been sheer vindictiveness. My mind reeled at the thought. They had done all that as a mere punishment for defying their authority.
+
+I had been scared. Now I was angry. "Those bastards," I said, softly. "They did it to get back at me for mouthing off."
+
+Jolu swore and then Vanessa cut loose in Korean, something she only did when she was really, really angry. 
+
+"I'm going to get them," I whispered, staring at my soda. "I'm going to get them."
+
+Jolu shook his head. "You can't, you know. You can't fight back against that."
+
+#
+
+None of us much wanted to talk about revenge then. Instead, we talked about what we would do next. We had to go home. Our phones' batteries were dead and it had been years since this neighborhood had any payphones. We just needed to go home. I even thought about taking a taxi, but there wasn't enough money between us to make that possible. 
+
+So we walked. On the corner, we pumped some quarters into a San Francisco Chronicle newspaper box and stopped to read the front section. It had been five days since the bombs went off, but it was still all over the front cover.
+
+Severe haircut woman had talked about "the bridge" blowing up, and I'd just assumed that she was talking about the Golden Gate bridge, but I was wrong. The terrorists had blown up the *Bay bridge*. 
+
+"Why the hell would they blow up the Bay Bridge?" I said. "The Golden Gate is the one on all the postcards." Even if you've never been to San Francisco, chances are you know what the Golden Gate looks like: it's that big orange suspension bridge that swoops dramatically from the old military base called the Presidio to Sausalito, where all the cutesy wine-country towns are with their scented candle shops and art galleries. It's picturesque as hell, and it's practically the symbol for the state of California. If you go to the Disneyland California Adventure park, there's a replica of it just past the gates, with a monorail running over it.
+
+So naturally I assumed that if you were going to blow up a bridge in San Francisco, that's the one you'd blow.
+
+"They probably got scared off by all the cameras and stuff," Jolu said. "The National Guard's always checking cars at both ends and there's all those suicide fences and junk all along it." People have been jumping off the Golden Gate since it opened in 1937 -- they stopped counting after the thousandth suicide in 1995. 
+
+"Yeah," Vanessa said. "Plus the Bay Bridge actually goes somewhere." The Bay Bridge goes from downtown San Francisco to Oakland and thence to Berkeley, the East Bay townships that are home to many of the people who live and work in town. It's one of the only parts of the Bay Area where a normal person can afford a house big enough to really stretch out in, and there's also the university and a bunch of light industry over there. The BART goes under the Bay and connects the two cities, too, but it's the Bay Bridge that sees most of the traffic. The Golden Gate was a nice bridge if you were a tourist or a rich retiree living out in wine country, but it was mostly ornamental. The Bay Bridge is -- was -- San Francisco's work-horse bridge.
+
+I thought about it for a minute. "You guys are right," I said. "But I don't think that's all of it. We keep acting like terrorists attack landmarks because they hate landmarks. Terrorists don't hate landmarks or bridges or airplanes. They just want to screw stuff up and make people scared. To make terror. So of course they went after the Bay Bridge after the Golden Gate got all those cameras -- after airplanes got all metal-detectored and X-rayed." I thought about it some more, staring blankly at the cars rolling down the street, at the people walking down the sidewalks, at the city all around me. "Terrorists don't hate airplanes or bridges. They love terror." It was so obvious I couldn't believe I'd never thought of it before. I guess that being treated like a terrorist for a few days was enough to clarify my thinking.
+
+The other two were staring at me. "I'm right, aren't I? All this crap, all the X-rays and ID checks, they're all useless, aren't they?"
+
+They nodded slowly. 
+
+"Worse than useless," I said, my voice going up and cracking. "Because they ended up with us in prison, with Darryl --" I hadn't thought of Darryl since we sat down and now it came back to me, my friend, missing, disappeared. I stopped talking and ground my jaws together.
+
+"We have to tell our parents," Jolu said.
+
+"We should get a lawyer," Vanessa said.
+
+I thought of telling my story. Of telling the world what had become of me. Of the videos that would no doubt come out, of me weeping, reduced to a groveling animal. 
