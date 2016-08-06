@@ -10,6 +10,11 @@ function weighted_roll(options_to_weights, total_weight){
     // Takes a {obj1: weight1, obj2: weight2, ..., total: <>} object.
     // Returns a random object, with higher weight more likely.
 
+    // For now, ignore weights.
+    return _.sample(
+        _.keys(_.omit(options_to_weights, 'total'))
+    );
+
     var roll = randint(0, options_to_weights['total']);
     var chosen = undefined;
     _.each(options_to_weights, function(value, key){

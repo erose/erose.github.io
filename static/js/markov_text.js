@@ -3,7 +3,8 @@ var w = new Worker("/static/js/markov_text_worker.js");
 var book_names = [
     "little_brother",
     "pirate_cinema",
-    "for_the_win"
+    "for_the_win",
+    "harry_potter_and_the_chamber_of_secrets"
 ];
 // A map from book name --> whether that book is selected or not.
 var is_selected = {};
