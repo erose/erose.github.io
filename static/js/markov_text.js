@@ -4,7 +4,10 @@ var book_names = [
     "little_brother",
     "pirate_cinema",
     "for_the_win",
-    "harry_potter_and_the_chamber_of_secrets"
+    "harry_potter_and_the_chamber_of_secrets",
+    "scrubs",
+    "enders_game",
+    "hamlet"
 ];
 // A map from book name --> whether that book is selected or not.
 var is_selected = {};
