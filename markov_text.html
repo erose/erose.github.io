@@ -13,8 +13,8 @@
     <script src="/static/js/katex.min.js"></script>
     <script src="/static/js/auto-render.min.js"></script>
     <script src="/static/js/sjcl.js"></script>
-     <script src="/static/js/react.js"></script>
-     <script src="/static/js/react-dom.js"></script>
+    <script src="/static/js/react.js"></script>
+    <script src="/static/js/react-dom.js"></script>
 </head>
 
 <body>
@@ -37,30 +37,16 @@
     <div class="post-date"></div>
 </div>
 <div class="post-content">
-    <style>
-button {
-    border-radius: 5px;
-}
-</style>
-
-<script src="/static/js/markov_text.js"></script>
+    <script src="/static/js/markov_text.js"></script>
 
 <p>Select the books you're interested in (want to add one? email me at <a href="mailto:really.eli@gmail.com">really.eli@gmail.com</a>) and press the scrambler button.</p>
 <p>The computer will write an original novella based on its inputs.</p>
 <div id="book-buttons" style="margin-top: 5px;">
 </div>
 
-<p><button id="generate-button" onclick="press();">
-    <img
-    class="arrow" id="still-icon" src="/static/icons/arrow.gif"
-    style="width: 20px; height: 20px;"
-    >
-    <img
-    class="arrow" id="active-icon" src="/static/icons/rotating_arrow.gif"
-    style="display: none; width: 20px; height: 20px;"
-    >
-</button></p>
-<pre id="output-text" placeholder="Output:" style="width: 100%; white-space: pre-wrap;"></pre>
+<p><hr>
+<div id="output-area">
+</div></p>
 </div>
 <div class="post-tags">
     

@@ -10,10 +10,10 @@ function weighted_roll(options_to_weights, total_weight){
     // Takes a {obj1: weight1, obj2: weight2, ..., total: <>} object.
     // Returns a random object, with higher weight more likely.
 
-    // For now, ignore weights.
-    return _.sample(
-        _.keys(_.omit(options_to_weights, 'total'))
-    );
+    // Fixed probability of selecting a key randomly (smoothing).
+        return _.sample(
+            _.keys(_.omit(options_to_weights, 'total'))
+        );
 
     var roll = randint(0, options_to_weights['total']);
     var chosen = undefined;
@@ -54,13 +54,13 @@ function get_counts(initial, text, n){
     return result;
 }
 
-function get_text(input_texts, n){
-    // Returns n characters of text similar to input_text.
+function get_text(input_texts, output_length, n){
+    // Returns output_length characters of text similar to input_text
+    // with ngram size n.
 
-    var NGRAM_SIZE = 10;
     var counts = {};
     _.each(input_texts, function(text){
-        counts = get_counts(counts, text, NGRAM_SIZE);
+        counts = get_counts(counts, text, n);
     });
 
     var output_text = "";
@@ -69,7 +69,7 @@ function get_text(input_texts, n){
     );
 
     var current_char = undefined;
-    _.times(n, function(){
+    _.times(output_length, function(){
         current_char = weighted_roll(counts[current_ngram]);
         output_text += current_char;
         // Advance by one character.
@@ -79,10 +79,22 @@ function get_text(input_texts, n){
     return output_text;
 }
 
+function normalize(input_texts){
+    // All input texts should be the same size so there's no bias.
+    var max_length = _.max(
+        _.map(input_texts, function(s){ return s.length; })
+    );
+
+    return _.map(input_texts, function(text){
+        return text.slice(0, max_length - 1);
+    });
+}
+
 onmessage = function(e){
     // Called when there is new text to process from the frontend.
     var content = e.data[0];
-    var n = +e.data[1];
+    var output_length = +e.data[1];
+    var n = +e.data[2]; // ngram size
 
     // Concatenate the data from the various input URLs.
     var input_texts = [];
@@ -94,8 +106,9 @@ onmessage = function(e){
 
         input_texts.push(xhr.responseText);
     });
+    // input_texts = normalize(input_texts);
 
     // Reply to the frontend.
-    var output_text = get_text(input_texts, n);
+    var output_text = get_text(input_texts, output_length, n);
     postMessage([output_text]);
 }
