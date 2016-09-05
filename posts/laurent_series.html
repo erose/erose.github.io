@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/post.css">
+    <link rel="stylesheet" href="/static/css/page.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/katex.min.css">
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+    <script src="/static/js/sjcl.js"></script>
+    <script src="/static/js/react.js"></script>
+    <script src="/static/js/react-dom.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a class="title" href="/index.html">Eli Rose</a> 's
+            <a href="/about.html">about</a>
+            &sdot;
+            <a href="/turing.html">turing</a>
+            &sdot;
+            <a href="/fraction_pattern.html">fraction pattern</a>
+            &sdot;
+            <a href="/markov_text.html">literature scrambler</a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Taylor Series' Evil Twin</div>
+    <div class="post-date">Monday, September 5th, 2016</div>
+</div>
+<div class="post-content">
+    <p>Apparently this is a thing. Consider the function $f(x) = \frac{1}{1-x}$. Maybe you know that you can express $f(x)$ as an infinite polynomial:</p>
+<p>$$\frac{1}{1 - x} = 1 + x + x^2 + x^3 + x^4 + ...$$</p>
+<p>I find this difficult to believe, despite being already familiar with it. Here's a rather standoffish proof: just multiply the right-hand side by $(1 - x)$ and see what you get.</p>
+<p>$$
+\begin{matrix}
+(1 - x)(1 + x + x^2 + ...) &amp; = &amp; (1 + x + x^2 + ...) - x(1 + x + x^2 + ...)\\
+&amp; = &amp; 1 + \color{red}{x} + \color{green}{x^2} + \color{blue}{x^3} + ... - \color{red}{x} - \color{green}{x^2} - \color{blue}{x^3} - ...\\
+&amp; = &amp; 1\\
+\end{matrix}
+$$</p>
+<p>Okay. We can rescue our intuition a bit by noting that the equality only makes sense when the series converges, i.e. when $|x| &lt; 1$. For example, when $x = 0.5$, we have $$1/(1 - 0.5) = 2 = 1 + 0.5 + 0.5^2 + 0.5^3 + ...$$</p>
+<p>This is just a geometric series. It all is, if you think of $x$ as the common ratio between terms. It's also a Taylor series, since we can get it by differentiating $\frac{1}{1 - x}$ a bunch of times. You can also get it by doing polynomial long division -- just like regular division, except you replace $10$ by $x$.</p>
+<p>(For another example, take $x = 10$. Then this equation states that $\frac{1}{9} = 0.111111...$).</p>
+<style>
+td {
+    padding-left: 40px;
+    border-top: 1px black solid;
+}
+</style>
+
+<table>
+<tbody>
+<tr>
+<td>
+<pre>
+
+       ____
+1 - x | 1
+</pre>
+</td>
+<td>Consider the first term only. One goes into one one time, so write that at the top.</td>
+</tr>
+
+<tr>
+<td>
+<pre>
+        1
+       ____
+1 - x | 1
+</pre>
+</td>
+<td>Now multiply $(1 - x)$ by $1$ and write it beneath.</td>
+</tr>
+
+<tr>
+<td>
+<pre>
+        1
+       ____
+1 - x | 1
+      - 1 + x
+</pre>
+</td>
+<td>Subtract.</td>
+</tr>
+
+<tr>
+<td>
+<pre>
+        1
+       ____
+1 - x | 1
+      - 1 + x
+      ________
+        0 + x
+</pre>
+</td>
+<td>How many times does one go into $x$?</td>
+</tr>
+
+<tr>
+<td>
+<pre>
+        1 + x
+       ____
+1 - x | 1
+      - 1 + x
+      ________
+        0 + x
+            x - x^2
+</pre>
+</td>
+<td>Now multiply $(1 - x)$ by $x$ and write it beneath.</td>
+</tr>
+
+<tr>
+<td>
+<pre>
+        1 + x
+       ____
+1 - x | 1
+      - 1 + x
+      ________
+        0 + x
+          - x + x^2
+          _________
+            0 + x^2
+
+</pre>
+</td>
+<td>Subtract again. We'll put $x^2$ up top, and then do this forever.</td>
+</tr>
+</tbody>
+</table>
+
+<p>But I pulled a bit of a fast one there. Why did I write the divisor as <code>1 - x</code> instead of <code>-x + 1</code>? We usually put the larger term first (we certainly do in decimal).</p>
+<p>It actually <em>changes the answer</em> when you do that. Try dividing $1$ by $-x + 1$ for yourself. (The first thing you have to do is decide how many times $-x$ goes into $1$: that would be $-x^{-1}$ times, which is your first term, which means the answer definitely isn't the same). The answer you get is:</p>
+<p>$$\frac{1}{-x + 1} = -x^{-1} - x^{-2} - x^{-3} - ...$$</p>
+<p>(<a href="http://math.stackexchange.com/questions/505817/polynomial-long-division-different-answers-when-reordering-terms/505827#505827">Source</a>). But the world hasn't gone mad, $1 - x$ and $-x + 1$ are still equivalent algebraically, so we must have equality to $\frac{1}{1 - x}$ as well. And indeed we do:</p>
+<p>$$(1-x)(-x^{-1} - x^{-2} - x^{-3} - ...)$$
+$$(-x^{-1} - x^{-2} - x^{-3} - ...) - (-1 - x^{-1} - x^{-2} - x^{-3} - ...)$$
+$$(-\color{red}{x^{-1}} - \color{green}{x^{-2}} - \color{blue}{x^{-3}} - ...) + 1 + \color{red}{x^{-1}} + \color{green}{x^{-2}} + \color{blue}{x^{-3}} + ...$$
+$$1$$</p>
+<p>Until today, I implicitly believed that "Taylor series" and "series expansion" were the same thing. But I'm here to tell you that every Taylor series, converging when $x$ is small, has an evil twin, a mystical equivalent, a hippie cousin: the Laurent series, which converges when $x$ is large. This is the Laurent series for $\frac{1}{1 - x}$.</p>
+<p>You can see that, because of all the $x$'s in the denominators, it won't converge unless $|x| &gt; 1$. So it's a perfect complement to the Taylor series, which occupies the $|x| &lt; 1$ space. Both are infinite polynomials that represent the function in some sense.<sup>1</sup></p>
+<p><strong>Questions</strong>: Could there be more types of series expansions? Wolfram Alpha refers to Laurent series as "centered around $\infty$" (vs. Taylor series centered around $0$) -- what does that mean? The forbidding <a href="https://en.wikipedia.org/wiki/Laurent_series">Wikipedia</a> page makes it clear that Laurent series have something to do with $\mathbb{C}$, but what's the relation?</p>
+<p><strong>Another Question</strong>: Here we've taken a divison problem that ordinarily gives an infinite but convergent answer, and "flipped it around" to get an answer that doesn't converge. Is there anything in doing this for a decmial long division problem, i.e. we keep pulling down larger and larger powers of 10?</p>
+<p><sub>[1] To me, it even makes a loose kind of sense which ordering gives you which series. Suppose you're always putting the most significant terms on the left, to mimick positional number systems. Then, writing $1 + x$ means that $|x| &lt; 1$, and this gives you the Taylor series which is only true for $|x| &lt; 1$.</sub></p>
+</div>
+<div class="post-tags">
+    
+    <b>Tags:</b> <a href="google.com">math</a>
+    
+    
+</div>
+
+        </div>
+    </div>
+<script>
+    renderMathInElement(
+        document.getElementById("content"), {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        }
+    )
+</script>
+</body>
+</html>
