@@ -1,0 +1,76 @@
+<html>
+<meta charset="utf-8"></meta>
+
+<head>
+    <title>Snap: Hour of Code</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-1.10.2.min.js"></script>
+    <link href='bootstrap/css/bootstrap.min.css' rel="stylesheet" type='text/css'>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="sha512.js"></script>
+    <script src='runme.js'></script>
+    <link rel="shortcut icon" href="http://snap.berkeley.edu/fav3.gif" type="image/gif">
+</head>
+
+<body>
+
+  <div id="top">
+    <div class='vcentered'>
+      <a id='bjclogo' href='http://bjc.berkeley.edu' target='_blank'>
+        <img id='bjclogo-img' src="images/bjc200.png">
+      </a>
+    </div>
+
+    <div id='page-title' class='vcentered'>
+      Hour of Code
+    </div>
+
+    <div id='buttons-top' class='btn-group'>
+    </div>
+
+    <div id='page-subtitle' class='vcentered'>
+      made with
+    </div>
+
+    <div class='vcentered'>
+      <a id='snaplogo' href='http://snap.berkeley.edu/run' target='_blank'>
+        <img id='snaplogo-img' src="images/snaplogo.png">
+      </a>
+    </div>
+
+    <div id='done-button' class='hidden vcentered'>
+      <button style='font-size: 1.5em;' onclick='congrats()' class='btn btn-success'>I'm done!</button>
+    </div>
+
+    <div id='next-button' class='vcentered'>
+        <button style='font-size: 1.5em;' class='btn btn-success'>Next</button>
+    </div>
+  </div>
+
+  <div id="below">
+    <div id="left">
+    </div>
+    <div id="right">
+      <iframe id='snap' width=100% height=100% src="snap.html"></iframe>
+    </div>
+  </div>
+
+  <div id="corral-cover">
+  </div>
+
+<!-- Modal
+ toggle me with $('#myModal').modal('toggle') 
+ -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img id='modal-alonzo' src="images/alonzo3dnoshadow.png">
+        <button type="button" class="close" data-dismiss="modal" onclick='killvideo()' aria-hidden="true">&times;</button>
+      <br>
+      <div class="modal-body">
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+</html>

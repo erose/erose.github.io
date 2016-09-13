@@ -1,0 +1,142 @@
+html {
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+}
+
+#top {
+  background-color: #131141;
+  height: 5em;
+  width: 100%;
+  overflow-y: auto;
+  display: table;
+}
+
+#chrome-message {
+  font-size: 2em;
+  font-weight: 800;
+  margin-bottom: 2em;
+  float: left;
+  padding: 2em;
+}
+
+#myModal {
+  overflow: auto;
+}
+
+
+#modal-alonzo {
+  display: block;
+  position: absolute;
+  left:-2em;
+  top:-1.8em;
+  width: 6em;
+ }
+
+.lab-page {
+  padding: 1em;
+  font-size: 1em;
+}
+
+.left {
+  float: left;
+}
+
+#page-title {
+  padding-left: 0.5em;
+  font-size: 2.5em;
+  color: white;
+}
+
+#page-subtitle {
+  text-align: right;
+  font-size: 1.6em;
+  padding-right: 0.4em;
+  color: white;
+}
+
+#bjclogo-img {
+  float: left;
+  width: 3.5em;
+  padding-left: 1em;
+}
+
+#buttons-top {
+  /* vcentered doesn't work because btn-group overrides it. */
+  display: table-cell;
+  vertical-align: middle;
+  margin-left: 1em;
+}
+
+.vcentered {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#snaplogo-img {
+  width: 5em;
+  padding-right: 0.8em;
+}
+
+#done-button {
+}
+
+#next-button {
+}
+
+#below {
+  position: absolute;
+  padding: 0.5em;
+  overflow: hidden;
+  top: 5em;
+  bottom: 0;
+}
+
+#left {
+  position: relative;
+  height: 100%;
+  width: 25%;
+  float: left;
+  overflow-y: auto;
+}
+
+#right {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+#corral-cover {
+  background-color: white;
+  display: table;
+  position: absolute;
+}
+
+.div-corral-cover {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.div-corral-cover-inner {
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  text-align: center;
+}
+
+.btn-corral-cover {
+  margin: 2em 0;
+  width: 100%;
+}
+
+.my-hidden {
+  visibility: hidden;
+}
+
+.answer-png {
+  width: 100%;
+  padding: 1em;
+}
