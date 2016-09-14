@@ -43,7 +43,6 @@ var BookButton = React.createClass({
             onClick: this.onClick,
             style: {
                 backgroundColor: 'white',
-                outline: 0,
                 opacity: opacity,
             }
         },
@@ -77,17 +76,54 @@ var BookButtonContainer = React.createClass({
         return React.DOM.div({}, els);
     }
 });
-var OutputArea = React.createClass({
-    getInitialState: function(){
-        return { spinning: false, title: "" };
+var SpinningButton = React.createClass({
+    propTypes: {
+        actions: React.PropTypes.object
     },
     componentWillMount: function(){
-        // Set onmessage at component creation time.
-        w.onmessage = this.finish;
+        var self = this;
+        w.onmessage = function(e){
+            self.setState({ working: false });
+
+            self.props.actions.finish(e);
+        };
+    },
+    getInitialState: function(){
+        return { working: false }
+    },
+    onMouseUp: function(){
+        // Remove outline on click, but not keypress (for accessibility).
+        ReactDOM.findDOMNode(this).blur();
+    },
+    onClick: function(){
+        if (!this.state.working){
+            this.setState({ working: true });
+            this.props.actions.start();
+        }
+    },
+    render: function(){
+        return React.DOM.button(
+        {
+            onClick: this.onClick,
+            onMouseUp: this.onMouseUp,
+            style: { borderRadius: 5, float: 'left' }
+        },
+            React.DOM.img({
+                className: 'arrow',
+                src: this.state.working ?
+                    "/static/icons/rotating_arrow.gif"
+                    :
+                    "/static/icons/arrow.gif",
+                style: { width: 20, height: 20 }
+            })
+        )
+    }
+});
+var OutputArea = React.createClass({
+    getInitialState: function(){
+        return { title: "", text: "" };
     },
     start: function(){
-        this.setState({ spinning: true });
-
         // Fetch from the selected urls.
         urls = _.filter(Object.keys(is_selected), function(k){
             return is_selected[k];
@@ -97,11 +133,15 @@ var OutputArea = React.createClass({
         w.postMessage([{ urls: urls }, 4000, 10]);
     },
     finish: function(e){
-        var text = e.data[0];
-        $("#output-text").text(text);
-        this.setState({ spinning: false, title: this.getTitle() });
+        this.setState({
+            title: this.getTitle(),
+            text: e.data[0]
+        });
     },
     getTitle: function(){
+        // Generates a fun new title from two existing titles A, B
+        // by putting B in the place of a word in A.
+
         titles = [];
         _.each(books, function(book){
             if (is_selected[book.slug]){
@@ -120,37 +160,24 @@ var OutputArea = React.createClass({
     },
     render: function(){
         return React.DOM.div({ style: { textAlign: 'center' } },
-            React.DOM.button({
-                onClick: this.start,
-                style: { borderRadius: 5, float: 'left' }
-            },
-                React.DOM.img({
-                    className: 'arrow',
-                    src: this.state.spinning ?
-                        "/static/icons/rotating_arrow.gif"
-                        :
-                        "/static/icons/arrow.gif",
-                    style: { width: 20, height: 20 }
-                })
-            ),
+            React.createElement(SpinningButton, {
+                actions: { start: this.start, finish: this.finish }
+            }),
             React.DOM.div({
                 style: {
                     display: 'inline',
                     fontSize: '1.5em',
                     fontFamily: "'Linden Hill', Georgia, serif"
                 }
-            },
-                this.state.title
-            ),
+            }, this.state.title),
             React.DOM.pre({
-                id: 'output-text',
                 placeholder: 'Output:',
                 style: {
                     width: '100%',
                     whiteSpace: 'pre-wrap',
                     textAlign: 'left'
                 }
-            })
+            }, this.state.text)
         );
     }
 })
