@@ -43,10 +43,29 @@
 </div>
 <div class="page-content">
     <p>Here I'm writing down books I read, movies I watched, etc. I may also write about them. Likely to be of more interest to me than to you.</p>
-<ul>
-<li><strong>Notes From the Underground</strong> by Doestoevsky. Finished September 11th, 2016.</li>
-<li><strong>The Conquest of Happiness</strong> by Bertrand Russell. Finished Jan 16th, 2017.</li>
-</ul>
+<div>
+  <ul id="media-list">
+  </ul>
+</div>
+
+<script>
+// Returns the literal HTML of a list element.
+var htmlForEntry = function(object) {
+    return (
+       "<li>"                                  +
+       "<b>" + object.title + "</b>" + " "     +
+       "by " + object.author + "."   + " "     +
+       "Finished " + object.dateFinished + "." +
+       "</li>"
+    );
+}
+
+$(document).ready(function(){
+    $.getJSON('/static/json/media_log.json', function(data){
+        $("#media-list").append(data.objects.map(htmlForEntry));
+    })
+});
+</script>
 </div>
 
         </div>

@@ -1,0 +1,14 @@
+{
+    "objects": [
+        {
+            "title": "Notes From The Underground",
+            "author": "Doestoevsky",
+            "dateFinished": "September 11th, 2016"
+        },
+        {
+            "title": "The Conquest of Happiness",
+            "author": "Bertrand Russell",
+            "dateFinished": "January 16th, 2017"
+        }
+    ]
+}
