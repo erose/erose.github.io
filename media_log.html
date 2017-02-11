@@ -51,17 +51,13 @@
 <script>
 // Returns the literal HTML of a list element.
 var htmlForEntry = function(object) {
-    return (
-       "<li>"                                                  +
-       "<b>" + object.title + "</b>" + " "                     +
-       "by " + object.author + "."   + " "                     +
-       object.completedVerb + " " + object.dateCompleted + "." +
-       "</li>"
-    );
+  return _.template(
+    "<li><b><%= object.title %></b> by <%= object.author %>. <i><%= object.completedVerb %> on <%= object.dateCompleted %></i>.</li>"
+  )({object: object});
 }
 
 $(document).ready(function(){
-    $.getJSON('/static/json/media_log.json', function(data){
+    $.getJSON('/data/json/media_log.json', function(data){
         $("#media-list").append(data.objects.map(htmlForEntry));
     })
 });
