@@ -52,10 +52,10 @@
 // Returns the literal HTML of a list element.
 var htmlForEntry = function(object) {
     return (
-       "<li>"                                  +
-       "<b>" + object.title + "</b>" + " "     +
-       "by " + object.author + "."   + " "     +
-       "Finished " + object.dateFinished + "." +
+       "<li>"                                                  +
+       "<b>" + object.title + "</b>" + " "                     +
+       "by " + object.author + "."   + " "                     +
+       object.completedVerb + " " + object.dateCompleted + "." +
        "</li>"
     );
 }

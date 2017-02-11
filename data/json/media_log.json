@@ -3,22 +3,26 @@
         {
             "title": "Notes From The Underground",
             "author": "Doestoevsky",
-            "dateFinished": "September 11th, 2016"
+            "dateCompleted": "September 11th, 2016",
+            "completedVerb": "Finished"
         },
         {
             "title": "The Conquest of Happiness",
             "author": "Bertrand Russell",
-            "dateFinished": "January 16th, 2017"
+            "dateCompleted": "January 16th, 2017",
+            "completedVerb": "Finished"
         },
         {
             "title": "Far From the Tree",
             "author": "Andrew Solomon",
-            "dateFinished": "February 9th, 2017"
+            "dateCompleted": "February 9th, 2017",
+            "completedVerb": "Finished"
         },
         {
             "title": "Paterson",
             "author": "Jim Jarmusch",
-            "dateFinished": "February 10th, 2017"
+            "dateCompleted": "February 10th, 2017",
+            "completedVerb": "Watched"
         }
     ]
 }
