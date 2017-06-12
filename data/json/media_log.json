@@ -85,6 +85,13 @@
             "author": "Elif Batuman",
             "dateCompleted": "May 28th, 2017",
             "completedVerb": "Finished reading"
+        },
+        {
+            "title": "Clean Code",
+            "type": "nonfiction",
+            "author": "Robert Cecil Martin",
+            "dateCompleted": "June 11th, 2017",
+            "completedVerb": "Finished reading"
         }
     ]
 }
