@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css">
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a class="title" href="/index.html">Eli Rose</a> 's
+            <a href="/index.html">posts</a>
+            &sdot;
+            <a href="/about.html">about</a>
+            &sdot;
+            <div class="dropdown">
+                <a href="javascript:void(0)">code projects</a>
+                <div class="dropdown-content">
+                    <div>&sdot; <a href="/turing.html">turing</a></div>
+                    <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                    <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                </div>
+            </div>
+            &sdot;
+            <a href="/media_log.html">media log</a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Writing Numbers as Sums of Two Squares</div>
+    <div class="post-date">Sunday, May 28th, 2017</div>
+</div>
+<div class="post-content">
+    <p>Recently I watched <strong>3Blue1Brown</strong>'s new <a href="https://www.youtube.com/watch?v=NaL_Cb42WyY&amp;t=649s">video</a>, which tackles this question: if I draw a circle in the coordinate plane, how many lattice points will it intersect? (A <em>lattice point</em> is a point $(x, y)$ where both coordinates are integers).</p>
+<p>Go check it out! The below is a dive into one small point in the video -- there's lots of cool stuff in it that I'm not going to talk about here.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NaL_Cb42WyY" frameborder="0" allowfullscreen></iframe>
+
+<hr />
+<p>Ok, what I'm interested in understanding is the claim that, for $p$ prime:</p>
+<p>$$p \equiv 1 \pmod{4} \Longleftrightarrow \exists a, b \in \mathbb{Z} \text{ such that } a^2 + b^2 = p$$</p>
+<p>For context, after $2$ all primes are either congruent to $1 \pmod{4}$ or $-1 \pmod{4}$, just because they're not even. So the first type of prime is always expressible as a sum of two squares, and the latter type never is.</p>
+<p>It's got a name -- <a href="https://en.wikipedia.org/wiki/Fermat%27s_theorem_on_sums_of_two_squares">Fermat's Theorem on Sums of Two Squares</a> or, charmingly, <a href="https://math.stackexchange.com/questions/11301/fermats-christmas-theorem-on-sums-of-two-squares-with-gaussian-integers">Fermat's Christmas Theorem</a>. Proofs are available at those links, but they were not enlightening enough for me. As with all my math posts, my goal is to really synthesize the fact, potentially look at it from new points of view, but anyway try to understand it fully.</p>
+<p><strong>Proof:</strong></p>
+<p>1) Be convinced that, for a prime $p$, "expressible as a sum of two squares" is equivalent to "factors in <a href="https://en.wikipedia.org/wiki/Gaussian_integer">$\mathbb{Z}[i]$</a>". That is, the primes expressible as a sum of two squares are those that lose their primeness when going from $\mathbb{Z}$ to $\mathbb{Z}[i]$.</p>
+<p>Why is this true? The idea is that multiplying by your complex conjugate always yields a sum of squares: $(a + bi)(a - bi) = a^2 + b^2$. And since $p$ is just a regular integer, if it has a factor $\alpha$ then the complex conjugate $\overline{\alpha}$ must also be a factor.</p>
+<p>(My intuition for that statement is that if we're sitting in the integers, we can't tell apart $i$ and $-i$ and hence must accept both. The formal proof: if $p = \alpha \beta$ we can conjugate both sides to get $p = \overline{\alpha} \overline{\beta}$).</p>
+</div>
+<div class="post-tags">
+    
+    <b>Tags:</b> <a href="google.com">math</a>
+    
+    
+</div>
+
+        </div>
+    </div>
+<script>
+    renderMathInElement(
+        document.getElementById("content"), {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        }
+    )
+</script>
+</body>
+</html>

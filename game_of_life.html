@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css">
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/page.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a class="title" href="/index.html">Eli Rose</a> 's
+            <a href="/index.html">posts</a>
+            &sdot;
+            <a href="/about.html">about</a>
+            &sdot;
+            <div class="dropdown">
+                <a href="javascript:void(0)">code projects</a>
+                <div class="dropdown-content">
+                    <div>&sdot; <a href="/turing.html">turing</a></div>
+                    <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                    <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                </div>
+            </div>
+            &sdot;
+            <a href="/media_log.html">media log</a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="page-header">
+    <div class="page-title">Conway's Game of Life</div>
+</div>
+<div class="page-content">
+    <div style="text-align: center;" id="main"></div>
+
+<script src="/static/js/game-of-life.js"></script>
+
+<script>
+  var node = document.getElementById('main');
+  var app = Elm.Main.embed(node);
+</script>
+</div>
+
+        </div>
+    </div>
+<script>
+    renderMathInElement(
+        document.getElementById("content"), {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        }
+    )
+</script>
+</body>
+</html>
