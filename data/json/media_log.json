@@ -120,6 +120,13 @@
             "author": "Kurt Vonnegut",
             "dateCompleted": "July 4th, 2017",
             "completedVerb": "Finished reading"
+        },
+        {
+            "title": "Confident Ruby",
+            "type": "nonfiction",
+            "author": "Avdi Grimm",
+            "dateCompleted": "July 30th, 2017",
+            "completedVerb": "Finished reading"
         }
     ]
 }
