@@ -9285,7 +9285,39 @@ var _elm_lang$svg$Svg_Events$onMouseOut = _elm_lang$svg$Svg_Events$simpleOn('mou
 var _elm_lang$svg$Svg_Events$onMouseOver = _elm_lang$svg$Svg_Events$simpleOn('mouseover');
 var _elm_lang$svg$Svg_Events$onMouseUp = _elm_lang$svg$Svg_Events$simpleOn('mouseup');
 
-var _user$project$Main$helpText = '\nClick to set up your cells, then press \'p\' to unpause.\n';
+var _user$project$Key$Unknown = {ctor: 'Unknown'};
+var _user$project$Key$ArrowRight = {ctor: 'ArrowRight'};
+var _user$project$Key$P = {ctor: 'P'};
+var _user$project$Key$fromCode = function (keyCode) {
+	var _p0 = keyCode;
+	switch (_p0) {
+		case 80:
+			return _user$project$Key$P;
+		case 39:
+			return _user$project$Key$ArrowRight;
+		default:
+			return _user$project$Key$Unknown;
+	}
+};
+
+var _user$project$Main$helpText = function (model) {
+	return model.paused ? '\nClick a cell to set its state. Press \'p\' to toggle pause. Press the right arrow key to run just one step.\n' : '\nClick a cell to set its state. Press \'p\' to toggle pause.\n';
+};
+var _user$project$Main$stylesheet = function (filepath) {
+	return A3(
+		_elm_lang$html$Html$node,
+		'link',
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$rel('stylesheet'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$href(filepath),
+				_1: {ctor: '[]'}
+			}
+		},
+		{ctor: '[]'});
+};
 var _user$project$Main$cellSizeInPixels = 10;
 var _user$project$Main$toScreenCoordinate = function (n) {
 	return _elm_lang$core$Basics$toString(n * _user$project$Main$cellSizeInPixels);
@@ -9387,13 +9419,16 @@ var _user$project$Main$update = F2(
 							board: A3(_elm_lang$core$Dict$update, _p6._0, _user$project$Main$toggleCell, model.board)
 						});
 				case 'Tick':
-					var _p7 = model;
-					var paused = _p7.paused;
-					var board = _p7.board;
-					return _elm_lang$core$Native_Utils.update(
+					return model.paused ? model : _elm_lang$core$Native_Utils.update(
 						model,
 						{
-							board: paused ? board : _user$project$Main$stepSimulation(board)
+							board: _user$project$Main$stepSimulation(model.board)
+						});
+				case 'OneStep':
+					return (!model.paused) ? model : _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							board: _user$project$Main$stepSimulation(model.board)
 						});
 				case 'TogglePause':
 					return _elm_lang$core$Native_Utils.update(
@@ -9450,6 +9485,7 @@ var _user$project$Main$Tick = function (a) {
 	return {ctor: 'Tick', _0: a};
 };
 var _user$project$Main$NoOp = {ctor: 'NoOp'};
+var _user$project$Main$OneStep = {ctor: 'OneStep'};
 var _user$project$Main$TogglePause = {ctor: 'TogglePause'};
 var _user$project$Main$subscriptions = function (model) {
 	return _elm_lang$core$Platform_Sub$batch(
@@ -9460,11 +9496,14 @@ var _user$project$Main$subscriptions = function (model) {
 				ctor: '::',
 				_0: _elm_lang$keyboard$Keyboard$downs(
 					function (keyCode) {
-						var _p8 = _elm_lang$core$Char$fromCode(keyCode);
-						if (_p8.valueOf() === 'P') {
-							return _user$project$Main$TogglePause;
-						} else {
-							return _user$project$Main$NoOp;
+						var _p7 = _user$project$Key$fromCode(keyCode);
+						switch (_p7.ctor) {
+							case 'P':
+								return _user$project$Main$TogglePause;
+							case 'ArrowRight':
+								return _user$project$Main$OneStep;
+							default:
+								return _user$project$Main$NoOp;
 						}
 					}),
 				_1: {ctor: '[]'}
@@ -9474,38 +9513,42 @@ var _user$project$Main$subscriptions = function (model) {
 var _user$project$Main$ToggleCell = function (a) {
 	return {ctor: 'ToggleCell', _0: a};
 };
-var _user$project$Main$renderCell = function (_p9) {
-	var _p10 = _p9;
-	var _p12 = _p10._0._1;
-	var _p11 = _p10._0._0;
+var _user$project$Main$renderCell = function (_p8) {
+	var _p9 = _p8;
+	var _p11 = _p9._0._1;
+	var _p10 = _p9._0._0;
 	return A2(
 		_elm_lang$svg$Svg$rect,
 		{
 			ctor: '::',
 			_0: _elm_lang$svg$Svg_Attributes$x(
-				_user$project$Main$toScreenCoordinate(_p11)),
+				_user$project$Main$toScreenCoordinate(_p10)),
 			_1: {
 				ctor: '::',
 				_0: _elm_lang$svg$Svg_Attributes$y(
-					_user$project$Main$toScreenCoordinate(_p12)),
+					_user$project$Main$toScreenCoordinate(_p11)),
 				_1: {
 					ctor: '::',
-					_0: _elm_lang$svg$Svg_Attributes$width(
-						_elm_lang$core$Basics$toString(_user$project$Main$cellSizeInPixels)),
+					_0: _elm_lang$svg$Svg_Attributes$class('cell'),
 					_1: {
 						ctor: '::',
-						_0: _elm_lang$svg$Svg_Attributes$height(
+						_0: _elm_lang$svg$Svg_Attributes$width(
 							_elm_lang$core$Basics$toString(_user$project$Main$cellSizeInPixels)),
 						_1: {
 							ctor: '::',
-							_0: _elm_lang$svg$Svg_Events$onClick(
-								_user$project$Main$ToggleCell(
-									{ctor: '_Tuple2', _0: _p11, _1: _p12})),
+							_0: _elm_lang$svg$Svg_Attributes$height(
+								_elm_lang$core$Basics$toString(_user$project$Main$cellSizeInPixels)),
 							_1: {
 								ctor: '::',
-								_0: _elm_lang$svg$Svg_Attributes$fillOpacity(
-									_p10._1 ? '1.0' : '0.0'),
-								_1: {ctor: '[]'}
+								_0: _elm_lang$svg$Svg_Events$onClick(
+									_user$project$Main$ToggleCell(
+										{ctor: '_Tuple2', _0: _p10, _1: _p11})),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$fillOpacity(
+										_p9._1 ? '1.0' : '0.0'),
+									_1: {ctor: '[]'}
+								}
 							}
 						}
 					}
@@ -9521,6 +9564,18 @@ var _user$project$Main$renderBoard = function (board) {
 		_elm_lang$core$Dict$toList(board));
 };
 var _user$project$Main$view = function (model) {
+	var stylePairs = A2(
+		_elm_lang$core$Basics_ops['++'],
+		{
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'border', _1: '1px solid black'},
+			_1: {ctor: '[]'}
+		},
+		model.paused ? {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'backgroundColor', _1: 'lightBlue'},
+			_1: {ctor: '[]'}
+		} : {ctor: '[]'});
 	var boardSizeInPixels = _elm_lang$core$Basics$toString(_user$project$Main$cellsOnASide * _user$project$Main$cellSizeInPixels);
 	return A2(
 		_elm_lang$html$Html$div,
@@ -9537,19 +9592,7 @@ var _user$project$Main$view = function (model) {
 						_0: _elm_lang$svg$Svg_Attributes$height(boardSizeInPixels),
 						_1: {
 							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$style(
-								A2(
-									_elm_lang$core$Basics_ops['++'],
-									{
-										ctor: '::',
-										_0: {ctor: '_Tuple2', _0: 'border', _1: '1px solid black'},
-										_1: {ctor: '[]'}
-									},
-									model.paused ? {
-										ctor: '::',
-										_0: {ctor: '_Tuple2', _0: 'backgroundColor', _1: 'lightBlue'},
-										_1: {ctor: '[]'}
-									} : {ctor: '[]'})),
+							_0: _elm_lang$html$Html_Attributes$style(stylePairs),
 							_1: {ctor: '[]'}
 						}
 					}
@@ -9562,7 +9605,8 @@ var _user$project$Main$view = function (model) {
 					{ctor: '[]'},
 					{
 						ctor: '::',
-						_0: _elm_lang$svg$Svg$text(_user$project$Main$helpText),
+						_0: _elm_lang$svg$Svg$text(
+							_user$project$Main$helpText(model)),
 						_1: {ctor: '[]'}
 					}),
 				_1: {ctor: '[]'}
