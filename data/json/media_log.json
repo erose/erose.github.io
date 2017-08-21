@@ -134,6 +134,13 @@
             "author": "Errol Morris",
             "dateCompleted": "August 7th, 2017",
             "completedVerb": "Watched"
+        },
+        {
+            "title": "Ex Machina",
+            "type": "movie",
+            "author": "Alex Garland",
+            "dateCompleted": "August 21st, 2017",
+            "completedVerb": "Watched"
         }
     ]
 }
