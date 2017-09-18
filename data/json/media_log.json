@@ -147,14 +147,14 @@
             "type": "tv show",
             "author": "Raphael Bob-Waksberg",
             "dateCompleted": "September 16th, 2017",
-            "completedVerb": "Finished watching",
+            "completedVerb": "Finished watching"
         },
         {
             "title": "Sleep Well Beast",
             "type": "album",
             "author": "The National",
             "dateCompleted": "September 17th, 2017",
-            "completedVerb": "Listened to",
+            "completedVerb": "Listened to"
         }
     ]
 }
