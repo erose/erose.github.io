@@ -155,6 +155,20 @@
             "author": "The National",
             "dateCompleted": "September 17th, 2017",
             "completedVerb": "Listened to"
+        },
+        {
+            "title": "Mother",
+            "type": "movie",
+            "author": "Darren Aronofsky",
+            "dateCompleted": "September 23rd, 2017",
+            "completedVerb": "Watched"
+        },
+        {
+            "title": "Brick Body Kids Still Daydream",
+            "type": "album",
+            "author": "Open Mike Eagle",
+            "dateCompleted": "Septermber 28th, 2017",
+            "completedVerb": "Listened to"
         }
     ]
 }
