@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css">
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a class="title" href="/index.html">Eli Rose</a> 's
+            <a href="/index.html">posts</a>
+            &sdot;
+            <a href="/about.html">about</a>
+            &sdot;
+            <div class="dropdown">
+                <a href="javascript:void(0)">code projects</a>
+                <div class="dropdown-content">
+                    <div>&sdot; <a href="/turing.html">turing</a></div>
+                    <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                    <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                </div>
+            </div>
+            &sdot;
+            <a href="/media_log.html">media log</a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Very Quick Sketch of Galois Theory</div>
+    <div class="post-date">Saturday, September 30th, 2017</div>
+</div>
+<div class="post-content">
+    <p>(I'm just writing this to help myself remember. YMMV.)</p>
+<p><em>Question</em>: we can write down a general formula for the roots of a quadratic, cubic, or quartic polynomial in terms of the coefficients. Why can't we do it for a quintic polynomial?</p>
+<p><em>Explanation</em>: Extend $\mathbb{Q}$ by taking roots and you will introduce certain symmetries (automorphisms which leave $\mathbb{Q}$ fixed). All the automorphisms introduced this way are cyclic in structure.</p>
+<p>The groups $S_2, S_3, S_4$ all have the property of decomposing in a certain nice way: they have a chain of normal subgroups which leave behind a cyclic group when quotiented out. But $S_{\geq 5}$ does not have this property (not "solvable")<sup>*</sup>.</p>
+<p>The theorem: a polynomial $p$ is solvable by radicals $\Leftrightarrow$ $\text{Gal}(p)$ is solvable.<sup></sup> It's true because of the isomorphism between field extensions and Galois subgroups. If we wanted to build a tower of field extensions (by taking roots) which culminated in a field that could hold the roots of the quintic, we would have to be able to add cyclic groups the whole way. But we can't reach $S_{\geq 5}$ this way, because no chain.</p>
+<div class='normal-line-height'>
+  <div class='small'>
+    * The obstruction is that $A_5$, the only candidate to start the chain off with, doesn't have any normal subgroups ("simple").
+  </div>
+</div>
+
+<hr />
+<p><strong>Extra:</strong></p>
+<ul>
+<li>This lovely <a href="https://www.math.ucdavis.edu/~osserman/classes/250B-W11/lattice.pdf">diagram</a> of the isomorphism for $p = x^4 - 2$.</li>
+<li>Implication which I somehow never realized until right now: there exist algebraic numbers, i.e. the roots of some $p \in \mathbb{Q}[x]$, which we have no "formula for". That is, no agreed-upon way to write them other than just exhibiting $p$. (You might object that this is a matter of convention and no different than the situation with $\sqrt{2}$, and you might have a point.) At any rate, these are called <a href="https://math.stackexchange.com/questions/657168/understanding-non-solvable-algebraic-numbers">non-solvable numbers</a>.</li>
+</ul>
+</div>
+<div class="post-tags">
+    
+    <b>Tags:</b> <a href="google.com">math</a>
+    
+    
+</div>
+
+        </div>
+    </div>
+<script>
+    renderMathInElement(
+        document.getElementById("content"), {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        }
+    )
+</script>
+</body>
+</html>
