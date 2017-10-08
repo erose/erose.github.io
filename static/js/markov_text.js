@@ -128,7 +128,7 @@ var OutputArea = React.createClass({
         urls = _.filter(Object.keys(is_selected), function(k){
             return is_selected[k];
         }).map(function(name){
-            return "/static/books/" + name + ".txt";
+            return "/data/books/" + name + ".txt";
         });
         w.postMessage([{ urls: urls }, 4000, 10]);
     },
