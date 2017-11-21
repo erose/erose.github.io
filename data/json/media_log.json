@@ -171,6 +171,20 @@
             "completedVerb": "Listened to"
         },
         {
+            "title": "My Beautiful Dark Twisted Fantasy",
+            "type": "album",
+            "author": "Kanye West",
+            "dateCompleted": "October 21st, 2017",
+            "completedVerb": "Listened to"
+        },
+        {
+            "title": "50 Song Memoir",
+            "type": "album",
+            "author": "The Magnetic Fields",
+            "dateCompleted": "November 7th, 2017",
+            "completedVerb": "Listened to"
+        },
+        {
             "title": "Toni Erdmann",
             "type": "movie",
             "author": "Maren Ade",
