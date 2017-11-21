@@ -78,6 +78,97 @@
             "author": "Ray McKinnon",
             "dateCompleted": "April 18th, 2017",
             "completedVerb": "Finished watching"
+        },
+        {
+            "title": "The Idiot",
+            "type": "novel",
+            "author": "Elif Batuman",
+            "dateCompleted": "May 28th, 2017",
+            "completedVerb": "Finished reading"
+        },
+        {
+            "title": "Clean Code",
+            "type": "nonfiction",
+            "author": "Robert Cecil Martin",
+            "dateCompleted": "June 11th, 2017",
+            "completedVerb": "Finished reading"
+        },
+        {
+            "title": "Three Bodies at Mitanni",
+            "type": "short story",
+            "author": "Seth Dickinson",
+            "dateCompleted": "June 17th, 2017",
+            "completedVerb": "Read"
+        },
+        {
+            "title": "So Sharp That Blood Must Flow",
+            "type": "short story",
+            "author": "Sunny Moraine",
+            "dateCompleted": "June 17th, 2017",
+            "completedVerb": "Read"
+        },
+        {
+            "title": "Wizards at War",
+            "type": "novel",
+            "author": "Diane Duane",
+            "dateCompleted": "July 2nd, 2017",
+            "completedVerb": "Finished reading"
+        },
+        {
+            "title": "Galápagos",
+            "type": "novel",
+            "author": "Kurt Vonnegut",
+            "dateCompleted": "July 4th, 2017",
+            "completedVerb": "Finished reading"
+        },
+        {
+            "title": "Confident Ruby",
+            "type": "nonfiction",
+            "author": "Avdi Grimm",
+            "dateCompleted": "July 30th, 2017",
+            "completedVerb": "Finished reading"
+        },
+        {
+            "title": "Fog of War",
+            "type": "documentary",
+            "author": "Errol Morris",
+            "dateCompleted": "August 7th, 2017",
+            "completedVerb": "Watched"
+        },
+        {
+            "title": "Ex Machina",
+            "type": "movie",
+            "author": "Alex Garland",
+            "dateCompleted": "August 21st, 2017",
+            "completedVerb": "Watched"
+        },
+        {
+            "title": "Bojack Horseman (Season 4)",
+            "type": "tv show",
+            "author": "Raphael Bob-Waksberg",
+            "dateCompleted": "September 16th, 2017",
+            "completedVerb": "Finished watching"
+        },
+        {
+            "title": "Sleep Well Beast",
+            "type": "album",
+            "author": "The National",
+            "dateCompleted": "September 17th, 2017",
+            "completedVerb": "Listened to"
+        },
+        {
+            "title": "Mother",
+            "type": "movie",
+            "author": "Darren Aronofsky",
+            "dateCompleted": "September 23rd, 2017",
+            "completedVerb": "Watched"
+        },
+        {
+            "title": "Brick Body Kids Still Daydream",
+            "type": "album",
+            "author": "Open Mike Eagle",
+            "dateCompleted": "Septermber 28th, 2017",
+            "completedVerb": "Listened to"
         }
     ]
 }
