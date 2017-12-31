@@ -211,6 +211,27 @@
             "author": "Eliezer Yudkowsky",
             "dateCompleted": "November 26th, 2017",
             "completedVerb": "Finished"
+        },
+        {
+            "title": "The Agent Intellect",
+            "type": "album",
+            "author": "Protomartyr",
+            "dateCompleted": "December 18th, 2017",
+            "completedVerb": "Listened to"
+        },
+        {
+            "title": "The Left Hand of Darkness",
+            "type": "novel",
+            "author": "Ursula K. LeGuin",
+            "dateCompleted": "December 28th, 2017",
+            "completedVerb": "Finished"
+        }
+        {
+            "title": "The Mating Mind",
+            "type": "nonfiction",
+            "author": "Geoffrey Miller",
+            "dateCompleted": "December 31st, 2017",
+            "completedVerb": "Finished"
         }
     ]
 }
