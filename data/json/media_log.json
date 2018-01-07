@@ -239,6 +239,20 @@
             "author": "Geoffrey Miller",
             "dateCompleted": "December 31st, 2017",
             "completedVerb": "Finished"
+        },
+        {
+            "title": "The Front Bottoms",
+            "type": "album",
+            "author": "The Front Bottoms",
+            "dateCompleted": "January 3rd, 2018",
+            "completedVerb": "Listened to"
+        },
+        {
+            "title": "Back On Top",
+            "type": "album",
+            "author": "The Front Bottoms",
+            "dateCompleted": "January 3rd, 2018",
+            "completedVerb": "Listened to"
         }
     ]
 }
