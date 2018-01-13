@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css">
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a class="title" href="/index.html">Eli Rose</a> 's
+            <a href="/index.html">posts</a>
+            &sdot;
+            <a href="/about.html">about</a>
+            &sdot;
+            <div class="dropdown">
+                <a href="javascript:void(0)">code projects</a>
+                <div class="dropdown-content">
+                    <div>&sdot; <a href="/turing.html">turing</a></div>
+                    <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                    <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                </div>
+            </div>
+            &sdot;
+            <a href="/media_log.html">media log</a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Learning Networking from Ben Eater Videos</div>
+    <div class="post-date">Saturday, January 13th, 2018</div>
+</div>
+<div class="post-content">
+    <p><strong><a href="https://www.youtube.com/watch?v=XaGXPObx2Gs">Sending Digital Information Over a Wire</a></strong></p>
+<ul>
+<li>
+<p>One way to convey digital information across distances is through copper wire (Ethernet cable). Here we just vary the voltage in the wire between two states A and B. When we are at A, we are sending a <code>0</code>, and when we are at B we are sending a <code>1</code>.</p>
+</li>
+<li>
+<p>What is voltage? Voltage is the delta between two points of an electrical field.</p>
+</li>
+<li>
+<p>These states are called <code>symbols</code>.</p>
+</li>
+<li>
+<p>Number of symbols / seconds is a unit called <code>baud</code>. If your symbol rate is 1 symbol per second, you are sending information at 1 baud.</p>
+</li>
+</ul>
+<p><strong><a href="https://www.youtube.com/watch?v=lUo45NqPyq8">Intro to Fiber Optics and RF Encoding</a></strong></p>
+<p>Two more ways of conveying digital information across distances.</p>
+<ul>
+<li>
+<p>Fiber optic cables: basically, they use reflection to give light the ability to go around corners. The symbols are (for example) "light is on" and "light is off".</p>
+</li>
+<li>
+<p>Radio waves: an antenna is constantly radiating radio waves. Information is conveyed through the phase of the wave: e.g. a phase of 0 radians is a <code>0</code>, a phase of π/4 radians is a <code>1</code>.</p>
+</li>
+</ul>
+<p><strong><a href="https://www.youtube.com/watch?v=8BhjXqw9MqI">Clock synchronization and Manchester coding</a></strong></p>
+<ul>
+<li>
+<p>All these methods require that sender and receiver agree on when to sample the continuous signal in order to convert it to binary information. This means that they need to have synchronized clocks. Another way of saying this is that sender and receiver need to agree on the same function $\mathbb{R} \rightarrow [0, 1]$.</p>
+</li>
+<li>
+<p>How can we synchronize clocks between distant computers?</p>
+<ul>
+<li>
+<p>They could both use a third party to keep their clocks in sync, e.g. GPS satellites (which have very accurate clocks by necessity).</p>
+</li>
+<li>
+<p>We could give each one an atomic clock.</p>
+</li>
+<li>
+<p>The sender could transmit its clock signal at the same time as the actual data, along a separate connection. Then the receiver interprets the data according to the sender's clock signal, not its own. But the issue with this is that by transmitting clock and data separately, we run the risk that they will get out of sync.</p>
+</li>
+<li>
+<p>Or (what is actually done) we combine clock and data into one signal. Given a data signal that stays at its state for 2 seconds and a clock that flips every second, we XOR the data signal with the clock signal.</p>
+</li>
+</ul>
+<p><img src="/static/images/manchester_encoding.png"></p>
+<ul>
+<li>Now the receiver interprets <img src="/static/images/manchester_encoding_rising_edge.png"> as a <code>0</code> and <img src="/static/images/manchester_encoding_falling_edge.png"> as a <code>1</code>. Note that these are only counted when they occur in the middle of a period. So there is still clock-dependence, but the encoding is much more robust to clock errors. In particular, the receiver can identify if its clock is wrong because there will no longer always be a transition during each period.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="post-tags">
+    
+    <b>Tags:</b> <a href="google.com">computer-science</a>
+    
+    
+</div>
+
+        </div>
+    </div>
+<script>
+    renderMathInElement(
+        document.getElementById("content"), {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        }
+    )
+</script>
+</body>
+</html>
