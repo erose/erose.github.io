@@ -253,6 +253,13 @@
             "author": "The Front Bottoms",
             "dateCompleted": "January 3rd, 2018",
             "completedVerb": "Listened to"
+        },
+        {
+            "title": "Phantom Thread",
+            "type": "movie",
+            "author": "Paul Thomas Anderson",
+            "dateCompleted": "January 13th, 2018",
+            "completedVerb": "Watched"
         }
     ]
 }
