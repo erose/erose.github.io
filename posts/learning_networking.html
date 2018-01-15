@@ -81,7 +81,7 @@
 <p>They could both use a third party to keep their clocks in sync, e.g. GPS satellites (which have very accurate clocks by necessity).</p>
 </li>
 <li>
-<p>We could give each one an atomic clock.</p>
+<p>We could give each one a highly accurate (e.g. atomic) clock that we promised wouldn't get out of sync.</p>
 </li>
 <li>
 <p>The sender could transmit its clock signal at the same time as the actual data, along a separate connection. Then the receiver interprets the data according to the sender's clock signal, not its own. But the issue with this is that by transmitting clock and data separately, we run the risk that they will get out of sync.</p>
@@ -95,6 +95,103 @@
 <li>Now the receiver interprets <img src="/static/images/manchester_encoding_rising_edge.png"> as a <code>0</code> and <img src="/static/images/manchester_encoding_falling_edge.png"> as a <code>1</code>. Note that these are only counted when they occur in the middle of a period. So there is still clock-dependence, but the encoding is much more robust to clock errors. In particular, the receiver can identify if its clock is wrong because there will no longer always be a transition during each period.</li>
 </ul>
 </li>
+</ul>
+<p><strong><a href="https://www.youtube.com/watch?v=xrVN9jKjIKQ">The Importance of Framing</a></strong></p>
+<ul>
+<li>
+<p>How do computers agree on how to chunk the stream of bits into bytes? (Agree upon a framing scheme). We need to agree on where the transmission starts.</p>
+<ul>
+<li>
+<p>One protocol for this is called <a href="https://en.wikipedia.org/wiki/High-Level_Data_Link_Control">HDLC</a> -- it has a certain bit pattern (<code>01111110</code>) which denotes the start of a frame. After you see this pattern, the very next bit is the first in the transmission.</p>
+</li>
+<li>
+<p>This means we need to escape the start-of-frame sequence whenever it appears naturally in our data. ("Bit stuffing.")</p>
+</li>
+<li>
+<p>Another protocol is Ethernet -- it uses a different bit pattern and has a distinctive preamble before the bit pattern.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>There is an efficieny/error recovery tradeoff when choosing your frame size, because an error spoils the whole frame. Make it too low and you will not send data efficiently (you will waste time sending start-of-frame bit patterns). Make it too high and any given error corrupts more data. In practice most frame sizes are between 64 bytes and 1500 bytes.</p>
+</li>
+</ul>
+<p><strong><a href="https://www.youtube.com/watch?v=1XrRT0CmzYw">Frame Formats</a></strong></p>
+<ul>
+<li>
+<p>Ethernet addresses, also called MAC addresses, are unique identifiers built into hardware that are required for communication over Ethernet because you need to specify where your message is going. Interestingly, manufacturers coordinate to make sure they're unique.</p>
+</li>
+<li>
+<p>Ethernet networks</p>
+</li>
+</ul>
+<p><strong><a href="https://www.youtube.com/watch?v=MGAaTqFct_I">Lower Layers of the OSI Model</a></strong></p>
+<ul>
+<li>
+<p>The OSI model (with Wikipedia's descriptions because I feel I am unlikely to summarize better than them).</p>
+<ol>
+<li><strong>Physical</strong>: Transmission and reception of raw bit streams over a physical medium.</li>
+<li><strong>Data Link</strong>: Reliable transmission of data frames between two nodes connected by a physical layer.</li>
+<li><strong>Network</strong>: Structuring and managing a multi-node network, including addressing, routing and traffic control.</li>
+<li><strong>Transport</strong>: Reliable transmission of data segments between points on a network, including segmentation, acknowledgement and multiplexing.</li>
+<li><strong>Session</strong>: Managing communication sessions, i.e. continuous exchange of information in the form of multiple back-and-forth transmissions between two nodes</li>
+<li><strong>Presentation</strong>: Translation of data between a networking service and an application; including character encoding, data compression and encryption/decryption.</li>
+<li><strong>Application</strong>: High-level APIs, including resource sharing, remote file access</li>
+</ol>
+</li>
+</ul>
+<p><strong><a href="https://www.youtube.com/watch?v=rPoalUa4m8E">The Internet Protocol</a></strong></p>
+<ul>
+<li>
+<p>Basic layout: ethernet networks (where nodes are identified by MAC addresses) are connected to the Internet (where nodes are identified by IP addresses) by routers. MAC addresses identify other nodes locally, IP addresses identify nodes globally.</p>
+</li>
+<li>
+<p>The internet is a collection of routers which have a collection of rules telling them how to forward packets, based on their destination IP addresses. A router is connected to N other routers ("interfaces") and can forward a packet to any of them. If the interfaces are 1, 2 and 3, the rules ("forwarding table") might look like this:</p>
+<ul>
+<li><code>172.17 / 16</code> $\rightarrow$ <code>2</code> (meaning: route the packet to interface 2 if its first 16 bits match <code>172.17</code>).</li>
+<li><code>172.17.6 / 24</code> $\rightarrow$ <code>3</code> (meaning: route the packet to interface 3 if its first 24 bits match <code>172.17.6</code>)</li>
+</ul>
+</li>
+<li>
+<p>Precedence is always given to the rule that matches the most bits, so here the packet <code>172.17.64</code> would be routed to interface 3.</p>
+</li>
+</ul>
+<p><strong><a href="https://www.youtube.com/watch?v=aamG4-tH_m8">ARP: Mapping Between IP and Ethernet</a></strong></p>
+<ul>
+<li>
+<p>Suppose I am a laptop connected to an Ethernet switch in San Francisco, and I want to send a packet to Boston. There's a local router that can route my packet, but in order to use Ethernet to send data to it I need to know its MAC address. How can I discover that? (In general, how do I learn about my router?)</p>
+<ul>
+<li>
+<p>We broadcast a message to the whole Ethernet network we are on, saying "Whoever is the owner of this IP address: 192.168.9.1 -- please tell me your MAC address."</p>
+</li>
+<li>
+<p>The protocol used here is ARP (<a href="https://en.wikipedia.org/wiki/Address_Resolution_Protocol">Address Resolution Protocol</a>).</p>
+</li>
+<li>
+<p>We can broadcast a message to the whole Ethernet network by sending a message with the special destination address <code>ff:ff:ff:ff:ff</code>. The switch will send this message to everyone.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong><a href="https://www.youtube.com/watch?v=xNbdeyEI-nE">Looking at ARP and Ping Packets</a></strong></p>
+<ul>
+<li>
+<p>I asked <a href="https://networkengineering.stackexchange.com/questions/47022/why-does-the-hwaddress-field-of-my-router-as-returned-by-arp-not-match-the-o">this SO question</a>, let's see if it gets any results.</p>
+</li>
+<li>
+<p>A packet may, and will often, have a destination MAC address at the Ethernet level that differs from its destination IP address at the IP level. The MAC address is where it's getting routed to right now, but the IP address is where it's going overall.</p>
+</li>
+</ul>
+<p><strong><a href="https://www.youtube.com/watch?v=VWJ8GmYnjTs">Hop-by-hop Routing</a></strong></p>
+<ul>
+<li>A forwarding table might give multiple best ways for a packet to reach a given destination.</li>
+</ul>
+<p><strong><a href="https://www.youtube.com/watch?v=4IMc3CaMhyY">TCP: Transmission Control Protocol</a></strong></p>
+<ul>
+<li>
+<p>TCP handles the problems of ordering packets, guarding against packet loss, distinguishing between multiple conversations that might be going on between computers A and B, and flow control.</p>
+</li>
+<li></li>
 </ul>
 </div>
 <div class="post-tags">
