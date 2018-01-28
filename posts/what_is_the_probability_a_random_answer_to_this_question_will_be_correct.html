@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css">
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a class="title" href="/index.html">Eli Rose</a> 's
+            <a href="/index.html">posts</a>
+            &sdot;
+            <a href="/about.html">about</a>
+            &sdot;
+            <div class="dropdown">
+                <a href="javascript:void(0)">code projects</a>
+                <div class="dropdown-content">
+                    <div>&sdot; <a href="/turing.html">turing</a></div>
+                    <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                    <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                </div>
+            </div>
+            &sdot;
+            <a href="/media_log.html">media log</a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">What is the probability a random answer to this question will be correct?</div>
+    <div class="post-date">Sunday, January 28th, 2018</div>
+</div>
+<div class="post-content">
+    <p>Maybe you've seen this problem or its variations before:</p>
+<div>
+  <img src="/static/images/random_multiple_choice_question.png"></img>
+</div>
+
+<p>By considering each possibility in turn, we can show that there is no answer.</p>
+<ul>
+<li>Suppose that <strong>A</strong> were correct. It agrees with <strong>D</strong>. The probability of selecting either <strong>A</strong> or <strong>D</strong> by random chance is 50%, since there are four answers. So if <strong>A</strong> were correct, the probability of answering correctly by choosing at random would be 50% -- but then <strong>A</strong> would not be correct. Hence <strong>A</strong> is not the answer.</li>
+<li>Suppose that <strong>B</strong> were correct. No other answer agrees with it, so the probability of being correct by chance would be the probability of selecting <strong>B</strong> by chance; that is, 25%. But then <strong>B</strong> would not be correct. Hence <strong>B</strong> is not the answer.</li>
+<li><strong>C)</strong> cannot be correct by the same argument that applies to <strong>B</strong>.</li>
+<li><strong>D</strong> cannot be correct by the same argument that applies to <strong>A</strong>.</li>
+</ul>
+<p>You may notice that there are fairly heavy restrictions on which problems of this kind have answers. It seems like we should be able to classify them all.</p>
+<p>One observation: in order to be correct an answer must, at the very least, give a probability of the form $(\frac{k}{n})$% where <em>n</em> is the number of other answers -- if we have four answers and one of them is 37%, we can throw it right out since there is just no way to achieve that probability.</p>
+<p>Another observation: if an answer $\frac{k}{n}$ is not repeated enough to constitute exactly $\frac{k}{n}$ of the <em>n</em> answers, it cannot be correct. (This was what we used to analyze the original problem.)</p>
+<ul>
+<li>67%</li>
+<li>67%</li>
+<li>33%</li>
+</ul>
+<p>2/3 of the time, we choose 67%. Is it correct?
+1/3 of the time, we choose 33%. Is it correct?</p>
+</div>
+<div class="post-tags">
+    
+    <b>Tags:</b> <a href="google.com">math</a>
+    
+    
+</div>
+
+        </div>
+    </div>
+<script>
+    renderMathInElement(
+        document.getElementById("content"), {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        }
+    )
+</script>
+</body>
+</html>
