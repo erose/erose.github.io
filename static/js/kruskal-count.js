@@ -1,75 +1,74 @@
 var KruskalCount = React.createClass({
+  getInitialState: function(){
+    return {
+      words: this.getBibleText().split(' '),
+      highlightedWordIndexes: [],
+    };
+  },
+
   getBibleText: function(){
     return "In the beginning God created the heaven and the Earth. And the earth was without form and void and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters. And God said, 'Let there be light', and there was light.";
   },
 
-  getInitialState: function(){
-    return {
-      wordObjects: this.getBibleText().split(' ').map(
-        function(word, index){
-          return { word: word, number: index };
-        }
-      ),
-      highlightedWordNumbers: [],
-    };
+  render: function(){
+    return React.DOM.div(
+      {},
+      this.state.words.map((word, index) => {
+        return React.createElement(
+          Word,
+          {
+            word: word,
+            index: index,
+            key: index,
+
+            isHighlighted: this.state.highlightedWordIndexes.includes(index),
+            
+            onMouseOverWord: this.onMouseOverWord,
+            onMouseLeaveWord: this.onMouseLeaveWord,
+          }
+        );
+      }),
+    );
   },
 
-  onWordMousedOver: function(number){
-    this.setState({ highlightedWordNumbers: this.chainStartingFrom(number), });
+  onMouseOverWord: function(index){
+    this.setState({
+      highlightedWordIndexes: this.chainStartingFrom(index),
+    });
   },
 
   /**
    * Returns the chain of words you get by following the Kruskal algorithm, starting at the given
    * index. Returns a list of integers.
    */
-  chainStartingFrom: function(number){
+  chainStartingFrom: function(index){
     var result = [];
 
-    var current = number;
-    while (current < this.state.wordObjects.length) {
+    var current = index;
+    while (current < this.state.words.length) {
       result.push(current);
 
-      var wordObject = this.state.wordObjects[current];
-      current += wordObject.word.length;
+      var word = this.state.words[current];
+      current += word.length;
     }
 
     return result;
   },
 
-  onWordMouseLeave: function(){
-    this.setState({ highlightedWordNumbers: [], });
-  },
-
-  render: function(){
-    var f = this.onWordMousedOver;
-    var g = this.onWordMouseLeave;
-    var highlightedWordNumbers = this.state.highlightedWordNumbers;
-
-    return React.DOM.div(
-      {},
-      this.state.wordObjects.map(function(wordObject, number){
-        return React.createElement(
-          Word,
-          {
-            word: wordObject.word,
-            number: wordObject.number,
-            isHighlighted: highlightedWordNumbers.includes(wordObject.number),
-            
-            onWordMousedOver: f,
-            onWordMouseLeave: g,
-          }
-        );
-      }),
-    );
+  onMouseLeaveWord: function(){
+    this.setState({ highlightedWordIndexes: [], });
   },
 });
 
 var Word = React.createClass({
-  // props: word
-  // props: number
-  // props: isHighlighted
-  // props: onWordMousedOver
-  // props: onMouseLeave
+  // propTypes: {
+  //   word: React.PropTypes.string,
+  //   index: React.PropTypes.number,
+  //   isHighlighted: React.propTypes.bool,
+
+  //   onMouseOverWord: React.PropTypes.func,
+  //   onMouseLeaveWord: React.PropTypes.func,
+  // },
 
   render: function(){
     var style = {
@@ -81,12 +80,8 @@ var Word = React.createClass({
     return React.DOM.span(
       {
         style: style,
-        onMouseEnter: function(_event){
-          this.props.onWordMousedOver(this.props.number);
-        }.bind(this),
-        onMouseLeave: function(_event){
-          this.props.onWordMouseLeave();
-        }.bind(this),
+        onMouseEnter: (_event) => { this.props.onMouseOverWord(this.props.index); },
+        onMouseLeave: (_event) => { this.props.onMouseLeaveWord(); },
       },
       this.props.word,
     );
