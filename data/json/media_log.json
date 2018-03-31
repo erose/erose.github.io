@@ -274,7 +274,20 @@
             "author": "Neil Gaiman",
             "dateCompleted": "February 2rd, 2018",
             "completedVerb": "Finished reading"
+        },
+        {
+            "title": "Annihilation",
+            "type": "movie",
+            "author": "Alex Garland",
+            "dateCompleted": "February 25th, 2018",
+            "completedVerb": "Watched"
+        },
+        {
+            "title": "Annihilation",
+            "type": "novel",
+            "author": "Jeff VanderMeer",
+            "dateCompleted": "March 31st, 2018",
+            "completedVerb": "Finished reading"
         }
-        
     ]
 }
