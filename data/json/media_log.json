@@ -283,6 +283,13 @@
             "completedVerb": "Finished reading"
         },
         {
+            "title": "Twin Fantasy",
+            "type": "album",
+            "author": "Car Seat Headrest",
+            "dateCompleted": "February 21st, 2018",
+            "completedVerb": "Listened to"
+        },
+        {
             "title": "Annihilation",
             "type": "movie",
             "author": "Alex Garland",
