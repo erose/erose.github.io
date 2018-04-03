@@ -276,6 +276,13 @@
             "completedVerb": "Finished reading"
         },
         {
+            "title": "Jailbird",
+            "type": "novel",
+            "author": "Kurt Vonnegut",
+            "dateCompleted": "February 14th, 2018",
+            "completedVerb": "Finished reading"
+        },
+        {
             "title": "Annihilation",
             "type": "movie",
             "author": "Alex Garland",
@@ -287,6 +294,13 @@
             "type": "novel",
             "author": "Jeff VanderMeer",
             "dateCompleted": "March 31st, 2018",
+            "completedVerb": "Finished reading"
+        },
+        {
+            "title": "Peopleware",
+            "type": "nonfiction",
+            "author": "Tom DeMarco, Timothy Lister",
+            "dateCompleted": "April 2nd, 2018",
             "completedVerb": "Finished reading"
         }
     ]
