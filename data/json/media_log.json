@@ -323,6 +323,27 @@
             "author": "Sean Baker",
             "dateCompleted": "May 13th, 2018",
             "completedVerb": "Watched"
+        },
+        {
+            "title": "Tully",
+            "type": "movie",
+            "author": "Diablo Cody",
+            "dateCompleted": "May 19th, 2018",
+            "completedVerb": "Watched"
+        },
+        {
+            "title": "How The Paladin Got His Scar",
+            "type": "comic",
+            "author": "Rich Burlew",
+            "dateCompleted": "May 20th, 2018",
+            "completedVerb": "Read"
+        },
+        {
+            "title": "Tool-Using Mimics",
+            "type": "short story",
+            "author": "Kij Johnson",
+            "dateCompleted": "May 20th, 2018",
+            "completedVerb": "Read"
         }
     ]
 }
