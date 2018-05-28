@@ -60,7 +60,7 @@ var InputTags = React.createClass({
       var tagTexts = Array.from(_this.state.selectedTags);
       var url = 'https://mood-tracker-backend.herokuapp.com/create_event';
 
-      $.post(url, JSON.stringify({ tags: tagTexts }).always(function() {
+      $.post(url, JSON.stringify({ tags: tagTexts })).always(function() {
         alert("Done.");
       });
     };
