@@ -365,6 +365,20 @@
             "author": "Ann Hulbert",
             "dateCompleted": "June 8th, 2018",
             "completedVerb": "Read"
+        },
+        {
+            "title": "Famous Actor",
+            "type" "short story",
+            "author": "Jess Walter",
+            "dateCompleted": "June 9th, 2018",
+            "completedVerb": "Read"
+        },
+        {
+            "title": "Richard of York Gave Battle in Vain",
+            "type": "short story",
+            "author": "Danielle Evans",
+            "dateCompleted": "June 9th, 2018",
+            "completedVerb": "Read"
         }
     ]
 }
