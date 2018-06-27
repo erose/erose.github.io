@@ -386,6 +386,34 @@
             "author": "David Brin",
             "dateCompleted": "June 9th, 2018",
             "completedVerb": "Read"
-        }
+        },
+        {
+            "title": "Solo",
+            "type": "movie",
+            "author": "Ron Howard",
+            "dateCompleted": "June 19th, 2018",
+            "completedVerb": "Watched"
+        },
+        {
+            "title": "The Incredibles 2",
+            "type": "movie",
+            "author": "Brad Bird",
+            "dateCompleted": "June 24th, 2018",
+            "completedVerb": "Watched"
+        },
+        {
+            "title": "Off The Charts",
+            "type": "nonfiction",
+            "author": "Ann Hulbert",
+            "dateCompleted": "June 27th, 2018",
+            "completedVerb": "Finished reading"
+        },
+        {
+            "title": "The Elephant in the Brain",
+            "type": "nonfiction",
+            "author": "Robin Hanson and Kevin Simler",
+            "dateCompleted": "June 27th, 2018",
+            "completedVerb": "Finished reading"
+        },
     ]
 }
