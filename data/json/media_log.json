@@ -415,5 +415,12 @@
             "dateCompleted": "June 27th, 2018",
             "completedVerb": "Finished reading"
         },
+        {
+            "title": "Mercurial",
+            "type": "short story",
+            "author": "Kim Stanley Robinson",
+            "dateCompleted": "July 19th, 2018",
+            "completedVerb": "Read"
+        }
     ]
 }
