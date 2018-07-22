@@ -435,6 +435,20 @@
             "author": "Genevieve Valentine",
             "dateCompleted": "July 21st, 2018",
             "completedVerb": "Read"
+        },
+        {
+            "title" "Eighth Grade",
+            "type": "movie",
+            "author": "Bo Burnham",
+            "dateCompleted": "July 21st, 2018",
+            "completedVerb": "Watched"
+        },
+        {
+            "title": "Twelve",
+            "type": "poem",
+            "author": "Lynn Melnick",
+            "dateCompleted": "July 21st, 2018",
+            "completedVerb": "Read"
         }
     ]
 }
