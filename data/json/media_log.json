@@ -505,6 +505,41 @@
             "author": "Ursula K. LeGuin",
             "dateCompleted": "August 20th, 2018",
             "completedVerb": "Read"
+        },
+        {
+            "title": "Strangers Drowning",
+            "type": "nonfiction",
+            "author": "Larissa MacFarquhar",
+            "dateCompleted": "August 25th, 2018",
+            "completedVerb": "Finished reading"
+        },
+        {
+            "title": "Life Studies",
+            "type": "poetry book",
+            "author": "Robert Lowell",
+            "dateCompleted": "August 23rd, 2018",
+            "completedVerb": "Finished reading"
+        },
+        {
+            "title": "Avengers: Infinity War",
+            "type": "movie",
+            "author": "Anthony and Joe Russo",
+            "dateCompleted": "August 25th, 2018",
+            "completedVerb": "Watched"
+        },
+        {
+            "title": "Black Panter",
+            "type": "movie",
+            "author": "Ryan Coogler",
+            "dateCompleted": "August 25th, 2018",
+            "completedVerb": "Watched"
+        },
+        {
+            "title": "The Privilege of the Happy Ending",
+            "type": "short story",
+            "author": "Kij Johnson",
+            "dateCompleted": "August 27th, 2018",
+            "completedVerb": "Read"
         }
     ]
 }
