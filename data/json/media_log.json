@@ -542,6 +542,13 @@
             "completedVerb": "Read"
         },
         {
+            "title": "God's Favorite Customer",
+            "type": "album",
+            "author": "Father John Misty",
+            "dateCompleted": "August 28th, 2018",
+            "completedVerb": "Listened to"
+        },
+        {
             "title": "Why Philosophers Should Care About Computational Complexity",
             "type": "nonfiction",
             "author": "Scott Aaronson",
@@ -554,6 +561,6 @@
             "author": "Lin-Manuel Miranda",
             "dateCompleted": "September 2nd, 2018",
             "completedVerb": "Listened to"
-        }
+        },
     ]
 }
