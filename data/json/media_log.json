@@ -562,5 +562,12 @@
             "dateCompleted": "September 2nd, 2018",
             "completedVerb": "Listened to"
         },
+        {
+            "title": "Best American Science Fiction And Fantasy 2017",
+            "type": "short story collection",
+            "author": "Charles Yu",
+            "dateCompleted": "September 9th, 2018",
+            "completedVerb": "Finished reading"
+        }
     ]
 }
