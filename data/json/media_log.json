@@ -568,6 +568,13 @@
             "author": "Charles Yu",
             "dateCompleted": "September 9th, 2018",
             "completedVerb": "Finished reading"
+        },
+        {
+            "title": "Mr. Penumbra's 24-Hour Bookstore",
+            "type": "novel",
+            "author": "Robin Sloan",
+            "dateCompleted": "September 15th, 2018",
+            "completedVerb": "Finished reading"
         }
     ]
 }
