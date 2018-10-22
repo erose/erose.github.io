@@ -589,6 +589,27 @@
             "author": "Car Seat Headrest",
             "dateCompleted": "September 23rd, 2018",
             "completedVerb": "Listened to"
+        },
+        {
+            "title": "Trench",
+            "type": "album",
+            "author": "Twenty One Pilots",
+            "dateCompleted": "October 15th, 2018",
+            "completedVerb": "Listened to"
+        },
+        {
+            "title": "Fateful Findings",
+            "type": "movie",
+            "author": "Neil Breen",
+            "dateCompleted": "October 20th, 2018",
+            "completedVerb": "Watched"
+        },
+        {
+            "title": "Big Mouth (Season 2)",
+            "type": "tv show",
+            "author": "Nick Kroll, Andrew Goldberg, Mark Levin, Jennifer Flackett",
+            "dateCompleted": "October 21st, 2018",
+            "completedVerb": "Finished watching"
         }
     ]
 }
