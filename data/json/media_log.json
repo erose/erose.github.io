@@ -612,6 +612,41 @@
             "completedVerb": "Finished watching"
         },
         {
+            "title": "Wildlife",
+            "type": "movie",
+            "author": "Paul Dano",
+            "dateCompleted": "November 17th, 2018",
+            "completedVerb": "Watched"
+        },
+        {
+            "title": "American Dream",
+            "type": "album",
+            "author": "LCD Soundsystem",
+            "dateCompleted": "November 11th, 2018",
+            "completedVerb:" "Listened to"
+        },
+        {
+            "title": "The Moon & Antarctica",
+            "type": "album",
+            "author": "Modest Mouse",
+            "dateCompleted": "November 19th, 2018",
+            "completedVerb": "Listened to"
+        },
+        {
+            "title": "Ruminations",
+            "type": "album",
+            "author": "Conor Oberst",
+            "dateCompleted": "November 23rd, 2018",
+            "completedVerb": "Listened to"
+        },
+        {
+            "title": "The Favourite",
+            "type": "movie",
+            "author": "Yorgos Lanthimos",
+            "dateCompleted": "December 8th, 2018",
+            "completedVerb": "Watched"
+        },
+        {
             "title": "America: The Ride",
             "type": "short story",
             "author": "Charles Yu",
