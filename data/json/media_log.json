@@ -652,6 +652,27 @@
             "author": "Charles Yu",
             "dateCompleted": "December 9th, 2018",
             "completedVerb": "Read"
+        },
+        {
+            "title": "The Third Bear",
+            "type": "short story collection",
+            "author": "Jeff VanderMeer",
+            "dateCompleted": "December 23rd, 2018",
+            "completedVerb": "Finished reading"
+        },
+        {
+            "title": "The Coddling of the American Mind",
+            "type": "nonfiction",
+            "author": "Jonathan Haidt and Greg Lukianoff",
+            "dateCompleted": "December 23rd, 2018",
+            "completedVerb": "Finished reading"
+        },
+        {
+            "title": "The Third Bear Carnival",
+            "type": "nonfiction",
+            "author": "Matthew Cheney",
+            "dateCompleted": "December 23rd, 2018",
+            "completedVerb": "Finished reading"
         }
     ]
 }
