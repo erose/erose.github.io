@@ -673,7 +673,27 @@
             "author": "Matthew Cheney",
             "dateCompleted": "December 23rd, 2018",
             "completedVerb": "Finished reading"
-        }
-        
+        },
+        {
+            "title": "In Brooklyn Heights",
+            "type": "movie",
+            "author": "Frederick Wiseman",
+            "dateCompleted": "December 24th, 2018",
+            "completedVerb": "Watched"
+        },
+        {
+            "title": "The Word for World is Forest",
+            "type" "novel",
+            "author": "Ursula K. LeGuin",
+            "dateCompleted": "December 26th, 2018",
+            "completedVerb" "Finished reading"
+        },
+        {
+            "title": "Private Life",
+            "type": "movie",
+            "author": "Tamara Jenkins",
+            "dateCompleted": "December 30th, 2018",
+            "completedVerb": "Watched"
+        },
     ]
 }
