@@ -686,7 +686,7 @@
             "type": "novel",
             "author": "Ursula K. LeGuin",
             "dateCompleted": "December 26th, 2018",
-            "completedVerb" "Finished reading"
+            "completedVerb": "Finished reading"
         },
         {
             "title": "Private Life",
@@ -694,6 +694,6 @@
             "author": "Tamara Jenkins",
             "dateCompleted": "December 30th, 2018",
             "completedVerb": "Watched"
-        },
+        }
     ]
 }
