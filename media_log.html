@@ -62,6 +62,8 @@ var htmlForEntry = function(object) {
 
 $(document).ready(function(){
     $.getJSON('/data/json/media_log.json', function(data){
+        // The data comes in ascending chronological order, but we want to display it in descending order.
+        data.objects.reverse();
         $("#media-list").append(data.objects.map(htmlForEntry));
     })
 });
