@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- The following line makes the site look better on mobile. See https://stackoverflow.com/questions/39550403/css-displayinline-block-changes-text-size-on-mobile for reference. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css">
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a class="title" href="/index.html">Eli Rose</a> 's
+            <a href="/index.html">posts</a>
+            &sdot;
+            <a href="/about.html">about</a>
+            &sdot;
+            <span class="dropdown">
+                <a href="javascript:void(0)">code projects</a>
+                <div class="dropdown-content">
+                    <div>&sdot; <a href="/turing.html">turing</a></div>
+                    <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                    <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                </div>
+            </span>
+            &sdot;
+            <a href="/media_log.html">media log</a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">What Is Bell's Theorem?</div>
+    <div class="post-date">Sunday, January 13th, 2019</div>
+</div>
+<div class="post-content">
+    <style>
+  table, td, th {
+    border: 1px solid black;
+  }
+
+  td {
+    padding: 1rem;
+  }
+</style>
+
+<p>(I'm just writing this to help myself remember. YMMV.)</p>
+<p>This post is very indebted to <a href="http://mateusaraujo.info/2016/07/15/understanding-bells-theorem-part-1-the-simple-version">Mateus Araújo</a>, whose exposition of this subject is the best I've found for a non-physicist but mathy audience. Any mistakes are mine alone, because I am far from an expert on this topic and indeed don't even understand the mathematical framework of quantum mechanics.</p>
+<h2>What is Bell's Theorem?</h2>
+<p><a href="http://en.wikipedia.org/wiki/Bell%27s_theorem">Bell's Theorem</a> is how we know that quantum mechanics must be "weird"; regardless of what model we choose to explain these phenomena, that model must give up some fundamental characteristics of classical mechanics. Specifically, its content is mathematical and it is a "proof by contradiction" where the last step is done by experiment. (These are called <a href="http://en.wikipedia.org/wiki/Bell_test_experiments">Bell tests</a>.) We end up having to discard one of our axioms.</p>
+<p>You could imagine a world where we had classical mechanics, then Bell's Theorem experiments were done and forced us into quantum mechanics. This is not how it happened; we actually first had quantum mechanics, then Bell's Theorem (his paper <em>On the Einstein Podolsky Rosen paradox</em> in 1964), then experimental tests verifying it which got more and more loophole-free (last and strongest one in 2015).</p>
+<p>The experiments are conceptually the same as the following situation: Alice and Bob are playing a game. They each receive a bit (0 or 1) simultaneously and must output another bit (0 or 1). They are physically separated in such a way that the speed-of-light limit prohibits interaction between them in the time between input and output.</p>
+<p>Alice and Bob win and lose according to the following table.</p>
+<table>
+    <tr>
+        <th>Inputs</th>
+        <th>Output same</th>
+        <th>Output different</th>
+    </tr>
+
+    <tr>
+        <td>
+            <div>Alice: 0</div>
+            <div>Bob: 0</div>
+        </td>
+        <td>Win</td>
+        <td>Lose</td>
+    </tr>
+
+    <tr>
+        <td>
+            <div>Alice: 0</div>
+            <div>Bob: 1</div>
+        </td>
+        <td>Win</td>
+        <td>Lose</td>
+    </tr>
+
+    <tr>
+        <td>
+            <div>Alice: 1</div>
+            <div>Bob: 0</div>
+        </td>
+        <td>Win</td>
+        <td>Lose</td>
+    </tr>
+
+    <tr>
+        <td>
+            <div>Alice: 1</div>
+            <div>Bob: 1</div>
+        </td>
+        <td>Lose</td>
+        <td>Win</td>
+    </tr>
+</table>
+
+<p>So, for example, if Alice and Bob receive 00 respectively and output 00 back, they win. If they output 01 back, they lose. But if they receive 11 and they output 01, they would win. They are allowed to communicate before the game starts, but not after it begins.</p>
+<p>Common sense indicates (and mathematics backs up) that the best strategy in this contrived game, given that you can't communicate, is to agree ahead of time to always both output the same bit (say 0). You'll win 75% = $\frac{3}{4}$ of the time.</p>
+<p>Yet, in the world we live in, if we set up Alice and Bob in certain ways (of course in the experiments they are not really humans, but machines), they can win $\frac{2 + \sqrt{2}}{4}$ $\approx$ 85% of the time. Quantum mechanics would say that these are situations where they have shared an entangled state before the game starts. Then, by taking actions on their entangled state, they can in a probabilistic way share information that allows them to win more often. (See <a href="https://sergworks.wordpress.com/2016/10/26/chsh-game-in-detail/">here</a> for a full explanation I don't yet understand.)</p>
+<p>Bell's Theorem is the formalization of the idea that, under models that have the same fundamental characteristics as classical mechanics, this situation is impossible. Hence, such models do not describe the world we live in.</p>
+<h2>Okay. What are the "fundamental characteristics"?</h2>
+<p>Technically there are two, and you can pick which one you want to lose.</p>
+<h4>Local Causality</h4>
+<p>This is much more discussed and commonly though of as being "given up". This is the idea that "causes are close to their effects", or, in relativistic terms, events in a spacetime region $A$ depend only on the contents of its past light cone $\Lambda$, and not on the contents of some disconnected region $B$. (Not sure if this is the same as <a href="https://en.wikipedia.org/wiki/Principle_of_locality#Local_realism">Local Realism</a>.)</p>
+<div style="text-align: center;">
+    <img style="width: 500px;" src="/static/images/local_causality.svg"/>
+    <div style="font-size: 10pt;">
+        (image credit to <a href="http://mateusaraujo.info/2016/07/21/understanding-bells-theorem-part-2-the-nonlocal-version">Mateus Araújo</a>)
+    </div>
+</div>
+
+<p>This is one way understanding of the concept "no action at a distance" which is central to our intuitive conceptions of physics. (Note that, in Mateus's blog post, "no action at a distance" is a specific condition, weaker than this.)</p>
+<p>Losing this is intense -- some idea of "locality" is suprisingly central to our understanding of the world. If the outcomes of our actions on Earth could depend on the state of some molecule on Alpha Centauri, how can we do science? Yet in practice, we seem to be muddling along.</p>
+<h4>No conspiracy</h4>
+<p>To see this objection, observe that the universe can be perfectly classical (billiard balls colliding in a void) and Alice and Bob still win their games if they are simply fated to do so. That is, if the initial conditions of the universe are set up such that Alice and Bob win 85 out of the 100 games they play, then their settings will be chosen such that they do so, probability be damned.</p>
+<p>We need to posit that the universe is not specifically designed to frustrate us -- equivalently, that we as the operators of the machines which are Alice and Bob are choosing their settings in a way uncorrelated with the rest of the experiment, as we think we are*. Some (me) may find this even worse to give up than the previous condition. Elsewhere this is called <a href="https://en.wikipedia.org/wiki/Superdeterminism">Superdeterminism</a>.</p>
+<h2>Does Bell's Theorem imply that we live in a nondeterministic universe?</h2>
+<p>No. For example, <a href="https://en.wikipedia.org/wiki/De_Broglie%E2%80%93Bohm_theory">Bohmian mechanics</a> is a model which is deterministic, though it gives up <strong>local causality</strong> (and indeed more).</p>
+<p>There are a variety of interpretations of quantum mechanics, but the most mainstream ones are indeed nondeterministic.</p>
+<p><sub>* In experiments, amusing lengths are gone to to protect against this. For example, from <a href="https://arxiv.org/abs/1511.03189">this paper</a>: "Finally, Alice and Bob each have a different predetermined pseudorandom source that is composed of various popular culture movies and TV shows, as well as the digits of π, XORed together."</sub></p>
+</div>
+<div class="post-tags">
+    
+</div>
+
+        </div>
+    </div>
+<script>
+    renderMathInElement(
+        document.getElementById("content"), {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        }
+    )
+</script>
+</body>
+</html>
