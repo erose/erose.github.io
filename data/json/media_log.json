@@ -694,6 +694,20 @@
             "author": "Tamara Jenkins",
             "dateCompleted": "December 30th, 2018",
             "completedVerb": "Watched"
+        },
+        {
+            "title": "Night Train to Terror",
+            "type": "movie",
+            "author": "Philip Yordan",
+            "dateCompleted": "January 5th, 2018",
+            "completedVerb": "Watched"
+        },
+        {
+            "title": "Enemy",
+            "type": "movie",
+            "author": "Denis Villeneuve",
+            "dateCompleted": "January 12th, 2018",
+            "completedVerb": "Watched"
         }
     ]
 }
