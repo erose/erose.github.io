@@ -56,7 +56,7 @@
 // Returns the literal HTML of a list element.
 var htmlForEntry = function(object) {
   return _.template(
-    "<li><b><%= object.title %></b> by <%= object.author %>. <i><%= object.completedVerb %> on <%= object.dateCompleted %></i>.</li>"
+    "<li><b><%= object.title %></b> by <%= object.author %>. <i>Finished on <%= object.date_completed %></i>.</li>"
   )({object: object});
 }
 
