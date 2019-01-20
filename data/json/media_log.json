@@ -611,6 +611,18 @@
             "date_completed": "January 18, 2019",
             "title": "Death by Hanging (Kōshikei)",
             "type": "movie"
+        },
+        {
+            "author": "Mitski",
+            "date_completed": "January 14, 2019",
+            "title": "Be the Cowboy",
+            "type": "album"
+        },
+        {
+            "author": "Talking Heads",
+            "date_completed": "January 10, 2019",
+            "title": "Fear of Music",
+            "type": "album"
         }
     ]
 }
