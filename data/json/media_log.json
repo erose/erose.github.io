@@ -601,15 +601,15 @@
             "type": "movie"
         },
         {
+            "author": "Talking Heads",
+            "date_completed": "January 10, 2019",
+            "title": "Fear of Music",
+            "type": "album"
+        },
+        {
             "author": "Denis Villeneuve",
             "date_completed": "January 12, 2019",
             "title": "Enemy",
-            "type": "movie"
-        },
-        {
-            "author": "Nagisa Oshima",
-            "date_completed": "January 18, 2019",
-            "title": "Death by Hanging (Kōshikei)",
             "type": "movie"
         },
         {
@@ -619,10 +619,10 @@
             "type": "album"
         },
         {
-            "author": "Talking Heads",
-            "date_completed": "January 10, 2019",
-            "title": "Fear of Music",
-            "type": "album"
+            "author": "Nagisa Oshima",
+            "date_completed": "January 18, 2019",
+            "title": "Death by Hanging (Kōshikei)",
+            "type": "movie"
         },
         {
             "author": "Gene Wolfe",
