@@ -623,6 +623,12 @@
             "date_completed": "January 10, 2019",
             "title": "Fear of Music",
             "type": "album"
+        },
+        {
+            "author": "Gene Wolfe",
+            "date_completed": "January 27, 2019",
+            "title": "The Shadow of the Torturer",
+            "type": "novel"
         }
     ]
 }
