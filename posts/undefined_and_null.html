@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- The following line makes the site look better on mobile. See https://stackoverflow.com/questions/39550403/css-displayinline-block-changes-text-size-on-mobile for reference. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css">
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a class="title" href="/index.html">Eli Rose</a> 's
+            <a href="/index.html">posts</a>
+            &sdot;
+            <a href="/about.html">about</a>
+            &sdot;
+            <span class="dropdown">
+                <a href="javascript:void(0)">code projects</a>
+                <div class="dropdown-content">
+                    <div>&sdot; <a href="/turing.html">turing</a></div>
+                    <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                    <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                </div>
+            </span>
+            &sdot;
+            <a href="/media_log.html">media log</a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">'null' vs. 'undefined' in Javascript Wasn't Originally Total Chaos, But Now It May As Well Be</div>
+    <div class="post-date">Saturday, February 2nd, 2019</div>
+</div>
+<div class="post-content">
+    <style>
+  code {
+    background-color: lightgrey;
+    padding: 2px;
+  }
+</style>
+
+<p>Most programming languages have a way to represent "no value" or "nothing". Python has <code>None</code>, Ruby has <code>nil</code>, Java and friends have <code>null</code>. Javascript has <em>two</em> ways to represent this concept -- <code>undefined</code> and <code>null</code>.</p>
+<p>How do we decide which one to use? For example, suppose I'm writing a function which is responsible for locating an object with certain qualities, but it is possible that no such object exists. If I detect that the latter is true, do I return <code>undefined</code> or <code>null</code>?</p>
+<p>For another example, suppose such as function exists in a third-party library, and you are calling it. Should you check the result against <code>null</code> before proceeding? Against <code>undefined</code>? Against both just to be sure?</p>
+<p>I attempted to arrive at a deep understanding of the answers to these questions.</p>
+<h3>What the distinction between <code>null</code> and <code>undefined</code>?</h3>
+<p>We can define the difference simply listing the situations where each pops up. (From what I can tell these are the most important ones, but I'm sure I'm overlooking a few.) My source is the <a href="http://www.ecma-international.org/ecma-262/6.0">ES6 spec</a>.</p>
+<ul>
+<li>
+<p><code>undefined</code> arises</p>
+<ul>
+<li>from accessing a variable that hasn't been assigned a value yet</li>
+<li>from accessing an object property that hasn't been assigned to yet or doesn't exist</li>
+<li>from capturing the return value of an expression or statement that has no other return value (e.g. <code>Array.forEach</code>)</li>
+<li>from accessing a parameter within a function that wasn't provided by the caller</li>
+<li>from builtin APIs that are allowed to return it (like <code>Array.find</code>)</li>
+<li>by typing "undefined"</li>
+<li>or by using the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void operator</a>.</li>
+</ul>
+</li>
+<li>
+<p><code>null</code> arises</p>
+<ul>
+<li>as the last element in the prototype chain (the prototype of <code>Object.prototype</code>)</li>
+<li>by typing "null"</li>
+<li>or via builtin APIs that are allowed to return it (like <code>RegExp.match</code>, <code>RegExp.exec</code> or <code>document.getElementById</code>). Relatively few builtin APIs return <code>null</code>.</li>
+</ul>
+</li>
+</ul>
+<p>And of course each may occur at any time in third-party libraries.</p>
+<p>This is helpful, but it's not really answering the question: we care about the <em>essence</em> of the distinction between them. Is there such a thing? Is it just a list of rules we have to look up all the time or is there a guiding idea that we can remember and use to deduce all the details?</p>
+<p>[Answer: Originally yes, but in practice you should just look up the details.]</p>
+<h3>What the essence of the distinction between <code>null</code> and <code>undefined</code>?</h3>
+<p>Values in Javascript are divided into <em>primitive</em> values and <em>object</em> values. <code>undefined</code> represents "this value is missing; it would have been either a primitive or an object". <code>null</code> means "this value is missing; it would have been an object".</p>
+<p>This explains why <code>Array.find</code> returns <code>undefined</code> -- that array could have contained either primitives or objects (or a mix of both), so we can't say what the return value would have been. But in <code>RegExp.match</code>, the return value is supposed to be an Array of results -- hence we can more specifically return <code>null</code> when no results are available. (We don't return an empty Array for reasons.) "If there was a value, it would have been an object" -- the value we use to represent this situation is <code>null</code>.</p>
+<p>Hence, <code>null</code> is more specific than <code>undefined</code>.</p>
+<p>This understanding is based on the <a href="http://www.ecma-international.org/ecma-262/6.0">specification</a>, which defines "undefined" as "primitive value used when a variable has not been assigned a value" and "null" as "primitive value that represents the intentional absence of any object value", as well as Axel Rauschmayer's book <a href="http://speakingjs.com/es5/ch08.html#_the_history_of_undefined_and_null">Speaking JS</a> and TJ Crowder's <a href="https://stackoverflow.com/a/5101991/2339708">thorough StackOverflow answer</a>.</p>
+<p>Here is an excerpt from Speaking JS which I found helpful:</p>
+<blockquote>
+<p>A single nonvalue could play the roles of both undefined and null. Why does JavaScript have two such values? The reason is historical.</p>
+<p>JavaScript adopted Java’s approach of partitioning values into primitives and objects. It also used Java’s value for “not an object,” null. Following the precedent set by C (but not Java), null becomes 0 if coerced to a number:</p>
+<p><code>5 + null === 5</code></p>
+<p>Remember that the first version of JavaScript did not have exception handling. Therefore, exceptional cases such as uninitialized variables and missing properties had to be indicated via a value. null would have been a good choice, but &gt; Brendan Eich wanted to avoid two things at the time:</p>
+<p>The value shouldn’t have the connotation of a reference, because it was about more than just objects.
+The value shouldn’t coerce to 0, because that makes errors harder to spot.
+As a result, Eich added undefined as an additional nonvalue to the language. It coerces to NaN:</p>
+<p><code>5 + undefined === NaN</code></p>
+</blockquote>
+<h3>How would you use this distinction in practice?</h3>
+<p>Suppose you're writing <code>function mean(numbers)</code> which takes in an array and returns the average of the numbers in that array. If passed an empty array, what do you do? Following this understanding, you should return <code>undefined</code>. It would be wrong to return <code>null</code>, because that would indicate that this function could have returned an object, when really it returns a Number -- a primitive.</p>
+<p>On the other hand, if you're writing a function that searches a list of <code>Appointment</code> objects for the one under a certain name, and there are no appointments for that name, you should return <code>null</code>. The return type could only have been <code>Appointment</code>, so you can give more information by returning a <code>null</code> rather than an <code>undefined</code>.</p>
+<h3>Great, so are these questions resolved?</h3>
+<p>No, because I wouldn't recommend actually doing that in practice without understanding the conventions of the libraries you're working with and communicating with the developers you're working with. The consensus of the Javascript community seems to be that <a href="https://medium.com/@alyz26/undefined-vs-null-c567b539ee71">"Javascript uses undefined and programmers should use null"</a> although I'm surprised that I've had a hard time finding an authoritative word on the matter. (See <a href="https://github.com/airbnb/javascript">Airbnb's popular style guide</a> which does not mention the issue.)</p>
+<p>So someone writing a <code>mean</code> function may be returning <code>null</code>, and you cannot confidently check against only <code>undefined</code>.</p>
+<p>Perhaps the lack of consensus is because it's also <a href="https://github.com/jashkenas/underscore/blob/71099af43d735444ff033fefe5264d0b0988eeef/underscore.js#L77">conventional</a> to use <code>x == null</code>, which thanks to coercion is true even if x is <code>undefined</code>, hence masking the difference between the two. I find this very misleading for someone who does not understand exactly what is going on, as it elides the difference between the two, but some Javascript developers use it (including major libraries such as Underscore and JQuery), and it is convenient.</p>
+<p>In conclusion, <code>undefined</code> vs <code>null</code> is a quirk of the language that must be tamed through communication and documentation.</p>
+<h3>Can we say anything for certain?</h3>
+<p>Yes -- we can say that the original distinction between <code>null</code> and <code>undefined</code> was motivated by a distinction between primitive and object values. Although we can invent new semantics for them for our own use, we should be careful that our new semantics are actually consistent with behavior, and we should be clear that the semantics are invented.</p>
+<p>It's tempting to take away something like "<code>undefined</code> means uninitialized, <code>null</code> means initialized but not present" (e.g. in <a href="https://stackoverflow.com/a/802371/2339708">this popular Stackoverflow answer</a>), and indeed this is true in many cases. But it does not explain why <code>Array.find</code> returns <code>undefined</code> rather than <code>null</code>, and so it will confuse you in the long run if 
+you mistake it for a full understanding.</p>
+<p>Likewise, if in our programs we decide always to use <code>null</code> or always to use <code>undefined</code> to indicate missing data, we should be clear that this is just a convention we are adopting, and be aware that the builtin APIs will disagree with us at times. </p>
+<h3>What does this mean about the world?</h3>
+<p>Javascript was famously prototyped over 10 days in 1995 by Brendan Eich. It's not new that it has many inconsistencies and strange design decisions. But I find it enlightening to observe that there actually is a consistent distinction between <code>null</code> and <code>undefined</code> -- just not one that is widely understood or relevant today.</p>
+<p>We can say now that it would probably have been better to just have <code>undefined</code> or just have <code>null</code> in the language -- but only with the benefit of hindsight and many other examples of similar scripting languages. We could not have done a better job than Brendan Eich in 1995.</p>
+<p>Paradigms such as programming languages can spread regardless of merit, and all paradigms look good from the inside. Javascript is now the most popular programming language in the world.</p>
+</div>
+<div class="post-tags">
+    
+</div>
+
+        </div>
+    </div>
+<script>
+    renderMathInElement(
+        document.getElementById("content"), {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        }
+    )
+</script>
+</body>
+</html>
