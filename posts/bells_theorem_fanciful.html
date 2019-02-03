@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- The following line makes the site look better on mobile. See https://stackoverflow.com/questions/39550403/css-displayinline-block-changes-text-size-on-mobile for reference. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css">
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a class="title" href="/index.html">Eli Rose</a> 's
+            <a href="/index.html">posts</a>
+            &sdot;
+            <a href="/about.html">about</a>
+            &sdot;
+            <span class="dropdown">
+                <a href="javascript:void(0)">code projects</a>
+                <div class="dropdown-content">
+                    <div>&sdot; <a href="/turing.html">turing</a></div>
+                    <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                    <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                </div>
+            </span>
+            &sdot;
+            <a href="/media_log.html">media log</a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Bell's Theorem (Fanciful)</div>
+    <div class="post-date">Saturday, January 12th, 2019</div>
+</div>
+<div class="post-content">
+    <style>
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  td {
+    padding: 1rem;
+  }
+</style>
+
+<p><strong>I.</strong></p>
+<p>They were the creatures that could argue, reason, and count. They were omnivorous, eating nuts and roots when they could not get meat. The sun rose and set each day. The wind blew through the dried-out prairie grasses and made them bend.</p>
+<p>Some of their culture's wisdom implied they had originated in another universe, another type of existence, where the rules were different. But history was difficult. Evidence was scanty.</p>
+<p><strong>II.</strong></p>
+<p>The structure of this world was known since their culture began -- the grasses, the trees and all living or nonliving matter were composed of many small pieces, belonging to various types but indistinguishable within their type, like billiard balls. The billiard balls had positions and velocities; when they collided, their velocities would be altered in a certain definite way depending on their initial values and the angle of the collision. At each time step, the billiard balls adjusted their positions according to their velocities, then adjusted their velocities according to any collisions.</p>
+<p>This led to a principle called <strong>certainty</strong>. As a consequence, if a supercomputer had written down the positions and velocities of each billiard ball in the universe at any one time, she could forever predict the position and velocity of each billiard ball in the universe from that time forward.</p>
+<p>This led to another principle called <strong>containment</strong>. Because the position and velocity of a single billiard ball at a given time depended only on the velocities of any billiard balls which may have collided with it a second before, the calculations were simplified. There was no need to know the positions and velocities of distant billiard balls in order to know what was going to happen to this one now. In the future, those distant balls might influence this one, but they would need to do so by first colliding with the balls between them.</p>
+<p><strong>III.</strong></p>
+<p>Crackpots made various claims that some phenomena or other required revisions to this view of the world, but on closer inspection their reasons all vanished. However, eventually a casino game which claimed to show off the potency of magic arose. It gained notoriety and spread quickly, demanding explanation, as it seemed paradoxical.</p>
+<p>The game involved two players, Alice and Bob, and a gambler from the audience. If the gambler won, the house paid him $\$25$. If Alice and Bob won, the gambler paid $\$75$ to the house.</p>
+<p>Alice and Bob sat in separate rooms, concealed from view. The gambler received a pad of "magic" paper and was told to write any of the strings $00, 01, 10, 11$ on it. Then the paper was divided in half, the left symbol ($0$ or $1$) slipped under Alice's door and the right symbol ($0$ or $1$) likewise slipped under Bob's. Alice and Bob must then choose whether or not to exit their rooms</p>
+<p>If the string had been any of ${00, 01, 10}$, Alice and Bob would be rewarded for doing the same thing: they would win the game if both of them exited or if both of them stayed, but lose if they did different things.</p>
+<p>If the string was $11$, however, the situation was reversed: Alice and Bob would win if they did different things, but lose if they did the same thing.</p>
+<table>
+    <tr>
+        <th>String</th>
+        <th>Goal</th>
+    </tr>
+
+    <tr>
+        <td>00</td>
+        <td>Same</td>
+    </tr>
+
+    <tr>
+        <td>01</td>
+        <td>Same</td>
+    </tr>
+
+    <tr>
+        <td>10</td>
+        <td>Same</td>
+    </tr>
+
+    <tr>
+        <td>11</td>
+        <td>Different</td>
+    </tr>
+</table>
+
+<p>It seemed, if no trickery were involved, the best strategy for Alice and Bob was simply to always both exit, regardless of which symbol was slipped under their door. This would result in a win percentage of 75%, and no better was possible. (Mathematics backed up this intuition.) Hence, the game should have been exactly fair, with neither side gaining or losing money on average.</p>
+<p>However, the gamblers were losing money quickly; Alice and Bob did not always win, but out of 100 games they won 85. They chalked this up to the magic paper; others suspected trickery. The scientists of the world were urged to investigate.</p>
+<p><strong>IV.</strong></p>
+<p>At first, it seemed obvious that Alice and Bob must somehow be communicating after they received their slips of paper. To prevent this, they were separated by vast distances. In this universe, it was known that no billiard ball could travel faster than a certain speed called $c$. So in order to rule out any communication once separated, the slips of paper were conveyed to them at the speed $c$, and their answers were required before any message from the other could possibly have crossed the distance between them, provided it was not traveling faster than $c$.</p>
+</div>
+<div class="post-tags">
+    
+</div>
+
+        </div>
+    </div>
+<script>
+    renderMathInElement(
+        document.getElementById("content"), {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        }
+    )
+</script>
+</body>
+</html>
