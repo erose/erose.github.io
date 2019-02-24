@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- The following line makes the site look better on mobile. See https://stackoverflow.com/questions/39550403/css-displayinline-block-changes-text-size-on-mobile for reference. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css">
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a class="title" href="/index.html">Eli Rose</a> 's
+            <a href="/index.html">posts</a>
+            &sdot;
+            <a href="/about.html">about</a>
+            &sdot;
+            <span class="dropdown">
+                <a href="javascript:void(0)">code projects</a>
+                <div class="dropdown-content">
+                    <div>&sdot; <a href="/turing.html">turing</a></div>
+                    <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                    <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                </div>
+            </span>
+            &sdot;
+            <a href="/media_log.html">media log</a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">What Are Probabilities?</div>
+    <div class="post-date">Sunday, February 10th, 2019</div>
+</div>
+<div class="post-content">
+    <p>We hear statements like:</p>
+<blockquote>
+<p>"The probability of this coin coming up heads is 0.5."</p>
+</blockquote>
+<p>What does this mean? We could say that it means "if you flip this coin 100 times, you will get about 50 heads." This seems roughly fine (though we could further question the word "about" here). But we also hear statements like:</p>
+<blockquote>
+<p>"The probability of Candidate A being elected next Tuesday is 0.75."</p>
+</blockquote>
+<p>What does this mean? We want to say something like "if you run next Tuesday's election 100 times, Candidate A will be elected about 75 of them." But you can't run an election again; it's a one-time-only event. So what could that sentence mean? We'd like our sentences to represent statements about the world. What, exactly, are you telling me about the world when you assign a probability of 0.75 here? It can't be the same thing as in the coin-flip example.</p>
+<p>Instead, I claim that we need to view it as the speaker ranking their beliefs. You telling me that you assign a probability of 0.75 to that statement is you communicating that you believe it more strongly than a statement to which you would assign a probability of 0.74, and less strongly than a statement to which you would assign 0.76. It's a statement about you, not about the rest of the world, although I may have reason to think that your beliefs about the world are correlated with the world.</p>
+</div>
+<div class="post-tags">
+    
+    <b>Tags:</b> <a href="google.com">philosophy</a>
+    
+    
+</div>
+
+        </div>
+    </div>
+<script>
+    renderMathInElement(
+        document.getElementById("content"), {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        }
+    )
+</script>
+</body>
+</html>
