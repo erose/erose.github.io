@@ -87,7 +87,7 @@
 <p>[Answer: Originally yes, but in practice you should just look up the details.]</p>
 <h3>What the essence of the distinction between <code>null</code> and <code>undefined</code>?</h3>
 <p>Values in Javascript are divided into <em>primitive</em> values and <em>object</em> values. <code>undefined</code> represents "this value is missing; it would have been either a primitive or an object". <code>null</code> means "this value is missing; it would have been an object".</p>
-<p>This explains why <code>Array.find</code> returns <code>undefined</code> -- that array could have contained either primitives or objects (or a mix of both), so we can't say what the return value would have been. But in <code>RegExp.match</code>, the return value is supposed to be an Array of results -- hence we can more specifically return <code>null</code> when no results are available. (We don't return an empty Array for reasons.) "If there was a value, it would have been an object" -- the value we use to represent this situation is <code>null</code>.</p>
+<p>This explains why <code>Array.find</code> returns <code>undefined</code> -- that array could have contained either primitives or objects (or a mix of both), so we can't say what the return value would have been. But in <code>RegExp.match</code>, the return value is supposed to be an Array of results -- hence we can more specifically return <code>null</code> when no results are available. (We don't return an empty Array for ...<em>reasons</em>.) "If there was a value, it would have been an object" -- the value we use to represent this situation is <code>null</code>.</p>
 <p>Hence, <code>null</code> is more specific than <code>undefined</code>.</p>
 <p>This understanding is based on the <a href="http://www.ecma-international.org/ecma-262/6.0">specification</a>, which defines "undefined" as "primitive value used when a variable has not been assigned a value" and "null" as "primitive value that represents the intentional absence of any object value", as well as Axel Rauschmayer's book <a href="http://speakingjs.com/es5/ch08.html#_the_history_of_undefined_and_null">Speaking JS</a> and TJ Crowder's <a href="https://stackoverflow.com/a/5101991/2339708">thorough StackOverflow answer</a>.</p>
 <p>Here is an excerpt from Speaking JS which I found helpful:</p>
@@ -95,7 +95,7 @@
 <p>A single nonvalue could play the roles of both undefined and null. Why does JavaScript have two such values? The reason is historical.</p>
 <p>JavaScript adopted Java’s approach of partitioning values into primitives and objects. It also used Java’s value for “not an object,” null. Following the precedent set by C (but not Java), null becomes 0 if coerced to a number:</p>
 <p><code>5 + null === 5</code></p>
-<p>Remember that the first version of JavaScript did not have exception handling. Therefore, exceptional cases such as uninitialized variables and missing properties had to be indicated via a value. null would have been a good choice, but &gt; Brendan Eich wanted to avoid two things at the time:</p>
+<p>Remember that the first version of JavaScript did not have exception handling. Therefore, exceptional cases such as uninitialized variables and missing properties had to be indicated via a value. null would have been a good choice, but Brendan Eich wanted to avoid two things at the time:</p>
 <p>The value shouldn’t have the connotation of a reference, because it was about more than just objects.
 The value shouldn’t coerce to 0, because that makes errors harder to spot.
 As a result, Eich added undefined as an additional nonvalue to the language. It coerces to NaN:</p>
@@ -118,6 +118,7 @@ you mistake it for a full understanding.</p>
 <p>Javascript was famously prototyped over 10 days in 1995 by Brendan Eich. It's not new that it has many inconsistencies and strange design decisions. But I find it enlightening to observe that there actually is a consistent distinction between <code>null</code> and <code>undefined</code> -- just not one that is widely understood or relevant today.</p>
 <p>We can say now that it would probably have been better to just have <code>undefined</code> or just have <code>null</code> in the language -- but only with the benefit of hindsight and many other examples of similar scripting languages. We could not have done a better job than Brendan Eich in 1995.</p>
 <p>Paradigms such as programming languages can spread regardless of merit, and all paradigms look good from the inside. Javascript is now the most popular programming language in the world.</p>
+<p><em>[Minor edits on 2/24/2019 for clarity]</em></p>
 </div>
 <div class="post-tags">
     
