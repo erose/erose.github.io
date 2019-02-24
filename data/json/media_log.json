@@ -641,6 +641,18 @@
             "date_completed": "January 30, 2019",
             "title": "Kids See Ghosts",
             "type": "album"
+        },
+        {
+            "author": "Aesop Rock",
+            "date_completed": "February 10, 2019",
+            "title": "Malibu Ken",
+            "type": "album"
+        },
+        {
+            "author": "Barry Jenkins",
+            "date_completed": "February 23, 2019",
+            "title": "If Beale Street Could Talk",
+            "type": "movie"
         }
     ]
 }
