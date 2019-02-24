@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- The following line makes the site look better on mobile. See https://stackoverflow.com/questions/39550403/css-displayinline-block-changes-text-size-on-mobile for reference. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css">
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a class="title" href="/index.html">Eli Rose</a> 's
+            <a href="/index.html">posts</a>
+            &sdot;
+            <a href="/about.html">about</a>
+            &sdot;
+            <span class="dropdown">
+                <a href="javascript:void(0)">code projects</a>
+                <div class="dropdown-content">
+                    <div>&sdot; <a href="/turing.html">turing</a></div>
+                    <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                    <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                </div>
+            </span>
+            &sdot;
+            <a href="/media_log.html">media log</a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">The Bug Collector by Haley Heynderickx</div>
+    <div class="post-date">Sunday, February 24th, 2019</div>
+</div>
+<div class="post-content">
+    <style>
+  .lyrics {
+    background-color: lightgrey;
+    padding: 1rem;
+  }
+</style>
+
+<p>Today I'll be analyzing the song <em>The Bug Collector</em> by <a href="https://haleyheynderickx.bandcamp.com/">Haley Heynderickx</a>, from her 2018 album <em>I Need To Start A Garden</em>.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w39qx5X_Owg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>This is a dreamy, enveloping song. I think in the end it's a sad one, a song about trying to help someone you love with their problems or history and realizing that you can't.</p>
+<p>It brings you into an elderly house that is not too separate from the outdoors. In my head, this song is set in the house in rural Ohio where I lived with friends in my senior year of college, where not quite enough light entered the living room (full of irregular chairs.)</p>
+<p>The song describes a series of insects which appear in the house and frighten the subject (the "you") of the song, and how the singer deals with them to make the subject feel comfortable again.</p>
+<pre class='lyrics'>
+  And there's a centipede
+  Naked in your bedroom
+  Oh and you swear to God
+  The fucker's out to get you
+
+  And I digress
+  'Cause I must make you the perfect morning
+  I try my best
+  To scoop the slugger out the window
+</pre>
+
+<p>The instrumentation immediately sets a deep and pondering mood, which the first line immediately contrasts with. Maybe you expected this folk song to start with something oblique and symbolic, like the opening of <a href="https://www.youtube.com/watch?v=2TRnHiX14TM">Skinny Love</a> -- nope, instead there's a centipede in your bedroom! Immediate smiles.</p>
+<p>But wait, it's not just a centipede, but a "naked" centipede. What?? A naked centipede is much creepier than a centipede. It's intimate; the centipede is sort of co-opting your bedroom, being naked in the place made for you to be naked. An inch beneath the surface, this context makes the subject's disgust at the centipede resemble disgust at or fear of sexual violation.</p>
+<pre class='lyrics'>
+  And there's a praying mantis
+  Prancing on your bathtub
+  And you swear it's a priest
+  From a past life out to getcha
+
+  And I digress
+  'Cause I must make you the perfect evening
+  I try my best
+  To put the priest inside a jam jar
+</pre>
+
+<p>You can hear that each insect gets a different instrumental theme played whenever they are mentioned. The centipede gets a sussurating, rainstick-like sound; this praying mantis gets a triumphant brass motif.</p>
+<p>I think the image of the praying mantis "prancing on your bathtub" is the most interesting in the song. It's comical to imagine such a self-important mantis, and to imagine it being a reincarnated priest. But the subject of the song reacts with the same disgust and fear she<sup style='font-size: 8px;'>1</sup> reacted to the centipede with -- even though it seems less warranted. Her identification of it as a priest seems delusional and specific -- clearly she has some bad history with priests, and she's jumping at shadows.</p>
+<p>For her, something in the perceived self-importance or pomposity of the mantis made it threatening. Just like the perceived "nakedness" of the centipede made it more threatening. The singer bows to the subject, calling it a 'priest' as she puts in in a jam jar.</p>
+<p>There's a long instrumental.</p>
+<pre class='lyrics'>
+  And there's a millipede
+  Angry on your carpet
+  Oh and I must admit
+  He's staring with a vengeance
+
+  Oh and I digress
+  'Cause I must make you the perfect morning
+  And I try my best
+  To prove that nothing's out to get you
+
+  To prove that nothing's out to get you
+</pre>
+
+<p>The singer concedes that this millipede does appear to be after the subject -- "staring with a vengeance." Also, she doesn't do anything about it. The words of the chorus are thrown into relief: it's one thing to reassure someone that they're safe, but to <em>prove</em> it -- no one can do that.</p>
+<p><sub style='font-size: 10px;' class='display-block normal-line-height'>1. Hereafter I assume the subject is female, which might not be accurate.</sub></p>
+</div>
+<div class="post-tags">
+    
+    <b>Tags:</b> <a href="google.com">song-analysis</a>
+    
+    
+</div>
+
+        </div>
+    </div>
+<script>
+    renderMathInElement(
+        document.getElementById("content"), {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        }
+    )
+</script>
+</body>
+</html>
