@@ -653,6 +653,18 @@
             "date_completed": "February 23, 2019",
             "title": "If Beale Street Could Talk",
             "type": "movie"
+        },
+        {
+            "author": "Open Mike Eagle",
+            "date_completed": "February 25, 2019",
+            "title": "What Happens When I Try To Relax",
+            "type": "album"
+        },
+        {
+            "author": "Smog",
+            "date_completed": "March 4, 2019",
+            "title": "Knock Knock",
+            "type": "album"
         }
     ]
 }
