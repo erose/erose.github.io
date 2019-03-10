@@ -2,12 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <!-- The following line makes the site look better on mobile. See https://stackoverflow.com/questions/39550403/css-displayinline-block-changes-text-size-on-mobile for reference. -->
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Eli's Blog</title>
     <link rel="stylesheet" href="/static/css/base.css">
-    <link rel="stylesheet" href="/static/css/katex.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
 
     <script src="/static/js/lodash.min.js"></script>
     <script src="/static/js/jquery-2.2.2.js"></script>
@@ -46,7 +46,7 @@
     <div class="post-title">What Does '100% Juice' Mean?</div>
     <div class="post-date">Sunday, January 20th, 2019</div>
 </div>
-<div class="post-content">
+<div>
     <p>I bought a bottle of cranberry juice which said "100% juice" on the label. But, later, I found that the label said it included apple juice. I became confused and suspicious about fruit juice labels, a state which lasted many years.</p>
 <p>But it turns out that fruit juice labels are pretty comprehensible. I learned this from user <em>rumtscho</em>'s <a href="https://cooking.stackexchange.com/questions/30367/what-is-100-juice">lovely post on this topic</a> at cooking.stackexchange.com. The following is just a restatement of that post.</p>
 <p>A manufacturer who sells juice can label it in one of three ways:</p>
@@ -79,15 +79,18 @@
 
         </div>
     </div>
-<script>
-    renderMathInElement(
-        document.getElementById("content"), {
-            delimiters: [
-                {left: "$$", right: "$$", display: true},
-                {left: "$", right: "$", display: false}
-            ]
-        }
-    )
-</script>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
 </body>
 </html>

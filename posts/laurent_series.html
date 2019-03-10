@@ -2,12 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <!-- The following line makes the site look better on mobile. See https://stackoverflow.com/questions/39550403/css-displayinline-block-changes-text-size-on-mobile for reference. -->
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Eli's Blog</title>
     <link rel="stylesheet" href="/static/css/base.css">
-    <link rel="stylesheet" href="/static/css/katex.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
 
     <script src="/static/js/lodash.min.js"></script>
     <script src="/static/js/jquery-2.2.2.js"></script>
@@ -46,7 +46,7 @@
     <div class="post-title">Taylor Series' Evil Twin</div>
     <div class="post-date">Monday, September 5th, 2016</div>
 </div>
-<div class="post-content">
+<div>
     <p>Apparently this is a thing. Consider the function $f(x) = \frac{1}{1-x}$. Maybe you know that you can express $f(x)$ as an infinite polynomial:</p>
 <p>$$\frac{1}{1 - x} = 1 + x + x^2 + x^3 + x^4 + ...$$</p>
 <p>I find this difficult to believe, despite being already familiar with it. Here's a rather standoffish proof: just multiply the right-hand side by $(1 - x)$ and see what you get.</p>
@@ -168,22 +168,26 @@ $$1$$</p>
 </div>
 <div class="post-tags">
     
-    <b>Tags:</b> <a href="google.com">math</a>
-    
+        <b>Tags:</b>
+        <a href="google.com">math</a>
+        
     
 </div>
 
         </div>
     </div>
-<script>
-    renderMathInElement(
-        document.getElementById("content"), {
-            delimiters: [
-                {left: "$$", right: "$$", display: true},
-                {left: "$", right: "$", display: false}
-            ]
-        }
-    )
-</script>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
 </body>
 </html>

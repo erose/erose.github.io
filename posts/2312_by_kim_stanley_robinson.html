@@ -2,12 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <!-- The following line makes the site look better on mobile. See https://stackoverflow.com/questions/39550403/css-displayinline-block-changes-text-size-on-mobile for reference. -->
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Eli's Blog</title>
     <link rel="stylesheet" href="/static/css/base.css">
-    <link rel="stylesheet" href="/static/css/katex.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
 
     <script src="/static/js/lodash.min.js"></script>
     <script src="/static/js/jquery-2.2.2.js"></script>
@@ -46,29 +46,33 @@
     <div class="post-title">2312 by Kim Stanley Robinson</div>
     <div class="post-date">Thursday, February 25th, 2016</div>
 </div>
-<div class="post-content">
+<div>
     <p>Hi!</p>
 <p><img width="200px" height="300px" class="post-floating-image" src="/static/images/2312_book_cover.jpg"></p>
 </div>
 <div class="post-tags">
     
-    <b>Tags:</b> <a href="google.com">book-review</a>,
-    <a href="google.com">review</a>
-    
+        <b>Tags:</b>
+        <a href="google.com">book-review</a>,
+        <a href="google.com">review</a>
+        
     
 </div>
 
         </div>
     </div>
-<script>
-    renderMathInElement(
-        document.getElementById("content"), {
-            delimiters: [
-                {left: "$$", right: "$$", display: true},
-                {left: "$", right: "$", display: false}
-            ]
-        }
-    )
-</script>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
 </body>
 </html>

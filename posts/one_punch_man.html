@@ -2,12 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <!-- The following line makes the site look better on mobile. See https://stackoverflow.com/questions/39550403/css-displayinline-block-changes-text-size-on-mobile for reference. -->
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Eli's Blog</title>
     <link rel="stylesheet" href="/static/css/base.css">
-    <link rel="stylesheet" href="/static/css/katex.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
 
     <script src="/static/js/lodash.min.js"></script>
     <script src="/static/js/jquery-2.2.2.js"></script>
@@ -46,7 +46,7 @@
     <div class="post-title">One Punch Man</div>
     <div class="post-date">Sunday, January 10th, 2016</div>
 </div>
-<div class="post-content">
+<div>
     <p>Into a Dragon Ball Z or Marvel Universe world, run by superbeings with various thematic powers, who battle each other by shouting out the names of their moves, is inserted Saitama, the bald, everyman protagonist.</p>
 <p>He's an amateur superhero. His power is to simply kill anyone in a single punch, which he uses on the monsters that are endlessly tearing down buildings and devouring apartment dwellers in his hometown, City <em>Z</em>. (There is also City <em>A</em>, City <em>B</em>, etc. which appear to comprise the rest of the world). A running gag is to introduce a huge, stunningly-drawn monster, linger over the destruction in their wake, continue as they explain their origins and plans for our subjugation, and then have Saitama cut them off mid-sentence with a punch.</p>
 <p><img class="centered" width="500px" height="auto" src="/static/images/one_punch_man_punch.jpg"></p>
@@ -56,23 +56,27 @@
 </div>
 <div class="post-tags">
     
-    <b>Tags:</b> <a href="google.com">tv-review</a>,
-    <a href="google.com">review</a>
-    
+        <b>Tags:</b>
+        <a href="google.com">tv-review</a>,
+        <a href="google.com">review</a>
+        
     
 </div>
 
         </div>
     </div>
-<script>
-    renderMathInElement(
-        document.getElementById("content"), {
-            delimiters: [
-                {left: "$$", right: "$$", display: true},
-                {left: "$", right: "$", display: false}
-            ]
-        }
-    )
-</script>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
 </body>
 </html>

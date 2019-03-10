@@ -2,12 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <!-- The following line makes the site look better on mobile. See https://stackoverflow.com/questions/39550403/css-displayinline-block-changes-text-size-on-mobile for reference. -->
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Eli's Blog</title>
     <link rel="stylesheet" href="/static/css/base.css">
-    <link rel="stylesheet" href="/static/css/katex.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
 
     <script src="/static/js/lodash.min.js"></script>
     <script src="/static/js/jquery-2.2.2.js"></script>
@@ -46,7 +46,7 @@
     <div class="post-title">Richard Feynman On Girls</div>
     <div class="post-date">Monday, April 11th, 2016</div>
 </div>
-<div class="post-content">
+<div>
     <p>The <a href="http://www.feynmanlectures.caltech.edu/">Feynman Lectures on Physics</a> are calmly beautiful and I am reading them right now instead of going to bed, but what the hell is with this paragraph in the middle of <a href="http://www.feynmanlectures.caltech.edu/I_03.html">chapter 3</a>?</p>
 <blockquote>
 <p>One of the most impressive discoveries was the origin of the energy of the stars, that makes them continue to burn. One of the men who discovered this was out with his girlfriend the night after he realized that nuclear reactions must be going on in the stars in order to make them shine. She said “Look at how pretty the stars shine!” He said “Yes, and right now I am the only man in the world who knows why they shine.” She merely laughed at him. She was not impressed with being out with the only man who, at that moment, knew why stars shine. Well, it is sad to be alone, but that is the way it is in this world.</p>
@@ -55,23 +55,27 @@
 </div>
 <div class="post-tags">
     
-    <b>Tags:</b> <a href="google.com">physics</a>,
-    <a href="google.com">what</a>
-    
+        <b>Tags:</b>
+        <a href="google.com">physics</a>,
+        <a href="google.com">what</a>
+        
     
 </div>
 
         </div>
     </div>
-<script>
-    renderMathInElement(
-        document.getElementById("content"), {
-            delimiters: [
-                {left: "$$", right: "$$", display: true},
-                {left: "$", right: "$", display: false}
-            ]
-        }
-    )
-</script>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
 </body>
 </html>

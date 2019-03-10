@@ -2,12 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <!-- The following line makes the site look better on mobile. See https://stackoverflow.com/questions/39550403/css-displayinline-block-changes-text-size-on-mobile for reference. -->
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Eli's Blog</title>
     <link rel="stylesheet" href="/static/css/base.css">
-    <link rel="stylesheet" href="/static/css/katex.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
 
     <script src="/static/js/lodash.min.js"></script>
     <script src="/static/js/jquery-2.2.2.js"></script>
@@ -46,7 +46,7 @@
     <div class="post-title">Normal Subgroups Hold Things Constant</div>
     <div class="post-date">Thursday, March 31st, 2016</div>
 </div>
-<div class="post-content">
+<div>
     <p>Some subgroups of a group $G$ are <a href="https://en.wikipedia.org/wiki/Normal_subgroup">normal</a>, and some are not. It's not easy to get an intuition for what that means. A week or two after encountering the concept in my abstract algebra class, I knew the following:</p>
 <ul>
 <li>Normal subgroups $N$ of $G$ are the only ones you can <a href="https://en.wikipedia.org/wiki/Quotient_group">quotient</a> by; i.e. you can write $G/N$ and it's a valid group.</li>
@@ -75,23 +75,27 @@
 </div>
 <div class="post-tags">
     
-    <b>Tags:</b> <a href="google.com">math</a>,
-    <a href="google.com">abstract-algebra</a>
-    
+        <b>Tags:</b>
+        <a href="google.com">math</a>,
+        <a href="google.com">abstract-algebra</a>
+        
     
 </div>
 
         </div>
     </div>
-<script>
-    renderMathInElement(
-        document.getElementById("content"), {
-            delimiters: [
-                {left: "$$", right: "$$", display: true},
-                {left: "$", right: "$", display: false}
-            ]
-        }
-    )
-</script>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
 </body>
 </html>

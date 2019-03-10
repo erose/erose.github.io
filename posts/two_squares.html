@@ -2,12 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <!-- The following line makes the site look better on mobile. See https://stackoverflow.com/questions/39550403/css-displayinline-block-changes-text-size-on-mobile for reference. -->
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Eli's Blog</title>
     <link rel="stylesheet" href="/static/css/base.css">
-    <link rel="stylesheet" href="/static/css/katex.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
 
     <script src="/static/js/lodash.min.js"></script>
     <script src="/static/js/jquery-2.2.2.js"></script>
@@ -46,7 +46,7 @@
     <div class="post-title">Writing Numbers as Sums of Two Squares</div>
     <div class="post-date">Sunday, May 28th, 2017</div>
 </div>
-<div class="post-content">
+<div>
     <p>Recently I watched <strong>3Blue1Brown</strong>'s new <a href="https://www.youtube.com/watch?v=NaL_Cb42WyY&amp;t=649s">video</a>, which tackles this question: if I draw a circle in the coordinate plane, how many lattice points will it intersect? (A <em>lattice point</em> is a point $(x, y)$ where both coordinates are integers).</p>
 <p>Go check it out! The below is a dive into one small point in the video -- there's lots of cool stuff in it that I'm not going to talk about here.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NaL_Cb42WyY" frameborder="0" allowfullscreen></iframe>
@@ -63,22 +63,26 @@
 </div>
 <div class="post-tags">
     
-    <b>Tags:</b> <a href="google.com">math</a>
-    
+        <b>Tags:</b>
+        <a href="google.com">math</a>
+        
     
 </div>
 
         </div>
     </div>
-<script>
-    renderMathInElement(
-        document.getElementById("content"), {
-            delimiters: [
-                {left: "$$", right: "$$", display: true},
-                {left: "$", right: "$", display: false}
-            ]
-        }
-    )
-</script>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
 </body>
 </html>
