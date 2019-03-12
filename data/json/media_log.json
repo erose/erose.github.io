@@ -665,6 +665,12 @@
             "date_completed": "March 4, 2019",
             "title": "Knock Knock",
             "type": "album"
+        },
+        {
+            "author": "Sandi Tan",
+            "date_completed": "March 9, 2019",
+            "title": "Shirkers",
+            "type": "movie"
         }
     ]
 }
