@@ -671,6 +671,12 @@
             "date_completed": "March 9, 2019",
             "title": "Shirkers",
             "type": "movie"
+        },
+        {
+            "author": "Adam McKay",
+            "date_completed": "March 19, 2019",
+            "title": "Vice",
+            "type": "movie"
         }
     ]
 }
