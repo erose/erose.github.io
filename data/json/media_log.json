@@ -677,6 +677,18 @@
             "date_completed": "March 19, 2019",
             "title": "Vice",
             "type": "movie"
+        },
+        {
+            "author": "AJJ",
+            "date_completed": "April 1, 2019",
+            "title": "Only God Can Judge Me",
+            "type": "album"
+        },
+        {
+            "author": "Ursula K. LeGuin",
+            "date_completed": "April 4, 2019",
+            "title": "No Time To Spare: Thinking About What Matters",
+            "type": "essays"
         }
     ]
 }
