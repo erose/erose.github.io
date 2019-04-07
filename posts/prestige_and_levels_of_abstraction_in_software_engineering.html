@@ -15,7 +15,7 @@
     <script src="/static/js/auto-render.min.js"></script>
 
     
-<link rel="stylesheet" href="/static/css/page.css">
+<link rel="stylesheet" href="/static/css/post.css">
 
 </head>
 
@@ -50,32 +50,15 @@
 
         <div id="content" class="content">
             
-<div class="page-header">
-    <div class="page-title">Media Log</div>
+<div class="post-header">
+    <div class="post-title">Prestige and Levels of Abstraction in Software Engineering</div>
+    <div class="post-date">Sunday, April 7th, 2019</div>
 </div>
-<div class="page-content">
-    <p>Here I'm writing down books I read, movies I watched, etc. I may also write about them. Likely to be of more interest to me than to you.</p>
 <div>
-  <ul id="media-list">
-  </ul>
+    
 </div>
-
-<script>
-// Returns the literal HTML of a list element.
-var htmlForEntry = function(object) {
-  return _.template(
-    "<li><b><%= object.title %></b> by <%= object.author %>. <i>Finished on <%= object.date_completed %></i>.</li>"
-  )({object: object});
-}
-
-$(document).ready(function(){
-    $.getJSON('/data/json/media_log.json', function(data){
-        // The data comes in ascending chronological order, but we want to display it in descending order.
-        data.objects.reverse();
-        $("#media-list").append(data.objects.map(htmlForEntry));
-    })
-});
-</script>
+<div class="post-tags">
+    
 </div>
 
         </div>
