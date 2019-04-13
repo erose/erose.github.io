@@ -689,6 +689,30 @@
             "date_completed": "April 4, 2019",
             "title": "No Time To Spare: Thinking About What Matters",
             "type": "essays"
+        },
+        {
+            "author": "Cameron Crowe",
+            "date_completed": "April 7, 2019",
+            "title": "Almost Famous",
+            "type": "movie"
+        },
+        {
+            "author": "J.K. Rowling",
+            "date_completed": "April 7, 2019",
+            "title": "Fantastic Beasts: The Crimes of Grindelwald",
+            "type": "movie"
+        },
+        {
+            "author": "Michel Houellebecq",
+            "date_completed": "April 7, 2019",
+            "title": "Whatever",
+            "type": "novel"
+        },
+        {
+            "author": "Gil Junger",
+            "date_completed": "April 9, 2019",
+            "title": "Ten Things I Hate About You",
+            "type": "movie"
         }
     ]
 }
