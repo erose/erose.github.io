@@ -713,6 +713,24 @@
             "date_completed": "April 9, 2019",
             "title": "Ten Things I Hate About You",
             "type": "movie"
+        },
+        {
+            "author": "Better Oblivion Community Center",
+            "date_completed": "April 26, 2019",
+            "title": "Better Oblivion Community Center",
+            "type": "album"
+        },
+        {
+            "author": "Ceschi",
+            "date_completed": "April 19, 2019",
+            "title": "Sad, Fat Luck",
+            "type": "album"
+        },
+        {
+            "author": "Eugene Wei",
+            "date_completed": "April 20, 2019",
+            "title": "Status As A Service",
+            "type": "nonfiction"
         }
     ]
 }
