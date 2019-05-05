@@ -731,6 +731,12 @@
             "date_completed": "April 20, 2019",
             "title": "Status As A Service",
             "type": "nonfiction"
+        },
+        {
+            "author": "Alexander Payne",
+            "date_completed": "May 3, 2019",
+            "title": "Election",
+            "type": "movie"
         }
     ]
 }
