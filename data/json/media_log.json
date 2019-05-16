@@ -743,6 +743,12 @@
             "date_completed": "May 15, 2019",
             "title": "Space Opera",
             "type": "novel"
+        },
+        {
+            "author": "Hop Along",
+            "date_completed": "May 8, 2019",
+            "title": "Bark Your Head Off, Dog",
+            "type": "album"
         }
     ]
 }
