@@ -737,6 +737,12 @@
             "date_completed": "May 3, 2019",
             "title": "Election",
             "type": "movie"
+        },
+        {
+            "author": "Catherynne Valente",
+            "date_completed": "May 15, 2019",
+            "title": "Space Opera",
+            "type": "novel"
         }
     ]
 }
