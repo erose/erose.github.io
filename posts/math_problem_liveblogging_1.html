@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code projects</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Math Problem Liveblogging #1</div>
+    <div class="post-date">Tuesday, July 2nd, 2019</div>
+</div>
+<div>
+    <h3>Background</h3>
+<p><em>This is an experiment where I narrate my thought process as I solve a math problem. My goal: writeups of the solutions to math problems usually present a polished, streamlined version of the solver's thought process that omits errors, wrong turns, and heuristics. I wondered what it would be like to represent the thought process "warts and all."</em></p>
+<p>In full disclosure, I didn't get the idea to liveblog my solving of this problem until after the "IS THAT IT??" insight, so the beginning is my attempt to reconstruct what I was thinking then.</p>
+<p>I encountered today's problem <a href="http://users.wfu.edu/rouseja/problems.html">here</a>.</p>
+<h3>Problem</h3>
+<p>Prove that if $a$, $b$, and $c$ are odd integers, then the roots of $ax^2 + bx + c = 0$ are irrational.</p>
+<ul>
+<li>
+<p>Interesting; so this means that the graph of $ax^2 + bx + c$ never intersects the x-axis at an integer point.</p>
+<ul>
+<li>Not sure how to proceed from that; maybe we need to do something algebraic.</li>
+</ul>
+</li>
+<li>
+<p>Oh, obviously we can use the quadratic formula. $\frac{b^2 - 4ac}{2a}$. No, $\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$. The part that matters is inside the square root. We just need $b^2 - 4ac$ not to be a perfect square; if it isn't a perfect square, then neither will the roots be.</p>
+</li>
+<li>
+<p>Okay; we have that $a, b, c$ are odd integers. They can be negative or positive, I notice.</p>
+</li>
+<li>
+<p>Well, an odd integer squared is still odd. So $b^2$ is odd. And $4ac$ is even, since it's an even number times an odd number times an odd number.</p>
+<ul>
+<li>
+<p>Is that right? Yes, it is, because evenness spreads like poision during multiplication (remember this via $1 \times 0 = 0$, odd times even is even).</p>
+</li>
+<li>
+<p>Okay, so $b^2 - 4ac$ is an odd minus an even, so it's odd.</p>
+</li>
+<li>
+<p>Wait; this doesn't get us anywhere. I don't care whether it's odd or not; I care whether it's a square.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Unsure what to do.</p>
+</li>
+<li>
+<p>Okay, let's try with some actual numbers. I need two squares and I know one of them has to be odd; let's use 9 for our odd square. I'll take another square — say 25 — and try to subtract enough to get it to 9.</p>
+<ul>
+<li>
+<p>What do I have to subtract? Right; 16.</p>
+</li>
+<li>
+<p>Okay; that won't work. I have to get $4ac$ to equal 16, but both $a$ and $c$ are odd whereas I need them both to be 2 in order to get 16.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Is there some sort of argument about how large the numbers can get? Like, if it's below 100 I can't hit it in this way, if it's above I can't hit it in another way? Some sort of bipartite argument.</p>
+<ul>
+<li>No, that's tough because there are two things that vary; the large square which I'm subtracting $4ac$ from and the small square I'm trying to hit.</li>
+</ul>
+</li>
+<li>
+<p>Let's choose another example. What's the next biggest square after 25? 36. Okay, I can't subtract from 36 to get to 25 because I'd have to subtract 11, and that's too big to be hit by $4ac$, I've already seen that.</p>
+<ul>
+<li>
+<p>Can I subtract to get to 9? No, I'd have to subtract 27, and that doesn't work either.</p>
+</li>
+<li>
+<p>Wait, there's another reason why these don't work; the amounts I'd have to subtract are all odd, but I need them to equal $4ac$.</p>
+</li>
+<li>
+<p>IS THAT IT??</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Right; when you list squares they look like this: 0, 1, 4, 9, 16 ... and the deltas look like this: 1, 3, 5, 7 ...</p>
+<ul>
+<li>
+<p>It's all the odd numbers.</p>
+</li>
+<li>
+<p>Imagine a sentence in the written-up proof. "Consider the set of differences of squares..." Is it generally the case that the difference of any two squares is an odd number? Not just counting consecutive ones.</p>
+</li>
+<li>
+<p>I don't think so; for example $49 - 9 = 40$ is not odd.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Perhaps we have to use the fact that $b^2$ is odd. But it's troubling that $40$ is not odd in the example above.</p>
+<ul>
+<li>Why doesn't the example above work? That is, why can't we have $b^2 = 49$ and $4ac = 40$? Well, $a$ would need to be $5$ and $c$ would need to be $2$ for that to work, but $c$ can't be $2$. So we're saved, but how are we saved in general?</li>
+</ul>
+</li>
+<li>
+<p>Okay, let's dive into the algebra. $b$ is odd, so say it's $2k + 1$.</p>
+<ul>
+<li>
+<p>Then $b^2 = (2k + 1)^2 = 4k^2 + 4k + 1$.</p>
+</li>
+<li>
+<p>I guess we'll subtract a square out and show that the result is not even? Or subtract an even number out and show that the result is not a square?</p>
+</li>
+<li>
+<p>First one seems easier. But wait; how to subtract a square out?</p>
+</li>
+<li>
+<p>Okay, let's try the second one.</p>
+</li>
+<li>
+<p>Hmm, how do I subtract an even number out? I feel like that trailing 1 is giving me what I want. But... $4k^2 + 4k$ will be an even + an even = an even, so if I leave that out I get 1, which <em>is</em> a square.</p>
+<ul>
+<li>Why doesn't this present a counterexample? Perhaps we simply can't find $a, c$ such that $4ac = 4k^2 + 4k$, but I am at a loss as to why.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Feel like I've taken a bad turn somewhere. Let's lay out what we've got in algebra. Also, let me head into another room.</p>
+<ul>
+<li>
+<p>We need to show that $b^2 - 4ac \ne d^2$, where $a, b, c$ are odd integers and $d$ is any integer.</p>
+</li>
+<li>
+<p>We can rewrite this into $b^2 - d^2 = 4ac$ and trying to show a contradiction, which is the direction we were going above. "It would be absurb to take an odd square, subtract a square from it, and get $4ac$" (the product of two odd integers and 4).</p>
+</li>
+<li>
+<p>What can we say about the differences of squares? Are they ever just 4 (so $a = c = 1$)? Well, no, as I laid out above there are no consecutive squares distance 4 apart, and the non-consecutive ones are too far apart to be 4 apart.</p>
+</li>
+<li>
+<p>Can we just do odd and even? We know $b^2$ is odd, so subtract another square from it. If we subtract an even square, the result is odd and can't be $4ac$. If we subtract an odd square, things get more interesting...</p>
+</li>
+<li>
+<p>Can we guarantee anything about relative size of $b$ and $d$? I don't think so...</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Subtract an odd square from an odd square. Say, $4k^2 + 4k + 1 - (4j^2 + 4j + 1)$. The $1$s go away and we can take out a 4, so $4(k^2 + k - j^2 - j)$. We want to show this can't be $4ac$?</p>
+<ul>
+<li>Well, $k^2 + k$ is even regardless of what $k$ is, since it's odd plus odd. And same goes for $j^2 + j$. So it's 4 times an even minus an even = an even; a poor fit for $4ac$, I suppose.</li>
+</ul>
+</li>
+<li>
+<p>This seems like it. But how to we justify that this cannot be $4ac$?</p>
+<ul>
+<li>Oh, we can simply divide by $4$. So, when you divide $4ac$ by 4 the result is odd; when you divide $4(k^2 + k - j^2 - j)$ by 4 we know that the result is even. Hence they are different.</li>
+</ul>
+</li>
+<li>
+<p>(Took a break)</p>
+</li>
+<li>
+<p>Great, I think we can write up the final solution now.</p>
+</li>
+</ul>
+<h3>Solution</h3>
+<p>By the quadratic formula, we just need to prove that $b^2 - 4ac$ is not a perfect square. We proceed by contradiction. Suppose it were; that is, suppose $b^2 - 4ac = d^2$, where $d$ is any integer. Rearrange: $b^2 - d^2 = 4ac$. There are two cases to consider: if $d$ is even, and if $d$ is odd.</p>
+<ul>
+<li>
+<p>If $d$ is even, then $d^2$ is even. But then the left-hand side is odd (odd - even) and the right side is even, so there is a contradiction.</p>
+</li>
+<li>
+<p>If $d$ is odd, then write $2k + 1$ for $b$ and $2j + 1$ for $d$, where $j, k$ are any integer. Expanding, we get </p>
+</li>
+</ul>
+<p>$$b^2 - d^2 \rightarrow 4k^2 + 4k + 1 - (4j^2 + 4j + 1) \rightarrow 4(k^2 + k - j^2 - j) = 4ac$$</p>
+<ul>
+<li>
+<p>Divide both sides by 4; $k^2 + k - j^2 - j = ac$</p>
+</li>
+<li>
+<p>Now, observe that the quantity $k^2 + k$ must be even, since $k^2$ has the same parity as $k$. Same with $j^2 - j$. Therefore left-hand side $k^2 + k - j^2 - j$ is even.</p>
+</li>
+<li>
+<p>But the right-hand side $ac$ is an odd number multiplied by an odd number and is therefore odd. Hence, a contradiction.</p>
+</li>
+</ul>
+<h3>Learnings</h3>
+<p>The difference of two odd squares is always a multiple of four; that's pretty interesting. (Furthermore, it's four times an even number, so I guess it's a multiple of eight.) I suppose the difference of two even squares is a multiple of four as well.</p>
+</div>
+<div class="post-tags">
+    
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>
