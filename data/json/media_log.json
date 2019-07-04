@@ -773,6 +773,18 @@
             "date_completed": "May 26, 2019",
             "title": "I Am Easy To Find",
             "type": "album"
+        },
+        {
+            "author": "Raphael Bob-Waksberg",
+            "date_completed": "July 1, 2019",
+            "title": "Someone Who Will Love You In All Your Damaged Glory",
+            "type": "short stories"
+        },
+        {
+            "author": "Brand New",
+            "date_completed": "June 28, 2019",
+            "title": "Science Fiction",
+            "type": "album"
         }
     ]
 }
