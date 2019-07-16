@@ -785,6 +785,18 @@
             "date_completed": "June 28, 2019",
             "title": "Science Fiction",
             "type": "album"
+        },
+        {
+            "author": "Bill Callahan",
+            "date_completed": "July 10, 2019",
+            "title": "Shepherd in a Sheepskin Vest",
+            "type": "album"
+        },
+        {
+            "author": "Ceridwen Dovey",
+            "date_completed": "July 14, 2019",
+            "title": "Only the Animals",
+            "type": "short stories"
         }
     ]
 }
