@@ -1,7 +1,7 @@
 {
     "objects": [
         {
-            "author": "Doestoevsky",
+            "author": "Fyodor Doestoevsky",
             "date_completed": "September 11, 2016",
             "title": "Notes From The Underground",
             "type": "novel"
@@ -751,6 +751,18 @@
             "type": "album"
         },
         {
+            "author": "The National",
+            "date_completed": "May 26, 2019",
+            "title": "I Am Easy To Find",
+            "type": "album"
+        },
+        {
+            "author": "Annie Dillard",
+            "date_completed": "May 30, 2019",
+            "title": "The Force That Drives The Flower",
+            "type": "essays"
+        },
+        {
             "author": "Vampire Weekend",
             "date_completed": "June 1, 2019",
             "title": "Father of the Bride",
@@ -763,15 +775,9 @@
             "type": "movie"
         },
         {
-            "author": "Annie Dillard",
-            "date_completed": "May 30, 2019",
-            "title": "The Force That Drives The Flower",
-            "type": "essays"
-        },
-        {
-            "author": "The National",
-            "date_completed": "May 26, 2019",
-            "title": "I Am Easy To Find",
+            "author": "Brand New",
+            "date_completed": "June 28, 2019",
+            "title": "Science Fiction",
             "type": "album"
         },
         {
@@ -779,12 +785,6 @@
             "date_completed": "July 1, 2019",
             "title": "Someone Who Will Love You In All Your Damaged Glory",
             "type": "short stories"
-        },
-        {
-            "author": "Brand New",
-            "date_completed": "June 28, 2019",
-            "title": "Science Fiction",
-            "type": "album"
         },
         {
             "author": "Bill Callahan",
