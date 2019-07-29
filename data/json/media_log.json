@@ -797,6 +797,24 @@
             "date_completed": "July 14, 2019",
             "title": "Only the Animals",
             "type": "short stories"
+        },
+        {
+            "author": "Joseph Kahn",
+            "date_completed": "July 27, 2019",
+            "title": "Bodied",
+            "type": "movie"
+        },
+        {
+            "author": "Richard Linklater",
+            "date_completed": "July 28, 2019",
+            "title": "Everybody Wants Some!!",
+            "type": "movie"
+        },
+        {
+            "author": "Quentin Tarantino",
+            "date_completed": "July 28, 2019",
+            "title": "Once Upon A Time In Hollywood",
+            "type": "movie"
         }
     ]
 }
