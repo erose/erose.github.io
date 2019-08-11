@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code projects</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Don't Say "What Is The Probability?"</div>
+    <div class="post-date">Saturday, August 10th, 2019</div>
+</div>
+<div>
+    <p><em>(This post essentially agrees with <a href="https://www.lesswrong.com/posts/f6ZLxEWaankRZ2Crv/probability-is-in-the-mind">Probability Is In The Mind</a>. It differs in emphasis and style.)</em></p>
+<p><em>[Epistemic status: clarifying language in the hope of helping people who were confused like me, not stating anything about what is or isn't the case in the world.]</em></p>
+<p><strong>Question</strong> (from a college-level math class): An urn contains 3 red balls and 6 blue balls. Two balls are drawn without replacement and the second is found to be red. What is the probability that the first ball was also red?</p>
+<p><strong>Question</strong> (in politics): What is the probability that Cory Booker is the 2020 Democratic nominee?</p>
+<p>I think that the phrase "what is the probability" is misleading in a subtle way. It can lead you to believe that you are asking a question about the world, though you are really asking a question about some model of the world. Sometimes it's okay to conflate those things, but other times it's important not to.</p>
+<p>Let's start with "What is the probability that Cory Booker is the 2020 Democratic nominee?" You might ask this question in the context of a sober, objective discussion. You are trying to look hard at the world and act like a scientist. It might lead you to investigate facts such as the future state of the economy, projected black voter turnout, etc. The investigative process feels like the scientific process by which we discover facts about the world. By analogy, it feels like the question "What is the probability that Cory Booker is the 2020 Democratic nominee?" has an answer of the same epistemic status as, say, "What is the age of planet Earth?"</p>
+<p>However, it doesn't. Probabilities are part of the <a href="https://www.lesswrong.com/posts/f6ZLxEWaankRZ2Crv/probability-is-in-the-mind">map, not the territory</a>. In other words, they are properties of a model of the world, not properties of the world itself. They are not discovered, they are created. There is some fact of the matter as to how old the planet Earth is<sup>*</sup>, but there is no fact of the matter about the probability that Cory Booker will become the 2020 Democratic nominee. It isn't floating out there in the world, waiting to be found by an intrepid scientist.</p>
+<p>Visualize yourself after the nominee has been declared. Suppose it is Cory Booker. What have you learned about the probability? You've learned that, in the world's past, the matter was arranged in such a way that led to Cory Booker being elected, but that is not a fact about the probability. (Do you think your model should have said "100%"?)</p>
+<p>"The probability of event X" resides in a model, not in the world. There is no "true probability" about any event or state of the world; the world just has some state. We create models that give us probabilities when queried, and we continuously revise the models as we learn more about the world.</p>
+<p>Although the math question above also uses the language "What is the probability?", we're in a rather different situation. We're given a map, a model (the implicit model of how drawing idealized balls from idealized urns works), and are asked a question about it. The question is actually about how to use the map, not about the territory at all. You'd be considered annoying if you ask a territory-motivated question like "But what about if a ball falls through a hole in the bottom of the urn?" even though this might be a real concern if we were engaged in modeling a physical urn. (I guess urn bottoms are pretty sturdy, but you get the picture.)</p>
+<p>So if you say $\frac{1}{4}$ and I say $\frac{1}{3}$, one of us is wrong about this map we're supposed to be sharing, and we should be able to agree. When discussing the probability of Cory Booker becoming the nominee, there is no map we are assumed to share; we are allowed to build our own, and hence we might have differences. At best, if our maps apply to similar situations, we can get data over time about whose map is better or worse. At worst, we might not be able to agree about what "similar situations" are, or we might not have enough shots to gather data.</p>
+<p>I used to be very confused by this, because I went from thinking about probabilities only in math classes to thinking about probabilities in the real world. This led to issues like me not knowing what it meant when the weather forecast said "80% chance of precipitation tomorrow", and suspecting no one else knew either. Now I think that there is a consistent way to think of such things, and that way is to interpret the weather forecast as saying "My (rather successful) model assigns an 80% probability to there being precipitation tomorrow."</p>
+<p><strong>Prescriptions</strong>:</p>
+<ul>
+<li>
+<p>When in a context where there <em>might</em> be multiple models in question, or in a context where it pays to be careful, say "What probability does X assign to this event?" instead of "What is the probability of this event?", where X is some model (e.g. you, me, Nate Silver). Probabilities are always relative to some model. When you're pretty sure everyone has the same model in mind (e.g. some authoritative weather forecaster) and you're speaking casually, it's okay to say "What is the probability that it will rain tomorrow?".</p>
+</li>
+<li>
+<p>Math classes teaching probability should discuss this distinction more loudly.</p>
+</li>
+</ul>
+<p><strong>Addendum:</strong></p>
+<p>It may be implied by quantum mechanics that there is another kind of probability which is actually in the world and not relative to some model; e.g. the probability that a qubit in an equal superposition of two states will measure as one or the other is 50%. We can call this "objective probability," and call the other kind as "subjective probability." I don't understand much more about it, or about quantum mechanics at all, but if true I believe it completely changes what I said above. For example, if whether Cory Booker is made the nominee depends on quantum events which there is an objective probability of, then there is an value out there in the world which is "the probability of Cory Booker becoming the Democratic nominee," not relative to any model. In other words, what I said above assumes determinism.</p>
+<p>The physicist E.T. Jaynes seems to have thought that this type of probability too was only relative to some model, but his arguments are not accepted by the <a href="https://physics.stackexchange.com/questions/233203/has-jayness-argument-against-bells-theorem-been-debunked">community</a>.</p>
+<hr>
+
+<p><sub class='display-block normal-line-height'>* Assuming we agree on a way to translate that question into a statement about the positions and properties of matter in the universe, which I think we mostly do.</sub></p>
+</div>
+<div class="post-tags">
+    
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>
