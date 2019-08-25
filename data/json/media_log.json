@@ -821,6 +821,36 @@
             "date_completed": "August 8, 2019",
             "title": "Dongs of Sevotion",
             "type": "album"
+        },
+        {
+            "author": "Lulu Wang",
+            "date_completed": "August 15, 2019",
+            "title": "The Farewell",
+            "type": "movie"
+        },
+        {
+            "author": "Kelly Link",
+            "date_completed": "August 15, 2019",
+            "title": "The Girl Who Did Not Know Fear",
+            "type": "short story"
+        },
+        {
+            "author": "Tracy K. Smith",
+            "date_completed": "August 21, 2019",
+            "title": "Life on Mars",
+            "type": "poetry"
+        },
+        {
+            "author": "Slaughter Beach, Dog",
+            "date_completed": "August 19, 2019",
+            "title": "Safe And Also No Fear",
+            "type": "album"
+        },
+        {
+            "author": "Son Lux",
+            "date_completed": "August 24, 2019",
+            "title": "Lanterns",
+            "type": "album"
         }
     ]
 }
