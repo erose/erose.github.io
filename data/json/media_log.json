@@ -835,16 +835,16 @@
             "type": "short story"
         },
         {
-            "author": "Tracy K. Smith",
-            "date_completed": "August 21, 2019",
-            "title": "Life on Mars",
-            "type": "poetry"
-        },
-        {
             "author": "Slaughter Beach, Dog",
             "date_completed": "August 19, 2019",
             "title": "Safe And Also No Fear",
             "type": "album"
+        },
+        {
+            "author": "Tracy K. Smith",
+            "date_completed": "August 21, 2019",
+            "title": "Life on Mars",
+            "type": "poetry"
         },
         {
             "author": "Son Lux",
