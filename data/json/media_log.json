@@ -851,6 +851,18 @@
             "date_completed": "August 24, 2019",
             "title": "Lanterns",
             "type": "album"
+        },
+        {
+            "author": "Jesse Armstrong",
+            "date_completed": "August 28, 2019",
+            "title": "Succession (Season 1)",
+            "type": "tv show"
+        },
+        {
+            "author": "Leo Tolstoy",
+            "date_completed": "August 28, 2019",
+            "title": "Anna Karenina",
+            "type": "novel"
         }
     ]
 }
