@@ -863,6 +863,12 @@
             "date_completed": "August 28, 2019",
             "title": "Anna Karenina",
             "type": "novel"
+        },
+        {
+            "author": "Nana Kwame Adjei-Brenyah",
+            "date_completed": "September 3, 2019",
+            "title": "Friday Black",
+            "type": "short stories"
         }
     ]
 }
