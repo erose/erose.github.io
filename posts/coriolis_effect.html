@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code projects</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">The Coriolis Effect Applies To Balls Dropped From Towers</div>
+    <div class="post-date">Tuesday, September 3rd, 2019</div>
+</div>
+<div>
+    <p>I know the Coriolis Effect from 9th-grade earth science as what causes hurricanes to spin; counterclockwise in the northern hemisphere, and clockwise in the southern. The idea is this: imagine teleporting a section of air from the Equator to the North Pole. An exceptionally violent wind would result, because the rotation of the earth means that air around the equator is moving at ~ 1000 miles/hour, while air around the North Pole is hardly moving at all.</p>
+<p>Generalize. So as air moves north in the Northern Hemisphere, it will find itself to be moving eastward (the Earth rotates from west to east) faster than the other air surrounding it. Hence it will end up moving in a northeasterly direction (relative to that other air), rather than just north. For the same reasons, air that is moving south in the Northern Hemisphere will find itself being pushed to the west. Things are reversed in the Southern Hemisphere. The overall effect is to add a lateral component to north/south motion on any rotating sphere.</p>
+<p>Note that, from a vantage point outside Earth, <em>all</em> the air is moving east or west, just like everything else on Earth — some air is just slightly faster at it. But standing on the Earth's surface, moving faster than everything else around you like being "pushed" in one direction or another.</p>
+<p>Okay, this I knew, but what I did not know was that the same principle explains why a ball dropped from a tower will land slightly to the east of "straight down." (Ignoring air resistance.)</p>
+<p>Consider that the ball at the top of the tower has the same angular velocity (degrees covered per second) as the bottom of the tower. But the circle it describes as it rotates has a larger radius than the circle the tower bottom describes as it rotates; therefore, the ball must have a larger velocity (kilometers per second). When the ball falls, it does not lose its velocity, and therefore is "pushed" eastward as it falls. (The effect is very small: <a href="https://www.dpmms.cam.ac.uk/~stcs/courses/dynamics/handouts/handout5a.pdf">about 50cm for a ball dropped from the top of the tallest tower in the world</a>.)</p>
+<p>This is the same phenomenon as the Coriolis effect. In the discussion of hurricanes we considered the north/south dimension and the east/west dimension; for balls dropping from towers, we apply the same analysis but consider the east/west and up/down dimensions.</p>
+</div>
+<div class="post-tags">
+    
+        <b>Tags:</b>
+        <a href="google.com">physics</a>
+        
+    
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>
