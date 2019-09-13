@@ -869,6 +869,12 @@
             "date_completed": "September 3, 2019",
             "title": "Friday Black",
             "type": "short stories"
+        },
+        {
+            "author": "Tim Burton",
+            "date_completed": "September 11, 2019",
+            "title": "The Nightmare Before Christmas",
+            "type": "movie"
         }
     ]
 }
