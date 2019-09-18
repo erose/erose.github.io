@@ -875,6 +875,12 @@
             "date_completed": "September 11, 2019",
             "title": "The Nightmare Before Christmas",
             "type": "movie"
+        },
+        {
+            "author": "Gene Wolfe",
+            "date_completed": "September 17, 2019",
+            "title": "The Claw of the Conciliator",
+            "type": "novel"
         }
     ]
 }
