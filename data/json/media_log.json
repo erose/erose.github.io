@@ -881,6 +881,12 @@
             "date_completed": "September 17, 2019",
             "title": "The Claw of the Conciliator",
             "type": "novel"
+        },
+        {
+            "author": "Leo Szilard",
+            "date_completed": "September 18, 2019",
+            "title": "My Trial As A War Criminal",
+            "type": "short story"
         }
     ]
 }
