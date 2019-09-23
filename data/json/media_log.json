@@ -887,6 +887,18 @@
             "date_completed": "September 18, 2019",
             "title": "My Trial As A War Criminal",
             "type": "short story"
+        },
+        {
+            "author": "David Mackenzie",
+            "date_completed": "September 20, 2019",
+            "title": "Hell or High Water",
+            "type": "movie"
+        },
+        {
+            "author": "Taiki Waititi",
+            "date_completed": "September 22, 2019",
+            "title": "Thor: Ragnarok",
+            "type": "movie"
         }
     ]
 }
