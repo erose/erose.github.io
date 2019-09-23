@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code projects</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">6 Strict Improvements For Thor: Ragnarok</div>
+    <div class="post-date">Monday, September 23rd, 2019</div>
+</div>
+<div>
+    <p>I saw <em>Thor: Ragnarok</em> recently. It's trying to be an imaginative, comedic sci-fi adventure movie with a touch of soul, and it pretty much is. However, it seemed to me and my friend that we could strictly improve the movie with some small tweaks. (That is, these tweaks would have done better something the movie was triyng to do already, without affecting much else.)</p>
+<p>[Spoilers abound]</p>
+<ol>
+<li>
+<p>Hela should reanimate the bodies of the people she kills, instead of reanimating the bodies of a bunch of dead Asgardians we don't know or care about. This would both make her scarier and be more resonant with mythology.</p>
+</li>
+<li>
+<p>Hela should use "death"/"disease" themed powers, instead of knives and spikes. What is she, the goddess of sharp objects? This would make her stand out more as a villain, be more resonant with mythology, and also intuitively make us <em>feel</em> an important plot point in the final battle scene: that Hela will never be defeated head-on, so Thor has to trigger Ragnarok in order to defeat her. When fight scenes consist of characters taking turns stabbing each other or throwing each other into walls, it can feel arbitrary who gets the upper hand. Thor is in melee with Hela multiple times, but he loses because... she's really tough and/or good at dodging, I guess? Instead, what if she was incorporeal and Thor's punches went right through her, leaving his hand withered and aged where it had made contact?</p>
+</li>
+<li>
+<p>Hela should be Loki's daughter, as in mythology. This would concretize the "this is all your fault" undercurrent that's there when Thor is yelling at Loki early in the film. It would also give Loki some inner turmoil, which he could use.</p>
+</li>
+<li>
+<p>Hulk should win the gladiator fight for real. This would make a humiliating moment even more humiliating for Thor, and make the "strongest Avenger" banter he and Banner engage in later funnier, as Thor would be thinking of his loss to Hulk while Banner is unaware of it.</p>
+</li>
+<li>
+<p>The Valkyrie should be some sort of named personage in Asgard: she could be a goddess, or a leader of the Valkyries if we want to keep her as one of them. This would put her on the same "level" with Thor and Loki, which is where she is already positioned, implicitly, by her fighting ability and assertiveness, and it would add more drama to her return.</p>
+</li>
+<li>
+<p>During the spaceship chase scene, the female lackey of Grandmaster's (Topaz) head-bangs like she is rocking out to some tunes as she is pursuing Thor &amp; co. She should actually be rocking out, and we should hear her music.</p>
+</li>
+</ol>
+</div>
+<div class="post-tags">
+    
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>
