@@ -899,6 +899,18 @@
             "date_completed": "September 22, 2019",
             "title": "Thor: Ragnarok",
             "type": "movie"
+        },
+        {
+            "author": "Nina Keith",
+            "date_completed": "September 24, 2019",
+            "title": "MARANASATI 1911",
+            "type": "album"
+        },
+        {
+            "author": "Owen Pallett",
+            "date_completed": "September 27, 2019",
+            "title": "In Conflict",
+            "type": "album"
         }
     ]
 }
