@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code projects</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Electromagnetism</div>
+    <div class="post-date">Monday, September 30th, 2019</div>
+</div>
+<div>
+    <p>The goal of this post is similar to that of <a href="/posts/classical_mechanics.html">the post on classical mechanics</a>. Here we will cover electromagnetism, and greatly expand the range of phenomena we can explain.</p>
+<p>Starting with the ontology from the previous post, we extend our notion of "particle" to incorporate another property, "charge." Overall, this is now our vision of a particle.</p>
+<h3>Particles</h3>
+<ul>
+<li>Particles have the following properties.<ul>
+<li><strong>Mass</strong> is a non-negative real number.</li>
+<li><strong>Position</strong> is a triple $(x, y, z)$ of real numbers.</li>
+<li><strong>Velocity</strong> is a vector $(x, y, z)$ of real numbers.</li>
+<li><strong>Charge</strong> is a member of the set $\{-1, 0, 1\}$.</li>
+</ul>
+</li>
+</ul>
+<h3>Forces</h3>
+<p>We need to introduce another force: the electromagnetic force. Like all forces, it takes in the universe and a specific particle in that universe, and returns a vector.</p>
+<p>The equation for the force $\mathbf{F}_{em}$ on a particle $w$ due to electromagnetism is a bit more complicated than the equation for the force due to gravity. Let $w_q$ be the charge of the particle $w$, and let $\mathbf{w_v}$ be its velocity.</p>
+<p>$$\mathbf{F_{em}} = w_q \left( \sum_{\text{other particles } x} \mathbf{E} + (\mathbf{w_v} \times \mathbf{B}) \right)$$</p>
+<p>where $\mathbf{E}$, the "electric" part, is defined as a function of particles $w$ and $x$ as follows. Let $\mathbf{e}_r$ be the <em>unit</em> vector from particle $w$ to... not particle $x$, but to the position it was at in the past. How far in the past? $r/c$ seconds ago, where $r$ is how far away it was then and $c$ is the speed of light. You can imagine, if you like, that an "influence" travels out from charged particles at speed $c$ and causes these effects.</p>
+<p>$$\mathbf{E}(w, x) = \frac{-x_q}{4 \pi \epsilon_0} \left[ \frac{\mathbf{e}_r}{r^2} + \frac{r}{c} \frac{d}{dt} \biggl( \frac{\mathbf{e}_r}{r^2} \biggr) + \frac{1}{c^2} \frac{d^2}{dt^2} \mathbf{e}_r \right]$$</p>
+<p>and $\mathbf{B}$, the "magnetic" part, is defined as a function of particles $w$ and $x$ by</p>
+<p>$$\mathbf{B}(w, x) = - \mathbf{e}_r \times \frac{\mathbf{E}}{c}$$</p>
+<p>With these two changes, we have the totality of electromagnetic theory.</p>
+<hr>
+
+<h3>Derivations</h3>
+<h4>Atoms</h4>
+<p>Consider a universe consisting of some particles with charge +1 and some with charge -1 which are close together. One positively charged particle (a proton) and one negatively charged particle (an electron) will head towards each other, according to the first term of $\mathbf{E}$ (also known as Coulomb's Law). Allow, via appeal to effects not mentioned above, that another force intervenes once they get close enough to each other, acting to keep them slightly apart. Then, the electron and proton will exist close together but slightly apart from one another, at a distance determined by the equilibrium between the two forces.</p>
+<p>This configuration is called a hydrogen atom. It is very common in our universe. It is stable because, if either particle moves slightly away from its partner, that particle will experience a strong electromagnetic force pulling it back towards its partner. The atom will often interact with other particles as though it had no net charge, since the charges of its proton and its electron cancel out. But two hydrogen atoms can end up in another stable spatial configuration where two protons end up "sharing" two electrons. This is a covalent bond, and the resulting configuration is called an $H_2$ molecule.</p>
+<p><img width="400px" src="https://upload.wikimedia.org/wikipedia/commons/1/19/Covalent_bond_hydrogen.svg"></p>
+<p>Now allow, again via appeal to effects not mentioned above, that protons when close enough together experience an attractive force that overrides the repulsive electromagnetic force they feel. (This is the <a href="https://en.wikipedia.org/wiki/Strong_interaction">strong force</a>.) Then multiple protons will sometimes cluster together. If their combined charge is $n$, they will attract $n$ electrons. These configurations are referred to as atoms of other elements.</p>
+<p><a href="http://www.feynmanlectures.caltech.edu/II_01.html">Feynman</a> is excellent on this subject.</p>
+<h4>Objects Don't Go Through Other Objects</h4>
+<p>The reason your hand can't go through a block of ice is because of electromagnetic forces. Ice is $H_2O$ molecules arranged in a certain stable configuration. Because the configuration is stable, when one molecule moves slightly away from its neighbor, it experiences a force pushing it back towards its original position. These forces — electromagnetic forces — are the ones your hand feels when you attempt to karate-chop a block of ice.</p>
+<p>Every time you rip a piece of fabric, or you make an indentation in a piece of foam, you have won a victory over these electromagnetic forces.</p>
+<h4>Electromagnetic Radiation (including light)</h4>
+<p>Looking at our equation for $\mathbf{E}$, we see that the first two terms fall off quadratically with distance, while the last term has a component. Hence, it is only this last term that is only important term at large distances.</p>
+<p>$$\mathbf{E} = \frac{-x_q}{4 \pi \epsilon_0 c^2} \left( \frac{d^2}{dt^2} \mathbf{e}_r \right)$$</p>
+<p><a href="http://www.feynmanlectures.caltech.edu/I_28.html">Feynman</a> on this equation:</p>
+<blockquote>
+<p>Suppose a charge is moving in any manner whatsoever, and we are observing it from a distance. We imagine for a moment that in a sense it is “lit up” (although it is light that we are trying to explain); we imagine it as a little white dot. Then we would see this white dot running around. But we don’t see exactly how it is running around right now, because of the delay that we have been talking about. What counts is how it was moving earlier. The unit vector e_r is pointed toward the apparent position of the charge. Of course, the end of e_r goes on a slight curve, so that its acceleration has two components. One is the transverse piece, because the end of it goes up and down, and the other is a radial piece because it stays on a sphere. It is easy to demonstrate that the latter is much smaller and varies as the inverse square of r when r is very great. This is easy to see, for when we imagine that we move a given source farther and farther away, then the wigglings of e_r look smaller and smaller, inversely as the distance, but the radial component of acceleration is varying much more rapidly than inversely as the distance. So for practical purposes all we have to do is project the motion on a plane at unit distance. Therefore we find the following rule: Imagine that we look at the moving charge and that everything we see is delayed—like a painter trying to paint a scene on a screen at a unit distance. A real painter, of course, does not take into account the fact that light is going at a certain speed, but paints the world as he sees it. We want to see what his picture would look like. So we see a dot, representing the charge, moving about in the picture. The acceleration of that dot is proportional to the electric field. That is all — all we need.</p>
+</blockquote>
+<p>This is what electromagnetic radiation (including visible light) is. A corollary: because visible light is electromagnetic radiation, matter with no electric charge is not visible. For example, if there were a solid plane of neutrons right in front of your face, you would not be able to see it and would walk right through it. In astronomy, neutron stars must be detected via indirect means.</p>
+<p>Why does electromagnetic radiation get reflected, scattered, or refracted by materials? To understand this, you need an extra piece of information that is not derivable from a worldview consisting only of particles and the laws above. The piece of information is that, in the presence of a steadily varying electromagnetic field (an "electromagnetic wave"), the charged electrons in the atom will oscillate as though they were masses on a spring (<a href="http://www.feynmanlectures.caltech.edu/I_31.html">Feynman</a>).</p>
+<p>Because the radiation causes the electrons in the atoms of the material to oscillate, creating other electromagnetic radiation. This secondary radiation modifies the primary radiation. It so happens that, depending on a variety of factors about the material, this secondary radiation cancels out the primary radiation to produce the reflection, scattering, or refraction we are familiar with. See <a href="https://en.wikipedia.org/wiki/Ewald%E2%80%93Oseen_extinction_theorem">Ewald-Oseen extinction theorem</a>.</p>
+<h4>Electricity</h4>
+<p>Electric current is the flow of charge. In direct current, the movement of electrons is in one direction at all times. Note that individual electrons are not moving at speed $c$ — the speed they travel at, called the "electron drift velocity", varies, but in copper wire it is less than a millimeter per second. (<a href="http://hyperphysics.phy-astr.gsu.edu/hbase/electric/miccur.html#c4">Hyperphysics</a>). By contrast, the random thermal movement of the electrons is on the order of $10^5$ meters per second. So if you look at an individual electron in most materials, it will be zooming around randomly at high speeds, and the difference between zero current and some current is only visible at the macro level, where you observe that there is a net velocity in some direction.</p>
+<p>What travels close to $c$ is the <em>information that a push is happening</em>. Quote from (<a href="http://wiki.c2.com/?SpeedOfElectrons">C2</a>):</p>
+<blockquote>
+<p>Wondering how electrons can be so slow and still have electricity go so fast? Imagine a long plastic tube filled with ping-pong balls. You gently press on the ball at one end so that a different ball falls out the other. Both the information that you had pressed, and the energy to dislodge the ball, travel much faster than the ball you pressed. At the local speed of sound for the Ping-Pong Ball medium.</p>
+</blockquote>
+<p>In alternating current, the velocity alternates in sign many times per second, so there is no net movement of the electrons over time. Alternating current is better for distributing electrical energy across vast distances because it allows for higher voltages, which is more efficient. Higher voltages are more efficient (equvialently, heat the wire used to carry them less) because the energy lost is proportional to the current squared. (<a href="http://www.phy6.org/Electric/-E11-reason.htm">Phy6.org</a>). AC allows for higher voltages because it admits the operation of <a href="https://en.wikipedia.org/wiki/Transformer">transformers</a>, which trade voltage for current (visualize $V = IR$, where $V$ is voltage, $I$ is current and $R$ is resistance). Because transformers operate using magnetic induction, which requires a varying magnetic field, they require a varying current (not a static one as we have in direct current). (<a href="https://en.wikipedia.org/wiki/Transformer#Ideal_transformer">Wikipedia</a>).</p>
+<h4>What is a circuit?</h4>
+<p>Consider for example an incandescent lightbulb. An electron flows through the filament, from one end of it to the other, generating a bit of heat and light because of the resistance (friction) provided by the filament. In order to produce continuous light, we need a steady flow of electrons to go through the filament.</p>
+<p>Electrons are very fast, so we need them to be traveling in a circle or their journey would end much too soon for us. An electron will travel in the direction the electric field points. But we can't set up an electric field so that it forms a closed loop with itself; if we could, we would have perpetual motion in our electrons, and this would violate the conservation of energy. Another way of saying this is that electrial potential (voltage) must be decreasing along a path if electrons are to move along that path, and it cannot decrease forever.</p>
+<p>So we need an "elevator" which "boosts" the electrons to a higher voltage level once they have arrived at the bottom. (Keeping in mind that an electron does not have a property called "voltage" — this is all emergent phenomena from the equations above, Maxwell's laws.) This elevator is known as a battery. A battery uses stored chemical energy to boost electrons back to high voltage levels again. See <a href="http://www.feynmanlectures.caltech.edu/II_22.html#Ch22-F8">Feynman Lecture 22</a> for an illustration and explanation of how a battery accomplishes this.</p>
+<h3>What is radio?</h3>
+<p>Radio waves are what we call electromagnetic radiation between 30 hertz and 300 gigahertz. They can carry information in two ways: via small changes in the frequency (FM or frequency-modulated radio) or small changes in the amplitude (AM or amplitude-modulated radio).</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Amfm3-en-de.gif"></p>
+<p>FM radio stations have numbers like "88.9." This is the "carrier frequency" that the station is transmitting in (the frequency which its modulations are around), measured in units of megahertz (millions of cycles per second). AM stations have numbers like "730", which measure the frequency in kilohertz (thousands of cycles per second).</p>
+<p>Your car, your TV, and your cellphone have antennas. An antenna is anything that serves to translate between radio waves and electrical current in a conducting material. For example, a long straight rod of metal. The electrons in the metal move in response to the ambient radio waves they feel, causing a slight current which can be turned back into audio.</p>
+<p>Antennas are designed to be a certain multiple of the wavelength that they are picking up. For example, it's common for an antenna to be $\frac{1}{4}$ as long as the wavelength of the signal it's trying to pick up. This is because then resonance can boost the signal: current traveling from the middle of the antenna will have rotated $\frac{\pi}{2}$ radians by the time it reaches the bottom of the antenna (the "feed"), at which point it gets reflected (adding $\pi$ radians) and travels another $\frac{\pi}{2}$ radians back to arrive back at its starting point in the same phase it began in. (<a href="https://en.wikipedia.org/wiki/Antenna_(radio)#Overview">Wikipedia</a>, <a href="https://www.explainthatstuff.com/antennas.html">ExplainThatStuff</a>)</p>
+<p>But one antenna can pick up more than a single wavelength; you can adjust the station you're listening to by turning a dial. What this dial does is adjust some parameters in a circuit ("radio receiver") inside your radio, changing the resonant frequency of that circuit. Only the signals at the current resonant frequency (the frequency the receiver is now "tuned to") are boosted enough to be passed on. Of course, in FM radio we actually need to pass on a <em>band</em> of frequencies, not a single point on the frequency spectrum, since we want to capture the modulations which are small deviations from the carrier frequency. (<a href="https://en.wikipedia.org/wiki/Radio_receiver#How_receivers_work">Wikipedia</a>)</p>
+<h3>How does a microwave work?</h3>
+<p>Consumer microwave ovens emit electromagnetic radiation of frequency about 2.45 GHz (12cm). These are called "microwaves." The radiation heats food through what is called <a href="https://en.wikipedia.org/wiki/Dielectric_heating">dielectric heating</a>.</p>
+<p>Polar molecules will be induced to rotate in an electric field in order to be aligned with it. Visualize a rod with a plus and a minus charge at either end sitting in a uniform positive electric field pointing to the left. If the plus charge is on the right, it will want to move away — hence the rod will rotate until the plus charge is on the left. If the plus charge is on the left, it will be stable.</p>
+<p>In the presence of a wave — i.e. an electric field that is sometimes negative and sometimes positive — a polar molecule will rotate continuously as it attempts to align itself with the ever-changing field. When rotating molecules are packed closely enough together, the rotating molecules will push and pull each other, and this results in the molecular motion which is heat. Note that a single polar molecule floating in space, or several polar molecules sufficiently separated from one another, would not heat up because they would just rotate freely in their places.</p>
+<p>This explains why microwave ovens heat only certain materials, including water, and not others. The explanation is that they only heat polar molecules, and in proportion to how polar those molecules are. Water is just a very common molecule that's quite polar, but smaller amounts of heating occur with sugar and lipid molecules as well. Note that the frequency of the microwaves is not the resonant frequency of a water molecule; if they worked this way, there would a strict frequency set by Nature which all microwave ovens operated at, but in reality the frequency of 2.45 GHz is established by convention and engineering considerations.</p>
+<p>There is nothing special about microwaves as opposed to other types of electromagnetic radiation for heating purposes; in principle you could heat food using radio waves.</p>
+</div>
+<div class="post-tags">
+    
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>

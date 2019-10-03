@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code projects</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Classical Mechanics</div>
+    <div class="post-date">Sunday, September 29th, 2019</div>
+</div>
+<div>
+    <p>This post is learning by explaining — I am attempting to write down my understanding of classical mechanics so that my understanding will grow. I'm aiming to be abstract and definitions-focused (not to depend on to common sense), and a guiding light is that the ontology should give enough information to write a computer simulation of the phenomena described by classical mechanics.</p>
+<p>First I will start with an "ontology." At the bottom level, what are the objects we talk about in classical mechanics and the rules for how they interact? What is the full list of facts about the world I need to accept in order to explain "classical" phenomena? I will strive for a small list of objects and interactions, and present anything that can be derived from them later.</p>
+<h3>Particles</h3>
+<ul>
+<li>"Particles" are the indivisible objects of the theory. They are the things we can observe. For motivation, imagine that everyday objects we can observe such as tables, roads, and humans are made up of many small particles. Particles have the following properties.<ul>
+<li><strong>Mass</strong> is a non-negative real number.</li>
+<li><strong>Position</strong> is a triple $(x, y, z)$ of real numbers.</li>
+<li><strong>Velocity</strong> is a vector $(x, y, z)$ of real numbers.</li>
+</ul>
+</li>
+</ul>
+<h3>Forces</h3>
+<ul>
+<li>
+<p>A "force" is a specific type of law that, for each particle at each moment in time, gives a vector quantity (called "the force on this particle at this moment due to &lt;name of force>"). In other words, a force is a function that takes in the universe, and specific particle in that universe, and returns a vector. Forces control the movement of particles in a specific way outlined below in "Newton's First and Second Laws."</p>
+</li>
+<li>
+<p>We need only one force currently: <strong>Gravity</strong> gives a force on one particle that is a function of the positions and masses of all other particles in the universe, as well as the position and mass of the particle in question. The gravitational force $\mathbf{F_g}$ on a particle $w$ is given by the following equation:</p>
+<p>$$\mathbf{F_g} = Gw_m \left( \sum_{\text{other particles } w'} w_m' \frac{\mathbf{e}_r(w, w')}{d(\mathbf{w_p}, \mathbf{w_p'})^2} \right)$$</p>
+<ul>
+<li>$\mathbf{w_p}$ and $\mathbf{w_p'}$ are the positions of the particles $w$ and $w'$, $w_m$ and $w_m'$ are the masses of those particles, and $\mathbf{e}_r(w, w')$ is the unit vector pointing from $w$ to $w'$. The distance function $d(-, -)$ is a function that takes in two positions and gives the distance between them. $G$ is a <a href="https://en.wikipedia.org/wiki/Gravitational_constant">universal constant</a>.</li>
+</ul>
+</li>
+</ul>
+<h3>Newton's First and Second Laws</h3>
+<p>The first derivative of a particle's position with respect to time is its velocity.</p>
+<p>$$\frac{d}{dt} \mathbf{p}(t) = \mathbf{v}(t)$$</p>
+<p>Call the derivative of a particle's velocity with respect to time its <em>acceleration</em> (as a function of time, $\mathbf{a}(t)$). This quantity is equal to the total force on the particle (here $\mathbf{F}$), divided by its mass. The total force on a particle is found by simply summing the vector contributions of all the force laws.</p>
+<p>$$\frac{d}{dt} \mathbf{v}(t) = \mathbf{a}(t) = \frac{\mathbf{F}}{m}$$</p>
+<hr>
+
+<h3>Derivations</h3>
+<h4>Gravity of a Sphere</h4>
+<p>Note that this theory does not prohibit two particles from occupying the same space, or provide for a force that would enable the particles to "bounce" off each other when they got too close. Such forces are electromagnetic in nature, so you'll see them in the next post.</p>
+<p>Assume those forces are in place for now. Consider a region of the universe that has several stationary particles. Over time, the force of gravity will draw them closer to each other until they are so close they are bumping up against one another. If the density of the particles is high enough and they are free to move around (think of a big blob of water floating in space), they will eventually coalesce into the shape of a sphere, because <a href="https://physics.stackexchange.com/questions/505837/how-to-derive-a-blob-of-water-in-space-becomes-a-sphere-analytically#505837">a sphere is the shape with no downhill</a>. That is, in such an environment each particle will experience a net force towards the center of mass of the whole configuration, so if there is a "downhill" (a gradient to move in which brings the particle closer to the center of mass) the particle will move down it, and this will continue until no particle sees a gradient to move along.</p>
+<p>Once the particles have formed a sphere, we can then treat them as a one unit for the purposes of analyzing their gravitational interaction with other particles (and other spheres). This is a mathematical fact about spheres called <a href="https://en.wikipedia.org/wiki/Shell_theorem">the Shell Theorem</a>, and I won't prove it here. How fortunate!</p>
+<h4>Orbit</h4>
+<p>Suppose one particle $a$ is near some particle $b$, moving according to its gravitational attraction to $b$, and suppose $b$ has large enough mass that it does not move even though it feels a gravitational attraction to $a$. This is called (a special case of) the <a href="https://en.wikipedia.org/wiki/Kepler_orbit#Simplified_two_body_problem">the two-body problem</a>. The differential equations here have many solutions, depending on the initial conditions of the particles — position, velocity and mass.</p>
+<p>There are solutions in which $a$ travels in a circle in some plane around $b$. This is an orbit. Because, for gravitational purposes, we can treat spheres as though all their mass were concentrated at the center, this analysis applies to planets and their stars as well as particles.</p>
+<p>To intuitively understand why orbit is a potential behavior of this system, imagine pointing your gun at the horizon and firing a bullet. (Ignore air resistance.) The bullet starts with velocity in the forward direction and no velocity in the downward direction; as time goes forward, it experiences an acceleration downwards as the Earth's gravity pulls on it. Now, the bullet is traveling quickly, and the Earth is round. Imagine where the bullet is at by the time it has fallen one foot downwards. Perhaps it has traveled far enough that it has gone off the curve of the Earth slightly, and has effectively gained one foot in height.</p>
+<p>But that's not all. Now that the bullet is elsewhere in space, the center of the Earth is not directly beneath it anymore — instead it's at a bit of an angle in relation to the bullet. So the pull is in a slightly different direction: imaginging the Earth at (0, 0, 0), if before the acceleration vector was pure $-y$, it now has $x$ and $z$ coordinates as well, and a bit less $y$. If the bullet is traveling fast enough, the total acceleration it experiences as it travels around will be zero, as the different vectors cancel each other out. Since the total acceleration is zero, this motion is a stable loop that can continue forever. (But if its velocity becomes zero at any point, it will begin to experience net acceleration and fall towards the Earth.)</p>
+<hr>
+
+<h3>Notes and Elaborations</h3>
+<p>We can also describe "Newton's First and Second Laws" computationally, in terms of the sequence of actions needed to simulate a universe in this theory. Start by recording the properties of all particles in the universe. Then run the following program.</p>
+<ol>
+<li>Execute the following steps, in parallel, for each particle in the universe.</li>
+<li>Find the total force on this particle at this moment.</li>
+<li>Divide the force on a particle by the mass of that particle.</li>
+<li>Add the quantity from the previous step ("acceleration") to this particle's velocity to get this particle's new velocity.</li>
+<li>Add this particle's velocity to its position to get this particle's new position.</li>
+<li>
+<p>Change the particle's velocity to the new velocity, and change its position to the new position.</p>
+</li>
+<li>
+<p>Go back to step one.</p>
+</li>
+</ol>
+</div>
+<div class="post-tags">
+    
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>
