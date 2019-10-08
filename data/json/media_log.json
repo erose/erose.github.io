@@ -923,6 +923,12 @@
             "date_completed": "October 2, 2019",
             "title": "Undone (Season 1)",
             "type": "tv show"
+        },
+        {
+            "author": "Andreas Mogensen",
+            "date_completed": "October 6, 2019",
+            "title": "Maximal Cluelessness",
+            "type": "academic paper"
         }
     ]
 }
