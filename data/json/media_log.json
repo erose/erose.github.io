@@ -913,16 +913,16 @@
             "type": "album"
         },
         {
-            "author": "Greta Gerwig",
-            "date_completed": "October 6, 2019",
-            "title": "Lady Bird",
-            "type": "movie"
-        },
-        {
             "author": "Kate Purdy",
             "date_completed": "October 2, 2019",
             "title": "Undone (Season 1)",
             "type": "tv show"
+        },
+        {
+            "author": "Greta Gerwig",
+            "date_completed": "October 6, 2019",
+            "title": "Lady Bird",
+            "type": "movie"
         },
         {
             "author": "Andreas Mogensen",
