@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code projects</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">The Competent Authorities</div>
+    <div class="post-date">Wednesday, October 16th, 2019</div>
+</div>
+<div>
+    <p>When I was a kid, I remember hearing about the various damages of the world. War, corruption, the mismanagement of countries, families starving below the poverty line. Like a lot of kids, I was disturbed at this news and concocted various kid schemes to make everything better. I designed a utopia in fifth grade where everything was solar-powered, so the environment wouldn't get damaged. (I really wanted blaster guns, so I also made solar-powered blaster guns. But I remembered that it was supposed to be a utopia without war. I compromised by deciding the blasters were used only for mining.)</p>
+<p>Later I still felt uneasy. I was overwhelmed by the scale of the wrongness, like one is overwhelmed by the number of stars in the universe. It was a relief to mentally assign responsibility for these problems to people of similar scale — presidents, secretary-generals, diplomats. I imagined people infinitely wiser than myself in these positions. (In fairness, that was correct, because I was twelve.) They were the competent authorities.</p>
+<p>Growing up, I mostly retained this worldview. The government I read about in the newspaper seemed mediocre and not particularly in control, so I modified my vision of the competent authorities; I imagined a cadre of generals and bureaucrats, rational, hard-nosed, humanistic, who stayed out of the public eye and wielded the real power. Like a conspiracy theorist, I thought that there was much more to the story than it appeared; unlike a conspiracy theorist, this thought filled me with optimism. (If you've ever seen <em>The West Wing</em>, I think it basically has this vision of the world.)</p>
+<p>Over the past five years, "the competent authorities" have exited my worldview. I don't mean that I think no one is competent. I don't particularly reject the hypothesis that there is "much more to the story than it appears." But it seems clear to me now that there is no one at the reins. That's not how the world works. There are no incorruptible cosmic police officers that show up when the wrongness gets severe enough. If there is "much more to the story" of our government than it appears, the rest of the story will not reveal an entity like this. It's too easy to notice bad things in the world, too easy to find mechanisms for how they got that way (tragedy of the commons, incentive problems, coordination problems...) for the competent authorities to exist and be hiding just beyond our ken.</p>
+<p>(Writing this out, it occurs to me another, simpler way to say this: what I was imagining was God, and I'm describing how the problem of evil convinced me there is no God.)</p>
+<p>(This means that Martin Sheen in <em>The West Wing</em> is symbolically God, which is not surprising because his first line in Episode 1 is "I am the Lord your God.")</p>
+<p>Hence, the maxim: do whatever you would want "the competent authorities" to be doing.</p>
+</div>
+<div class="post-tags">
+    
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>
