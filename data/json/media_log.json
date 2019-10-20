@@ -929,6 +929,24 @@
             "date_completed": "October 6, 2019",
             "title": "Maximal Cluelessness",
             "type": "academic paper"
+        },
+        {
+            "author": "Bong Joon-ho",
+            "date_completed": "October 19, 2019",
+            "title": "Parasite",
+            "type": "movie"
+        },
+        {
+            "author": "Gene Wolfe",
+            "date_completed": "October 19, 2019",
+            "title": "The Sword of the Lictor",
+            "type": "novel"
+        },
+        {
+            "author": "Rebecca Sugar",
+            "date_completed": "October 17, 2019",
+            "title": "Steven Universe: The Movie",
+            "type": "movie"
         }
     ]
 }
