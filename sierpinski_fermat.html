@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/page.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code trinkets</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/sierpinski_fermat.html">sierpinksi's triangle and fermat numbers</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="page-header">
+    <div class="page-title">Sierpinksi's Triangle and Fermat Numbers</div>
+</div>
+<div class="page-content">
+    <hr>
+
+<div style="line-height: 100%; margin-top: 1rem;">
+  <div id="main"></div>
+</div>
+
+<hr>
+
+<p>Take the first five <a href="https://en.wikipedia.org/wiki/Fermat_number">Fermat numbers</a> (numbers of the form $2^{2^n} + 1$, $n \in \mathbb{N}$) and multiply them together in all possible combinations (without repetition). You will get $2^5 = 32$ results. Write them in binary, ordered smallest to largest, and you'll see that if you look at the pattern in the zeroes and ones, it's the beginning rows of <a href="https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle">Sierpinski's Triangle</a>.</p>
+<p><img src="/static/images/sierpinski.png"/></p>
+<p>Wow! I learned this fact from <a href="https://www.johndcook.com/blog/2019/10/19/binary-surprise/">a blog post</a> and wanted to understand deeply why it was true. After I understood, I wanted to transmit my understanding in a way that wasn't just an explanation with words — so I made this demo. Some words follow anyway.</p>
+<p>We start with the first two Fermat numbers, 3 ("11" in binary) and 5 ("101"), and generate new numbers according to the following rule: take the last Fermat number in the triangle, and multiply each previous row by it in the triangle, going from top to bottom. When you run out, introduce the next Fermat number (i.e. if your last number was $2^{2^n} + 1$, your next will be $2^{2^{n+1}} + 1$). Repeat.</p>
+<p>This rule generates all possible combinations inductively; the previous rows are made of all possible combinations of the previous Fermat numbers, so when you add a new number to the mix, you just need to multiply each previous row by it in order to generate all possible combinations of the set including your new number. This makes sense because when you do this you multiply the number of rows by 2, and the number of possible combinations of  <em>n+1</em> objects is twice as many as the number of combinations of <em>n</em> objects. This rule also conveniently generates the numbers in order.</p>
+<p>The Sierpinksi's Triangle structure arises because the Fermat numbers give enough "space" for the structure in the previous rows to repeat itself. What happens when we multiply a previous row $x$ by a Fermat number, which looks like $10...01$?</p>
+<p>Split it apart: $x(10...01) = x(10...00) + x(1)$. We add some number of zeroes to the end of $x$, then add $x$ to the result. We've essentially replaced the leading $1$ of the Fermat number with a copy of $x$, while swapping out its last $\text{length}(x)$ digits with another copy of $x$. Copies of $x$ intrude from both sides, leading us to replicate the previous rows twice: one facing left, and one facing right. That's what gives rise to the fractal nature which is the hallmark of the triangle.</p>
+<p>Note that this only works as long as there's enough space for the two copies not to interfere with one another; as long as we don't have to do any carries when we do the addition above. The Fermat numbers have an exponentially increasing number of zeroes between the 1s; if that number grew more slowly, there would be interference, since multiplying by each previous row each time means that we have an exponentially increasing number of rows to multiply by.</p>
+<h3>Addendum</h3>
+<p>As far as I can tell, it took until 1977 (<a href="https://www.fq.math.ca/Scanned/15-2/hewgill.pdf">Hewgill</a>) for this surprising relationship to be noticed. Hewgill's proof brings in Pascal's Triangle and its relationship to Sierpinski's, but I don't think that's necessary to see what's going on.</p>
+<p>The first line of the triangle is 1, which isn't a Fermat number and can't be arrived at by multiplying Fermat numbers together. It does fit, however, as the empty product: the combination which consists of no Fermat numbers.</p>
+<p>This project was made with <a href="http://elm-lang.org/">Elm</a>, a strongly-typed functional lanuage for the browser. Check out the <a href="https://github.com/erose/elm-sierpinski-fermat">repo</a>.</p>
+<script src="/static/js/sierpinski-fermat.js"></script>
+
+<script>
+  var node = document.getElementById('main');
+  var app = Elm.Main.init({ node: node });
+</script>
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>
