@@ -43,12 +43,6 @@
             "type": "novel"
         },
         {
-            "author": "Liu Cixin",
-            "date_completed": "April 15, 2017",
-            "title": "The Three-Body Problem",
-            "type": "novel"
-        },
-        {
             "author": "W.B. Yeats",
             "date_completed": "April 14, 2017",
             "title": "The Cold Heaven",
@@ -59,6 +53,12 @@
             "date_completed": "April 14, 2017",
             "title": "Crusoe in England",
             "type": "poetry"
+        },
+        {
+            "author": "Liu Cixin",
+            "date_completed": "April 15, 2017",
+            "title": "The Three-Body Problem",
+            "type": "novel"
         },
         {
             "author": "Ray McKinnon",
@@ -140,7 +140,7 @@
         },
         {
             "author": "Open Mike Eagle",
-            "date_completed": "Septermber 28, 2017",
+            "date_completed": "September 28, 2017",
             "title": "Brick Body Kids Still Daydream",
             "type": "album"
         },
@@ -433,16 +433,16 @@
             "type": "short stories"
         },
         {
-            "author": "Larissa MacFarquhar",
-            "date_completed": "August 25, 2018",
-            "title": "Strangers Drowning",
-            "type": "nonfiction"
-        },
-        {
             "author": "Robert Lowell",
             "date_completed": "August 23, 2018",
             "title": "Life Studies",
             "type": "poetry"
+        },
+        {
+            "author": "Larissa MacFarquhar",
+            "date_completed": "August 25, 2018",
+            "title": "Strangers Drowning",
+            "type": "nonfiction"
         },
         {
             "author": "Anthony and Joe Russo",
@@ -487,16 +487,16 @@
             "type": "short stories"
         },
         {
-            "author": "Robin Sloan",
-            "date_completed": "September 15, 2018",
-            "title": "Mr. Penumbra's 24-Hour Bookstore",
-            "type": "novel"
-        },
-        {
             "author": "Protomartyr",
             "date_completed": "September 12, 2018",
             "title": "Relatives in Descent",
             "type": "album"
+        },
+        {
+            "author": "Robin Sloan",
+            "date_completed": "September 15, 2018",
+            "title": "Mr. Penumbra's 24-Hour Bookstore",
+            "type": "novel"
         },
         {
             "author": "Car Seat Headrest",
@@ -523,16 +523,16 @@
             "type": "tv show"
         },
         {
-            "author": "Paul Dano",
-            "date_completed": "November 17, 2018",
-            "title": "Wildlife",
-            "type": "movie"
-        },
-        {
             "author": "LCD Soundsystem",
             "date_completed": "November 11, 2018",
             "title": "American Dream",
             "type": "album"
+        },
+        {
+            "author": "Paul Dano",
+            "date_completed": "November 17, 2018",
+            "title": "Wildlife",
+            "type": "movie"
         },
         {
             "author": "Modest Mouse",
@@ -601,15 +601,15 @@
             "type": "movie"
         },
         {
+            "author": "Talking Heads",
+            "date_completed": "January 10, 2019",
+            "title": "Fear of Music",
+            "type": "album"
+        },
+        {
             "author": "Denis Villeneuve",
             "date_completed": "January 12, 2019",
             "title": "Enemy",
-            "type": "movie"
-        },
-        {
-            "author": "Nagisa Oshima",
-            "date_completed": "January 18, 2019",
-            "title": "Death by Hanging (Kōshikei)",
             "type": "movie"
         },
         {
@@ -619,10 +619,10 @@
             "type": "album"
         },
         {
-            "author": "Talking Heads",
-            "date_completed": "January 10, 2019",
-            "title": "Fear of Music",
-            "type": "album"
+            "author": "Nagisa Oshima",
+            "date_completed": "January 18, 2019",
+            "title": "Death by Hanging (Kōshikei)",
+            "type": "movie"
         },
         {
             "author": "Gene Wolfe",
@@ -715,12 +715,6 @@
             "type": "movie"
         },
         {
-            "author": "Better Oblivion Community Center",
-            "date_completed": "April 26, 2019",
-            "title": "Better Oblivion Community Center",
-            "type": "album"
-        },
-        {
             "author": "Ceschi",
             "date_completed": "April 19, 2019",
             "title": "Sad, Fat Luck",
@@ -733,22 +727,28 @@
             "type": "nonfiction"
         },
         {
+            "author": "Better Oblivion Community Center",
+            "date_completed": "April 26, 2019",
+            "title": "Better Oblivion Community Center",
+            "type": "album"
+        },
+        {
             "author": "Alexander Payne",
             "date_completed": "May 3, 2019",
             "title": "Election",
             "type": "movie"
         },
         {
-            "author": "Catherynne Valente",
-            "date_completed": "May 15, 2019",
-            "title": "Space Opera",
-            "type": "novel"
-        },
-        {
             "author": "Hop Along",
             "date_completed": "May 8, 2019",
             "title": "Bark Your Head Off, Dog",
             "type": "album"
+        },
+        {
+            "author": "Catherynne Valente",
+            "date_completed": "May 15, 2019",
+            "title": "Space Opera",
+            "type": "novel"
         },
         {
             "author": "The National",
@@ -931,6 +931,12 @@
             "type": "academic paper"
         },
         {
+            "author": "Rebecca Sugar",
+            "date_completed": "October 17, 2019",
+            "title": "Steven Universe: The Movie",
+            "type": "movie"
+        },
+        {
             "author": "Bong Joon-ho",
             "date_completed": "October 19, 2019",
             "title": "Parasite",
@@ -943,10 +949,16 @@
             "type": "novel"
         },
         {
-            "author": "Rebecca Sugar",
-            "date_completed": "October 17, 2019",
-            "title": "Steven Universe: The Movie",
-            "type": "movie"
+            "author": "Weatherday",
+            "date_completed": "October 23, 2019",
+            "title": "Come In",
+            "type": "album"
+        },
+        {
+            "author": "Titus Andronicus",
+            "date_completed": "October 24, 2019",
+            "title": "An Obelisk",
+            "type": "album"
         },
         {
             "author": "Gene Wolfe",
@@ -959,18 +971,6 @@
             "date_completed": "October 26, 2019",
             "title": "Succession (Season 2)",
             "type": "tv show"
-        },
-        {
-            "author": "Titus Andronicus",
-            "date_completed": "October 24, 2019",
-            "title": "An Obelisk",
-            "type": "album"
-        },
-        {
-            "author": "Weatherday",
-            "date_completed": "October 23, 2019",
-            "title": "Come In",
-            "type": "album"
         }
     ]
 }
