@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code trinkets</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/sierpinski_fermat.html">sierpinksi's triangle and fermat numbers</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Where Does the 2 Come From In The Poisoned Wine Problem?</div>
+    <div class="post-date">Monday, October 28th, 2019</div>
+</div>
+<div>
+    <p>This is a brain teaser I came across recently (<a href="http://thinkingcomplete.blogspot.com/2018/09/a-compendium-of-conundrums.html">original source</a>):</p>
+<blockquote>
+<p>A king has 100 bottles of wine, exactly one of which is poisoned. He decides to figure out which it is by feeding the wines to some of his servants, and seeing which ones drop dead. He wants to find out before the poisoner has a chance to get away, and so he doesn't have enough time to do this sequentially - instead he plans to give each servant some combination of the wines tonight, and see which are still alive tomorrow morning.</p>
+<p>a) How many servants does he need?</p>
+<p>b) Suppose he had 100 servants - then how many wines could he test?</p>
+</blockquote>
+<p>Answer: the king needs 7 servants. Number the servants 0, 1, 2, 3, 4, 5, 6. Then assign servant $i$ to drink the wines which have an $0$ in their $2^i$s place, when written in binary. For example:</p>
+<ul>
+<li>Servant 0 will drink those wines which have a zero in their $2^0 = 1$s place; the even-numbered wines.</li>
+<li>Servant 1 will drink the wines with a zero in their $2^1 = 2$s place — those are the wines which are a multiple of $4$.</li>
+<li>Servant 6 will drink the wines which have a zero in their $2^6 = 64$s place; in this problem, those are just the wines numbered &lt; $64$.</li>
+</ul>
+<p>Now watch what happens to the servants, and begin writing an number in binary. Write a zero in the $2^i$s place if servant $i$ dies, and a one otherwise. That number is the number of the poisoned wine.</p>
+<p>What is happening is that each servant is contributing one bit of information to our answer. We need $\log_2(n)$ bits of information to discriminate between $n$ options, so we need $\log_2(100) \approx 6.64$ servants for 100 wines. Oops, we can't have a partial servant, so we actually need 7. (The rounding up is an indication that we're not using the power of that last servant fully.)</p>
+<p>Here we have a problem whose statement contains nothing about binary numbers, but whose solution makes extensive use of them. One wonders: where is that "2" coming from?</p>
+<p>At first I thought that the "2" originated in the fact that we could only observe two outcomes: servant dies or servant lives. What if the wine could be poisoned severely or lightly, so there were three possible outcomes: servant dies, servant gets sick, servant lives? (The goal is the same: identify the poisoned wine.) Then there would be three outcomes, so we could use the same strategy but with ternary.</p>
+<p>It turns out that doesn't work, but here's an modification that does. The wine is still either poisoned or not poisioned, but instead of just drinking or not drinking, the servants can either drink the wine fully, sip it a little, or not drink it at all. If you merely sip a poisoned wine, you just get sick rather than dying.</p>
+<p>This extension gives us three actions to perform, so the servants can drink, sip, or abstain for wines that have a 0, 1, or 2 in their place. It also gives us three outcomes to observe, so we write a 0, 1, or 2 in the appropriate place depending on whether the servant dies, gets sick, or is unaffected. When the problem is modified in this way, it becomes easier due to the additional information we get: we need only $\lceil \log_3(100) \rceil \approx \lceil 4.14 \rceil = 5$ servants.</p>
+<p>What's important is that the number of actions is equal to the number of outcomes. The "2" in the original problem comes from two actions that are related in lockstep to two outcomes.</p>
+</div>
+<div class="post-tags">
+    
+        <b>Tags:</b>
+        <a href="google.com">math</a>
+        
+    
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>
