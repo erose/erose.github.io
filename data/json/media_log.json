@@ -947,6 +947,30 @@
             "date_completed": "October 17, 2019",
             "title": "Steven Universe: The Movie",
             "type": "movie"
+        },
+        {
+            "author": "Gene Wolfe",
+            "date_completed": "October 25, 2019",
+            "title": "The Citadel of the Autarch",
+            "type": "novel"
+        },
+        {
+            "author": "Jesse Armstrong",
+            "date_completed": "October 26, 2019",
+            "title": "Succession (Season 2)",
+            "type": "tv show"
+        },
+        {
+            "author": "Titus Andronicus",
+            "date_completed": "October 24, 2019",
+            "title": "An Obelisk",
+            "type": "album"
+        },
+        {
+            "author": "Weatherday",
+            "date_completed": "October 23, 2019",
+            "title": "Come In",
+            "type": "album"
         }
     ]
 }
