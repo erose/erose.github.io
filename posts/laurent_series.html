@@ -68,7 +68,6 @@
 $$</p>
 <p>Okay. We can rescue our intuition a bit by noting that the equality only makes sense when the series converges, i.e. when $|x| &lt; 1$. For example, when $x = 0.5$, we have $$1/(1 - 0.5) = 2 = 1 + 0.5 + 0.5^2 + 0.5^3 + ...$$</p>
 <p>This is just a geometric series. It all is, if you think of $x$ as the common ratio between terms. It's also a Taylor series, since we can get it by differentiating $\frac{1}{1 - x}$ a bunch of times. You can also get it by doing polynomial long division -- just like regular division, except you replace $10$ by $x$.</p>
-<p>(For another example, take $x = 10$. Then this equation states that $\frac{1}{9} = 0.111111...$).</p>
 <style>
 td {
     padding-left: 40px;
@@ -174,6 +173,7 @@ $$1$$</p>
 <p><strong>Questions</strong>: Could there be more types of series expansions? Wolfram Alpha refers to Laurent series as "centered around $\infty$" (vs. Taylor series centered around $0$) -- what does that mean? The forbidding <a href="https://en.wikipedia.org/wiki/Laurent_series">Wikipedia</a> page makes it clear that Laurent series have something to do with $\mathbb{C}$, but what's the relation?</p>
 <p><strong>Another Question</strong>: Here we've taken a divison problem that ordinarily gives an infinite but convergent answer, and "flipped it around" to get an answer that doesn't converge. Is there anything in doing this for a decmial long division problem, i.e. we keep pulling down larger and larger powers of 10?</p>
 <p><sub class='display-block normal-line-height'>[1] To me, it even makes a loose kind of sense which ordering gives you which series. Suppose you're always putting the most significant terms on the left, to mimick positional number systems. Then, writing $1 + x$ means that $|x| &lt; 1$, and this gives you the Taylor series which is only true for $|x| &lt; 1$.</sub></p>
+<p><em>[Edited 10/31/2019 to remove an incorrect statement.]</em></p>
 </div>
 <div class="post-tags">
     

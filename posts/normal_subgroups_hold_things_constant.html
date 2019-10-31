@@ -74,13 +74,14 @@
 <ul>
 <li>$\mathbb{Z}/3\mathbb{Z} \,\simeq\, \mathbb{Z}_3$, because if I'm in the integers but ignore the distinctions between different multiples of three, being at $5$ looks just like being at $2$. The homomorphism here is "mod by 3".</li>
 <li>$\mathbb{R}/\mathbb{Z} \,\simeq\, C_\infty$, the circle group, because if I'm in the reals but ignore the distinctions between different integers, being at $1.03$ looks just like being at $1908.03$. The homomorphism here is "chop off the integer part".</li>
-<li>$(\mathbb{Z}_2 \times \mathbb{Z}_2) / \mathbb{Z}_2 \,\simeq\, \mathbb{Z}_2$, because (thinking of $\mathbb{Z}_2 \times \mathbb{Z}_2$ as ordered pairs over $\{0, 1\}$) if I ignore what the left side is doing, the only distinction left to make is whether the right side is 0 or 1. The homomorphism here sends $(a, b) \rightarrow b$.</li>
+<li>$(\mathbb{Z}_2 \times \mathbb{Z}_2) / \mathbb{Z}_2 \,\simeq\, \mathbb{Z}_2$, because, thinking of $\mathbb{Z}_2 \times \mathbb{Z}_2$ as ordered pairs over $\{0, 1\}$, if I ignore what the left side is doing, the only remaining distinction to make is whether the right side is 0 or 1. The homomorphism here sends $(a, b) \rightarrow b$.</li>
 </ul>
-<p>And since the first isomorphism theorem also holds for rings, we can do this one. Define $\mathbb{Q}[x]$ to be the set of all polynomials with rational coefficients, and $\langle x^2 - 3 \rangle$ to be the subset of these polynomials that are multiples of $x^2 - 3$. Then:</p>
+<p>And since the first isomorphism theorem also holds for rings, we can do this one. Define $\mathbb{Q}[x]$ to be the ring of all polynomials with rational coefficients, and $\langle x^2 - 3 \rangle$ to be the subring of these polynomials that are multiples of $x^2 - 3$. Then:</p>
 <ul>
-<li>$\mathbb{Q}[x]/\langle x^2 - 3 \rangle \,\simeq\, \mathbb{Q}[\sqrt{3}]$, all numbers of the form $a + b\sqrt{3}$. The homomorphism here is "take your polynomial and plug in $\sqrt{3}$ for $x$". It sends all multiples of $x^2 - 3$ to $0$ and anything else to some element of $\mathbb{Q}[\sqrt{3}]$.</li>
+<li>$\mathbb{Q}[x]/\langle x^2 - 3 \rangle \,\simeq\, \mathbb{Q}[\sqrt{3}]$, the ring of all numbers of the form $a + b\sqrt{3}$. The homomorphism here is "take your polynomial and plug in $\sqrt{3}$ for $x$". It sends all multiples of $x^2 - 3$ to $0$ and anything else to some element of $\mathbb{Q}[\sqrt{3}]$.</li>
 </ul>
 <p>Many thanks to <a href="https://gowers.wordpress.com/2011/11/20/normal-subgroups-and-quotient-groups/">Tim Gowers' blog</a>!</p>
+<p><em>[Edited 10/31/2019 to tighten a mathematical statement.]</em></p>
 </div>
 <div class="post-tags">
     
