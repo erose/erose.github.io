@@ -977,6 +977,18 @@
             "date_completed": "November 9, 2019",
             "title": "Sorry To Bother You",
             "type": "movie"
+        },
+        {
+            "author": "Raphael Bob-Waksberg",
+            "date_completed": "November 11, 2019",
+            "title": "BoJack Horseman (Season 6, Part 1)",
+            "type": "tv show"
+        },
+        {
+            "author": "Jens Lekman",
+            "date_completed": "November 17, 2019",
+            "title": "Night Falls Over Kortedala",
+            "type": "album"
         }
     ]
 }
