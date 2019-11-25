@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code trinkets</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/sierpinski_fermat.html">sierpinksi's triangle and fermat numbers</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Thinking About Oneself As An Alliance</div>
+    <div class="post-date">Saturday, April 13th, 2019</div>
+</div>
+<div>
+    <h2>I.</h2>
+<p>Sometimes, we find ourselves doing things that, upon reflection, we regret. I'm sure you can fill in examples, but for concreteness let's use "wasting time on Twitter". Specifically, suppose we ought to have gone to bed half an hour ago, but instead we're sitting in the kitchen staring at a screen. We're kind of tired -- it would be nice to be in bed, in fact we'll probably go to bed soon, just not when we should have. We're not really that interested in what we're reading. What exactly has happened?</p>
+<p>We often model ourselves as executing a series of actions to meet a set of goals. For example, a goal might be to get a taco, or to make someone laugh, or to get a promotion. In this model, we have a relatively small number of goals at any one time and we could theoretically enumerate them if asked. Each action we take is directed at achieving some goal. No two of our goals directly contradict each other. Our goals may change with time, and be short or long-term. When we make a mistake (do something clearly not in the interest of any goal), it is because we mistakenly thought it would help achieve a goal.</p>
+<p>This is a very popular model to use when thinking about other people. Upon meeting somebody, we ask "What does he/she want?". I think many people use this model for themselves, but I'm wary of <a href="https://wiki.lesswrong.com/wiki/Typical_mind_fallacy">typical mind fallacy</a>. I know that this is my default way to think about my actions.</p>
+<p>There are a few ways to explain "wasting time on Twitter" in this model. We don't experience having a goal called "go on Twitter", and if you asked us what our goals were for the night, at no point would we say "go on Twitter" -- even during and right before. So we might reflect and say "Well, I did this, so I must have had a goal to do it after all -- just one I wasn't aware of." (This might be more recognizable through the "want" language: "Well, I did this, so I must have wanted it after all -- I just didn't know that's what I wanted".) This introduces the idea of hidden goals. We might try to stamp out our hidden goals as perverse and counterproductive, or embrace them as more in-tune with what's good for us than our unhidden goals.</p>
+<h2>II.</h2>
+<p>I want to offer up a different model, bringing its own strengths and weaknesses, which I have recently tried to use more often to think about my own actions. The metaphor is that of a political alliance between many countries. Instead of a unified entity with a finite set of goals that it is wholly committed to, you imagine yourself as the European Union. Different elements within it are pushing and pulling in different directions. Some elements are caught up in thinking about a math problem. Other elements disagree with them and think that the alliance as a whole should prioritize having sex. Another faction is quiet now but in five seconds will loudly advocate for scratching your nose. Another set of countries supports the math faction because solving this math problem will make your friends think you're smart. One internal agency, unaware of the rest, is concerned that it's been a while since you ate.</p>
+<p>A "faction" can be pretty dumb, maybe just harping on one or two topics. Rather than a finite set of desires, you at all times have varying degrees of all desires, which may contradict each other. The direction you end up going in is the vector sum of all these desires. This explains the Twitter problem: there's some faction within your brain that wants to experience more Twitter, and right now that faction's is shouting louder than everyone else. But that will soon change, as you become more tired and the "go to bed" faction gains more support.</p>
+<h2>III.</h2>
+<p>Suppose I'm considering installing a productivity app which deliberately makes Twitter slower to load so I waste less time on it. The "hidden goals" model admits this might help, but grumbles that it does nothing to address the root issue: that I apparently <em>want</em> to waste time on Twitter! In the "alliance" model, this makes perfect sense: what I'm doing is reducing the support that the "yes Twitter" faction has by decreasing the amount of stimulation I get from it. However, I have no illusions that that faction is going to go away.</p>
+<p>We usually treat it as a fascinating quirk of humans that we sometimes don't act in our own best interests. In the alliance model, it's a bit of an achievement to <em>ever</em> act in your own best interests -- like getting a piece of legislation passed. The metaphor also gives an image of us constantly prioritizing one impulse over another, and offers an intuitive explanation for why an impulse that is quashed for too long can suddenly rise up with violence.</p>
+<p>This model implies that humans can vary in how aligned their various subsystems are. Someone is very aligned if a large majority of their subsystems point them in the same direction (i.e. if the magnitude of the vector sum of their desires is large): we imagine such a person feeling focused. In the domain of higher-level convictions and desires, we might think of such a person as being determined and having few doubts. Someone is less aligned if their subsystems pull them in opposite directions (i.e. if the vector sum is close to the zero vector): we imagine such a person feeling unable to concentrate, jumping from one thing to another as small fluctuations change which way the arrow points. In the higher-level domain, maybe they are full of doubt or unable to decide.</p>
+</div>
+<div class="post-tags">
+    
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>
