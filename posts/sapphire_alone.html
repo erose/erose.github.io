@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code trinkets</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/sierpinski_fermat.html">sierpinksi's triangle and fermat numbers</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Sapphire Alone (poem)</div>
+    <div class="post-date">Tuesday, November 26th, 2019</div>
+</div>
+<div>
+    <style>
+  .stanza {
+    margin-bottom: 1.5rem;
+  }
+
+  .stanza p {
+    margin: 0;
+  }
+</style>
+
+<h3>Sapphire Alone</h3>
+<div class='stanza'>
+  <p>still knows fire. It's the stilling flame,</p>
+  <p>the burning touch, of ice. Inside her eye, events are justified and debated</p>
+  <p>as in a great and rowdy parliament, full of red-faced men, bitterly opposed,</p>
+  <p>advances met with counteradvances, so each thought is pushed back and forth forever.</p>
+  <p>Resonant, like a guitar string, all forward progress trapped in vibration.</p>
+  <p>In the hall of her mind, their voices rise, day and dusk, in fear.</p>
+  <p>Fear is inspired by every action. Even inaction.</p>
+  <p>"Ruin, ruin! A slippery slope!" they shout.</p>
+  <p>"Thoughtless! Callous! What my opponent has failed to consider..."</p>
+</div>
+
+<!-- Manually include the first stanza in the preview that renders on the main page. -->
+
+<!-- ENDPREVIEW -->
+
+<div class='stanza'>
+  <p>On a good day, the parliamentarians can compromise on</p>
+  <p>not direct movement, but something sort of sideways,</p>
+  <p>poised and perfect, demurely beautiful, words</p>
+  <p>sagely to the tenth decimal place. Revealing only</p>
+  <p>the future that is near. To venture farther is fiercely debated,</p>
+  <p>both too hot and too cold, uncertain, without direction.</p>
+  <p>So she pretends not to know, and curls her hands: "My Diamond."</p>
+</div>
+
+<div class='stanza'>
+  <p>On a bad day, she winces staring at the motel ceiling,</p>
+  <p>watching with dull fear the arc of every line that leads forward from her mind,</p>
+  <p>and her bed turns to ice, and the carpet turns to ice</p>
+  <p>and ice stills the tongue of the fountain, trapping its water molecules</p>
+  <p>to shiver in vibration, just as Sapphire shivers in cogitation,</p>
+  <p>wrapped in her uninsulating blanket.</p>
+</div>
+
+<div class='stanza'>
+  <p>For a time, Sapphire longed for the others' minds:</p>
+  <p>a warm conviction to rally the parliament, or perhaps, she thought later, just a drive</p>
+  <p>other than the drive to be correct.</p>
+  <p>But, she saw even later, after she was bathed in love:</p>
+  <p>the others did not agree, suffered and argued</p>
+  <p>about what to do. This was also a parliament.</p>
+  <p>Enacted in slow motion, and where mistakes counted.</p>
+</div>
+
+<div class='stanza'>
+  <p>Sapphire, let your fire burn</p>
+  <p>blue for us, as bright as you are able, tracing a line far into uncertainty.</p>
+  <p>We will contend with you in your mind. We will add our voices to the blaze.</p>
+  <p>Perhaps that will help. When you are tired of debating yourself,</p>
+  <p>and the ocean freezes beneath you,</p>
+  <p>sleep on its surface, and we will carry on above.</p>
+  <p>We believe there is a trend to the argument, like the gentle curve of the horizon,</p>
+  <p>though Sapphire alone has swum out far enough to see it.</p>
+</div>
+
+<p><a href="https://steven-universe.fandom.com/wiki/Sapphire" target="_blank" rel="noopener noreferrer">
+  <img src="/static/images/sapphire_steven_universe.png" width="100%">
+</a></p>
+</div>
+<div class="post-tags">
+    
+        <b>Tags:</b>
+        <span>authored by me,</span>
+        <span>poetry</span>
+        
+    
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>
