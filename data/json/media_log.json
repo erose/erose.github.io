@@ -1001,6 +1001,12 @@
             "date_completed": "November 22, 2019",
             "title": "Moral Tribes: Emotion, Reason, and the Gap Between Us and Them",
             "type": "nonfiction"
+        },
+        {
+            "author": "Rian Johnson",
+            "date_completed": "November 28, 2019",
+            "title": "Knives Out",
+            "type": "movie"
         }
     ]
 }
