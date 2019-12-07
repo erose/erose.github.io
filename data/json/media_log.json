@@ -1007,6 +1007,18 @@
             "date_completed": "November 28, 2019",
             "title": "Knives Out",
             "type": "movie"
+        },
+        {
+            "author": "Car Seat Headrest",
+            "date_completed": "November 28, 2019",
+            "title": "Monomania",
+            "type": "album"
+        },
+        {
+            "author": "BaLonely",
+            "date_completed": "December 7, 2019",
+            "title": "Stories",
+            "type": "album"
         }
     ]
 }
