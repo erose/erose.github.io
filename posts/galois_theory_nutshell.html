@@ -56,23 +56,29 @@
     <div class="post-date">Saturday, September 30th, 2017</div>
 </div>
 <div>
-    <p>(I'm just writing this to help myself remember. YMMV.)</p>
+    <p><em>[Epistemic Status: I'm just writing this to help myself remember. YMMV.]</em></p>
 <p><em>Question</em>: we can write down a general formula for the roots of a quadratic, cubic, or quartic polynomial in terms of the coefficients. Why can't we do it for a quintic polynomial?</p>
-<p><em>Explanation</em>: Extend $\mathbb{Q}$ by taking roots and you will introduce certain symmetries (automorphisms which leave $\mathbb{Q}$ fixed). All the automorphisms introduced this way are cyclic in structure.</p>
-<p>The groups $S_2, S_3, S_4$ all have the property of decomposing in a certain nice way: they have a chain of normal subgroups which leave behind a cyclic group when quotiented out. But $S_{\geq 5}$ does not have this property (not "solvable")<sup>*</sup>.</p>
-<p>The theorem: a polynomial $p$ is solvable by radicals $\Leftrightarrow$ $\text{Gal}(p)$ is solvable.<sup></sup> It's true because of the isomorphism between field extensions and Galois subgroups. If we wanted to build a tower of field extensions (by taking roots) which culminated in a field that could hold the roots of the quintic, we would have to be able to add cyclic groups the whole way. But we can't reach $S_{\geq 5}$ this way, because no chain.</p>
+<p><em>Explanation</em>: Consider the field $\mathbb{Q}(\sqrt{2})$ which is the rationals extended with $\sqrt{2}$. Consider automorphisms of this field which leave the subfield $\mathbb{Q}$ fixed. Denote by $\text{Gal}(\mathbb{Q}(\sqrt{2}) / \mathbb{Q})$ the group of these automorphisms. In this example there is one nontrivial automorphism, which takes $\sqrt{2}$ to $-\sqrt{2}$ and vice versa. So the Galois group of $\mathbb{Q}(\sqrt{2})$ over $\mathbb{Q}$ is $C_2$.</p>
+<p>Define the <em>splitting field</em> of a polynomial in a field $F$ as the smallest field extension of $F$ in which that polynomial factors. Use the notation $\text{Split}(p)$ which I made up. For example, $\text{Split}(x^2 - 2)$ is $\mathbb{Q}(\sqrt{2})$.</p>
+<p>A general formula for the roots of a polynomial $p$ must live in the splitting field of $p$.</p>
+<p><strong>Fundamental Theorem of Galois Theory</strong>: For a field $F$ which is an extension of $\mathbb{Q}$, there is an isomorphism between the field extensions that build from $\mathbb{Q}$ up to $F$ and chains of normal subgroups $(N_1 \le N_2 ~\text{...}~ \le \text{Gal}(F/\mathbb{Q}))$ such that $N_1$ is a normal subgroup of $N_2$, $N_2$ is a normal subgroup of $N_3$, etc.</p>
+<p>Here's an example. ($f$ and $g$ are generators with $f^2 = e$ and $g^2 = e$.) Note that the left and right diagrams are the reverses of each other, in the sense that the "trivial" field case corresponds to the "full" group case, and vice versa.</p>
+<p><img width="100%" src="/static/images/galois_theory_lattice_illustration.svg"></p>
+<p>The groups $S_2, S_3, S_4$ all have the property of decomposing into chains of normal subgroups in this way. But $S_{\geq 5}$ does not have this property (not "solvable")<sup><span class='small'>*</span></sup>.</p>
+<p>We can write down a general formula for the roots of a polynomial $p$ if and only if $\text{Gal}(\text{Split}(p))$ is solvable.<sup></sup></p>
+<p>This is true because of the isomorphism between field extensions and subgroups. If we wanted to build a tower of field extensions (by adding roots) which culminated in a field that could hold the roots of the quintic, we would have to descend a chain of normal subgroups. But there is no such chain for $S_{\geq 5}$, because it isn't solvable.</p>
 <div class='normal-line-height'>
   <div class='small'>
-    * The obstruction is that $A_5$, the only candidate to start the chain off with, doesn't have any normal subgroups ("simple").
+    * The obstruction is that $A_5$, the only candidate to start the chain off with, doesn't have any normal subgroups (it is "simple").
   </div>
 </div>
 
 <hr />
 <p><strong>Extra:</strong></p>
 <ul>
-<li>This lovely <a href="https://www.math.ucdavis.edu/~osserman/classes/250B-W11/lattice.pdf">diagram</a> of the isomorphism for $p = x^4 - 2$.</li>
 <li>Implication which I somehow never realized until right now: there exist algebraic numbers, i.e. the roots of some $p \in \mathbb{Q}[x]$, which we have no "formula for". That is, no agreed-upon way to write them other than just exhibiting $p$. (You might object that this is a matter of convention and no different than the situation with $\sqrt{2}$, and you might have a point.) At any rate, these are called <a href="https://math.stackexchange.com/questions/657168/understanding-non-solvable-algebraic-numbers">non-solvable numbers</a>.</li>
 </ul>
+<p><em>[Edited 12/9/2019. Elaborated and removed an incorrect use of the $\text{Gal}$ function.]</em></p>
 </div>
 <div class="post-tags">
     
