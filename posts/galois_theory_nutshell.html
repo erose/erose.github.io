@@ -62,7 +62,7 @@
 <p>Define the <em>splitting field</em> of a polynomial in a field $F$ as the smallest field extension of $F$ in which that polynomial factors. Use the notation $\text{Split}(p)$ which I made up. For example, $\text{Split}(x^2 - 2)$ is $\mathbb{Q}(\sqrt{2})$.</p>
 <p>A general formula for the roots of a polynomial $p$ must live in the splitting field of $p$.</p>
 <p><strong>Fundamental Theorem of Galois Theory</strong>: For a field $F$ which is an extension of $\mathbb{Q}$, there is an isomorphism between the field extensions that build from $\mathbb{Q}$ up to $F$ and chains of normal subgroups $(N_1 \le N_2 ~\text{...}~ \le \text{Gal}(F/\mathbb{Q}))$ such that $N_1$ is a normal subgroup of $N_2$, $N_2$ is a normal subgroup of $N_3$, etc.</p>
-<p>Here's an example. ($f$ and $g$ are generators with $f^2 = e$ and $g^2 = e$.) Note that the left and right diagrams are the reverses of each other, in the sense that the "trivial" field case corresponds to the "full" group case, and vice versa.</p>
+<p>Here's an example. ($f$ and $g$ are generators with $f^2 = g^2 = (fg)^2 = e$.) Note that the left and right diagrams are the reverses of each other, in the sense that the "trivial" field case corresponds to the "full" group case, and vice versa.</p>
 <p><img width="100%" src="/static/images/galois_theory_lattice_illustration.svg"></p>
 <p>The groups $S_2, S_3, S_4$ all have the property of decomposing into chains of normal subgroups in this way. But $S_{\geq 5}$ does not have this property (not "solvable")<sup><span class='small'>*</span></sup>.</p>
 <p>We can write down a general formula for the roots of a polynomial $p$ if and only if $\text{Gal}(\text{Split}(p))$ is solvable.<sup></sup></p>
