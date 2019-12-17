@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code trinkets</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/sierpinski_fermat.html">sierpinksi's triangle and fermat numbers</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Why Do Less Dense Things Rise?</div>
+    <div class="post-date">Tuesday, December 17th, 2019</div>
+</div>
+<div>
+    <p>Why do less dense things rise? Recently I was asked this as a puzzle. I had always taken it as a basic truth, but we should be able to explain it in terms of forces.</p>
+<p>Let's try to explain why helium rises in air.</p>
+<p>First consider a blob of air in air. It experiences a force downward due to gravity, which is balanced by a force upward due to the pressure differential between where it is now and slightly below that. It stays still.</p>
+<p>(We know the forces balance because that's just what it means to have a column of fluid, experiencing increasing pressure due to gravity)</p>
+<p>Now consider a blob of helium in air. The upward force due to the pressure differential overwhelms the downward force due to gravity, because the less massive helium is pulled less strongly by gravity. So the helium will rise until it has the same density as its surroundings; that is, until we are in the first case again and the forces are balanced.</p>
+<p>I heard this puzzle from Samuel Marks.</p>
+<p><strong>Caveats:</strong></p>
+<ul>
+<li>We're assuming the blob of helium stays together. This makes sense if it's inside a balloon, but if it's a free-floating blob I think it would disperse as it rises.</li>
+</ul>
+</div>
+<div class="post-tags">
+    
+        <b>Tags:</b>
+        <span>physics</span>
+        
+    
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>
