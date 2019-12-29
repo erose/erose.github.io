@@ -1019,6 +1019,42 @@
             "date_completed": "December 7, 2019",
             "title": "Stories",
             "type": "album"
+        },
+        {
+            "author": "Modest Mouse",
+            "date_completed": "December 22, 2019",
+            "title": "Good News For People Who Love Bad News",
+            "type": "album"
+        },
+        {
+            "author": "Radiohead",
+            "date_completed": "December 23, 2019",
+            "title": "Kid A",
+            "type": "album"
+        },
+        {
+            "author": "Greta Gerwig",
+            "date_completed": "December 26, 2019",
+            "title": "Little Women",
+            "type": "movie"
+        },
+        {
+            "author": "Randall Munroe",
+            "date_completed": "December 27, 2019",
+            "title": "How To",
+            "type": "nonfiction"
+        },
+        {
+            "author": "Phoebe Bridgers",
+            "date_completed": "December 28, 2019",
+            "title": "Stranger In The Alps",
+            "type": "album"
+        },
+        {
+            "author": "Gillian Welch",
+            "date_completed": "December 28, 2019",
+            "title": "The Harrow & The Harvest",
+            "type": "album"
         }
     ]
 }
