@@ -1055,6 +1055,18 @@
             "date_completed": "December 28, 2019",
             "title": "The Harrow & The Harvest",
             "type": "album"
+        },
+        {
+            "author": "Ta-Nehisi Coates",
+            "date_completed": "December 31, 2019",
+            "title": "Between the World and Me",
+            "type": "nonfiction"
+        },
+        {
+            "author": "Josh and Benny Safdie",
+            "date_completed": "January 2, 2020",
+            "title": "Uncut Gems",
+            "type": "movie"
         }
     ]
 }
