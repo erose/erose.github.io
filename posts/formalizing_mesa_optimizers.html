@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code trinkets</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/sierpinski_fermat.html">sierpinksi's triangle and fermat numbers</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Formalizing Mesa Optimizers</div>
+    <div class="post-date">Friday, January 3rd, 2020</div>
+</div>
+<div>
+    <p><em>[This post is likely only to be of interest to you if you've read the paper under discussion.]</em></p>
+<p>The paper <a href="https://arxiv.org/abs/1906.01820">Risks from Learned Optimization in Advanced Machine Learning Systems</a> is written in natural language. It discusses the possibility of two functions — the objective function of the base optimizer, and the objective function of the mesa optimizer — being equal or unequal. As Samuel Marks pointed out during a presentation, in this informal setting, it's not clear that these functions even have the same type. Here's two formalizations where it's clearer what we mean when we discuss equality between these two functions.</p>
+<p>(These ideas were birthed at a whiteboard discussion with Samuel Marks, Buck Shlegeris, Ben Weinstein-Raun, Scott Garrabrant and myself. Any errors are mine.)</p>
+<p>The issue is that the objective function of the base optimizer is evaluating models, but the objective function of the inner optimizer is probably evaluating something else. We can smooth out the types by changing everything into Turing machines.</p>
+<p>We're going to run an algorithm to optimize some function on Turing machines, considered as strings over $\text{TM} = \{0, 1\}$. We have a function $U : \text{TM} \rightarrow \mathbb{R}$ which scores our machines on this metric.</p>
+<p><em>Example</em>: in the case of evolution, $U$ is: how well does this machine self-replicate?</p>
+<p>Suppose we have $m \in \text{TM}$ such that $m$ is a mesa-optimizer. What $m$ does when run is simulate some ten other Turing machines, evaluate which is the best one according to some internally represented function $U_m : \text{TM} \rightarrow \mathbb{R}$, and act like that one.</p>
+<p><em>Example</em>: in the case of evolution of humans, $m$ is a human brain and $U_m$ is "does behaving like this seem like it would suit my goals?"</p>
+<ul>
+<li>Note that $U_m$ is not a utility function that takes in states of the world and spits out utilities. Its domain is Turing machines.</li>
+<li>Note that the domain of $U_m$ may be only a subset of the domain of $U$; that is, $U_m$ may be a partial function from $\text{TM} \rightarrow [0, 1]$. A human does not need to be able to evaluate all possible minds. It just needs to be able to evaluate the minds it could act like.</li>
+</ul>
+<p>Now we have $U$ and $U_m$ of the same type, so we can meaningfully say that inner alignment is when $U = U_m$ (at least, on the domain of $U_m$).</p>
+</div>
+<div class="post-tags">
+    
+        <b>Tags:</b>
+        <span>ai-safety</span>
+        
+    
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>
