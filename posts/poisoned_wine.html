@@ -65,7 +65,7 @@
 <p>Answer: the king needs 7 servants. Number the servants 0, 1, 2, 3, 4, 5, 6. Then assign servant $i$ to drink the wines which have an $0$ in their $2^i$s place, when written in binary. For example:</p>
 <ul>
 <li>Servant 0 will drink those wines which have a zero in their $2^0 = 1$s place; the even-numbered wines.</li>
-<li>Servant 1 will drink the wines with a zero in their $2^1 = 2$s place — those are the wines which are a multiple of $4$.</li>
+<li>Servant 1 will drink the wines with a zero in their $2^1 = 2$s place.</li>
 <li>Servant 6 will drink the wines which have a zero in their $2^6 = 64$s place; in this problem, those are just the wines numbered &lt; $64$.</li>
 </ul>
 <p>Now watch what happens to the servants, and begin writing an number in binary. Write a zero in the $2^i$s place if servant $i$ dies, and a one otherwise. That number is the number of the poisoned wine.</p>
@@ -75,6 +75,7 @@
 <p>It turns out that doesn't work, but here's a modification that does. The wine is still either poisoned or not poisioned, but instead of just drinking or not drinking, the servants can either drink the wine fully, sip it a little, or not drink it at all. If you merely sip a poisoned wine, you just get sick rather than dying.</p>
 <p>This extension gives us three actions to perform, so the servants can drink, sip, or abstain for wines that have a 0, 1, or 2 in their place. It also gives us three outcomes to observe, so we write a 0, 1, or 2 in the appropriate place depending on whether the servant dies, gets sick, or is unaffected. When the problem is modified in this way, it becomes easier due to the additional information we get: we need only $\lceil \log_3(100) \rceil \approx \lceil 4.14 \rceil = 5$ servants.</p>
 <p>What's important is that the number of actions is equal to the number of outcomes. The "2" in the original problem comes from two actions that are related in lockstep to two outcomes.</p>
+<p><em>[Edited 1/3/2020 — Lucy pointed out that I incorrectly said the wines Servant 1 drinks are a multiple of 4.]</em></p>
 </div>
 <div class="post-tags">
     
