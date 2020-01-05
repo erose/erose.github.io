@@ -1067,6 +1067,12 @@
             "date_completed": "January 2, 2020",
             "title": "Uncut Gems",
             "type": "movie"
+        },
+        {
+            "author": "Donald Glover",
+            "date_completed": "January 5, 2020",
+            "title": "Atlanta (Season 1)",
+            "type": "tv show"
         }
     ]
 }
