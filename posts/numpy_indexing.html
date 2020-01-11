@@ -100,7 +100,7 @@ Each integer you encounter means "the shape of the result will not have an entry
 <p><pre>
 (..., k, ...)[..., [a], ...] -&gt; (..., *[a].shape, ...)
 </pre>
-Each numpy array or Python list you encounter means "the shape of the result will, have the shape ofthis numpy array or Python list inserted here."</p>
+Each numpy array or Python list you encounter means "the shape of the result will, have the shape of this numpy array or Python list inserted here."</p>
 <ul>
 <li>Example: <code>A[[0], :] == [[1], [2]]</code>, shape <code>(2, 3) -&gt; (1, 3)</code></li>
 <li>Example: <code>A[[[0]], :].shape</code> == <code>(1, 1, 3)</code></li>
