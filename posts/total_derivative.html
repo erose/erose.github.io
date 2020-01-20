@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code trinkets</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/sierpinski_fermat.html">sierpinksi's triangle and fermat numbers</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">How Do You Generalize Derivatives to Higher Dimensions?</div>
+    <div class="post-date">Monday, January 20th, 2020</div>
+</div>
+<div>
+    <p>The analogue of the derivative for functions whose inputs and outputs are vectors is called the <em>total derivative</em>. The total derivative of a function $f: \mathbb{R}^n \rightarrow \mathbb{R}^m$ is an object that gives you a function for each point in $\mathbb{R}^n$. In other words it is a function $\mathbb{R}^n \rightarrow \mathbb{R}^n \rightarrow \mathbb{R}^m$.</p>
+<p>I'll write $D(f)$ for the total derivative of $f$; the function $\mathbb{R}^n \rightarrow \mathbb{R}^n \rightarrow \mathbb{R}^m$. $D(f)(\mathbf{x})$ is what you get when you put in $\mathbf{x}$ — it is a particular function $\mathbb{R}^n \rightarrow \mathbb{R}^m$.</p>
+<p>(I wanted to use the more familiar $\frac{d}{d\text{...}}$ notation, but unfortunately it seems to obscure some analogies more than it aids others, because of the need to put in a symbol at the bottom.)</p>
+<p>$D(f)(\mathbf{x})$ maps vectors to vectors. I'm going to claim that it "tells you what $f$ does to a very small vector whose tail is placed at $\mathbf{x}$." What does this mean, and how is this a generalization of the derivative?</p>
+<p>Think about our old friend $f = x^2$, $\frac{d}{dx} f = 2x$. This means that if you make a very small increase $\epsilon$ to your input at point $x$, your output will increase by $2x\epsilon$. You can view this as a function $\mathbb{R} \rightarrow \mathbb{R} \rightarrow \mathbb{R}$. Given a point $x \in \mathbb{R}$, it gives you a function which maps $\epsilon \rightarrow 2x\epsilon$. It tells you what $f$ does to a very small increase at point $x$.</p>
+<p>Now back to the multidimensional case. Adding a very small vector $\mathbf{\epsilon}$ to $\mathbf{x}$ is like making a very small increase to your input, but in multiple dimensions at once. So the total derivative $\mathbb{R}^n \rightarrow \mathbb{R}^n \rightarrow \mathbb{R}^m$ is the analogue of the derivative in the sense that given a point $\mathbf{x} \in \mathbb{R}^n$, it gives you a function which tells you how to map $\mathbf{\epsilon} \rightarrow \text{???}$ for vectors $\mathbf{\epsilon} \in \mathbb{R}^n$ whose tails are placed at $\mathbf{x}$. That's why I said it tells you what $f$ does to a very small vector whose tail is placed at $\mathbf{x}$.</p>
+<p>(This post really ought to have some illustrations, but alas I couldn't find any on the Internet, so I'm stuck trying to paint pictures with words.)</p>
+<p>An important fact about the total derivative is that it's a <em>linear</em> transformation. With our old friend the derivative, this was so obvious that perhaps it slipped beneath notice. $\epsilon \rightarrow 2x\epsilon$ is linear because it just multiplies the input by some number. All derivatives are linear in this sense.</p>
+<p>(Don't get confused: $\frac{d}{dx} x^3 = 3x^2$ isn't a linear function of $x$, but that's the function $\mathbb{R} \rightarrow \mathbb{R} \rightarrow \mathbb{R}$. The thing which we are saying is linear is the function $\mathbb{R} \rightarrow \mathbb{R}$, which is $\epsilon \rightarrow 3x^2 \epsilon$. In introductory calculus classes I've been in, we "squished down" the derivative of a function into $\mathbb{R} \rightarrow \mathbb{R}$ by identifying $\epsilon \rightarrow a\epsilon$ with $a \in \mathbb{R}$. For example, whenever we graphed the derivative of a function. That is all well and good for some things, but I think it is hard to understand the total derivative from that perspective.)</p>
+<p>Because there are more dimensions, the total derivative of a function $\mathbb{R}^n \rightarrow \mathbb{R}^m$ can be more complex than "multiply by a number." More things can happen to a very small vector than just scaling; it can be rotated, skewed, etc. One coordinate can be mixed with another. But it is still a linear function of $\mathbf{\epsilon}$. And since it is a linear transformation from $\mathbb{R}^n \rightarrow \mathbb{R}^m$, it can be represented as an $m \times n$ matrix. This is called the Jacobian matrix of the function. We do this by filling out a matrix with every possible partial derivative you could take, organized in a certain way.</p>
+<p>For example, take the function $f(\mathbf{x}) = f(x_1, x_2) = \langle x_1^2 + \sin(x_2), x_1x_2 + 10 \rangle$ from $\mathbb{R}^2 \rightarrow \mathbb{R}^2$. We can write down its Jacobian matrix.</p>
+<p>$$D(f) =
+\begin{bmatrix}\frac{\partial f_1}{\partial x_1} &amp; \frac{\partial f_1}{\partial x_2}\\ \frac{\partial f_2}{\partial x_1} &amp; \frac{\partial f_2}{\partial x_2}\end{bmatrix} =
+\begin{bmatrix}2x_1 &amp; \cos(x_2)\\ x_2 &amp; x_1\end{bmatrix}$$</p>
+<p>Fill in a concrete value for $\mathbf{x} = \langle x_1, x_2 \rangle$ and the matrix represents a function $\mathbb{R}^2 \rightarrow \mathbb{R}^2$. It acts on vectors to transform them the way that a very small vector whose tail is at $\mathbf{x}$ would be transformed.</p>
+<p>Before I learned about the total derivative, the answer I would give to "how do you generalize derivatives to higher dimensions?" was "with the gradient." The gradient $\nabla f$ is a special case of the total derivative; when the function is $\mathbb{R}^n \rightarrow \mathbb{R}$, the total derivative is a matrix of dimension $1 \times n$ whose transpose can be seen as a column vector in $\mathbb{R}^n$. We take the function $\mathbb{R}^n \rightarrow \mathbb{R}^n \rightarrow \mathbb{R}$ and select just the first part ($\mathbb{R}^n \rightarrow \mathbb{R}^n$) to serve as a vector field. So the gradient is really just the total derivative with some tricks and flips.</p>
+<p>The total derivative is the One True Way to think about multi-dimensional derivatives. You can do everything you want with it. It's got a chain rule:
+$$D(f \circ g)(\mathbf{x}) = D(f)(g(\mathbf{x})) \circ D(g)(\mathbf{x})$$</p>
+<p>Note that if you replace $D(f)$ with $f'$, this is almost the same thing as the familiar one-dimensional chain rule
+$$((f \circ g)(x))' = f'(g(x))g'(x)$$</p>
+<p>But mere multiplication in the one-dimensional case has been replaced with composition in the multi-dimensional case. This makes sense because, for one-dimensional linear functions, composition <em>is</em> multiplication. ($(x \rightarrow 5x) \circ (x \rightarrow 2x) = x \rightarrow 10x$.) But when our linear functions get more dimensions, composition becomes more complicated. However, it's still a kind of multiplication — matrix multiplication of the Jacobian matrices!</p>
+<p>Here's a table of analogies between the one-dimensional derivative and the total derivative.</p>
+<pre>
+d/dx                   |  D
+------------------------------------------------
+small increase         => add small vector
+multiplication         => linear transformation
+R -> R -> R            => R^n -> R^n -> R^m
+real-valued function   => vector-valued function
+f'(g(x))g'(x)          => D(f)(g(x)) o D(g)(x)
+</pre>
+</div>
+<div class="post-tags">
+    
+        <b>Tags:</b>
+        <span>math</span>
+        
+    
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>
