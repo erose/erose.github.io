@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code trinkets</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/sierpinski_fermat.html">sierpinksi's triangle and fermat numbers</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">The Derivative of a Matrix and The Backpropagation Algorithm</div>
+    <div class="post-date">Tuesday, January 21st, 2020</div>
+</div>
+<div>
+    <p>Consider a matrix acting on a vector, $\mathbf{W}\mathbf{x}$. You can see this as function $f$ with type $\mathbb{R}^n \rightarrow \mathbb{R}^m$, where $\mathbf{W}$ is an $m \times n$ matrix, being applied to the vector $\mathbf{x}$. What is the derivative of $f$?</p>
+<p>The framework behind taking derivatives in higher dimensions I covered in a <a href="/posts/total_derivative.html">previous post</a>. I'll use the notation I introduced in that post here. $D(f)$ is the total derivative of a function $f$. $D(f)(\mathbf{x})$ is the total derivative of $f$ evaluated at a point $\mathbf{x}$. I'll also use the concept of a Jacobian matrix from that post.</p>
+<p>I think the question "what is the derivative of a matrix?" is sort of funny and interesting in itself, but my motivation for exploring this came from machine learning — specifically, understanding the backpropagation algorithm we use to train neural networks. I'll show you what the derivative of a matrix is first, and then use this to justify a step in the backpropagation algorithm that had confused me.</p>
+<p>Let's decide on some notation. Following <a href="http://cs231n.stanford.edu/vecDerivs.pdf">Erik Learned-Miller</a> I'm going to use $\frac{df}{d\mathbf{x}}$ to mean $D(f)(\mathbf{x})$. I'm not sure how standard this notation is, but I like it.</p>
+<p>So, $f(\mathbf{x}) = \mathbf{W}\mathbf{x}$ and we want $\frac{df}{d \mathbf{x}}$. The derivative of a function $\mathbb{R}^n \rightarrow \mathbb{R}^m$ is represented by its $m \times n$ Jacobian matrix. Suppose $n = m = 2$. Then the Jacobian matrix of the function $f$ looks like this:</p>
+<p>$$
+D(f) = \begin{bmatrix}\frac{\partial f_1}{\partial x_1} &amp; \frac{\partial f_1}{\partial x_2}\\ &amp; \\ \frac{\partial f_2}{\partial x_1} &amp; \frac{\partial f_2}{\partial x_2}\end{bmatrix}
+$$</p>
+<p>If we name the entries in our matrix and vector as follows:</p>
+<p>$$
+\mathbf{W} = \begin{bmatrix}w_{11} &amp; w_{12}\\ w_{21} &amp; w_{22}\end{bmatrix}
+$$</p>
+<p>$$
+\mathbf{x} = \begin{bmatrix}x_1\\ x_2\end{bmatrix}
+$$</p>
+<p>then we can get those partial derivatives by first writing down what $f$ is as a function of two arguments:</p>
+<p>$$
+\begin{aligned}
+f(x_1, x_2) &amp;= \langle f_1(x_1, x_2), f_2(x_1, x_2) \rangle\\
+f_1(x_1, x_2) &amp;= x_1w_{11} + x_2w_{12}\\
+f_2(x_1, x_2) &amp;= x_1w_{21} + x_2w_{22}\\
+\end{aligned}
+$$</p>
+<p>and then computing:</p>
+<p>$$
+\begin{aligned}
+\frac{\partial f_1}{\partial x_1} &amp;= w_{11}\\
+&amp; \\
+\frac{\partial f_1}{\partial x_2} &amp;= w_{12}\\
+&amp; \\
+\frac{\partial f_2}{\partial x_1} &amp;= w_{21}\\
+&amp; \\
+\frac{\partial f_2}{\partial x_2} &amp;= w_{22}\\
+\end{aligned}
+$$</p>
+<p>giving us:</p>
+<p>$$
+D(f)
+= \begin{bmatrix}\frac{\partial f_1}{\partial x_1} &amp; \frac{\partial f_1}{\partial x_2}\\ &amp; \\ \frac{\partial f_2}{\partial x_1} &amp; \frac{\partial f_2}{\partial x_2}\end{bmatrix}
+= \begin{bmatrix}w_{11} &amp; w_{12}\\ w_{21} &amp; w_{22}\end{bmatrix}
+= \mathbf{W}
+$$</p>
+<p>Conceptually, we can say $D(\mathbf{W}) = \mathbf{W}$.</p>
+<p>So the derivative of a matrix is that matrix again. This makes sense because the total derivative of a function $f$ at a point $\mathbf{x}$ should tell us how a small vector with its tail at $\mathbf{x}$ is transformed by $f$. The total derivative is always a linear function on small vectors, regardless of whether $f$ is linear or not. But since in this case $f$ is already a linear function, the answer to "how does $f$ transform a small vector?" is the same as "how does $f$ transform any vector?"</p>
+<p>Note we wrote the Jacobian as an $m \times n$ matrix. This seems good, because we want the Jacobian to represent a function on small vectors in the domain of the original function, $\mathbb{R}^n$, and an $m \times n$ matrix represents a function from $\mathbb{R}^n \rightarrow \mathbb{R}^m$.</p>
+<p>However, sometimes you want the derivative of a function $\mathbb{R}^n \rightarrow \mathbb{R}$ to be a vector in $\mathbb{R}^n$. The problem is that it's the wrong shape; the Jacobian is a $1 \times n$ matrix, a row vector, but you want it to be an $n \times 1$ matrix, a column vector. So you need to take the transpose.</p>
+<p>To illustrate: You have $\mathbf{d} = \mathbf{W}\mathbf{x}$ and $f(\mathbf{d})$ and you want to construct the column vector $\frac{df}{d\mathbf{x}}$. In neural networks, $f$ is a cost function evaluating your output, $\mathbf{d}$ is that output, $\mathbf{W}$ is a matrix of weights telling you how signals propagate from one layer of the network to the next layer, and $\mathbf{x}$ is your input data.</p>
+<p>Apply the chain rule $D(f \circ g)(\mathbf{x}) = D(f)(g(\mathbf{x})) \circ D(g)(\mathbf{x})$ like this (we will identify the matrix $\mathbf{W}$ with the function it represents):</p>
+<p>$$
+\begin{aligned}
+D(f)(\mathbf{x}) &amp;= D(f)(\mathbf{W}\mathbf{x}) \circ D(\mathbf{W})(\mathbf{x})\\
+D(f)(\mathbf{x}) &amp;= D(f)(\mathbf{W}\mathbf{x}) \circ \mathbf{W}\\
+D(f)(\mathbf{x}) &amp;= D(f)(\mathbf{d}) \circ \mathbf{W}\\
+\end{aligned}
+$$</p>
+<p>where $D(\mathbf{W})(\mathbf{x}) = \mathbf{W}$ because the total derivative of a linear transformation is just that same transformation, and this is true at any point in the space. Now we can make a notational change, convert composition to matrix multiplication, and get:</p>
+<p>$$
+\begin{aligned}
+\frac{df}{d\mathbf{x}} &amp;= \frac{df}{d\mathbf{d}} \mathbf{W}\\
+\end{aligned}
+$$</p>
+<p>If $\mathbf{W}$ is an $m \times n$ matrix, $\frac{df}{d\mathbf{x}}$ is a row vector of shape $1 \times n$ and $\frac{df}{d\mathbf{d}}$ is a row vector of shape $1 \times m$. We want the left-hand side to have shape $n \times 1$ instead, so we take the transpose of both sides.</p>
+<p>$$
+\begin{aligned}
+\left(\frac{df}{d\mathbf{x}}\right)^T &amp;= \left(\frac{df}{d\mathbf{d}} \mathbf{W}\right)^T\\
+&amp; \\
+\left(\frac{df}{d\mathbf{x}}\right)^T &amp;= \mathbf{W}^T \left(\frac{df}{d\mathbf{d}}\right)^T\\
+\end{aligned}
+$$</p>
+<p>There's our formula for the derivative of $f$ at $\mathbf{x}$ as a column vector. In the context of <a href="https://en.wikipedia.org/wiki/Automatic_differentiation#Reverse_accumulation">reverse-mode automatic differentiation</a> (the generalization of backpropagation), this tells you that if in "going forwards" you multiplied by a matrix, to "go backwards" you need to multiply by its transpose.</p>
+<p>Resources I used in putting together this post:</p>
+<ul>
+<li><a href="http://cs231n.stanford.edu/vecDerivs.pdf">Vector, Matrix, and Tensor Derivatives</a> by Erik Learned-Miller.</li>
+<li><a href="https://explained.ai/matrix-calculus">The Matrix Calculus You Need For Deep Learning</a> by explained.ai.</li>
+</ul>
+</div>
+<div class="post-tags">
+    
+        <b>Tags:</b>
+        <span>math</span>
+        
+    
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>
