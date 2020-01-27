@@ -1091,6 +1091,18 @@
             "date_completed": "January 18, 2020",
             "title": "The Incantations of Daniel Johnston",
             "type": "novel"
+        },
+        {
+            "author": "Bellwire",
+            "date_completed": "January 20, 2020",
+            "title": "Following The Plan",
+            "type": "album"
+        },
+        {
+            "author": "Ruben Östlund",
+            "date_completed": "January 24, 2020",
+            "title": "The Square",
+            "type": "movie"
         }
     ]
 }
