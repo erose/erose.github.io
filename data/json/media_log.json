@@ -1103,6 +1103,12 @@
             "date_completed": "January 24, 2020",
             "title": "The Square",
             "type": "movie"
+        },
+        {
+            "author": "Rick Bass",
+            "date_completed": "January 26, 2020",
+            "title": "The Rage of the Squat King",
+            "type": "short story"
         }
     ]
 }
