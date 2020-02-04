@@ -1109,6 +1109,18 @@
             "date_completed": "January 26, 2020",
             "title": "The Rage of the Squat King",
             "type": "short story"
+        },
+        {
+            "author": "Eddie Murphy",
+            "date_completed": "February 2, 2020",
+            "title": "Dolemite Is My Name",
+            "type": "movie"
+        },
+        {
+            "author": "George Orwell",
+            "date_completed": "February 2, 2020",
+            "title": "The Lion And The Unicorn",
+            "type": "nonfiction"
         }
     ]
 }
