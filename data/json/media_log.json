@@ -1121,6 +1121,12 @@
             "date_completed": "February 2, 2020",
             "title": "The Lion And The Unicorn",
             "type": "nonfiction"
+        },
+        {
+            "author": "Richard E Albright",
+            "date_completed": "February 8, 2020",
+            "title": "What Can Past Technology Forecasts Tell Us About The Future?",
+            "type": "academic paper"
         }
     ]
 }
