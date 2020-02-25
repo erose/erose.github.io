@@ -1145,6 +1145,12 @@
             "date_completed": "February 16, 2020",
             "title": "Marriage Story",
             "type": "movie"
+        },
+        {
+            "author": "William Lanouette",
+            "date_completed": "February 24, 2020",
+            "title": "Genius in the Shadows: A Biography of Leo Szilard, the Man Behind the Bomb",
+            "type": "nonfiction"
         }
     ]
 }
