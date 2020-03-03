@@ -1157,6 +1157,12 @@
             "date_completed": "February 24, 2020",
             "title": "Genius in the Shadows: A Biography of Leo Szilard, the Man Behind the Bomb",
             "type": "nonfiction"
+        },
+        {
+            "author": "Joe Talbot",
+            "date_completed": "March 1, 2020",
+            "title": "The Last Black Man In San Francisco",
+            "type": "movie"
         }
     ]
 }
