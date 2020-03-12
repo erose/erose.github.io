@@ -1163,6 +1163,18 @@
             "date_completed": "March 1, 2020",
             "title": "The Last Black Man In San Francisco",
             "type": "movie"
+        },
+        {
+            "author": "George Orwell",
+            "date_completed": "March 9, 2020",
+            "title": "Essays",
+            "type": "essays"
+        },
+        {
+            "author": "The Modern Lovers",
+            "date_completed": "March 10, 2020",
+            "title": "The Modern Lovers",
+            "type": "album"
         }
     ]
 }
