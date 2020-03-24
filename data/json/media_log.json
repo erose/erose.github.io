@@ -1175,6 +1175,30 @@
             "date_completed": "March 10, 2020",
             "title": "The Modern Lovers",
             "type": "album"
+        },
+        {
+            "author": "Nicole Holofcener",
+            "date_completed": "March 20, 2020",
+            "title": "The Land of Steady Habits",
+            "type": "movie"
+        },
+        {
+            "author": "Ali Smith",
+            "date_completed": "March 23, 2020",
+            "title": "Winter",
+            "type": "novel"
+        },
+        {
+            "author": "W.H. Auden",
+            "date_completed": "March 24, 2020",
+            "title": "Herman Melville",
+            "type": "poetry"
+        },
+        {
+            "author": "W.H. Auden",
+            "date_completed": "March 24, 2020",
+            "title": "Voltaire at Ferney",
+            "type": "poetry"
         }
     ]
 }
