@@ -1199,6 +1199,12 @@
             "date_completed": "March 24, 2020",
             "title": "Voltaire at Ferney",
             "type": "poetry"
+        },
+        {
+            "author": "James Clerk Maxwell",
+            "date_completed": "March 28, 2020",
+            "title": "Are There Real Analogies In Nature?",
+            "type": "essays"
         }
     ]
 }
