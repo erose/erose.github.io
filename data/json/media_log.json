@@ -1205,6 +1205,18 @@
             "date_completed": "March 28, 2020",
             "title": "Are There Real Analogies In Nature?",
             "type": "essays"
+        },
+        {
+            "author": "Franz Kafka",
+            "date_completed": "April 1, 2020",
+            "title": "A Hunger Artist",
+            "type": "short story"
+        },
+        {
+            "author": "Neil Jordan",
+            "date_completed": "April 2, 2020",
+            "title": "The Butcher Boy",
+            "type": "movie"
         }
     ]
 }
