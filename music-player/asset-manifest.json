@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/music-player/static/css/main.7d17d69b.chunk.css",
-    "main.js": "/music-player/static/js/main.a66b1e64.chunk.js",
-    "main.js.map": "/music-player/static/js/main.a66b1e64.chunk.js.map",
-    "runtime-main.js": "/music-player/static/js/runtime-main.d90a06c0.js",
-    "runtime-main.js.map": "/music-player/static/js/runtime-main.d90a06c0.js.map",
-    "static/js/2.8c9b413c.chunk.js": "/music-player/static/js/2.8c9b413c.chunk.js",
-    "static/js/2.8c9b413c.chunk.js.map": "/music-player/static/js/2.8c9b413c.chunk.js.map",
+    "main.css": "/music-player/static/css/main.4903e7a2.chunk.css",
+    "main.js": "/music-player/static/js/main.66f04abf.chunk.js",
+    "main.js.map": "/music-player/static/js/main.66f04abf.chunk.js.map",
+    "runtime-main.js": "/music-player/static/js/runtime-main.04ad0482.js",
+    "runtime-main.js.map": "/music-player/static/js/runtime-main.04ad0482.js.map",
+    "static/js/2.f85c63dc.chunk.js": "/music-player/static/js/2.f85c63dc.chunk.js",
+    "static/js/2.f85c63dc.chunk.js.map": "/music-player/static/js/2.f85c63dc.chunk.js.map",
     "index.html": "/music-player/index.html",
-    "precache-manifest.ad755f54069ba276028ac6ad9b55d83b.js": "/music-player/precache-manifest.ad755f54069ba276028ac6ad9b55d83b.js",
+    "precache-manifest.388d272e4988610552479c6cd408755c.js": "/music-player/precache-manifest.388d272e4988610552479c6cd408755c.js",
     "service-worker.js": "/music-player/service-worker.js",
-    "static/css/main.7d17d69b.chunk.css.map": "/music-player/static/css/main.7d17d69b.chunk.css.map",
-    "static/js/2.8c9b413c.chunk.js.LICENSE.txt": "/music-player/static/js/2.8c9b413c.chunk.js.LICENSE.txt",
+    "static/css/main.4903e7a2.chunk.css.map": "/music-player/static/css/main.4903e7a2.chunk.css.map",
+    "static/js/2.f85c63dc.chunk.js.LICENSE.txt": "/music-player/static/js/2.f85c63dc.chunk.js.LICENSE.txt",
+    "static/media/pause.svg": "/music-player/static/media/pause.c7564688.svg",
+    "static/media/play.svg": "/music-player/static/media/play.53d7188e.svg",
     "static/media/spinner.ico": "/music-player/static/media/spinner.2f27f045.ico"
   },
   "entrypoints": [
-    "static/js/runtime-main.d90a06c0.js",
-    "static/js/2.8c9b413c.chunk.js",
-    "static/css/main.7d17d69b.chunk.css",
-    "static/js/main.a66b1e64.chunk.js"
+    "static/js/runtime-main.04ad0482.js",
+    "static/js/2.f85c63dc.chunk.js",
+    "static/css/main.4903e7a2.chunk.css",
+    "static/js/main.66f04abf.chunk.js"
   ]
 }
