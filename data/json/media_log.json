@@ -1217,6 +1217,12 @@
             "date_completed": "April 2, 2020",
             "title": "The Butcher Boy",
             "type": "movie"
+        },
+        {
+            "author": "Brian De Palma",
+            "date_completed": "April 18, 2020",
+            "title": "Phantom of the Paradise",
+            "type": "movie"
         }
     ]
 }
