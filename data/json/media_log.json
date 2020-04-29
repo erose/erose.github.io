@@ -1223,6 +1223,12 @@
             "date_completed": "April 18, 2020",
             "title": "Phantom of the Paradise",
             "type": "movie"
+        },
+        {
+            "author": "Shane McCrae",
+            "date_completed": "April 25, 2020",
+            "title": "The Gilded Auction Block",
+            "type": "poetry"
         }
     ]
 }
