@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code trinkets</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/sierpinski_fermat.html">sierpinksi's triangle and fermat numbers</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Affine Spaces in Ruby on Rails</div>
+    <div class="post-date">Thursday, May 7th, 2020</div>
+</div>
+<div>
+    <p>A great example of Ruby on Rails "magic" is this:</p>
+<pre>
+2.5.1 :001 > 1.day.ago
+ => Wed, 06 May 2020 20:23:24 UTC +00:00
+</pre>
+
+<p>Very convenient. When I was a beginner to Rails, I thought about <code>1.day.ago</code> as an irreducible incantation. But if you think about what is happening beneath the hood, it's a bit goofy. The numeral <code>1</code> has a method <code>.day</code>, which returns an object which has a method <code>.ago</code>, which returns the date — that is, an object of type <code>ActiveSupport::TimeWithZone</code>.</p>
+<p>Thinking about it this way suggests a question: what is that intermediate object returned by <code>.day</code>?</p>
+<pre>
+2.5.1 :001 > 1.day
+ => 1 day
+2.5.1 :002 > 1.day.class
+ => ActiveSupport::Duration
+</pre>
+
+<p>There are two kinds of time objects: <code>ActiveSupport::TimeWithZone</code> for points in time (datetimes), and <code>ActiveSupport::Duration</code> for distances between points in time. These are different concepts! And you need different ones at different times. You can't add points in time to each other; what's last Friday plus last Sunday? You can only add durations to points in time: last Friday plus one week.</p>
+<p>I remember screwing up this distinction several times when I was a beginning programmer. I'm pretty sure I did things like use python's <code>datetime</code> class with zeroes in everything but the minutes slot to represent a duration. It's nice that the type system stops us here.</p>
+<pre>
+2.5.1 :001 > 1.day.ago + 1.day
+ => Thu, 07 May 2020 20:38:37 UTC +00:00
+2.5.1 :002 > 1.day + 1.day
+ => 2 days
+2.5.1 :003 > 1.day.ago + 1.day.ago
+Traceback (most recent call last):
+        1: from (irb):1
+TypeError (not an integer)
+</pre>
+
+<p>Now here's a new set of goggles to look at this through. In math, an <em>affine space</em> is a set like this where we have points and vectors between them, and we can take vector + point or vector + vector, but not point + point.</p>
+<p>Alternatively, you can see an affine space as a vector space, but if we don't care where the origin is. To see this in the time example, consider that a datetime object can be implemented by storing an integer representing the number of milliseconds since midnight on 1 January 1970 UTC, the "Unix epoch."</p>
+<p>This is an arbitrary point in time which functions as our "zero." If you wanted, you could write a <code>sum_two_datetimes(a, b)</code> routine which simply added <code>a.milliseconds</code> to <code>b.milliseconds</code>. But the result would be nonsense. We can call it nonsense in a principled way by noting that it would depend on the choice of zero. The difference of two datetimes is the same regardless of whether the Unix epoch is in 1970 or 1971, but not the sum. Since we do not want calculations on datetimes to depend on the choice of zero, we must forbid this operation.</p>
+<p>Hence, an affine space is a vector space where we don't want our calculations to depend on where the origin is.</p>
+<p>Another good example of an affine space is... <em>space</em>. Like the 3D space we live in, you know? (Mathematicians call this $\mathbb{R}^3$.) "But wait," you say, "$\mathbb{R}^3$ is a vector space, not an affine space!" Well, what's $\text{Paris} + \text{London}$ then? The result depends on your choice of zero (if you choose the center of the Earth as zero, the location represented by the sum is out in space somewhere, while if you choose Paris as zero, the location represented by the sum is London). Meanwhile, $\text{Paris} - \text{London}$ is always the same thing; the vector pointing from London to Paris.</p>
+<p>I learned about $\mathbb{R}^3$ in a multivariable calculus with a very exciting teacher and it was very exciting. We were going to map out the physical world! We put a point $P$ on the board and it was just a point in the world! "What is a vector?" we were asked, and we chanted "It's just a point!" Then there was a distinction made between "vectors," which were locations in space, and "free vectors," which were just kind of floating around.</p>
+<p>If you treat points in 3D space as elements of $\mathbb{R}^3$, it's weird because you better not add them, even though the rules let you. For this reason, I think the 3D space we live in is best modeled as an affine space, where locations are the points and the <em>vectors</em> are in $\mathbb{R}^3$. I'm sympathetic to not having to introduce the abstract definition of an affine space in your multivariable class, but I think it would have improved my understanding of the theorems if we noted explicitly which things are locations and which are vectors between locations. And it doesn't seem so much more complicated.</p>
+</div>
+<div class="post-tags">
+    
+        <b>Tags:</b>
+        <span>math,</span>
+        <span>programming</span>
+        
+    
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>
