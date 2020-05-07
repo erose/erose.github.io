@@ -1235,6 +1235,24 @@
             "date_completed": "April 25, 2020",
             "title": "The Gilded Auction Block",
             "type": "poetry"
+        },
+        {
+            "author": "W.H. Auden",
+            "date_completed": "May 5, 2020",
+            "title": "Heavy Date",
+            "type": "poetry"
+        },
+        {
+            "author": "W.H. Auden",
+            "date_completed": "May 5, 2020",
+            "title": "The Prophets",
+            "type": "poetry"
+        },
+        {
+            "author": "Kelly O'Sullivan",
+            "date_completed": "May 6, 2020",
+            "title": "Saint Frances",
+            "type": "movie"
         }
     ]
 }
