@@ -1253,6 +1253,12 @@
             "date_completed": "May 6, 2020",
             "title": "Saint Frances",
             "type": "movie"
+        },
+        {
+            "author": "Fiona Apple",
+            "date_completed": "May 12, 2020",
+            "title": "Fetch The Bolt Cutters",
+            "type": "album"
         }
     ]
 }
