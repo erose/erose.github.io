@@ -1265,6 +1265,18 @@
             "date_completed": "May 15, 2020",
             "title": "American Dharma",
             "type": "movie"
+        },
+        {
+            "author": "Orson Welles",
+            "date_completed": "May 20, 2020",
+            "title": "Citizen Kane",
+            "type": "movie"
+        },
+        {
+            "author": "Duncan Trussell",
+            "date_completed": "May 22, 2020",
+            "title": "Midnight Gospel",
+            "type": "tv show"
         }
     ]
 }
