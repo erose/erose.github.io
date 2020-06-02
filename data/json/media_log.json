@@ -1277,6 +1277,24 @@
             "date_completed": "May 22, 2020",
             "title": "Midnight Gospel",
             "type": "tv show"
+        },
+        {
+            "author": "Car Seat Headrest",
+            "date_completed": "May 23, 2020",
+            "title": "Making A Door Less Open",
+            "type": "album"
+        },
+        {
+            "author": "Robert Altman",
+            "date_completed": "May 29, 2020",
+            "title": "Nashville",
+            "type": "movie"
+        },
+        {
+            "author": "Jawbreaker",
+            "date_completed": "June 1, 2020",
+            "title": "Dear You",
+            "type": "album"
         }
     ]
 }
