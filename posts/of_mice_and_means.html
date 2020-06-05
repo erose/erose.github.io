@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code trinkets</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/sierpinski_fermat.html">sierpinksi's triangle and fermat numbers</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">Of Mice and Means</div>
+    <div class="post-date">Friday, June 5th, 2020</div>
+</div>
+<div>
+    <p>The mean of a set of numbers $x_1, x_2 \ldots x_n$ is the unique value $\overline{x}$ which minimizes $\sum (\overline{x} - x_i)^2$, the sum of squared distances between it and the numbers. Why? The mean seems very natural — for example, it's related to intuitive ideas about fairness — but the sum of squares less so. For instance, what's so special about squaring? Why not the sum of fourth powers $\sum (\overline{x} - x_i)^4$ ? Or the sum of unsigned distances $\sum |\overline{x} - x_i|$ ?</p>
+<p>My friend Dillon asked me this question. I felt I knew the answer, due to reading <a href="https://ericneyman.wordpress.com/2019/12/26/beyond-the-mean-median-and-mode/">this post by Eric Neyman</a>. But though I could do the algebra proving it, I wasn't able to convince Dillon (or myself, after a few minutes) of it on an intuitive level. It still felt like there were unanswered questions. It was unsatisfying. This post is my attempt to write an explanation that you can "feel in your bones."</p>
+<h3>Even Split Vs. Center Of Mass</h3>
+<p>I need to start by talking about two concepts.</p>
+<ul>
+<li>Even split. You have n bags of money, containing amounts $\$x_1, \$x_2 \ldots \$x_n$, and you want to divide them fairly among n people. How much should each person get? The answer is the mean of $x_1, x_2 \ldots x_n$.</li>
+<li>Center of mass. You have a ruler with unit weights embedded in it at positions $x_1, x_2 \ldots x_n$. What position do you put your finger at such that the ruler balances on your finger? The answer is at the center of mass of the ruler — the position $x$ such that the sum of the signed distances between $x$ and each $x_i$ is zero. In symbols, the $x$ satisfying $\sum (x_i - x) = 0$.</li>
+</ul>
+<p>Now, if you remember enough introductory physics to believe that, you probably remember that the center of mass of that ruler is the mean of $x_1, x_2 \ldots x_n$. Therefore, it's also the amount each person would get if the n weights were bags of money and you wanted to divide all the money evenly among n people.</p>
+<p>Wow. Why should this be true?</p>
+<h3>Even Split Implies Center Of Mass</h3>
+<p>Let's say $n$ people want to split their winnings from the casino. Consider any way of splitting this money — not necessarily evenly.</p>
+<p>Look at the excess money made by the $i$th person — how much more they got out than what they paid in. Say the $i$th person has won $i_{\text{in}}$ dollars and gets paid $i_{\text{out}}$ dollars, so the excess is $i_{\text{out}} - i_{\text{in}}$. Note someone's excess may be negative; that means they have gotten out less than they paid in.</p>
+<p>Observe that the total excess (the sum of everyone's excesses) must be zero. If it's less than zero, then we have more money to give to someone. If it's greater than zero, then we've somehow conjured money from thin air. So we require that $\sum (i_{\text{out}} - i_{\text{in}}) = 0$.</p>
+<p>Now suppose they do want to split the money evenly; everyone should get the same payout. That means all the $i_{\text{out}}$s will be equal to a single value which we'll call $\overline{x}$.</p>
+<p>What is $\overline{x}$? We know we can <em>calculate</em> it by throwing all our money in a pile and then physically dividing the pile into n equal parts. So $total = \sum i_{\text{in}}$ and $\overline{x} = total / n$. But instead of calculating our answer, let's determine the condition it must satisfy. So, generalize from our condition above by substituting in $\overline{x}$ for every $i_{\text{out}}$ to get $\sum (\overline{x} - i_{\text{in}}) = 0$. We see that this is the same as our "center of mass" condition from before!</p>
+<h3>Minimizing Squared Distance Implies Center Of Mass</h3>
+<p>Let's apply calculus. Take the expression we are trying to minimize, $\sum (\overline{x} - x_i)^2$, with each $x_i$ known but $\overline{x}$ unknown, and consider what its graph looks like. As the sum of a bunch of quadratics, it is itself a quadratic. So it has a single minimum, which is the point where the derivative is zero.</p>
+<p>Solving for $\overline{x}$ in $\frac{d}{d\overline{x}} \sum (\overline{x} - x_i)^2 = 0$, we get $\sum 2(\overline{x} - x_i) = 0$. Because we're setting the expression to zero, the constant 2 doesn't matter, so we can drop it to get $\sum (\overline{x} - x_i) = 0$, which states that the sum of signed distances must be zero; again the "center of mass" condition from before! So the value which minimizes the sum of squared distances will be the unique value for which the sum of signed distances is zero.</p>
+<p>So why is <em>squaring</em> in particular special? What if we had tried to minimize another function like $\sum (\overline{x} - x_i)^4$ ? Well, then we would have $\frac{d}{d\overline{x}} (\overline{x} - x_i)^4$, which is $4(\overline{x} - x_i)^3$, and we would need the sum of those to equal zero.</p>
+<p>This is just a different condition, and it does not give you the mean. What's special about the squaring function is that its derivative is linear, so the sum of the derivatives is the sum of signed distances. The sum of signed distances needing to equal zero — the "center of mass" condition — is what gives rise to the mean.</p>
+<h3>The Final Explanation</h3>
+<p>The value that minimizes the sum of squared distances will be the same as the payout everyone gets when they split the pool equally, because:</p>
+<ul>
+<li><em>any</em> split requires that the sum of the excesses must be zero</li>
+<li>an <em>even</em> split requires you to find a single payout such that the sum of the excesses is zero</li>
+<li>that means you're finding a point such that the sum of signed distances is zero</li>
+<li>any such point is exactly the point at which the sum of squares is minimized, since<ul>
+<li>the sum of signed distances tells you how fast the sum of squares is changing</li>
+<li>the sum of squares is minimized exactly when its rate of change is zero</li>
+</ul>
+</li>
+</ul>
+<p>Can you feel this in your bones? I think I can, but I have to try pretty hard. It's a fair number of steps. It seems like the concepts "even split" and "sum of squared distances" are legitimately distant, and surprisingly related.</p>
+<hr />
+<p>Here's a bonus explanation.</p>
+<h3>The Median Minimizes Unsigned Distance</h3>
+<p>I mentioned the sum of unsigned distances $\sum |\overline{x} - x_i|$ at the beginning of this post. It turns out that the thing minimizing this is the median! This is somewhat easier to see. Imagine your numbers again as weights on a ruler. You want to choose a point such that the sum of distances between each point and your weight is minimized.</p>
+<p>Consider the leftmost and rightmost weights, corresponding to the smallest and largest numbers.</p>
+<ul>
+<li>Observe that you want to be between those weights; if you're not, then they're both in the same direction from you, so you can improve your standing by just moving in that direction.</li>
+<li>Observe that, if you <em>are</em> between those weights, as far as they're concerned it doesn't matter where you are. Call them $a$ and $b$; anything you gain by moving towards $a$ is exactly offset by what you lose by moving towards $b$, and vice versa.</li>
+</ul>
+<p>So by looking at the outer pair of weights, we conclude that if we put ourselves between them, then we can safely ignore them for the remainder of the analysis.</p>
+<p>Next, apply this analysis to place ourselves between the second-outermost pair of weights. Repeat. If you have an even number of weights, this will work until you run out. If you have an odd number of weights, you'll end up with one weight left to consider (the middle one), and it's easy to conclude that you should just place yourself on top of it to minimize the distance to it.</p>
+<p>Note that this analysis doesn't place you anywhere in particular between the last pair of weights. And indeed, if you have the list of numbers 0, 1, 5, 8, 20, 23, every value in the interval [5, 8] minimizes the sum of unsigned distances. So under this definition, there is no single median of an even-length list. I got this point from <a href="https://ericneyman.wordpress.com/2019/12/26/beyond-the-mean-median-and-mode/">Eric Neyman's post</a>.</p>
+</div>
+<div class="post-tags">
+    
+        <b>Tags:</b>
+        <span>math,</span>
+        <span>statistics</span>
+        
+    
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>
