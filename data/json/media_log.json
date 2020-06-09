@@ -1295,6 +1295,12 @@
             "date_completed": "June 1, 2020",
             "title": "Dear You",
             "type": "album"
+        },
+        {
+            "author": "Anthony Doerr",
+            "date_completed": "June 9, 2020",
+            "title": "Best American Short Stories 2019",
+            "type": "short stories"
         }
     ]
 }
