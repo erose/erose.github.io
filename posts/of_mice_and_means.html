@@ -101,6 +101,7 @@
 </ul>
 <p>So by looking at the outer pair of weights, we conclude that if we put ourselves between them, then we can safely ignore them for the remainder of the analysis.</p>
 <p>Next, apply this analysis to place ourselves between the second-outermost pair of weights. Repeat. If you have an even number of weights, this will work until you run out. If you have an odd number of weights, you'll end up with one weight left to consider (the middle one), and it's easy to conclude that you should just place yourself on top of it to minimize the distance to it.</p>
+<p>This argument focusing just on the ends — the leftmost and rightmost — of the list of numbers doesn't work for minimizing the sum of squared distances, since the contributions from $a$ and $b$ no longer cancel each other out. So the ends don't justify the mean after all, though they do justify the median.</p>
 <p>Note that this analysis doesn't place you anywhere in particular between the last pair of weights. And indeed, if you have the list of numbers 0, 1, 5, 8, 20, 23, every value in the interval [5, 8] minimizes the sum of unsigned distances. So under this definition, there is no single median of an even-length list. I got this point from <a href="https://ericneyman.wordpress.com/2019/12/26/beyond-the-mean-median-and-mode/">Eric Neyman's post</a>.</p>
 </div>
 <div class="post-tags">
