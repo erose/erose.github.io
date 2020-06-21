@@ -1307,6 +1307,18 @@
             "date_completed": "June 9, 2020",
             "title": "Making A Door Less Open",
             "type": "album"
+        },
+        {
+            "author": "Bobcat Goldthwait",
+            "date_completed": "June 18, 2020",
+            "title": "Call Me Lucky",
+            "type": "movie"
+        },
+        {
+            "author": "Hans Rosling",
+            "date_completed": "June 21, 2020",
+            "title": "Factfulness: Ten Reasons We're Wrong About the World--and Why Things Are Better Than You Think",
+            "type": "nonfiction"
         }
     ]
 }
