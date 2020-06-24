@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/openphil/survey-prototype-june-2020/precache-manifest.bacc66d9768221d459b792fd4dcc113e.js"
+  "/openphil/survey-prototype-june-2020/precache-manifest.f57534f84849c4303cf2ba3e9d125ff8.js"
 );
 
 self.addEventListener('message', (event) => {
