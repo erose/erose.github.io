@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8"/>
+  <style>
+    .item {
+      border: 1px solid black;
+      margin-bottom: 1rem;
+
+      position: absolute;
+    }
+  </style>
+
+  <script>
+    var beingDragged; // which element is currently being dragged?
+    var offsetX;
+    var offsetY;
+
+    // Keep track of the current mouse position.
+    var cursorX;
+    var cursorY;
+    document.onmousemove = function(e){
+      cursorX = e.pageX;
+      cursorY = e.pageY;
+    }
+
+    // Create a new item at the current mouse position when the user presses spacebar.
+    document.onkeydown = function(e) {
+      if (e.key !== ' ') {
+        return;
+      }
+
+      e.preventDefault();
+
+      var newItem = document.createElement("textarea");
+      newItem.classList.add("item");
+      newItem.draggable = "true";
+      newItem.ondragstart = onDragstart;
+
+      document.getElementById('dragging-area').appendChild(newItem);
+
+      // Set its position.
+      newItem.style.left = cursorX + "px";
+      newItem.style.top = cursorY + "px";
+    }
+
+    function onDragstart(e) {
+      beingDragged = e.target;
+      offsetX = e.offsetX;
+      offsetY = e.offsetY;
+    }
+
+    function onDrop(e) {
+      beingDragged.style.left = (e.x - offsetX) + "px";
+      beingDragged.style.top = (e.y - offsetY) + "px";
+
+      offsetX = undefined;
+      offsetY = undefined;
+      beingDragged = undefined;
+    }
+
+    function onDragover(e) {
+      e.preventDefault(); // necessary to allow the drop event to fire.
+      e.dataTransfer.dropEffect = "move"; // TODO explain.
+    }
+  </script>
+</head>
+
+<body>
+  <p>
+    Press space to create a new item.
+  </p>
+
+  <div id='dragging-area' style="width: 100%; height: 40rem; background-color: #ffe6e6;" ondragover="onDragover(event)" ondrop="onDrop(event)">
+    <textarea class="item" draggable="true" ondragstart="onDragstart(event)"></textarea>
+  </div>
+</body>
+
+</html>
