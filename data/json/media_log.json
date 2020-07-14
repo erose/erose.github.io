@@ -1319,6 +1319,18 @@
             "date_completed": "June 21, 2020",
             "title": "Factfulness: Ten Reasons We're Wrong About the World--and Why Things Are Better Than You Think",
             "type": "nonfiction"
+        },
+        {
+            "author": "Franz Kafka",
+            "date_completed": "July 10, 2020",
+            "title": "Before the Law",
+            "type": "short story"
+        },
+        {
+            "author": "Max Barbakow",
+            "date_completed": "July 13, 2020",
+            "title": "Palm Springs",
+            "type": "movie"
         }
     ]
 }
