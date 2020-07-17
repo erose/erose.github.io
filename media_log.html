@@ -61,12 +61,51 @@
   </ul>
 </div>
 
+<style>
+  #media-list {
+    list-style-type: none;
+  }
+</style>
+
 <script>
+
 // Returns the literal HTML of a list element.
-var htmlForEntry = function(object) {
+function htmlForEntry(object) {
   return _.template(
-    "<li><b><%= object.title %></b> by <%= object.author %>. <i>Finished on <%= object.date_completed %></i>.</li>"
-  )({object: object});
+    "<li class='media-list-item'><%= emoji %> <b><%= object.title %></b> by <%= object.author %>. <i>Finished on <%= object.date_completed %></i>.</li>"
+  )({object: object, emoji: emojiForObject(object)});
+}
+
+function emojiForObject(object) {
+  switch (object.type) {
+    case 'album':
+      return '💿';
+      break;
+    case 'movie':
+      return '🎥';
+      break;
+    case 'novel':
+    case 'essays':
+    case 'nonfiction':
+    case 'short stories':
+    case 'short story':
+    case 'poetry':
+      return '📗';
+      break;
+    case 'academic paper':
+      return '📜';
+      break;
+    case 'tv show':
+      return '📺';
+      break;
+    case 'comic':
+    case 'webcomic':
+      return '🖼️';
+      break;
+    default:
+      throw 'Unexpected object type: ' + object.type;
+      break;
+  }
 }
 
 $(document).ready(function(){
