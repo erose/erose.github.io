@@ -1331,6 +1331,18 @@
             "date_completed": "July 13, 2020",
             "title": "Palm Springs",
             "type": "movie"
+        },
+        {
+            "author": "Taylor Swift",
+            "date_completed": "July 24, 2020",
+            "title": "folklore",
+            "type": "album"
+        },
+        {
+            "author": "Chimimanda Ngozi Adichie",
+            "date_completed": "July 26, 2020",
+            "title": "Half a Yellow Sun",
+            "type": "novel"
         }
     ]
 }
