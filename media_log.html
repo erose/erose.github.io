@@ -64,6 +64,11 @@
 <style>
   #media-list {
     list-style-type: none;
+    margin-left: 2rem;
+  }
+
+  .media-list-item > .title-and-author {
+    text-indent: -2rem; /* The combination of negative text-indent and margin causes all lines except the first to be indented. */
   }
 </style>
 
@@ -72,7 +77,7 @@
 // Returns the literal HTML of a list element.
 function htmlForEntry(object) {
   return _.template(
-    "<li class='media-list-item'><%= emoji %> <b><%= object.title %></b> by <%= object.author %>. <i>Finished on <%= object.date_completed %></i>.</li>"
+    "<li class='media-list-item'><div class='title-and-author'><%= emoji %> <b><%= object.title %></b> by <%= object.author %>.</div><div><i>Finished on <%= object.date_completed %></i>.</div></li>"
   )({object: object, emoji: emojiForObject(object)});
 }
 
