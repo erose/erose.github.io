@@ -1343,6 +1343,18 @@
             "date_completed": "July 26, 2020",
             "title": "Half a Yellow Sun",
             "type": "novel"
+        },
+        {
+            "author": "Vernor Vinge",
+            "date_completed": "August 1, 2020",
+            "title": "Fast Times at Fairmont High",
+            "type": "short story"
+        },
+        {
+            "author": "Furniture",
+            "date_completed": "August 1, 2020",
+            "title": "with reckless confidence",
+            "type": "album"
         }
     ]
 }
