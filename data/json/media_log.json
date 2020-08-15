@@ -1355,6 +1355,18 @@
             "date_completed": "August 1, 2020",
             "title": "with reckless confidence",
             "type": "album"
+        },
+        {
+            "author": "Furniture",
+            "date_completed": "August 13, 2020",
+            "title": "Universe City",
+            "type": "album"
+        },
+        {
+            "author": "Daniel DiMauro and Morgan Pehme",
+            "date_completed": "August 15, 2020",
+            "title": "The Swamp",
+            "type": "movie"
         }
     ]
 }
