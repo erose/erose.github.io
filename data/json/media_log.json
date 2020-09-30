@@ -1373,6 +1373,18 @@
             "date_completed": "August 25, 2020",
             "title": "Ultimate Success Today",
             "type": "album"
+        },
+        {
+            "author": "Charlie Kaufman",
+            "date_completed": "September 8, 2020",
+            "title": "I'm Thinking of Ending Things",
+            "type": "movie"
+        },
+        {
+            "author": "The Mountain Goats",
+            "date_completed": "September 20, 2020",
+            "title": "Songs for Pierre Chuvin",
+            "type": "album"
         }
     ]
 }
