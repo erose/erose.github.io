@@ -1385,6 +1385,12 @@
             "date_completed": "September 20, 2020",
             "title": "Songs for Pierre Chuvin",
             "type": "album"
+        },
+        {
+            "author": "Elliott Smith",
+            "date_completed": "October 6, 2020",
+            "title": "XO",
+            "type": "album"
         }
     ]
 }
