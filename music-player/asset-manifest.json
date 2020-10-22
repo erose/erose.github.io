@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/music-player/static/css/main.1b9b549b.chunk.css",
-    "main.js": "/music-player/static/js/main.3a0b2c3c.chunk.js",
-    "main.js.map": "/music-player/static/js/main.3a0b2c3c.chunk.js.map",
+    "main.js": "/music-player/static/js/main.297e4c7c.chunk.js",
+    "main.js.map": "/music-player/static/js/main.297e4c7c.chunk.js.map",
     "runtime-main.js": "/music-player/static/js/runtime-main.04ad0482.js",
     "runtime-main.js.map": "/music-player/static/js/runtime-main.04ad0482.js.map",
-    "static/js/2.f85c63dc.chunk.js": "/music-player/static/js/2.f85c63dc.chunk.js",
-    "static/js/2.f85c63dc.chunk.js.map": "/music-player/static/js/2.f85c63dc.chunk.js.map",
+    "static/js/2.f29666a4.chunk.js": "/music-player/static/js/2.f29666a4.chunk.js",
+    "static/js/2.f29666a4.chunk.js.map": "/music-player/static/js/2.f29666a4.chunk.js.map",
     "index.html": "/music-player/index.html",
-    "precache-manifest.1a32cbffd25c7db8cb1017c594f90381.js": "/music-player/precache-manifest.1a32cbffd25c7db8cb1017c594f90381.js",
+    "precache-manifest.97b6df1a0df62709f4a1ac0ab4a8e305.js": "/music-player/precache-manifest.97b6df1a0df62709f4a1ac0ab4a8e305.js",
     "service-worker.js": "/music-player/service-worker.js",
     "static/css/main.1b9b549b.chunk.css.map": "/music-player/static/css/main.1b9b549b.chunk.css.map",
-    "static/js/2.f85c63dc.chunk.js.LICENSE.txt": "/music-player/static/js/2.f85c63dc.chunk.js.LICENSE.txt",
+    "static/js/2.f29666a4.chunk.js.LICENSE.txt": "/music-player/static/js/2.f29666a4.chunk.js.LICENSE.txt",
     "static/media/pause.svg": "/music-player/static/media/pause.c7564688.svg",
     "static/media/play.svg": "/music-player/static/media/play.53d7188e.svg",
     "static/media/spinner.ico": "/music-player/static/media/spinner.2f27f045.ico"
   },
   "entrypoints": [
     "static/js/runtime-main.04ad0482.js",
-    "static/js/2.f85c63dc.chunk.js",
+    "static/js/2.f29666a4.chunk.js",
     "static/css/main.1b9b549b.chunk.css",
-    "static/js/main.3a0b2c3c.chunk.js"
+    "static/js/main.297e4c7c.chunk.js"
   ]
 }
