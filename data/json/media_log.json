@@ -1391,6 +1391,42 @@
             "date_completed": "October 6, 2020",
             "title": "XO",
             "type": "album"
+        },
+        {
+            "author": "Open Mike Eagle",
+            "date_completed": "October 10, 2020",
+            "title": "Anime, Trauma and Divorce",
+            "type": "album"
+        },
+        {
+            "author": "Silver Jews",
+            "date_completed": "November 1, 2020",
+            "title": "American Water",
+            "type": "album"
+        },
+        {
+            "author": "Silver Jews",
+            "date_completed": "November 1, 2020",
+            "title": "The Natural Bridge",
+            "type": "album"
+        },
+        {
+            "author": "Bright Eyes",
+            "date_completed": "November 11, 2020",
+            "title": "Down in the Weeds, Where the World Once Was",
+            "type": "album"
+        },
+        {
+            "author": "Jake McKelvie & the Countertops",
+            "date_completed": "November 12, 2020",
+            "title": "Here's What You Do",
+            "type": "album"
+        },
+        {
+            "author": "Mushi Production",
+            "date_completed": "November 17, 2020",
+            "title": "Belladonna of Sadness",
+            "type": "movie"
         }
     ]
 }
