@@ -1427,6 +1427,18 @@
             "date_completed": "November 17, 2020",
             "title": "Belladonna of Sadness",
             "type": "movie"
+        },
+        {
+            "author": "Michaela Coel",
+            "date_completed": "November 23, 2020",
+            "title": "I May Destroy You (Season 1)",
+            "type": "tv show"
+        },
+        {
+            "author": "Martin Scorsese",
+            "date_completed": "November 29, 2020",
+            "title": "The King of Comedy",
+            "type": "movie"
         }
     ]
 }
