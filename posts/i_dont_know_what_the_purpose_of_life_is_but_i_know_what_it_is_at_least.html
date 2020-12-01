@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevent the browser from scaling down the entire page to fit the screen. See https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eli's Blog</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/katex.css"> <!-- CSS for the rendered LaTeX. -->
+
+    <script src="/static/js/lodash.min.js"></script>
+    <script src="/static/js/jquery-2.2.2.js"></script>
+    <script src="/static/js/katex.min.js"></script>
+    <script src="/static/js/auto-render.min.js"></script>
+
+    
+<link rel="stylesheet" href="/static/css/post.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <a class="title" href="/index.html">Eli Rose</a> 's
+                <a href="/index.html">posts</a>
+                &sdot;
+                <a href="/about.html">about</a>
+                &sdot;
+                <span class="dropdown">
+                    <a href="javascript:void(0)">code trinkets</a>
+                    <div class="dropdown-content">
+                        <div>&sdot; <a href="/game_of_life.html">conway's game of life (in Elm)</a></div>
+                        <div>&sdot; <a href="/turing.html">turing</a></div>
+                        <div>&sdot; <a href="/sierpinski_fermat.html">sierpinksi's triangle and fermat numbers</a></div>
+                        <div>&sdot; <a href="/fraction_pattern.html">fraction pattern</a></div>
+                        <div>&sdot; <a href="/markov_text.html">literature scrambler</a></div>
+                    </div>
+                </span>
+                &sdot;
+                <a href="/quotes.html">quotes</a>
+                &sdot;
+                <a href="/media_log.html">media log</a>
+            </div>
+
+            <a href="/rss.xml">
+                <img class="rss-icon" src="/static/images/feed-icon-28x28.png">
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            
+<div class="post-header">
+    <div class="post-title">I Don't Know What The Purpose of Life Is, But I Know What It Is At Least (poem)</div>
+    <div class="post-date">Monday, November 30th, 2020</div>
+</div>
+<div>
+    <style>
+  .stanza {
+    margin-bottom: 1.5rem;
+  }
+
+  .stanza p {
+    margin: 0;
+  }
+</style>
+
+<div class='stanza'>
+<p>What is best in life?</p>
+<p>That men should not die in the street.</p>
+</div>
+
+<div class='stanza'>
+<p>What is the finest pleasure?</p>
+<p>The finest, most discerning taste</p>
+<p>Is for a lack of men dying in the street.</p>
+</div>
+
+<div class='stanza'>
+<p>The most beautiful music</p>
+<p>Is men not dying in the street.</p>
+</div>
+
+<div class='stanza'>
+<p>The perfect work of sculpture</p>
+<p>Is no men dying in the street.</p>
+</div>
+
+<div class='stanza'>
+<p>The most divinely crafted story</p>
+<p>Is no men dying in the street.</p>
+</div>
+</div>
+<div class="post-tags">
+    
+        <b>Tags:</b>
+        <span>authored by me,</span>
+        <span>poetry</span>
+        
+    
+</div>
+
+        </div>
+    </div>
+
+    <!-- Automatically render the LaTeX that appears in the page. -->
+    <script>
+        renderMathInElement(
+            document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            }
+        )
+    </script>
+
+</body>
+</html>
