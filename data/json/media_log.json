@@ -1439,6 +1439,36 @@
             "date_completed": "November 29, 2020",
             "title": "The King of Comedy",
             "type": "movie"
+        },
+        {
+            "author": "Aesop Rock",
+            "date_completed": "December 10, 2020",
+            "title": "Spirit World Field Guide",
+            "type": "album"
+        },
+        {
+            "author": "Marc Webb",
+            "date_completed": "December 18, 2020",
+            "title": "The Amazing Spider Man",
+            "type": "movie"
+        },
+        {
+            "author": "John Wilson",
+            "date_completed": "January 5, 2021",
+            "title": "How To With John Wilson",
+            "type": "tv show"
+        },
+        {
+            "author": "Dirty Projectors",
+            "date_completed": "January 10, 2021",
+            "title": "Bitte Orca",
+            "type": "album"
+        },
+        {
+            "author": "Lucy Prebble",
+            "date_completed": "January 15, 2021",
+            "title": "I Hate Suzie",
+            "type": "tv show"
         }
     ]
 }
