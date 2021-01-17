@@ -1469,6 +1469,12 @@
             "date_completed": "January 15, 2021",
             "title": "I Hate Suzie",
             "type": "tv show"
+        },
+        {
+            "author": "The Mountain Goats",
+            "date_completed": "December 7, 2021",
+            "title": "Getting Into Knives",
+            "type": "album"
         }
     ]
 }
