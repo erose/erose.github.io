@@ -1447,6 +1447,12 @@
             "type": "album"
         },
         {
+            "author": "The Mountain Goats",
+            "date_completed": "December 7, 2020",
+            "title": "Getting Into Knives",
+            "type": "album"
+        },
+        {
             "author": "Marc Webb",
             "date_completed": "December 18, 2020",
             "title": "The Amazing Spider Man",
@@ -1469,12 +1475,6 @@
             "date_completed": "January 15, 2021",
             "title": "I Hate Suzie",
             "type": "tv show"
-        },
-        {
-            "author": "The Mountain Goats",
-            "date_completed": "December 7, 2020",
-            "title": "Getting Into Knives",
-            "type": "album"
         }
     ]
 }
