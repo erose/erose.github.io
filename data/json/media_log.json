@@ -1441,15 +1441,15 @@
             "type": "movie"
         },
         {
-            "author": "Aesop Rock",
-            "date_completed": "December 10, 2020",
-            "title": "Spirit World Field Guide",
-            "type": "album"
-        },
-        {
             "author": "The Mountain Goats",
             "date_completed": "December 7, 2020",
             "title": "Getting Into Knives",
+            "type": "album"
+        },
+        {
+            "author": "Aesop Rock",
+            "date_completed": "December 10, 2020",
+            "title": "Spirit World Field Guide",
             "type": "album"
         },
         {
@@ -1475,6 +1475,12 @@
             "date_completed": "January 15, 2021",
             "title": "I Hate Suzie",
             "type": "tv show"
+        },
+        {
+            "author": "Evan Morgan",
+            "date_completed": "February 14, 2021",
+            "title": "The Kid Detective",
+            "type": "movie"
         }
     ]
 }
