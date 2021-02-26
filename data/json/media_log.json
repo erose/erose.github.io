@@ -1481,6 +1481,18 @@
             "date_completed": "February 14, 2021",
             "title": "The Kid Detective",
             "type": "movie"
+        },
+        {
+            "author": "Martha Coolidge",
+            "date_completed": "February 20, 2021",
+            "title": "Real Genius",
+            "type": "movie"
+        },
+        {
+            "author": "Shame",
+            "date_completed": "February 25, 2021",
+            "title": "Drunk Tank Pink",
+            "type": "album"
         }
     ]
 }
