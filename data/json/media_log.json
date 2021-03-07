@@ -1493,6 +1493,24 @@
             "date_completed": "February 25, 2021",
             "title": "Drunk Tank Pink",
             "type": "album"
+        },
+        {
+            "author": "Lance Oppenheim",
+            "date_completed": "February 28, 2021",
+            "title": "Some Kind of Heaven",
+            "type": "movie"
+        },
+        {
+            "author": "Miranda July",
+            "date_completed": "March 5, 2021",
+            "title": "Kajillionaire",
+            "type": "movie"
+        },
+        {
+            "author": "Kurt Vonnegut",
+            "date_completed": "March 6, 2021",
+            "title": "God Bless You, Mr. Rosewater",
+            "type": "novel"
         }
     ]
 }
