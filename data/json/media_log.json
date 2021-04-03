@@ -1511,6 +1511,12 @@
             "date_completed": "March 6, 2021",
             "title": "God Bless You, Mr. Rosewater",
             "type": "novel"
+        },
+        {
+            "author": "Adam Wingard",
+            "date_completed": "April 2, 2021",
+            "title": "Godzilla vs. King Kong",
+            "type": "movie"
         }
     ]
 }
