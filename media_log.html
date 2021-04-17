@@ -76,9 +76,17 @@
 
 // Returns the literal HTML of a list element.
 function htmlForEntry(object) {
-  return _.template(
-    "<li class='media-list-item'><div class='title-and-author'><%= emoji %> <b><%= object.title %></b> by <%= object.author %>.</div><div><i>Finished on <%= object.date_completed %></i>.</div></li>"
-  )({object: object, emoji: emojiForObject(object)});
+  const templateString = [
+    "<li class='media-list-item'>",
+    "<div class='title-and-author'>",
+    "<%= emoji %> ",
+    "<b><%= object.title %></b>",
+    "<%= object.author ? (' by ' + object.author) : '' %>.",
+    "</div>",
+    "<div><i>Finished on <%= object.date_completed %></i>.</div>",
+    "</li>",
+  ].join("");
+  return _.template(templateString)({object: object, emoji: emojiForObject(object)});
 }
 
 function emojiForObject(object) {
