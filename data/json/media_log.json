@@ -1517,6 +1517,18 @@
             "date_completed": "April 2, 2021",
             "title": "Godzilla vs. King Kong",
             "type": "movie"
+        },
+        {
+            "author": "Golden Palominos",
+            "date_completed": "April 9, 2021",
+            "title": "Dead Inside",
+            "type": "album"
+        },
+        {
+            "author": "",
+            "date_completed": "April 13, 2021",
+            "title": "Best American Short Stories 2020",
+            "type": "short stories"
         }
     ]
 }
