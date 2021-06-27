@@ -1529,6 +1529,18 @@
             "date_completed": "April 13, 2021",
             "title": "Best American Short Stories 2020",
             "type": "short stories"
+        },
+        {
+            "author": "Del Amitri",
+            "date_completed": "June 18, 2021",
+            "title": "Fatal Mistakes",
+            "type": "album"
+        },
+        {
+            "author": "Ada Palmer",
+            "date_completed": "June 20, 2021",
+            "title": "Too Like The Lightning",
+            "type": "novel"
         }
     ]
 }
