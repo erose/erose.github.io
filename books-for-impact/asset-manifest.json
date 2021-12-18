@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.895eecac.chunk.css",
+    "main.js": "/static/js/main.1ce764eb.chunk.js",
+    "main.js.map": "/static/js/main.1ce764eb.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.087b07e6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.087b07e6.js.map",
+    "static/js/2.24276787.chunk.js": "/static/js/2.24276787.chunk.js",
+    "static/js/2.24276787.chunk.js.map": "/static/js/2.24276787.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.895eecac.chunk.css.map": "/static/css/main.895eecac.chunk.css.map",
+    "static/js/2.24276787.chunk.js.LICENSE.txt": "/static/js/2.24276787.chunk.js.LICENSE.txt",
+    "static/media/80000-hours-cover.3c7f3500.png": "/static/media/80000-hours-cover.3c7f3500.png",
+    "static/media/index.scss": "/static/media/SabonRoman.5e0b9b34.woff2",
+    "static/media/doing-good-better-cover.7d767840.jpg": "/static/media/doing-good-better-cover.7d767840.jpg",
+    "static/media/human-compatible-cover.2e51980e.jpg": "/static/media/human-compatible-cover.2e51980e.jpg",
+    "static/media/map-and-territory-cover.62901bcf.jpg": "/static/media/map-and-territory-cover.62901bcf.jpg",
+    "static/media/scout-mindset-cover.efc669e9.jpg": "/static/media/scout-mindset-cover.efc669e9.jpg",
+    "static/media/superintelligence-cover.cf7e6539.jpg": "/static/media/superintelligence-cover.cf7e6539.jpg",
+    "static/media/the-precipice-cover.35bd0939.jpg": "/static/media/the-precipice-cover.35bd0939.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.087b07e6.js",
+    "static/js/2.24276787.chunk.js",
+    "static/css/main.895eecac.chunk.css",
+    "static/js/main.1ce764eb.chunk.js"
+  ]
+}
