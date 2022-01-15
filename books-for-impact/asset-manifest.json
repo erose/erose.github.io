@@ -1,28 +1,39 @@
 {
   "files": {
-    "main.css": "/books-for-impact/static/css/main.65c6bc0d.chunk.css",
-    "main.js": "/books-for-impact/static/js/main.1ce764eb.chunk.js",
-    "main.js.map": "/books-for-impact/static/js/main.1ce764eb.chunk.js.map",
+    "main.css": "/books-for-impact/static/css/main.0dfee56c.chunk.css",
+    "main.js": "/books-for-impact/static/js/main.bdee239a.chunk.js",
+    "main.js.map": "/books-for-impact/static/js/main.bdee239a.chunk.js.map",
     "runtime-main.js": "/books-for-impact/static/js/runtime-main.adc02ef9.js",
     "runtime-main.js.map": "/books-for-impact/static/js/runtime-main.adc02ef9.js.map",
-    "static/js/2.24276787.chunk.js": "/books-for-impact/static/js/2.24276787.chunk.js",
-    "static/js/2.24276787.chunk.js.map": "/books-for-impact/static/js/2.24276787.chunk.js.map",
+    "static/js/2.326e94b1.chunk.js": "/books-for-impact/static/js/2.326e94b1.chunk.js",
+    "static/js/2.326e94b1.chunk.js.map": "/books-for-impact/static/js/2.326e94b1.chunk.js.map",
     "index.html": "/books-for-impact/index.html",
-    "static/css/main.65c6bc0d.chunk.css.map": "/books-for-impact/static/css/main.65c6bc0d.chunk.css.map",
-    "static/js/2.24276787.chunk.js.LICENSE.txt": "/books-for-impact/static/js/2.24276787.chunk.js.LICENSE.txt",
+    "static/css/main.0dfee56c.chunk.css.map": "/books-for-impact/static/css/main.0dfee56c.chunk.css.map",
+    "static/js/2.326e94b1.chunk.js.LICENSE.txt": "/books-for-impact/static/js/2.326e94b1.chunk.js.LICENSE.txt",
+    "static/media/1984-cover.2a180e0f.jpg": "/books-for-impact/static/media/1984-cover.2a180e0f.jpg",
     "static/media/80000-hours-cover.3c7f3500.png": "/books-for-impact/static/media/80000-hours-cover.3c7f3500.png",
     "static/media/index.scss": "/books-for-impact/static/media/SabonRoman.5e0b9b34.woff2",
+    "static/media/animal-liberation-cover.9b5b540f.jpg": "/books-for-impact/static/media/animal-liberation-cover.9b5b540f.jpg",
     "static/media/doing-good-better-cover.7d767840.jpg": "/books-for-impact/static/media/doing-good-better-cover.7d767840.jpg",
+    "static/media/factfulness-cover.c76ba736.jpg": "/books-for-impact/static/media/factfulness-cover.c76ba736.jpg",
+    "static/media/grokking-deep-learning-cover.cf20f723.png": "/books-for-impact/static/media/grokking-deep-learning-cover.cf20f723.png",
     "static/media/human-compatible-cover.2e51980e.jpg": "/books-for-impact/static/media/human-compatible-cover.2e51980e.jpg",
     "static/media/map-and-territory-cover.62901bcf.jpg": "/books-for-impact/static/media/map-and-territory-cover.62901bcf.jpg",
+    "static/media/poor-economics-cover.95fdbe56.jpg": "/books-for-impact/static/media/poor-economics-cover.95fdbe56.jpg",
+    "static/media/reasons-and-persons-cover.b992f185.jpg": "/books-for-impact/static/media/reasons-and-persons-cover.b992f185.jpg",
     "static/media/scout-mindset-cover.efc669e9.jpg": "/books-for-impact/static/media/scout-mindset-cover.efc669e9.jpg",
+    "static/media/superforecasting-cover.27de4035.jpg": "/books-for-impact/static/media/superforecasting-cover.27de4035.jpg",
     "static/media/superintelligence-cover.cf7e6539.jpg": "/books-for-impact/static/media/superintelligence-cover.cf7e6539.jpg",
-    "static/media/the-precipice-cover.35bd0939.jpg": "/books-for-impact/static/media/the-precipice-cover.35bd0939.jpg"
+    "static/media/the-dead-hand-cover.ae7a7335.jpg": "/books-for-impact/static/media/the-dead-hand-cover.ae7a7335.jpg",
+    "static/media/the-most-important-century-cover.7e8859b0.png": "/books-for-impact/static/media/the-most-important-century-cover.7e8859b0.png",
+    "static/media/the-precipice-cover.35bd0939.jpg": "/books-for-impact/static/media/the-precipice-cover.35bd0939.jpg",
+    "static/media/the-whole-sky-cover.bfc8b622.png": "/books-for-impact/static/media/the-whole-sky-cover.bfc8b622.png",
+    "static/media/under-a-white-sky-cover.3a96aefc.jpg": "/books-for-impact/static/media/under-a-white-sky-cover.3a96aefc.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.adc02ef9.js",
-    "static/js/2.24276787.chunk.js",
-    "static/css/main.65c6bc0d.chunk.css",
-    "static/js/main.1ce764eb.chunk.js"
+    "static/js/2.326e94b1.chunk.js",
+    "static/css/main.0dfee56c.chunk.css",
+    "static/js/main.bdee239a.chunk.js"
   ]
 }
