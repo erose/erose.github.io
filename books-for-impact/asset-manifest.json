@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/books-for-impact/static/css/main.0dfee56c.chunk.css",
-    "main.js": "/books-for-impact/static/js/main.bdee239a.chunk.js",
-    "main.js.map": "/books-for-impact/static/js/main.bdee239a.chunk.js.map",
+    "main.css": "/books-for-impact/static/css/main.2cfc9513.chunk.css",
+    "main.js": "/books-for-impact/static/js/main.a1a78a6d.chunk.js",
+    "main.js.map": "/books-for-impact/static/js/main.a1a78a6d.chunk.js.map",
     "runtime-main.js": "/books-for-impact/static/js/runtime-main.adc02ef9.js",
     "runtime-main.js.map": "/books-for-impact/static/js/runtime-main.adc02ef9.js.map",
     "static/js/2.326e94b1.chunk.js": "/books-for-impact/static/js/2.326e94b1.chunk.js",
     "static/js/2.326e94b1.chunk.js.map": "/books-for-impact/static/js/2.326e94b1.chunk.js.map",
     "index.html": "/books-for-impact/index.html",
-    "static/css/main.0dfee56c.chunk.css.map": "/books-for-impact/static/css/main.0dfee56c.chunk.css.map",
+    "static/css/main.2cfc9513.chunk.css.map": "/books-for-impact/static/css/main.2cfc9513.chunk.css.map",
     "static/js/2.326e94b1.chunk.js.LICENSE.txt": "/books-for-impact/static/js/2.326e94b1.chunk.js.LICENSE.txt",
     "static/media/1984-cover.2a180e0f.jpg": "/books-for-impact/static/media/1984-cover.2a180e0f.jpg",
     "static/media/80000-hours-cover.3c7f3500.png": "/books-for-impact/static/media/80000-hours-cover.3c7f3500.png",
@@ -33,7 +33,7 @@
   "entrypoints": [
     "static/js/runtime-main.adc02ef9.js",
     "static/js/2.326e94b1.chunk.js",
-    "static/css/main.0dfee56c.chunk.css",
-    "static/js/main.bdee239a.chunk.js"
+    "static/css/main.2cfc9513.chunk.css",
+    "static/js/main.a1a78a6d.chunk.js"
   ]
 }
