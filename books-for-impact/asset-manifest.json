@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/books-for-impact/static/css/main.2cfc9513.chunk.css",
-    "main.js": "/books-for-impact/static/js/main.f666c880.chunk.js",
-    "main.js.map": "/books-for-impact/static/js/main.f666c880.chunk.js.map",
+    "main.css": "/books-for-impact/static/css/main.950fb51e.chunk.css",
+    "main.js": "/books-for-impact/static/js/main.46312578.chunk.js",
+    "main.js.map": "/books-for-impact/static/js/main.46312578.chunk.js.map",
     "runtime-main.js": "/books-for-impact/static/js/runtime-main.adc02ef9.js",
     "runtime-main.js.map": "/books-for-impact/static/js/runtime-main.adc02ef9.js.map",
     "static/js/2.326e94b1.chunk.js": "/books-for-impact/static/js/2.326e94b1.chunk.js",
     "static/js/2.326e94b1.chunk.js.map": "/books-for-impact/static/js/2.326e94b1.chunk.js.map",
     "index.html": "/books-for-impact/index.html",
-    "static/css/main.2cfc9513.chunk.css.map": "/books-for-impact/static/css/main.2cfc9513.chunk.css.map",
+    "static/css/main.950fb51e.chunk.css.map": "/books-for-impact/static/css/main.950fb51e.chunk.css.map",
     "static/js/2.326e94b1.chunk.js.LICENSE.txt": "/books-for-impact/static/js/2.326e94b1.chunk.js.LICENSE.txt",
     "static/media/1984-cover.2a180e0f.jpg": "/books-for-impact/static/media/1984-cover.2a180e0f.jpg",
     "static/media/80000-hours-cover.3c7f3500.png": "/books-for-impact/static/media/80000-hours-cover.3c7f3500.png",
@@ -22,6 +22,7 @@
     "static/media/poor-economics-cover.95fdbe56.jpg": "/books-for-impact/static/media/poor-economics-cover.95fdbe56.jpg",
     "static/media/reasons-and-persons-cover.b992f185.jpg": "/books-for-impact/static/media/reasons-and-persons-cover.b992f185.jpg",
     "static/media/scout-mindset-cover.efc669e9.jpg": "/books-for-impact/static/media/scout-mindset-cover.efc669e9.jpg",
+    "static/media/seeing-like-a-state-cover.857ca2cd.jpg": "/books-for-impact/static/media/seeing-like-a-state-cover.857ca2cd.jpg",
     "static/media/superforecasting-cover.27de4035.jpg": "/books-for-impact/static/media/superforecasting-cover.27de4035.jpg",
     "static/media/superintelligence-cover.cf7e6539.jpg": "/books-for-impact/static/media/superintelligence-cover.cf7e6539.jpg",
     "static/media/the-dead-hand-cover.ae7a7335.jpg": "/books-for-impact/static/media/the-dead-hand-cover.ae7a7335.jpg",
@@ -33,7 +34,7 @@
   "entrypoints": [
     "static/js/runtime-main.adc02ef9.js",
     "static/js/2.326e94b1.chunk.js",
-    "static/css/main.2cfc9513.chunk.css",
-    "static/js/main.f666c880.chunk.js"
+    "static/css/main.950fb51e.chunk.css",
+    "static/js/main.46312578.chunk.js"
   ]
 }
