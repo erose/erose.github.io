@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/books-for-impact/static/css/main.950fb51e.chunk.css",
-    "main.js": "/books-for-impact/static/js/main.f9ccbba8.chunk.js",
-    "main.js.map": "/books-for-impact/static/js/main.f9ccbba8.chunk.js.map",
+    "main.js": "/books-for-impact/static/js/main.16a1be0b.chunk.js",
+    "main.js.map": "/books-for-impact/static/js/main.16a1be0b.chunk.js.map",
     "runtime-main.js": "/books-for-impact/static/js/runtime-main.adc02ef9.js",
     "runtime-main.js.map": "/books-for-impact/static/js/runtime-main.adc02ef9.js.map",
     "static/js/2.326e94b1.chunk.js": "/books-for-impact/static/js/2.326e94b1.chunk.js",
@@ -35,6 +35,6 @@
     "static/js/runtime-main.adc02ef9.js",
     "static/js/2.326e94b1.chunk.js",
     "static/css/main.950fb51e.chunk.css",
-    "static/js/main.f9ccbba8.chunk.js"
+    "static/js/main.16a1be0b.chunk.js"
   ]
 }
