@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LLM Chess: Win Probability vs Dragon Level 1</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0a0a0a; color: #e0e0e0;
+    display: flex; flex-direction: column; align-items: center;
+    min-height: 100vh; padding: 20px;
+  }
+  h1 { font-size: 1.4rem; font-weight: 600; margin-bottom: 4px; color: #fff; }
+  .subtitle { font-size: 0.85rem; color: #888; margin-bottom: 16px; }
+  #chart-container {
+    position: relative; width: 1200px; height: 700px;
+    background: #111; border: 1px solid #333; border-radius: 8px; overflow: hidden;
+  }
+  canvas { display: block; }
+  #tooltip {
+    display: none; position: absolute;
+    background: rgba(20, 20, 20, 0.95); border: 1px solid #555;
+    border-radius: 6px; padding: 10px 14px; font-size: 0.8rem; line-height: 1.6;
+    pointer-events: none; z-index: 10; max-width: 360px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  }
+  #tooltip .model-name { font-weight: 700; font-size: 0.9rem; margin-bottom: 4px; }
+  .legend { display: flex; gap: 24px; margin-top: 12px; font-size: 0.85rem; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+  .note { font-size: 0.75rem; color: #666; margin-top: 8px; max-width: 1200px; text-align: center; }
+  .controls { display: flex; gap: 16px; margin-top: 8px; margin-bottom: 4px; }
+  .controls label { font-size: 0.8rem; color: #aaa; cursor: pointer; user-select: none; }
+  .controls input { cursor: pointer; }
+  .tab-bar { display: flex; gap: 0; margin-bottom: 8px; }
+  .tab { padding: 6px 16px; font-size: 0.85rem; cursor: pointer; border: 1px solid #333;
+    background: #1a1a1a; color: #888; user-select: none; }
+  .tab:first-child { border-radius: 6px 0 0 6px; }
+  .tab:last-child { border-radius: 0 6px 6px 0; }
+  .tab.active { background: #333; color: #fff; border-color: #555; }
+</style>
+</head>
+<body>
+<h1>LLM Chess Performance Over Time</h1>
+<p class="subtitle">Source: maxim-saplin/llm_chess. Elo anchored to Komodo Dragon engine levels.</p>
+<div class="tab-bar">
+  <div class="tab active" data-view="elo">Elo Rating</div>
+  <div class="tab" data-view="winprob">Win % vs Dragon Lvl 1</div>
+</div>
+<div class="controls">
+  <label><input type="checkbox" id="showErrors" checked> Show error bars (95% CI)</label>
+  <label><input type="checkbox" id="showLabels" checked> Show labels</label>
+</div>
+<div id="chart-container">
+  <canvas id="chart"></canvas>
+  <div id="tooltip"></div>
+</div>
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#10a37f"></div> OpenAI</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#d4a27f"></div> Anthropic</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#4285f4"></div> Google</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#fff"></div> xAI</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#888"></div> Other</div>
+</div>
+<p class="note">
+  Win probability computed from Elo via the logistic formula: E = 1 / (1 + 10^((250 - Elo) / 400)).
+  Dragon Level 1 = 250 Elo. Error bars show 95% CI propagated from Elo margin of error.
+</p>
+<script>
+const DATA = [{"name": "claude-3-sonnet", "elo": -321.8, "elo_moe": 144.4, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2024-03", "status": "not_reasoning", "totalGames": 34, "gamesRandom": 34, "gamesDragon": 0, "company": "Anthropic", "winProbDragon1": 3.6}, {"name": "claude-3-opus", "elo": -145.7, "elo_moe": 126.1, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2024-03", "status": "not_reasoning", "totalGames": 30, "gamesRandom": 30, "gamesDragon": 0, "company": "Anthropic", "winProbDragon1": 9.3}, {"name": "gemini-1.5-pro-preview-0409", "elo": -651.0, "elo_moe": 283.4, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2024-04", "status": "not_reasoning", "totalGames": 40, "gamesRandom": 40, "gamesDragon": 0, "company": "Google", "winProbDragon1": 0.6}, {"name": "llama-3-70b-instruct-awq", "elo": -278.1, "elo_moe": 143.6, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2024-04", "status": "not_reasoning", "totalGames": 30, "gamesRandom": 30, "gamesDragon": 0, "company": "Other", "winProbDragon1": 4.6}, {"name": "gpt-4-turbo-2024-04-09", "elo": -103.8, "elo_moe": 85.9, "winPctRandom": 1.6, "winPctAll": 1.6, "date": "2024-04", "status": "not_reasoning", "totalGames": 63, "gamesRandom": 63, "gamesDragon": 0, "company": "OpenAI", "winProbDragon1": 11.5}, {"name": "gemini-1.5-flash-001", "elo": -366.9, "elo_moe": 166.8, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2024-05", "status": "not_reasoning", "totalGames": 30, "gamesRandom": 30, "gamesDragon": 0, "company": "Google", "winProbDragon1": 2.8}, {"name": "gpt-4o-2024-05-13", "elo": -157.7, "elo_moe": 89.7, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2024-05", "status": "not_reasoning", "totalGames": 60, "gamesRandom": 60, "gamesDragon": 0, "company": "OpenAI", "winProbDragon1": 8.7}, {"name": "gemma-2-9b-it-8bit", "elo": -545.7, "elo_moe": 249.2, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2024-06", "status": "not_reasoning", "totalGames": 30, "gamesRandom": 30, "gamesDragon": 0, "company": "Google", "winProbDragon1": 1.0}, {"name": "gemma-2-27b-it@q6_k_l", "elo": -412.4, "elo_moe": 182.9, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2024-06", "status": "not_reasoning", "totalGames": 30, "gamesRandom": 30, "gamesDragon": 0, "company": "Google", "winProbDragon1": 2.2}, {"name": "llama3.1-8b", "elo": -795.6, "elo_moe": 280.4, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2024-07", "status": "not_reasoning", "totalGames": 90, "gamesRandom": 90, "gamesDragon": 0, "company": "Other", "winProbDragon1": 0.2}, {"name": "gpt-4o-mini-2024-07-18", "elo": -251.8, "elo_moe": 75.1, "winPctRandom": 1.0, "winPctAll": 1.0, "date": "2024-07", "status": "not_reasoning", "totalGames": 102, "gamesRandom": 102, "gamesDragon": 0, "company": "OpenAI", "winProbDragon1": 5.3}, {"name": "claude-3-5-sonnet", "elo": -134.4, "elo_moe": 72.8, "winPctRandom": 2.2, "winPctAll": 2.2, "date": "2024-07", "status": "not_reasoning", "totalGames": 89, "gamesRandom": 89, "gamesDragon": 0, "company": "Anthropic", "winProbDragon1": 9.9}, {"name": "grok-2-1212", "elo": -334.8, "elo_moe": 123.0, "winPctRandom": 4.1, "winPctAll": 4.1, "date": "2024-08", "status": "not_reasoning", "totalGames": 49, "gamesRandom": 49, "gamesDragon": 0, "company": "xAI", "winProbDragon1": 3.3}, {"name": "gpt-4o-2024-08-06", "elo": -133.9, "elo_moe": 88.7, "winPctRandom": 1.7, "winPctAll": 1.7, "date": "2024-08", "status": "not_reasoning", "totalGames": 60, "gamesRandom": 60, "gamesDragon": 0, "company": "OpenAI", "winProbDragon1": 9.9}, {"name": "qwen2.5-72b-instruct", "elo": -672.2, "elo_moe": 346.3, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2024-09", "status": "not_reasoning", "totalGames": 30, "gamesRandom": 30, "gamesDragon": 0, "company": "Other", "winProbDragon1": 0.5}, {"name": "o1-mini-2024-09-12", "elo": -52.4, "elo_moe": 125.0, "winPctRandom": 30.0, "winPctAll": 30.0, "date": "2024-09", "status": "reasoning", "totalGames": 30, "gamesRandom": 30, "gamesDragon": 0, "company": "OpenAI", "winProbDragon1": 14.9}, {"name": "o1-preview-2024-09-12", "elo": 46.3, "elo_moe": 133.6, "winPctRandom": 46.7, "winPctAll": 46.7, "date": "2024-09", "status": "reasoning", "totalGames": 30, "gamesRandom": 30, "gamesDragon": 0, "company": "OpenAI", "winProbDragon1": 23.6}, {"name": "claude-3-5-haiku-20241022", "elo": -120.5, "elo_moe": 105.6, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2024-10", "status": "not_reasoning", "totalGames": 42, "gamesRandom": 42, "gamesDragon": 0, "company": "Anthropic", "winProbDragon1": 10.6}, {"name": "claude-3-5-sonnet-v2", "elo": -98.7, "elo_moe": 87.2, "winPctRandom": 6.6, "winPctAll": 6.6, "date": "2024-10", "status": "not_reasoning", "totalGames": 61, "gamesRandom": 61, "gamesDragon": 0, "company": "Anthropic", "winProbDragon1": 11.8}, {"name": "gpt-4o-2024-11-20", "elo": -108.1, "elo_moe": 63.1, "winPctRandom": 3.4, "winPctAll": 3.4, "date": "2024-11", "status": "not_reasoning", "totalGames": 117, "gamesRandom": 117, "gamesDragon": 0, "company": "OpenAI", "winProbDragon1": 11.3}, {"name": "deepseek-v3", "elo": -822.8, "elo_moe": 342.9, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2024-12", "status": "not_reasoning", "totalGames": 70, "gamesRandom": 70, "gamesDragon": 0, "company": "Other", "winProbDragon1": 0.2}, {"name": "gemini-2.0-flash-exp", "elo": -672.2, "elo_moe": 346.3, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2024-12", "status": "not_reasoning", "totalGames": 30, "gamesRandom": 30, "gamesDragon": 0, "company": "Google", "winProbDragon1": 0.5}, {"name": "llama-3.3-70b", "elo": -607.7, "elo_moe": 246.7, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2024-12", "status": "not_reasoning", "totalGames": 42, "gamesRandom": 42, "gamesDragon": 0, "company": "Other", "winProbDragon1": 0.7}, {"name": "deepseek-v3-0324", "elo": -579.5, "elo_moe": 221.6, "winPctRandom": 2.2, "winPctAll": 2.2, "date": "2024-12", "status": "not_reasoning", "totalGames": 45, "gamesRandom": 45, "gamesDragon": 0, "company": "Other", "winProbDragon1": 0.8}, {"name": "o1 (low)", "elo": 153.7, "elo_moe": 98.9, "winPctRandom": 57.4, "winPctAll": 40.3, "date": "2024-12", "status": "reasoning", "totalGames": 67, "gamesRandom": 47, "gamesDragon": 20, "company": "OpenAI", "winProbDragon1": 36.5}, {"name": "o1 (medium)", "elo": 280.1, "elo_moe": 129.3, "winPctRandom": 80.5, "winPctAll": 66.0, "date": "2024-12", "status": "reasoning", "totalGames": 53, "gamesRandom": 41, "gamesDragon": 12, "company": "OpenAI", "winProbDragon1": 54.3}, {"name": "qwen-plus-2025-01-25", "elo": -616.2, "elo_moe": 284.5, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2025-01", "status": "not_reasoning", "totalGames": 33, "gamesRandom": 33, "gamesDragon": 0, "company": "Other", "winProbDragon1": 0.7}, {"name": "deepseek-r1", "elo": -216.2, "elo_moe": 130.8, "winPctRandom": 22.6, "winPctAll": 22.6, "date": "2025-01", "status": "reasoning", "totalGames": 31, "gamesRandom": 31, "gamesDragon": 0, "company": "Other", "winProbDragon1": 6.4}, {"name": "o3-mini (low)", "elo": -183.9, "elo_moe": 80.9, "winPctRandom": 4.6, "winPctAll": 2.5, "date": "2025-01", "status": "reasoning", "totalGames": 121, "gamesRandom": 65, "gamesDragon": 56, "company": "OpenAI", "winProbDragon1": 7.6}, {"name": "qwen-max-2025-01-25", "elo": -98.9, "elo_moe": 88.0, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2025-01", "status": "not_reasoning", "totalGames": 60, "gamesRandom": 60, "gamesDragon": 0, "company": "Other", "winProbDragon1": 11.8}, {"name": "o3-mini (medium)", "elo": 82.4, "elo_moe": 69.5, "winPctRandom": 33.7, "winPctAll": 23.4, "date": "2025-01", "status": "reasoning", "totalGames": 124, "gamesRandom": 86, "gamesDragon": 38, "company": "OpenAI", "winProbDragon1": 27.6}, {"name": "o3-mini (high)", "elo": 403.1, "elo_moe": 64.1, "winPctRandom": 67.2, "winPctAll": 36.8, "date": "2025-01", "status": "reasoning", "totalGames": 190, "gamesRandom": 61, "gamesDragon": 129, "company": "OpenAI", "winProbDragon1": 70.7}, {"name": "gemini-2.0-flash-lite-001", "elo": -812.4, "elo_moe": 343.1, "winPctRandom": 1.5, "winPctAll": 1.5, "date": "2025-02", "status": "not_reasoning", "totalGames": 66, "gamesRandom": 66, "gamesDragon": 0, "company": "Google", "winProbDragon1": 0.2}, {"name": "gemini-2.0-flash-001", "elo": -310.8, "elo_moe": 101.0, "winPctRandom": 4.5, "winPctAll": 4.5, "date": "2025-02", "status": "not_reasoning", "totalGames": 67, "gamesRandom": 67, "gamesDragon": 0, "company": "Google", "winProbDragon1": 3.8}, {"name": "grok-3-beta", "elo": -137.2, "elo_moe": 106.2, "winPctRandom": 2.4, "winPctAll": 2.4, "date": "2025-02", "status": "not_reasoning", "totalGames": 42, "gamesRandom": 42, "gamesDragon": 0, "company": "xAI", "winProbDragon1": 9.7}, {"name": "gpt-4.5-preview-2025-02-27", "elo": -111.0, "elo_moe": 102.9, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2025-02", "status": "not_reasoning", "totalGames": 44, "gamesRandom": 44, "gamesDragon": 0, "company": "OpenAI", "winProbDragon1": 11.1}, {"name": "claude-3-7-sonnet-20250219", "elo": -76.4, "elo_moe": 59.1, "winPctRandom": 8.4, "winPctAll": 5.2, "date": "2025-02", "status": "not_reasoning", "totalGames": 173, "gamesRandom": 107, "gamesDragon": 66, "company": "Anthropic", "winProbDragon1": 13.3}, {"name": "claude-3-7-sonnet-20250219_thinking_2048", "elo": -62.4, "elo_moe": 74.5, "winPctRandom": 14.3, "winPctAll": 14.3, "date": "2025-02", "status": "reasoning", "totalGames": 84, "gamesRandom": 84, "gamesDragon": 0, "company": "Anthropic", "winProbDragon1": 14.2}, {"name": "grok-3-mini-beta", "elo": -37.3, "elo_moe": 106.2, "winPctRandom": 14.3, "winPctAll": 14.3, "date": "2025-02", "status": "not_reasoning", "totalGames": 42, "gamesRandom": 42, "gamesDragon": 0, "company": "xAI", "winProbDragon1": 16.1}, {"name": "claude-3-7-sonnet-20250219_thinking_1024", "elo": -36.1, "elo_moe": 107.5, "winPctRandom": 19.5, "winPctAll": 19.5, "date": "2025-02", "status": "reasoning", "totalGames": 41, "gamesRandom": 41, "gamesDragon": 0, "company": "Anthropic", "winProbDragon1": 16.2}, {"name": "claude-3-7-sonnet-20250219_thinking_5000", "elo": -36.1, "elo_moe": 107.5, "winPctRandom": 17.1, "winPctAll": 17.1, "date": "2025-02", "status": "reasoning", "totalGames": 41, "gamesRandom": 41, "gamesDragon": 0, "company": "Anthropic", "winProbDragon1": 16.2}, {"name": "grok-3-mini-beta-low", "elo": -33.9, "elo_moe": 89.7, "winPctRandom": 16.9, "winPctAll": 16.9, "date": "2025-02", "status": "reasoning", "totalGames": 59, "gamesRandom": 59, "gamesDragon": 0, "company": "xAI", "winProbDragon1": 16.3}, {"name": "claude-3-7-sonnet-20250219_thinking_10000", "elo": -1.0, "elo_moe": 115.4, "winPctRandom": null, "winPctAll": 24.3, "date": "2025-02", "status": "reasoning", "totalGames": 37, "gamesRandom": 37, "gamesDragon": 0, "company": "Anthropic", "winProbDragon1": 19.1}, {"name": "grok-3-mini-beta-high", "elo": 430.4, "elo_moe": 53.4, "winPctRandom": 71.4, "winPctAll": 19.1, "date": "2025-02", "status": "reasoning", "totalGames": 282, "gamesRandom": 49, "gamesDragon": 233, "company": "xAI", "winProbDragon1": 73.9}, {"name": "gpt-4.1-mini-2025-04-14", "elo": -167.2, "elo_moe": 65.2, "winPctRandom": 0.0, "winPctAll": 6.1, "date": "2025-04", "status": "not_reasoning", "totalGames": 115, "gamesRandom": 115, "gamesDragon": 0, "company": "OpenAI", "winProbDragon1": 8.3}, {"name": "gemini-2.5-pro-preview-03-25", "elo": -144.3, "elo_moe": 105.3, "winPctRandom": 27.9, "winPctAll": 27.9, "date": "2025-04", "status": "reasoning", "totalGames": 43, "gamesRandom": 43, "gamesDragon": 0, "company": "Google", "winProbDragon1": 9.4}, {"name": "gpt-4.1-2025-04-14", "elo": -110.6, "elo_moe": 53.3, "winPctRandom": 0.6, "winPctAll": 0.6, "date": "2025-04", "status": "not_reasoning", "totalGames": 164, "gamesRandom": 164, "gamesDragon": 0, "company": "OpenAI", "winProbDragon1": 11.1}, {"name": "llama-4-maverick", "elo": -99.7, "elo_moe": 128.8, "winPctRandom": null, "winPctAll": 7.1, "date": "2025-04", "status": "not_reasoning", "totalGames": 28, "gamesRandom": 28, "gamesDragon": 0, "company": "Other", "winProbDragon1": 11.8}, {"name": "o4-mini (low)", "elo": 104.1, "elo_moe": 72.2, "winPctRandom": 43.2, "winPctAll": 26.0, "date": "2025-04", "status": "reasoning", "totalGames": 123, "gamesRandom": 74, "gamesDragon": 49, "company": "OpenAI", "winProbDragon1": 30.2}, {"name": "o4-mini (medium)", "elo": 240.3, "elo_moe": 64.3, "winPctRandom": 68.6, "winPctAll": 58.3, "date": "2025-04", "status": "reasoning", "totalGames": 199, "gamesRandom": 159, "gamesDragon": 40, "company": "OpenAI", "winProbDragon1": 48.6}, {"name": "o4-mini (high)", "elo": 440.0, "elo_moe": 56.9, "winPctRandom": 89.7, "winPctAll": 36.5, "date": "2025-04", "status": "reasoning", "totalGames": 203, "gamesRandom": 39, "gamesDragon": 164, "company": "OpenAI", "winProbDragon1": 74.9}, {"name": "o3 (low)", "elo": 738.6, "elo_moe": 62.7, "winPctRandom": 90.5, "winPctAll": 50.2, "date": "2025-04", "status": "reasoning", "totalGames": 253, "gamesRandom": 42, "gamesDragon": 211, "company": "OpenAI", "winProbDragon1": 94.3}, {"name": "o3 (medium)", "elo": 777.6, "elo_moe": 179.2, "winPctRandom": 90.6, "winPctAll": 86.4, "date": "2025-04", "status": "reasoning", "totalGames": 66, "gamesRandom": 53, "gamesDragon": 13, "company": "OpenAI", "winProbDragon1": 95.4}, {"name": "gemini-2.5-pro-preview-05-06", "elo": -70.7, "elo_moe": 105.2, "winPctRandom": 47.6, "winPctAll": 47.6, "date": "2025-05", "status": "reasoning", "totalGames": 42, "gamesRandom": 42, "gamesDragon": 0, "company": "Google", "winProbDragon1": 13.6}, {"name": "claude-opus-4", "elo": -10.9, "elo_moe": 114.7, "winPctRandom": 24.3, "winPctAll": 24.3, "date": "2025-05", "status": "not_reasoning", "totalGames": 37, "gamesRandom": 37, "gamesDragon": 0, "company": "Anthropic", "winProbDragon1": 18.2}, {"name": "claude-sonnet-4", "elo": -10.9, "elo_moe": 114.7, "winPctRandom": 24.3, "winPctAll": 24.3, "date": "2025-05", "status": "not_reasoning", "totalGames": 37, "gamesRandom": 37, "gamesDragon": 0, "company": "Anthropic", "winProbDragon1": 18.2}, {"name": "claude-opus-4 (thinking 16000)", "elo": 29.3, "elo_moe": 123.4, "winPctRandom": 32.4, "winPctAll": 32.4, "date": "2025-05", "status": "reasoning", "totalGames": 34, "gamesRandom": 34, "gamesDragon": 0, "company": "Anthropic", "winProbDragon1": 21.9}, {"name": "claude-sonnet-4 (thinking 16000)", "elo": 115.3, "elo_moe": 92.9, "winPctRandom": 36.8, "winPctAll": 19.7, "date": "2025-05", "status": "reasoning", "totalGames": 71, "gamesRandom": 38, "gamesDragon": 33, "company": "Anthropic", "winProbDragon1": 31.5}, {"name": "gemini-2.5-flash", "elo": -289.3, "elo_moe": 123.4, "winPctRandom": 19.0, "winPctAll": 19.0, "date": "2025-06", "status": "reasoning", "totalGames": 42, "gamesRandom": 42, "gamesDragon": 0, "company": "Google", "winProbDragon1": 4.3}, {"name": "gemini-2.5-pro", "elo": -147.2, "elo_moe": 107.9, "winPctRandom": 36.6, "winPctAll": 36.6, "date": "2025-06", "status": "reasoning", "totalGames": 41, "gamesRandom": 41, "gamesDragon": 0, "company": "Google", "winProbDragon1": 9.2}, {"name": "kimi-k2-instruct", "elo": -689.3, "elo_moe": 345.8, "winPctRandom": 3.0, "winPctAll": 3.0, "date": "2025-07", "status": "not_reasoning", "totalGames": 33, "gamesRandom": 33, "gamesDragon": 0, "company": "Other", "winProbDragon1": 0.4}, {"name": "qwen3-4b-thinking@q8", "elo": -636.9, "elo_moe": 283.8, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2025-07", "status": "reasoning", "totalGames": 37, "gamesRandom": 37, "gamesDragon": 0, "company": "Other", "winProbDragon1": 0.6}, {"name": "qwen-3-235b-a22b-instruct", "elo": -140.3, "elo_moe": 119.9, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2025-07", "status": "not_reasoning", "totalGames": 33, "gamesRandom": 33, "gamesDragon": 0, "company": "Other", "winProbDragon1": 9.6}, {"name": "qwen3-30b-a3b-thinking@q4_k_m", "elo": -37.3, "elo_moe": 106.2, "winPctRandom": 26.2, "winPctAll": 26.2, "date": "2025-07", "status": "reasoning", "totalGames": 42, "gamesRandom": 42, "gamesDragon": 0, "company": "Other", "winProbDragon1": 16.1}, {"name": "gpt-oss-20b (low)", "elo": -299.9, "elo_moe": 141.4, "winPctRandom": 3.0, "winPctAll": 3.0, "date": "2025-08", "status": "reasoning", "totalGames": 33, "gamesRandom": 33, "gamesDragon": 0, "company": "OpenAI", "winProbDragon1": 4.0}, {"name": "gpt-oss-120b (low)", "elo": -268.2, "elo_moe": 114.3, "winPctRandom": 19.6, "winPctAll": 19.6, "date": "2025-08", "status": "reasoning", "totalGames": 46, "gamesRandom": 46, "gamesDragon": 0, "company": "OpenAI", "winProbDragon1": 4.8}, {"name": "gpt-oss-20b (high)", "elo": -257.7, "elo_moe": 133.1, "winPctRandom": 3.0, "winPctAll": 3.0, "date": "2025-08", "status": "reasoning", "totalGames": 33, "gamesRandom": 33, "gamesDragon": 0, "company": "OpenAI", "winProbDragon1": 5.1}, {"name": "gpt-oss-120b (high)", "elo": -252.1, "elo_moe": 115.8, "winPctRandom": 27.9, "winPctAll": 27.9, "date": "2025-08", "status": "reasoning", "totalGames": 43, "gamesRandom": 43, "gamesDragon": 0, "company": "OpenAI", "winProbDragon1": 5.3}, {"name": "gpt-oss-20b (medium)", "elo": -232.0, "elo_moe": 129.0, "winPctRandom": 3.0, "winPctAll": 3.0, "date": "2025-08", "status": "reasoning", "totalGames": 33, "gamesRandom": 33, "gamesDragon": 0, "company": "OpenAI", "winProbDragon1": 5.9}, {"name": "gpt-oss-120b (medium)", "elo": -217.2, "elo_moe": 107.5, "winPctRandom": 25.6, "winPctAll": 21.4, "date": "2025-08", "status": "reasoning", "totalGames": 56, "gamesRandom": 43, "gamesDragon": 13, "company": "OpenAI", "winProbDragon1": 6.4}, {"name": "gpt-5-nano (low)", "elo": -117.0, "elo_moe": 99.1, "winPctRandom": 45.5, "winPctAll": 11.4, "date": "2025-08", "status": "reasoning", "totalGames": 132, "gamesRandom": 33, "gamesDragon": 99, "company": "OpenAI", "winProbDragon1": 10.8}, {"name": "gpt-5-chat", "elo": -87.3, "elo_moe": 118.5, "winPctRandom": 0.0, "winPctAll": 0.0, "date": "2025-08", "status": "not_reasoning", "totalGames": 33, "gamesRandom": 33, "gamesDragon": 0, "company": "OpenAI", "winProbDragon1": 12.5}, {"name": "gpt-5-mini (low)", "elo": -55.6, "elo_moe": 119.0, "winPctRandom": 9.1, "winPctAll": 9.1, "date": "2025-08", "status": "reasoning", "totalGames": 33, "gamesRandom": 33, "gamesDragon": 0, "company": "OpenAI", "winProbDragon1": 14.7}, {"name": "claude-opus-4.1", "elo": -37.9, "elo_moe": 101.2, "winPctRandom": 3.2, "winPctAll": 1.6, "date": "2025-08", "status": "not_reasoning", "totalGames": 63, "gamesRandom": 31, "gamesDragon": 32, "company": "Anthropic", "winProbDragon1": 16.0}, {"name": "gpt-5-mini (medium)", "elo": 348.5, "elo_moe": 106.2, "winPctRandom": 81.8, "winPctAll": 56.1, "date": "2025-08", "status": "reasoning", "totalGames": 66, "gamesRandom": 33, "gamesDragon": 33, "company": "OpenAI", "winProbDragon1": 63.8}, {"name": "gpt-5-nano (medium)", "elo": 413.3, "elo_moe": 77.5, "winPctRandom": 90.9, "winPctAll": 43.9, "date": "2025-08", "status": "reasoning", "totalGames": 132, "gamesRandom": 33, "gamesDragon": 99, "company": "OpenAI", "winProbDragon1": 71.9}, {"name": "gpt-5-nano (high)", "elo": 683.0, "elo_moe": 81.1, "winPctRandom": 87.9, "winPctAll": 61.4, "date": "2025-08", "status": "reasoning", "totalGames": 132, "gamesRandom": 33, "gamesDragon": 99, "company": "OpenAI", "winProbDragon1": 92.4}, {"name": "gpt-5-mini (high)", "elo": 759.0, "elo_moe": 117.0, "winPctRandom": 88.6, "winPctAll": 66.2, "date": "2025-08", "status": "reasoning", "totalGames": 68, "gamesRandom": 35, "gamesDragon": 33, "company": "OpenAI", "winProbDragon1": 94.9}, {"name": "gpt-5 (low)", "elo": 858.2, "elo_moe": 89.4, "winPctRandom": 95.3, "winPctAll": 59.6, "date": "2025-08", "status": "reasoning", "totalGames": 109, "gamesRandom": 43, "gamesDragon": 66, "company": "OpenAI", "winProbDragon1": 97.1}, {"name": "gpt-5 (medium)", "elo": 1086.8, "elo_moe": 123.0, "winPctRandom": null, "winPctAll": 73.2, "date": "2025-08", "status": "reasoning", "totalGames": 56, "gamesRandom": 18, "gamesDragon": 38, "company": "OpenAI", "winProbDragon1": 99.2}, {"name": "k2-think@iq4_xs", "elo": -457.6, "elo_moe": 192.5, "winPctRandom": null, "winPctAll": 6.1, "date": "2025-09", "status": "reasoning", "totalGames": 33, "gamesRandom": 33, "gamesDragon": 0, "company": "Other", "winProbDragon1": 1.7}, {"name": "qwen3-next-80b-a3b", "elo": -127.9, "elo_moe": 106.6, "winPctRandom": null, "winPctAll": 0.0, "date": "2025-09", "status": "not_reasoning", "totalGames": 64, "gamesRandom": 31, "gamesDragon": 33, "company": "Other", "winProbDragon1": 10.2}, {"name": "claude-sonnet-4.5", "elo": -35.9, "elo_moe": 101.6, "winPctRandom": 25.8, "winPctAll": 12.9, "date": "2025-09", "status": "not_reasoning", "totalGames": 62, "gamesRandom": 31, "gamesDragon": 31, "company": "Anthropic", "winProbDragon1": 16.2}, {"name": "claude-sonnet-4.5 (thinking 16000)", "elo": 112.7, "elo_moe": 96.2, "winPctRandom": 36.4, "winPctAll": 19.7, "date": "2025-09", "status": "reasoning", "totalGames": 66, "gamesRandom": 33, "gamesDragon": 33, "company": "Anthropic", "winProbDragon1": 31.2}, {"name": "claude-haiku-4.5", "elo": -42.0, "elo_moe": 98.7, "winPctRandom": 21.2, "winPctAll": 10.6, "date": "2025-10", "status": "not_reasoning", "totalGames": 66, "gamesRandom": 33, "gamesDragon": 33, "company": "Anthropic", "winProbDragon1": 15.7}, {"name": "claude-haiku-4.5 (thinking 16000)", "elo": 126.6, "elo_moe": 96.2, "winPctRandom": 30.3, "winPctAll": 15.2, "date": "2025-10", "status": "reasoning", "totalGames": 66, "gamesRandom": 33, "gamesDragon": 33, "company": "Anthropic", "winProbDragon1": 33.0}, {"name": "gpt-5.1-chat", "elo": -130.7, "elo_moe": 102.3, "winPctRandom": null, "winPctAll": 0.0, "date": "2025-11", "status": "not_reasoning", "totalGames": 67, "gamesRandom": 35, "gamesDragon": 32, "company": "OpenAI", "winProbDragon1": 10.1}, {"name": "claude-opus-4.5", "elo": 71.1, "elo_moe": 96.2, "winPctRandom": null, "winPctAll": 12.1, "date": "2025-11", "status": "not_reasoning", "totalGames": 66, "gamesRandom": 33, "gamesDragon": 33, "company": "Anthropic", "winProbDragon1": 26.3}, {"name": "claude-opus-4.5 (thinking 16000)", "elo": 446.1, "elo_moe": 141.5, "winPctRandom": null, "winPctAll": 10.2, "date": "2025-11", "status": "not_reasoning", "totalGames": 49, "gamesRandom": 12, "gamesDragon": 37, "company": "Anthropic", "winProbDragon1": 75.6}, {"name": "gpt-5.1-codex (low)", "elo": 504.3, "elo_moe": 218.2, "winPctRandom": null, "winPctAll": 82.1, "date": "2025-11", "status": "reasoning", "totalGames": 39, "gamesRandom": 32, "gamesDragon": 7, "company": "OpenAI", "winProbDragon1": 81.2}, {"name": "gpt-5.1-codex-mini (high)", "elo": 544.0, "elo_moe": 155.5, "winPctRandom": null, "winPctAll": 42.9, "date": "2025-11", "status": "reasoning", "totalGames": 42, "gamesRandom": 19, "gamesDragon": 23, "company": "OpenAI", "winProbDragon1": 84.5}, {"name": "gpt-5.1 (low)", "elo": 614.7, "elo_moe": 111.3, "winPctRandom": null, "winPctAll": 26.5, "date": "2025-11", "status": "reasoning", "totalGames": 68, "gamesRandom": 16, "gamesDragon": 52, "company": "OpenAI", "winProbDragon1": 89.1}, {"name": "gpt-5.1 (medium)", "elo": 947.5, "elo_moe": 124.3, "winPctRandom": null, "winPctAll": 65.5, "date": "2025-11", "status": "reasoning", "totalGames": 58, "gamesRandom": 26, "gamesDragon": 32, "company": "OpenAI", "winProbDragon1": 98.2}, {"name": "gemini-3-pro-preview", "elo": 1033.7, "elo_moe": 143.9, "winPctRandom": null, "winPctAll": 77.4, "date": "2025-11", "status": "reasoning", "totalGames": 53, "gamesRandom": 27, "gamesDragon": 26, "company": "Google", "winProbDragon1": 98.9}, {"name": "nemotron-3-nano@q3_k_l", "elo": -199.6, "elo_moe": 93.5, "winPctRandom": null, "winPctAll": 0.0, "date": "2025-12", "status": "not_reasoning", "totalGames": 80, "gamesRandom": 52, "gamesDragon": 28, "company": "Other", "winProbDragon1": 7.0}, {"name": "gemini-3-flash-preview", "elo": -179.5, "elo_moe": 124.7, "winPctRandom": null, "winPctAll": 19.2, "date": "2025-12", "status": "reasoning", "totalGames": 52, "gamesRandom": 25, "gamesDragon": 27, "company": "Google", "winProbDragon1": 7.8}, {"name": "gpt-5.2-chat", "elo": 142.4, "elo_moe": 102.7, "winPctRandom": null, "winPctAll": 27.1, "date": "2025-12", "status": "not_reasoning", "totalGames": 59, "gamesRandom": 33, "gamesDragon": 26, "company": "OpenAI", "winProbDragon1": 35.0}, {"name": "gpt-5.2 (low)", "elo": 782.5, "elo_moe": 144.0, "winPctRandom": null, "winPctAll": 47.7, "date": "2025-12", "status": "reasoning", "totalGames": 44, "gamesRandom": 17, "gamesDragon": 27, "company": "OpenAI", "winProbDragon1": 95.5}, {"name": "gpt-5.2 (medium)", "elo": 1054.3, "elo_moe": 135.4, "winPctRandom": null, "winPctAll": 73.9, "date": "2025-12", "status": "reasoning", "totalGames": 46, "gamesRandom": 15, "gamesDragon": 31, "company": "OpenAI", "winProbDragon1": 99.0}, {"name": "glm-4.7-flash@q4", "elo": -328.1, "elo_moe": 269.2, "winPctRandom": null, "winPctAll": 0.0, "date": "2026-01", "status": "reasoning", "totalGames": 10, "gamesRandom": 10, "gamesDragon": 0, "company": "Other", "winProbDragon1": 3.5}];
+
+const ALWAYS_LABEL = new Set([
+  'o1-preview-2024-09-12', 'o1 (medium)',
+  'o3-mini (high)', 'o3 (low)', 'o4-mini (high)',
+  'gpt-5 (low)', 'gpt-5 (medium)',
+  'gpt-5.1 (medium)', 'gpt-5.2 (medium)',
+  'gemini-3-pro-preview',
+  'claude-sonnet-4.5 (thinking 16000)',
+  'claude-opus-4.5 (thinking 16000)',
+  'grok-3-mini-beta-high',
+  'deepseek-r1', 'gpt-4o-2024-05-13',
+  'claude-3-5-sonnet', 'claude-3-7-sonnet-20250219',
+  'claude-haiku-4.5 (thinking 16000)',
+  'gpt-5.2-chat',
+]);
+
+const COLORS = {
+  OpenAI: '#10a37f',
+  Anthropic: '#d4a27f',
+  Google: '#4285f4',
+  xAI: '#ffffff',
+  Other: '#888888',
+};
+
+const canvas = document.getElementById('chart');
+const ctx = canvas.getContext('2d');
+const tooltip = document.getElementById('tooltip');
+const W = 1200, H = 700;
+const DPR = window.devicePixelRatio || 1;
+canvas.width = W * DPR; canvas.height = H * DPR;
+canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+ctx.scale(DPR, DPR);
+
+const pad = { top: 30, right: 40, bottom: 60, left: 70 };
+const plotW = W - pad.left - pad.right;
+const plotH = H - pad.top - pad.bottom;
+
+const parseDate = s => { const [y, m] = s.split('-').map(Number); return new Date(y, m - 1, 15); };
+const points = DATA.map(d => ({
+  ...d,
+  dateObj: parseDate(d.date),
+  // Also compute win prob bounds from elo +/- moe
+  winProbHi: 1 / (1 + Math.pow(10, (250 - (d.elo + d.elo_moe)) / 400)) * 100,
+  winProbLo: 1 / (1 + Math.pow(10, (250 - (d.elo - d.elo_moe)) / 400)) * 100,
+}));
+
+const minDate = new Date(2024, 2, 1);
+const maxDate = new Date(2026, 1, 28);
+
+let currentView = 'elo';
+let showErrors = true, showLabels = true;
+
+function getYConfig() {
+  if (currentView === 'elo') {
+    return { min: -900, max: 1200, step: 200, label: 'Elo Rating',
+      getValue: p => p.elo, getHi: p => p.elo + p.elo_moe, getLo: p => p.elo - p.elo_moe,
+      format: v => v.toString(), zeroLine: true };
+  } else {
+    return { min: 0, max: 100, step: 10, label: 'Win Probability vs Dragon Lvl 1 (%)',
+      getValue: p => p.winProbDragon1, getHi: p => p.winProbHi, getLo: p => p.winProbLo,
+      format: v => v + '%', zeroLine: false, fiftyLine: true };
+  }
+}
+
+const xScale = d => pad.left + ((d - minDate) / (maxDate - minDate)) * plotW;
+function yScale(v, cfg) { return pad.top + plotH - ((v - cfg.min) / (cfg.max - cfg.min)) * plotH; }
+
+document.getElementById('showErrors').addEventListener('change', e => { showErrors = e.target.checked; draw(-1); });
+document.getElementById('showLabels').addEventListener('change', e => { showLabels = e.target.checked; draw(-1); });
+
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    currentView = tab.dataset.view;
+    draw(-1);
+  });
+});
+
+function draw(hoveredIdx) {
+  const cfg = getYConfig();
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = '#111'; ctx.fillRect(0, 0, W, H);
+
+  // Horizontal grid
+  ctx.font = '11px -apple-system, sans-serif'; ctx.textAlign = 'right';
+  for (let v = cfg.min; v <= cfg.max; v += cfg.step) {
+    const y = yScale(v, cfg);
+    const isZero = cfg.zeroLine && v === 0;
+    const isFifty = cfg.fiftyLine && v === 50;
+    ctx.strokeStyle = (isZero || isFifty) ? '#444' : '#222';
+    ctx.lineWidth = (isZero || isFifty) ? 1.5 : 1;
+    ctx.setLineDash((isZero || isFifty) ? [5, 5] : []);
+    ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(W - pad.right, y); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = '#666'; ctx.fillText(cfg.format(v), pad.left - 8, y + 4);
+  }
+  if (cfg.zeroLine) {
+    ctx.fillStyle = '#555'; ctx.font = '10px -apple-system, sans-serif'; ctx.textAlign = 'left';
+    ctx.fillText('Elo = 0 (baseline)', pad.left + 4, yScale(0, cfg) - 6);
+  }
+  if (cfg.fiftyLine) {
+    ctx.fillStyle = '#555'; ctx.font = '10px -apple-system, sans-serif'; ctx.textAlign = 'left';
+    ctx.fillText('50% (coin flip)', pad.left + 4, yScale(50, cfg) - 6);
+  }
+
+  // Vertical grid
+  const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  ctx.textAlign = 'center';
+  for (let d = new Date(2024, 3, 1); d <= maxDate; d = new Date(d.getFullYear(), d.getMonth() + 1, 1)) {
+    const x = xScale(d);
+    ctx.strokeStyle = '#1a1a1a'; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(x, pad.top); ctx.lineTo(x, H - pad.bottom); ctx.stroke();
+    if (d.getMonth() % 2 === 0) {
+      ctx.fillStyle = '#888'; ctx.font = '11px -apple-system, sans-serif';
+      ctx.fillText(monthNames[d.getMonth()] + ' ' + d.getFullYear(), x, H - pad.bottom + 20);
+    }
+  }
+  ctx.fillStyle = '#aaa'; ctx.font = '13px -apple-system, sans-serif'; ctx.textAlign = 'center';
+  ctx.fillText('Release Date', W / 2, H - 8);
+  ctx.save(); ctx.translate(16, H / 2); ctx.rotate(-Math.PI / 2);
+  ctx.fillText(cfg.label, 0, 0); ctx.restore();
+
+  // Error bars
+  if (showErrors) {
+    points.forEach((p, i) => {
+      if (!p.elo_moe) return;
+      const x = xScale(p.dateObj);
+      const yTop = yScale(cfg.getHi(p), cfg);
+      const yBot = yScale(cfg.getLo(p), cfg);
+      const color = COLORS[p.company] || '#888';
+      ctx.strokeStyle = color;
+      ctx.globalAlpha = i === hoveredIdx ? 0.5 : 0.15;
+      ctx.lineWidth = i === hoveredIdx ? 2 : 1;
+      ctx.beginPath(); ctx.moveTo(x, yTop); ctx.lineTo(x, yBot); ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(x - 3, yTop); ctx.lineTo(x + 3, yTop);
+      ctx.moveTo(x - 3, yBot); ctx.lineTo(x + 3, yBot);
+      ctx.stroke(); ctx.globalAlpha = 1;
+    });
+  }
+
+  // Points
+  points.forEach((p, i) => {
+    const x = xScale(p.dateObj);
+    const y = yScale(cfg.getValue(p), cfg);
+    const color = COLORS[p.company] || '#888';
+    const isHovered = i === hoveredIdx;
+    const radius = isHovered ? 7 : 4.5;
+    ctx.beginPath(); ctx.arc(x, y, radius, 0, Math.PI * 2);
+    ctx.fillStyle = isHovered ? '#fff' : color;
+    ctx.globalAlpha = isHovered ? 1 : 0.8;
+    ctx.fill(); ctx.globalAlpha = 1;
+    ctx.strokeStyle = isHovered ? color : 'rgba(0,0,0,0.4)';
+    ctx.lineWidth = isHovered ? 2 : 1;
+    ctx.stroke();
+    if (showLabels && ALWAYS_LABEL.has(p.name) && !isHovered) {
+      ctx.fillStyle = '#999'; ctx.font = '9px -apple-system, sans-serif';
+      ctx.textAlign = 'left'; ctx.fillText(p.name, x + 7, y - 4);
+    }
+  });
+}
+
+function getHoveredPoint(mx, my) {
+  const cfg = getYConfig();
+  let closest = -1, closestDist = Infinity;
+  points.forEach((p, i) => {
+    const x = xScale(p.dateObj);
+    const y = yScale(cfg.getValue(p), cfg);
+    const d = Math.hypot(mx - x, my - y);
+    if (d < 18 && d < closestDist) { closest = i; closestDist = d; }
+  });
+  return closest;
+}
+
+canvas.addEventListener('mousemove', e => {
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+  const idx = getHoveredPoint(mx, my);
+  draw(idx);
+  if (idx >= 0) {
+    const p = points[idx];
+    tooltip.innerHTML = `
+      <div class="model-name" style="color:${COLORS[p.company] || '#888'}">${p.name}</div>
+      <div>Elo: <strong>${p.elo.toFixed(0)}</strong> &plusmn; ${p.elo_moe.toFixed(0)}</div>
+      <div>Win prob vs Dragon Lvl 1: <strong>${p.winProbDragon1.toFixed(1)}%</strong></div>
+      <div>Released: ${p.date}</div>
+      <div>Company: ${p.company}</div>
+      <div>Games: ${p.totalGames} total (${p.gamesRandom} vs random, ${p.gamesDragon} vs Dragon)</div>
+    `;
+    tooltip.style.display = 'block';
+    let tx = mx + 15, ty = my - 10;
+    if (tx + 320 > W) tx = mx - 330;
+    if (ty + 160 > H) ty = my - 160;
+    if (ty < 0) ty = 10;
+    tooltip.style.left = tx + 'px'; tooltip.style.top = ty + 'px';
+  } else { tooltip.style.display = 'none'; }
+});
+canvas.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; draw(-1); });
+draw(-1);
+</script>
+</body>
+</html>
